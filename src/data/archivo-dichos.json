@@ -1159,6 +1159,50 @@
     ]
   },
   {
+    "id": "tweet-1512259120283406339",
+    "fecha": "2022-04-08",
+    "rol": "Líder de oposición / Candidato presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "La lista de los parientes sigue creciendo en el gobierno del Pdte. @gabrielboric Donde quedó la promesa de que se acabarían las malas prácticas de nepotismo y pitutocracia ?",
+    "fuenteUrl": "https://x.com/joseantoniokast/status/1512259120283406339",
+    "archivoUrl": "https://web.archive.org/web/20220408024112/https://twitter.com/joseantoniokast/status/1512259120283406339",
+    "categoria": "nepotismo",
+    "postura": "condena",
+    "conceptosClave": [
+      "nepotismo",
+      "pariente",
+      "pitutocracia",
+      "creciendo",
+      "acabarian",
+      "practica",
+      "promesa",
+      "lista"
+    ]
+  },
+  {
+    "id": "tweet-1511927964845322240",
+    "fecha": "2022-04-07",
+    "rol": "Líder de oposición / Candidato presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "Este es un gobierno de practicantes y lo que Chile necesita es un equipo profesional a la altura de las enormes responsabilidades y demandas de esta hora. El Presidente Boric tiene que hacer cambios y ejercer el liderazgo que ha faltado en estas semanas. No más improvisaciones!",
+    "fuenteUrl": "https://x.com/joseantoniokast/status/1511927964845322240",
+    "archivoUrl": "https://web.archive.org/web/20220407044532/https://twitter.com/joseantoniokast/status/1511927964845322240",
+    "categoria": "gasto-publico",
+    "postura": "prohibe",
+    "conceptosClave": [
+      "practicante",
+      "profesional",
+      "responsabilidad",
+      "improvisacion",
+      "liderazgo",
+      "necesita",
+      "enormes",
+      "demanda"
+    ]
+  },
+  {
     "id": "dicho-recursos-fiscales-sagrados",
     "fecha": "2022-03-15",
     "rol": "Líder Republicano",
