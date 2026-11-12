@@ -82,3 +82,19 @@ export interface CandidatoContradiccion {
   generadoEn: string;
   metodoAnalisis: 'motor-determinista' | 'motor-llm';
 }
+
+/**
+ * Cita textual destacada del oficialismo o su sector registrada en la sección "Frases para el bronce".
+ */
+export interface FraseBronce {
+  id: string;
+  fecha: string;
+  autor: string;
+  cargo: string;
+  cita: string;
+  contexto: string;
+  medio: string;
+  fuenteUrl: string;
+}
+
+export type OpcionEncuesta = 'aprueba' | 'desaprueba' | 'neutral';

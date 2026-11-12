@@ -3,11 +3,13 @@ import datosEscupos from './data/escupos.json';
 import datosCandidatos from './data/candidatos.json';
 import datosNoticias from './data/noticias-recientes.json';
 import datosDichos from './data/archivo-dichos.json';
+import datosFrasesBronce from './data/frases-bronce.json';
 import type {
   CandidatoContradiccion,
   CategoriaEscupo,
   DichoHistorico,
   Escupo,
+  FraseBronce,
   NoticiaScrapeada,
 } from './types/escupo';
 import {
@@ -21,6 +23,8 @@ import { MarcadorPortada } from './components/MarcadorPortada';
 import { ExpedienteDestacado } from './components/ExpedienteDestacado';
 import { FiltrosYBusqueda } from './components/FiltrosYBusqueda';
 import { HistorialEscupos } from './components/HistorialEscupos';
+import { FrasesBronce } from './components/FrasesBronce';
+import { EncuestaGobierno } from './components/EncuestaGobierno';
 import { MesaRedaccion } from './components/MesaRedaccion';
 import { Footer } from './components/Footer';
 
@@ -33,6 +37,7 @@ export function App() {
   const candidatos = datosCandidatos as CandidatoContradiccion[];
   const noticiasRecientes = datosNoticias as NoticiaScrapeada[];
   const dichosHistoricos = datosDichos as DichoHistorico[];
+  const frasesBronce = datosFrasesBronce as FraseBronce[];
 
   const fechaHoy = useMemo(() => {
     return new Date().toISOString().split('T')[0];
@@ -84,6 +89,10 @@ export function App() {
             />
 
             <HistorialEscupos incidentes={incidentesFiltrados} />
+
+            <FrasesBronce frases={frasesBronce} />
+
+            <EncuestaGobierno />
           </>
         ) : (
           <MesaRedaccion
