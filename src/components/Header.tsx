@@ -1,7 +1,7 @@
 import React from 'react';
-import { FileText, Cpu, Quote, BarChart3 } from 'lucide-react';
+import { FileText, Cpu, Quote, BarChart3, Newspaper } from 'lucide-react';
 
-export type VistaActiva = 'archivo' | 'redaccion' | 'legal';
+export type VistaActiva = 'archivo' | 'noticias' | 'redaccion' | 'legal';
 
 interface HeaderProps {
   vistaActiva: VistaActiva;
@@ -50,6 +50,19 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <FileText className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Expediente</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => onCambiarVista('noticias')}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
+              vistaActiva === 'noticias'
+                ? 'bg-[#ffffff] text-[#141413] shadow-xs'
+                : 'text-[#4a4843] hover:text-[#141413]'
+            }`}
+          >
+            <Newspaper className="w-3.5 h-3.5" aria-hidden="true" />
+            <span>Noticias</span>
           </button>
 
           {!mostrarRedaccion ? (

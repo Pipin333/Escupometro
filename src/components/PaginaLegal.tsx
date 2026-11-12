@@ -72,7 +72,7 @@ export const PaginaLegal: React.FC<PaginaLegalProps> = ({ onVolverArchivo }) => 
               Atribución de fuentes y rectificación
             </h4>
             <p>
-              Cada ficha distingue las citas textuales de los hechos reportados por terceros y enlaza a su fuente original. La mención a investigaciones judiciales o administrativas refleja exclusivamente información publicada por medios de prensa y no constituye imputación personal de responsabilidad penal. Si detectas un error de fecha, cita o enlace, puedes solicitar su revisión y enmienda aportando la fuente verificable mediante un Issue en el repositorio del proyecto.
+              Cada ficha distingue las citas textuales de los hechos reportados por terceros y enlaza a su fuente original. Asimismo, la sección <strong>Noticias</strong> muestra únicamente titulares, extractos breves y enlaces directos provenientes de feeds RSS públicos de medios chilenos, sin reproducir artículos completos. La mención a investigaciones judiciales o administrativas refleja exclusivamente información publicada por medios de prensa y no constituye imputación personal de responsabilidad penal. Si detectas un error de fecha, cita o enlace, puedes solicitar su revisión y enmienda aportando la fuente verificable mediante un Issue en el repositorio del proyecto.
             </p>
           </div>
 

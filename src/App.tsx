@@ -1,9 +1,10 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import datosEscupos from './data/escupos.json';
 import type {
   CategoriaEscupo,
   Escupo,
   FraseBronce as FraseBronceTipo,
+  NoticiaScrapeada,
 } from './types/escupo';
 import datosFrasesBronce from './data/frases-bronce.json';
 import {
@@ -13,6 +14,7 @@ import {
   obtenerUltimoIncidente,
   filtrarIncidentes,
 } from './lib/contador';
+import { cargarNoticiasEnVivo } from './lib/noticias';
 import {
   determinarVistaInicial,
   puedeAccederRedaccion,
@@ -24,6 +26,8 @@ import { FiltrosYBusqueda } from './components/FiltrosYBusqueda';
 import { HistorialEscupos } from './components/HistorialEscupos';
 import { FrasesBronce } from './components/FrasesBronce';
 import { EncuestaGobierno } from './components/EncuestaGobierno';
+import { UltimasNoticiasWidget } from './components/UltimasNoticiasWidget';
+import { SeccionNoticias } from './components/SeccionNoticias';
 import { PaginaLegal } from './components/PaginaLegal';
 import { Footer } from './components/Footer';
 
@@ -55,6 +59,34 @@ export function App() {
   const [totalCandidatosDev, setTotalCandidatosDev] = useState(0);
   const [categoria, setCategoria] = useState<CategoriaEscupo | 'todas'>('todas');
   const [busqueda, setBusqueda] = useState('');
+  const [noticias, setNoticias] = useState<NoticiaScrapeada[]>([]);
+  const [noticiasCargando, setNoticiasCargando] = useState(true);
+  const [noticiasError, setNoticiasError] = useState<string | null>(null);
+  const [noticiasActualizadoEn, setNoticiasActualizadoEn] = useState<string | null>(null);
+  const [noticiasFallbackEstatico, setNoticiasFallbackEstatico] = useState(false);
+
+  const recargarNoticias = useCallback(async () => {
+    setNoticiasCargando(true);
+    setNoticiasError(null);
+    try {
+      const resultado = await cargarNoticiasEnVivo();
+      setNoticias(resultado.items);
+      setNoticiasActualizadoEn(resultado.fetchedAt);
+      setNoticiasFallbackEstatico(resultado.esFallbackEstatico);
+    } catch {
+      setNoticiasError('No fue posible obtener los titulares de prensa.');
+    } finally {
+      setNoticiasCargando(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    void recargarNoticias();
+    const intervalo = window.setInterval(() => {
+      void recargarNoticias();
+    }, 900_000);
+    return () => window.clearInterval(intervalo);
+  }, [recargarNoticias]);
 
   useEffect(() => {
     if (!import.meta.env.DEV) return;
@@ -94,6 +126,11 @@ export function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const abrirNoticias = () => {
+    setVistaActiva('noticias');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const volverAlArchivo = () => {
     setVistaActiva('archivo');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -112,6 +149,15 @@ export function App() {
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6">
         {vistaActiva === 'legal' ? (
           <PaginaLegal onVolverArchivo={volverAlArchivo} />
+        ) : vistaActiva === 'noticias' ? (
+          <SeccionNoticias
+            noticias={noticias}
+            cargando={noticiasCargando}
+            error={noticiasError}
+            actualizadoEn={noticiasActualizadoEn}
+            esFallbackEstatico={noticiasFallbackEstatico}
+            onRecargar={() => void recargarNoticias()}
+          />
         ) : vistaActiva === 'archivo' || !mostrarRedaccion || !MesaRedaccionDev ? (
           <>
             <MarcadorPortada
@@ -136,6 +182,15 @@ export function App() {
             <FrasesBronce frases={frasesBronce} />
 
             <EncuestaGobierno />
+
+            <UltimasNoticiasWidget
+              noticias={noticias}
+              cargando={noticiasCargando}
+              error={noticiasError}
+              esFallbackEstatico={noticiasFallbackEstatico}
+              onVerTodas={abrirNoticias}
+              onRecargar={() => void recargarNoticias()}
+            />
           </>
         ) : (
           <Suspense

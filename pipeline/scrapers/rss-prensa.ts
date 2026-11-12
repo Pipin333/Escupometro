@@ -58,13 +58,18 @@ function limpiarHtml(html: string): string {
     .trim();
 }
 
-function parsearFechaISO(pubDate?: string): string {
-  if (!pubDate) return new Date().toISOString().split('T')[0];
+function parsearFechaISO(pubDate?: string): { fecha: string; publicadoEn: string } {
+  if (!pubDate) {
+    const ahora = new Date().toISOString();
+    return { fecha: ahora.split('T')[0], publicadoEn: ahora };
+  }
   const parsed = new Date(pubDate);
   if (Number.isNaN(parsed.getTime())) {
-    return new Date().toISOString().split('T')[0];
+    const ahora = new Date().toISOString();
+    return { fecha: ahora.split('T')[0], publicadoEn: ahora };
   }
-  return parsed.toISOString().split('T')[0];
+  const iso = parsed.toISOString();
+  return { fecha: iso.split('T')[0], publicadoEn: iso };
 }
 
 function generarIdEstable(titulo: string, fecha: string): string {
@@ -153,7 +158,7 @@ export async function scrapearFeed(fuente: FuenteRSS): Promise<NoticiaScrapeada[
     const bajada = typeof item.description === 'string' ? limpiarHtml(item.description) : '';
     if (!esNoticiaRelevante(tituloLimpio, bajada)) continue;
 
-    const fecha = parsearFechaISO(item.pubDate);
+    const { fecha, publicadoEn } = parsearFechaISO(item.pubDate);
 
     noticias.push({
       id: generarIdEstable(tituloLimpio, fecha),
@@ -161,6 +166,7 @@ export async function scrapearFeed(fuente: FuenteRSS): Promise<NoticiaScrapeada[
       bajada: bajada.slice(0, 420),
       medio,
       fecha,
+      publicadoEn,
       url,
     });
   }
@@ -197,8 +203,10 @@ export async function scrapearPrensaChilena(
     }
   }
 
-  // Ordenar por fecha más reciente primero
-  unicas.sort((a, b) => b.fecha.localeCompare(a.fecha));
+  // Ordenar por fecha/hora más reciente primero
+  unicas.sort((a, b) =>
+    (b.publicadoEn ?? b.fecha).localeCompare(a.publicadoEn ?? a.fecha)
+  );
 
   return { noticias: unicas, errores };
 }

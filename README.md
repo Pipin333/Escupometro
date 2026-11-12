@@ -78,7 +78,15 @@ El proyecto queda listo para publicarse en **GitHub Pages** con cualquier nombre
 1. Sube el código a GitHub (`git remote add origin ... && git push -u origin main`).
 2. En GitHub abre **Settings → Pages → Build and deployment → Source** y selecciona **GitHub Actions**.
 3. El workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) detecta automáticamente la ruta base del repositorio (`configure-pages`), corre las pruebas (`npm test`), compila (`npm run build`) y publica en Pages tanto en cada push a `main` como después de cada corrida exitosa del cron RSS (`worker-rss.yml`).
-4. En producción pública (`npm run build`), la **Mesa de Redacción** y los archivos del worker (`candidatos.json`, `noticias-recientes.json`, `archivo-dichos.json`) se excluyen completamente del bundle mediante compilación condicional (`import.meta.env.DEV`): solo operan en tu entorno local (`npm run dev`) y no existe ningún parámetro URL para abrirlos en GitHub Pages. La encuesta de apoyo al gobierno funciona en modo cliente (`localStorage`) al tratarse de un hosting estático.
+4. En producción pública (`npm run build`), la **Mesa de Redacción** y los archivos privados del worker (`candidatos.json`, `archivo-dichos.json`) se excluyen completamente del bundle mediante compilación condicional (`import.meta.env.DEV`): solo operan en tu entorno local (`npm run dev`) y no existe ningún parámetro URL para abrirlos en producción. La encuesta de apoyo al gobierno funciona en modo cliente (`localStorage`).
+
+### Despliegue en Vercel (con Noticias en Vivo `/api/rss`)
+
+Para contar con refresco automático de prensa chilena cada 15 minutos sin rebuilds:
+
+1. Importa el repositorio en **Vercel** (detecta Vite automáticamente mediante [`vercel.json`](vercel.json)).
+2. La función serverless [`api/rss.ts`](api/rss.ts) expone `GET /api/rss`, reutiliza el scraper político (`scrapearPrensaChilena`) y responde con caché CDN en el edge (`s-maxage=900, stale-while-revalidate=300`).
+3. En hosts puramente estáticos (como GitHub Pages) donde `/api/rss` no existe, la pestaña **Noticias** y el bloque de portada degradan automáticamente al snapshot `src/data/noticias-recientes.json`.
 
 ---
 

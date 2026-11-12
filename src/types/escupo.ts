@@ -65,6 +65,7 @@ export interface NoticiaScrapeada {
   bajada: string;
   medio: string;
   fecha: string;
+  publicadoEn?: string;
   url: string;
 }
 
