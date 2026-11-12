@@ -1,5 +1,51 @@
 [
   {
+    "id": "news-2026-11-12-cd6f58ff65__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-12-cd6f58ff65",
+      "titulo": "Kast criticó a Boric por viajar en crisis y ahora mantiene gira a Asia en pleno paro de camioneros",
+      "bajada": "Kast criticó a Boric por viajar en crisis y ahora mantiene gira a Asia en pleno paro de camioneros Novena Digital",
+      "medio": "Novena Digital",
+      "fecha": "2026-11-12",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTXN4MUFqSlhGQXdkZEZ4TFFJMDY2MWZ3RkZGaUtzSEZZZXhmUWx2OUptclBsRTZOcTFBSnFGejNLMjBHaWx3ZlpTY1pZdzdtTlN4X2dTNmQ5bEtUME1yZ3BYcXFUYXBIU1Q2Z2c1TnJYMmhROHY2b01hRWVNZk10M2p6N1Z3WFEyUkdlSGZQRmx6R01Fck1aLTFFZzZWdFEzUm9fZjREQVBEYWZ6bFoxdFVSajNMTU5uVlpFZGhQN2NwUQ?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 99,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "gira",
+      "asia",
+      "crisis",
+      "paro"
+    ],
+    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, asia, crisis, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, viaja, paro) frente a la postura original de \"condena\" emitida el 2023-07-18.",
+    "generadoEn": "2026-11-12",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
     "id": "news-2026-11-12-0e4117ffe7__dicho-giras-extranjero",
     "noticia": {
       "id": "news-2026-11-12-0e4117ffe7",
@@ -485,49 +531,6 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-12",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-09-02462b854e__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-09-02462b854e",
-      "titulo": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20",
-      "bajada": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20 El Desconcierto",
-      "medio": "El Desconcierto",
-      "fecha": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYV9uX3FZelFxYXFUOGFTTDh3ZFVYMEY1el9hMnlmZnhZMTltaXQxQkF0Tkw2MFl5OHl1cXRkV21Qa2lhTXZhTVA4Tmg2NWdYUDM0cThPaWIzV2stdUhtaXlSaGRnZlZIQzdHR240Rmd5T2RlTVlKdnhyY0IxbTZqNmdDMzJSMHBSc0pZbHROOGpRMnVieG5qQUM3VVVmNUtIamtNSGRRYkhiUWs0MVE3TlRYUWF2c0JtNWFWbjRGTlppSzZZRlZjVmpBVkljaWJvb05IX2ZWc0c?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 90,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "combustible",
-      "alza"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, alza). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
     "generadoEn": "2026-11-12",
     "metodoAnalisis": "motor-determinista"
   }

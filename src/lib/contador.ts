@@ -1,6 +1,22 @@
 import type { Escupo, CategoriaEscupo } from '../types/escupo';
 
 /**
+ * Obtiene la fecha actual en huso horario de Chile (`America/Santiago`) en formato `YYYY-MM-DD`,
+ * evitando desfasar el contador tras las 21:00 horas respecto a UTC.
+ *
+ * @param fecha Instante de referencia (por defecto, la hora actual).
+ * @returns Fecha local chilena en formato `YYYY-MM-DD`.
+ */
+export function obtenerFechaHoySantiago(fecha: Date = new Date()): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Santiago',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(fecha);
+}
+
+/**
  * Calcula la diferencia en días enteros entre dos fechas en formato YYYY-MM-DD.
  * @param fechaInicio Fecha inicial en formato YYYY-MM-DD
  * @param fechaFin Fecha final en formato YYYY-MM-DD

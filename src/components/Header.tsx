@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Cpu } from 'lucide-react';
+import { FileText, Cpu, Quote, BarChart3 } from 'lucide-react';
 
 export type VistaActiva = 'archivo' | 'redaccion';
 
@@ -8,6 +8,7 @@ interface HeaderProps {
   onCambiarVista: (vista: VistaActiva) => void;
   totalCandidatos: number;
   fechaEdicion: string;
+  mostrarRedaccion: boolean;
 }
 
 /**
@@ -18,6 +19,7 @@ export const Header: React.FC<HeaderProps> = ({
   onCambiarVista,
   totalCandidatos,
   fechaEdicion,
+  mostrarRedaccion,
 }) => {
   return (
     <header className="border-b border-[#dcd7cc] bg-[#f7f5f0]/95 backdrop-blur-sm sticky top-0 z-40">
@@ -40,7 +42,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onCambiarVista('archivo')}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
               vistaActiva === 'archivo'
                 ? 'bg-[#ffffff] text-[#141413] shadow-xs'
                 : 'text-[#4a4843] hover:text-[#141413]'
@@ -50,21 +52,40 @@ export const Header: React.FC<HeaderProps> = ({
             <span>Expediente</span>
           </button>
 
-          <button
-            type="button"
-            onClick={() => onCambiarVista('redaccion')}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
-              vistaActiva === 'redaccion'
-                ? 'bg-[#ffffff] text-[#141413] shadow-xs'
-                : 'text-[#4a4843] hover:text-[#141413]'
-            }`}
-          >
-            <Cpu className="w-3.5 h-3.5" aria-hidden="true" />
-            <span>Mesa de Redacción</span>
-            <span className="font-tabular text-[11px] px-1.5 py-0.5 rounded bg-[#141413]/10 text-[#141413]">
-              {totalCandidatos}
-            </span>
-          </button>
+          {!mostrarRedaccion ? (
+            <>
+              <a
+                href="#frases-bronce"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium text-[#4a4843] hover:text-[#141413] transition-colors whitespace-nowrap flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
+              >
+                <Quote className="w-3.5 h-3.5" aria-hidden="true" />
+                <span>Frases</span>
+              </a>
+              <a
+                href="#encuesta-gobierno"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium text-[#4a4843] hover:text-[#141413] transition-colors whitespace-nowrap flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
+              >
+                <BarChart3 className="w-3.5 h-3.5" aria-hidden="true" />
+                <span>Encuesta</span>
+              </a>
+            </>
+          ) : (
+            <button
+              type="button"
+              onClick={() => onCambiarVista('redaccion')}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
+                vistaActiva === 'redaccion'
+                  ? 'bg-[#ffffff] text-[#141413] shadow-xs'
+                  : 'text-[#4a4843] hover:text-[#141413]'
+              }`}
+            >
+              <Cpu className="w-3.5 h-3.5" aria-hidden="true" />
+              <span>Mesa de Redacción</span>
+              <span className="font-tabular text-[11px] px-1.5 py-0.5 rounded bg-[#141413]/10 text-[#141413]">
+                {totalCandidatos}
+              </span>
+            </button>
+          )}
         </nav>
       </div>
     </header>

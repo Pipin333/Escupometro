@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import datosEscupos from './data/escupos.json';
 import datosCandidatos from './data/candidatos.json';
 import datosNoticias from './data/noticias-recientes.json';
@@ -13,11 +13,16 @@ import type {
   NoticiaScrapeada,
 } from './types/escupo';
 import {
+  obtenerFechaHoySantiago,
   calcularDiasSinEscupo,
   calcularRecordHistorico,
   obtenerUltimoIncidente,
   filtrarIncidentes,
 } from './lib/contador';
+import {
+  determinarVistaInicial,
+  puedeAccederRedaccion,
+} from './lib/entorno-editor';
 import { Header, type VistaActiva } from './components/Header';
 import { MarcadorPortada } from './components/MarcadorPortada';
 import { ExpedienteDestacado } from './components/ExpedienteDestacado';
@@ -28,20 +33,54 @@ import { EncuestaGobierno } from './components/EncuestaGobierno';
 import { MesaRedaccion } from './components/MesaRedaccion';
 import { Footer } from './components/Footer';
 
+function leerContextoNavegador() {
+  if (typeof window === 'undefined') {
+    return { isDev: import.meta.env.DEV, search: '', hash: '' };
+  }
+  return {
+    isDev: import.meta.env.DEV,
+    search: window.location.search,
+    hash: window.location.hash,
+  };
+}
+
 export function App() {
   const [escupos, setEscupos] = useState<Escupo[]>(datosEscupos as Escupo[]);
-  const [vistaActiva, setVistaActiva] = useState<VistaActiva>('archivo');
+  const [mostrarRedaccion, setMostrarRedaccion] = useState<boolean>(() =>
+    puedeAccederRedaccion(leerContextoNavegador())
+  );
+  const [vistaActiva, setVistaActiva] = useState<VistaActiva>(() =>
+    determinarVistaInicial(leerContextoNavegador())
+  );
   const [categoria, setCategoria] = useState<CategoriaEscupo | 'todas'>('todas');
   const [busqueda, setBusqueda] = useState('');
+
+  useEffect(() => {
+    const actualizarPermiso = () => {
+      const contexto = leerContextoNavegador();
+      const habilitado = puedeAccederRedaccion(contexto);
+      setMostrarRedaccion(habilitado);
+      if (!habilitado) {
+        setVistaActiva('archivo');
+      } else if (determinarVistaInicial(contexto) === 'redaccion') {
+        setVistaActiva('redaccion');
+      }
+    };
+
+    window.addEventListener('hashchange', actualizarPermiso);
+    window.addEventListener('popstate', actualizarPermiso);
+    return () => {
+      window.removeEventListener('hashchange', actualizarPermiso);
+      window.removeEventListener('popstate', actualizarPermiso);
+    };
+  }, []);
 
   const candidatos = datosCandidatos as CandidatoContradiccion[];
   const noticiasRecientes = datosNoticias as NoticiaScrapeada[];
   const dichosHistoricos = datosDichos as DichoHistorico[];
   const frasesBronce = datosFrasesBronce as FraseBronce[];
 
-  const fechaHoy = useMemo(() => {
-    return new Date().toISOString().split('T')[0];
-  }, []);
+  const fechaHoy = useMemo(() => obtenerFechaHoySantiago(), []);
 
   const ultimoIncidente = useMemo(() => obtenerUltimoIncidente(escupos), [escupos]);
   const diasActuales = useMemo(() => calcularDiasSinEscupo(escupos, fechaHoy), [escupos, fechaHoy]);
@@ -66,10 +105,11 @@ export function App() {
         onCambiarVista={setVistaActiva}
         totalCandidatos={candidatos.length}
         fechaEdicion={fechaHoy}
+        mostrarRedaccion={mostrarRedaccion}
       />
 
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6">
-        {vistaActiva === 'archivo' ? (
+        {vistaActiva === 'archivo' || !mostrarRedaccion ? (
           <>
             <MarcadorPortada
               diasActuales={diasActuales}

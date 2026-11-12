@@ -71,6 +71,17 @@ Abre [http://localhost:5173](http://localhost:5173).
 
 ---
 
+## Despliegue en GitHub Pages
+
+El proyecto queda listo para publicarse en **GitHub Pages** con cualquier nombre de repositorio o dominio personalizado:
+
+1. Sube el código a GitHub (`git remote add origin ... && git push -u origin main`).
+2. En GitHub abre **Settings → Pages → Build and deployment → Source** y selecciona **GitHub Actions**.
+3. El workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) detecta automáticamente la ruta base del repositorio (`configure-pages`), corre las pruebas (`npm test`), compila (`npm run build`) y publica en Pages tanto en cada push a `main` como después de cada corrida exitosa del cron RSS (`worker-rss.yml`).
+4. En producción pública, la **Mesa de Redacción** permanece oculta para visitantes y se abre únicamente agregando `?editor=1` o `#redaccion` a la URL. La encuesta de apoyo al gobierno funciona en modo cliente (`localStorage`) al tratarse de un hosting estático.
+
+---
+
 ## 🐳 Ejecución con Docker
 
 ```bash
@@ -87,7 +98,11 @@ Abre [http://localhost:3000](http://localhost:3000).
 ```text
 contadorKast/
 ├── .github/workflows/
+│   ├── deploy-pages.yml          # Build y despliegue automático en GitHub Pages
 │   └── worker-rss.yml            # Cron automático RSS cada 2 horas
+├── public/
+│   ├── favicon.svg               # Ícono editorial de pestaña
+│   └── og-cover.jpg              # Tarjeta de vista previa (Open Graph / X)
 ├── pipeline/
 │   ├── imports/                  # Carpeta para exportaciones (.json, tweets.js, .csv)
 │   ├── lib/
@@ -103,10 +118,11 @@ contadorKast/
 │   ├── components/               # UI editorial (Expediente + Mesa de Redacción)
 │   ├── data/
 │   │   ├── archivo-dichos.json   # Base histórica de citas y posturas
+│   │   ├── frases-bronce.json    # Archivo de frases destacadas para el bronce
 │   │   ├── escupos.json          # Expedientes verificados y publicados
 │   │   ├── candidatos.json       # Cruces generados por el worker
 │   │   └── noticias-recientes.json
-│   ├── lib/                      # Lógica del contador y filtros
+│   ├── lib/                      # Contador horario Chile, encuesta local y control editorial
 │   ├── motor/
 │   │   ├── clasificador-dichos.ts # Clasificador automático de categoría, postura y conceptos
 │   │   └── detector.ts           # Motor determinista compartido (CLI y navegador)

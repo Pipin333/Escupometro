@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
+  obtenerFechaHoySantiago,
   calcularDiasEntreFechas,
   obtenerUltimoIncidente,
   calcularDiasSinEscupo,
@@ -85,5 +86,10 @@ describe('Lógica del Contador y Filtros de Escupos', () => {
 
     const busquedaInexistente = filtrarIncidentes(muestraMock, 'todas', 'inexistente');
     expect(busquedaInexistente.length).toBe(0);
+  });
+
+  it('calcula la fecha actual en huso horario America/Santiago sin adelantarse por UTC', () => {
+    const nocheEnChile = new Date('2026-11-13T01:30:00Z'); // 22:30 del 2026-11-12 en Chile (-03:00)
+    expect(obtenerFechaHoySantiago(nocheEnChile)).toBe('2026-11-12');
   });
 });
