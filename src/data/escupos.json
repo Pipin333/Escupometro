@@ -26,6 +26,60 @@
     "votosComunidad": 6240
   },
   {
+    "id": "recesion-tecnica-quiroz-2026",
+    "titulo": "Citaba a Jorge Quiroz contra el 'bajo crecimiento' vs. Su ministro Quiroz reconoce recesión técnica",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-11-11",
+    "diasSinEscupoPrevios": 1,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2025-03-20",
+      "rol": "Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras algunos celebran la mediocridad, economistas serios como Jorge Quiroz alertan sobre el bajo crecimiento, el alto déficit y el irresponsable aumento de la deuda pública. Chile puede mucho más que el gobierno incompetente que tiene.",
+      "fuenteUrl": "https://x.com/joseantoniokast/status/1902703354163130423",
+      "archivoUrl": "https://web.archive.org/web/20260112045629/https://x.com/joseantoniokast/status/1902703354163130423"
+    },
+    "presente": {
+      "fecha": "2026-11-11",
+      "medio": "Radio Universidad de Chile / CIPER Chile",
+      "titulo": "Ministro Jorge Quiroz reconoce por primera vez que Chile está técnicamente en recesión",
+      "descripcion": "En entrevista con Bloomberg, el ministro de Hacienda admitió que el país atraviesa 'técnicamente una recesión', tras acumular una contracción de 0,4% en 2026 y una desocupación que subió al 9,8%, superando el millón de personas sin empleo en el trimestre móvil julio-septiembre.",
+      "impacto": "El mismo economista al que Kast respaldaba en marzo de 2025 para denunciar 'bajo crecimiento y un gobierno incompetente' pasó a encabezar Hacienda y confirmar una recesión técnica.",
+      "fuenteUrl": "https://radio.uchile.cl/2026/11/11/un-contratiempo-pasajero-ministro-quiroz-reconoce-por-primera-vez-que-chile-esta-en-recesion/"
+    },
+    "veredictoSatirico": "Lo que en 2025 citaba como prueba de un 'gobierno incompetente', en 2026 su propio ministro citado en aquel tuit tuvo que bautizarlo como 'recesión técnica pasajera'.",
+    "votosComunidad": 0
+  },
+  {
+    "id": "steinert-embajada-paraguay-antipitutos-2026",
+    "titulo": "Bandera 'Antipitutos' en cargos públicos vs. Nombramiento de exministra Steinert en embajada en Paraguay",
+    "categoria": "nepotismo",
+    "fechaIncidente": "2026-11-10",
+    "diasSinEscupoPrevios": 13,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2021-06-02",
+      "rol": "Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Cumplir la palabra empeñada. Pitutos para parientes y amigos en cargos públicos. Malgastar fondos públicos. Influir para que medios de comunicación y justicia no investiguen. Temas que deben ser parte del debate público",
+      "fuenteUrl": "https://x.com/joseantoniokast/status/1400126410358988806",
+      "archivoUrl": "https://web.archive.org/web/20210602165627/https://twitter.com/joseantoniokast/status/1400126410358988806"
+    },
+    "presente": {
+      "fecha": "2026-11-10",
+      "medio": "Radio Universidad de Chile / CIPER Chile",
+      "titulo": "Designan a exministra Trinidad Steinert como agregada de seguridad en Paraguay tras 69 días en el gabinete",
+      "descripcion": "A casi seis meses de dejar el Ministerio de Seguridad Pública en el ajuste del 19 de mayo —y luego de descartarse un destino similar en Perú ante críticas políticas—, La Moneda nombró a la exministra como agregada de seguridad en la Embajada de Chile en Paraguay.",
+      "impacto": "Parlamentarios y sectores de oposición cuestionaron la creación del puesto diplomático como un 'premio de consuelo' tras su cuestionada salida del gabinete.",
+      "fuenteUrl": "https://radio.uchile.cl/2026/11/10/trinidad-steinert-asumira-como-agregada-de-seguridad-en-paraguay-a-meses-de-su-salida-del-gabinete/"
+    },
+    "veredictoSatirico": "Cambiar el combate frontal a los 'pitutos y malgasto público' por una agregaduría diplomática tras 69 días de gabinete puso a prueba la memoria del archivo Wayback.",
+    "votosComunidad": 0
+  },
+  {
     "id": "rebaja-condenas-abusadores-justicia-2026",
     "titulo": "'Jamás indultaría a un abusador de niños' vs. Decretos del Ministerio de Justicia que rebajaron penas a 56 reos",
     "categoria": "seguridad",
@@ -34,10 +88,10 @@
     "gravedad": "termocéfala",
     "pasado": {
       "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "rol": "Candidato Presidencial (Debate ANATEL 2025)",
       "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl"
+      "cita": "Jamás indultaría algún abusador de niño. Jamás.",
+      "fuenteUrl": "https://youtu.be/fUfJmxVgttA?t=1434"
     },
     "presente": {
       "fecha": "2026-10-28",
