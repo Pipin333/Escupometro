@@ -49,6 +49,55 @@
     "votosComunidad": 4120
   },
   {
+    "id": "zanja-fronteriza-colchane-solucion",
+    "titulo": "La 'zanja mágica' de 3 metros contra la inmigración vs. La realidad de tablones y pasos a pie",
+    "categoria": "seguridad",
+    "fechaIncidente": "2024-02-15",
+    "diasSinEscupoPrevios": 12,
+    "gravedad": "moderada",
+    "pasado": {
+      "fecha": "2021-10-18",
+      "rol": "Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Vamos a construir una zanja de 3 metros de ancho y 3 metros de profundidad en la frontera norte. Una medida simple, barata y efectiva para frenar en seco el ingreso clandestino y a las bandas de delincuentes.",
+      "fuenteUrl": "https://twitter.com/joseantoniokast"
+    },
+    "presente": {
+      "fecha": "2024-02-10",
+      "titulo": "Verificaciones en Colchane y límites técnicos de la infraestructura",
+      "descripcion": "Reportajes de terreno de CIPER y análisis de expertos demostraron que las zanjas existentes en Colchane eran sorteadas en minutos con tablones de madera, escalas o rodeando el foso por el desierto, evidenciando que una zanja sin personal permanente no detiene el flujo migratorio irregular.",
+      "impacto": "La bancada republicana debió moderar su propuesta hacia acuerdos bilaterales y mayor presupuesto operativo de FF.AA.",
+      "fuenteUrl": "https://ciperchile.cl/2022/02/15/las-zanjas-en-colchane-la-solucion-de-tres-gobiernos-que-no-freno-la-migracion-irregular/"
+    },
+    "veredictoSatirico": "La zanja infalible de 3 metros fue derrotada por un tablón de pino Oregón de $5.000 comprado en la ferretería de Pisiga.",
+    "votosComunidad": 3410
+  },
+  {
+    "id": "eliminar-ministerio-mujer-voltereta",
+    "titulo": "Decretar la eliminación del Ministerio de la Mujer a pedir perdón en televisión abierta",
+    "categoria": "libertades",
+    "fechaIncidente": "2021-12-07",
+    "diasSinEscupoPrevios": 15,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2021-09-24",
+      "rol": "Programa Presidencial (1ra Vuelta)",
+      "tipoMedio": "prensa",
+      "cita": "Eliminaremos el Ministerio de la Mujer y la Equidad de Género para reducir la burocracia política y evitar la ideología de género con dineros públicos.",
+      "fuenteUrl": "https://www.servel.cl"
+    },
+    "presente": {
+      "fecha": "2021-12-06",
+      "titulo": "Acto de rectificación y disculpas públicas en el Cerro San Cristóbal",
+      "descripcion": "Tras clasificar a segunda vuelta y enfrentar el rechazo mayoritario del electorado femenino, Kast convocó un acto para pedir perdón públicamente, retractarse por completo de la propuesta y garantizar la mantención del Ministerio de la Mujer con más presupuesto.",
+      "impacto": "El 'Plan para el Futuro de Chile' de segunda vuelta debió borrar formalmente la eliminación de la cartera.",
+      "fuenteUrl": "https://www.t13.cl/noticia/elecciones-2021/politica/kast-pide-perdon-y-recula-sobre-ministerio-de-la-mujer-06-12-2021"
+    },
+    "veredictoSatirico": "El escupo al Ministerio de la Mujer subió con fuerza en primera vuelta y cayó como balde de agua fría sobre el comando en el balotaje.",
+    "votosComunidad": 4670
+  },
+  {
     "id": "marcela-cubillos-uss-sueldo",
     "titulo": "Cruzada contra 'los pitutos millonarios' vs. Apoyo a Marcela Cubillos y su sueldo de $17 millones en la USS",
     "categoria": "nepotismo",
