@@ -32,32 +32,59 @@ const IMPORTS_DIR = path.join(ROOT_DIR, 'pipeline/imports');
 
 function parsearArgumentos(argv: string[]): OpcionesCliIngesta {
   const opciones: OpcionesCliIngesta = {
-    usuario: process.env.X_TARGET_USER?.trim() || 'joseantoniokast',
+    usuario:
+      process.env.npm_config_usuario?.trim() ||
+      process.env.X_TARGET_USER?.trim() ||
+      'joseantoniokast',
     urls: [],
     archivos: [],
     maxResultados: 500,
     maxPaginas: 10,
-    incluirTodo: false,
-    dryRun: false,
+    incluirTodo: process.env.npm_config_incluir_todo === 'true',
+    dryRun: process.env.npm_config_dry_run === 'true',
   };
+
+  if (process.env.npm_config_url?.trim()) {
+    opciones.urls.push(process.env.npm_config_url.trim());
+  }
+  if (process.env.npm_config_archivo?.trim()) {
+    opciones.archivos.push(
+      path.resolve(ROOT_DIR, process.env.npm_config_archivo.trim())
+    );
+  }
 
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     const valor = argv[i + 1];
 
-    if (arg === '--usuario' && valor) {
+    if (arg.startsWith('--usuario=')) {
+      const v = arg.slice('--usuario='.length).trim();
+      if (v) opciones.usuario = v;
+    } else if (arg === '--usuario' && valor) {
       opciones.usuario = valor;
       i += 1;
+    } else if (arg.startsWith('--url=')) {
+      const v = arg.slice('--url='.length).trim();
+      if (v) opciones.urls.push(v);
     } else if (arg === '--url' && valor) {
       opciones.urls.push(valor);
       i += 1;
+    } else if (arg.startsWith('--archivo=')) {
+      const v = arg.slice('--archivo='.length).trim();
+      if (v) opciones.archivos.push(path.resolve(ROOT_DIR, v));
     } else if (arg === '--archivo' && valor) {
       opciones.archivos.push(path.resolve(ROOT_DIR, valor));
       i += 1;
+    } else if (arg.startsWith('--max=')) {
+      const parsed = Number.parseInt(arg.slice('--max='.length), 10);
+      if (Number.isFinite(parsed) && parsed > 0) opciones.maxResultados = parsed;
     } else if (arg === '--max' && valor) {
       const parsed = Number.parseInt(valor, 10);
       if (Number.isFinite(parsed) && parsed > 0) opciones.maxResultados = parsed;
       i += 1;
+    } else if (arg.startsWith('--paginas=')) {
+      const parsed = Number.parseInt(arg.slice('--paginas='.length), 10);
+      if (Number.isFinite(parsed) && parsed > 0) opciones.maxPaginas = parsed;
     } else if (arg === '--paginas' && valor) {
       const parsed = Number.parseInt(valor, 10);
       if (Number.isFinite(parsed) && parsed > 0) opciones.maxPaginas = parsed;
@@ -66,6 +93,13 @@ function parsearArgumentos(argv: string[]): OpcionesCliIngesta {
       opciones.incluirTodo = true;
     } else if (arg === '--dry-run') {
       opciones.dryRun = true;
+    } else if (/^https?:\/\/(?:www\.)?(?:twitter\.com|x\.com)\//i.test(arg)) {
+      opciones.urls.push(arg);
+    } else if (
+      !arg.startsWith('-') &&
+      EXTENSIONES_SOPORTADAS.has(path.extname(arg).toLowerCase())
+    ) {
+      opciones.archivos.push(path.resolve(ROOT_DIR, arg));
     }
   }
 
@@ -121,7 +155,7 @@ async function ejecutarIngestaTweets(): Promise<void> {
     console.log('  2. X API v2 oficial: define X_BEARER_TOKEN en .env');
     console.log('  3. SocialData API: define SOCIALDATA_API_KEY en .env');
     console.log(
-      '  4. URL individual pública (oEmbed sin clave): npm run ingesta:tweets -- --url https://x.com/joseantoniokast/status/ID'
+      '  4. URL individual pública (oEmbed sin clave): npm run ingesta:tweets https://x.com/joseantoniokast/status/ID'
     );
     return;
   }

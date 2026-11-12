@@ -21,7 +21,7 @@ interface OpcionesWorker {
 
 function parsearOpcionesWorker(argv: string[]): OpcionesWorker {
   const envMinutos = Number.parseInt(
-    process.env.WORKER_INTERVAL_MINUTES ?? '',
+    process.env.npm_config_interval ?? process.env.WORKER_INTERVAL_MINUTES ?? '',
     10
   );
   let intervaloMinutos =
@@ -32,6 +32,11 @@ function parsearOpcionesWorker(argv: string[]): OpcionesWorker {
     const arg = argv[i];
     if (arg === '--watch') {
       watch = true;
+    } else if (arg.startsWith('--interval=')) {
+      const parsed = Number.parseInt(arg.slice('--interval='.length), 10);
+      if (Number.isFinite(parsed) && parsed > 0) {
+        intervaloMinutos = parsed;
+      }
     } else if (arg === '--interval' && argv[i + 1]) {
       const parsed = Number.parseInt(argv[i + 1], 10);
       if (Number.isFinite(parsed) && parsed > 0) {
