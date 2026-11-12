@@ -1,4 +1,6 @@
-import { scrapearPrensaChilena } from '../pipeline/scrapers/rss-prensa';
+import { scrapearPrensaChilena } from '../pipeline/scrapers/rss-prensa.js';
+
+export const maxDuration = 30;
 
 /**
  * Función serverless de Vercel para agregar feeds RSS políticos chilenos sin CORS

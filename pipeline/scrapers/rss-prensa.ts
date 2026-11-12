@@ -1,7 +1,7 @@
 import { XMLParser } from 'fast-xml-parser';
 import crypto from 'node:crypto';
-import type { NoticiaScrapeada } from '../../src/types/escupo';
-import { normalizarTexto } from '../../src/motor/detector';
+import type { NoticiaScrapeada } from '../../src/types/escupo.js';
+import { normalizarTexto } from '../../src/motor/detector.js';
 
 export interface FuenteRSS {
   nombre: string;
