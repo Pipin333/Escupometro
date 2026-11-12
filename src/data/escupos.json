@@ -1,5 +1,29 @@
 [
   {
+    "id": "mara-sedini-voceria-corrupcion",
+    "titulo": "La 'corrupción de asumir cargos no preparados' de Mara Sedini: de la lección moral en TV a durar 69 días como vocera",
+    "categoria": "nepotismo",
+    "fechaIncidente": "2024-11-05",
+    "diasSinEscupoPrevios": 9,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2023-04-12",
+      "rol": "Panelista TV / Cuadro Republicano",
+      "tipoMedio": "prensa",
+      "cita": "El primer y mayor acto de corrupción que un ser humano comete es aceptar un cargo para el cual no está preparado.",
+      "fuenteUrl": "https://www.youtube.com"
+    },
+    "presente": {
+      "fecha": "2024-11-05",
+      "titulo": "Salida abrupta de la vocería tras 69 días de tropiezos comunicacionales",
+      "descripcion": "Designada como ministra vocera sin ninguna experiencia previa en administración del Estado ni gestión pública. Tras apenas 69 días marcados por nulo manejo mediático, desmentidos diarios y crisis de vocería, debió renunciar a su cargo.",
+      "impacto": "Su propia frase del pasado se viralizó como el epitafio político de su gestión.",
+      "fuenteUrl": "https://elpais.com"
+    },
+    "veredictoSatirico": "Pocas veces la física cuántica salival operó con tanta precisión: definió el acto de corrupción en televisión abierta y procedió a ejecutarlo al pie de la letra.",
+    "votosComunidad": 5830
+  },
+  {
     "id": "caso-convenios-mauricio-ojeda",
     "titulo": "Guerra al 'Caso Convenios' vs. Desafuero del diputado republicano Mauricio Ojeda por $730 millones",
     "categoria": "gasto-publico",
