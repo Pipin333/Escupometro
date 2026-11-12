@@ -78,7 +78,7 @@ El proyecto queda listo para publicarse en **GitHub Pages** con cualquier nombre
 1. Sube el código a GitHub (`git remote add origin ... && git push -u origin main`).
 2. En GitHub abre **Settings → Pages → Build and deployment → Source** y selecciona **GitHub Actions**.
 3. El workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) detecta automáticamente la ruta base del repositorio (`configure-pages`), corre las pruebas (`npm test`), compila (`npm run build`) y publica en Pages tanto en cada push a `main` como después de cada corrida exitosa del cron RSS (`worker-rss.yml`).
-4. En producción pública, la **Mesa de Redacción** permanece oculta para visitantes y se abre únicamente agregando `?editor=1` o `#redaccion` a la URL. La encuesta de apoyo al gobierno funciona en modo cliente (`localStorage`) al tratarse de un hosting estático.
+4. En producción pública (`npm run build`), la **Mesa de Redacción** y los archivos del worker (`candidatos.json`, `noticias-recientes.json`, `archivo-dichos.json`) se excluyen completamente del bundle mediante compilación condicional (`import.meta.env.DEV`): solo operan en tu entorno local (`npm run dev`) y no existe ningún parámetro URL para abrirlos en GitHub Pages. La encuesta de apoyo al gobierno funciona en modo cliente (`localStorage`) al tratarse de un hosting estático.
 
 ---
 

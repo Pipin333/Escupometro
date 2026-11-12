@@ -27,15 +27,18 @@ describe('control de visibilidad de Mesa de Redacción', () => {
     ).toBe('archivo');
   });
 
-  it('habilita Mesa de Redacción en producción solo con ?editor=1 o #redaccion', () => {
+  it('rechaza ?editor=1 y #redaccion en producción para no exponer redacción fuera de dev', () => {
     expect(
       puedeAccederRedaccion({ isDev: false, search: '?editor=1', hash: '' })
-    ).toBe(true);
+    ).toBe(false);
+    expect(
+      puedeAccederRedaccion({ isDev: false, search: '?redaccion=1', hash: '' })
+    ).toBe(false);
     expect(
       determinarVistaInicial({ isDev: false, search: '', hash: '#redaccion' })
-    ).toBe('redaccion');
+    ).toBe('archivo');
     expect(
       puedeAccederRedaccion({ isDev: false, search: '', hash: '#editor' })
-    ).toBe(true);
+    ).toBe(false);
   });
 });

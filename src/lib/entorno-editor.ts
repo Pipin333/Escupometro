@@ -6,24 +6,14 @@ export interface ContextoNavegador {
 
 /**
  * Determina si la vista editorial interna (`Mesa de Redacción`) debe exponerse en la interfaz.
- * En desarrollo local siempre está activa; en despliegues estáticos públicos requiere
- * habilitarla explícitamente mediante `?editor=1`, `?redaccion=1` o `#redaccion`.
+ * Está habilitada únicamente en desarrollo local (`import.meta.env.DEV === true`),
+ * bloqueando cualquier desbloqueo por URL/hash en compilaciones de producción.
  *
  * @param contexto Parámetros de entorno y URL actual.
- * @returns `true` si el modo redacción está habilitado.
+ * @returns `true` únicamente en desarrollo local.
  */
 export function puedeAccederRedaccion(contexto: ContextoNavegador): boolean {
-  if (contexto.isDev) {
-    return true;
-  }
-
-  const params = new URLSearchParams(contexto.search);
-  if (params.get('editor') === '1' || params.get('redaccion') === '1') {
-    return true;
-  }
-
-  const hashLimpio = contexto.hash.toLowerCase();
-  return hashLimpio === '#redaccion' || hashLimpio === '#editor';
+  return contexto.isDev === true;
 }
 
 /**

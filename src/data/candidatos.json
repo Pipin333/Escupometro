@@ -315,52 +315,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-12-3f63bf496a__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-12-3f63bf496a",
-      "titulo": "De camioneros a pesqueros, feriantes y estudiantes: cómo el paro de transportistas ha ido sumando adherentes en todo el país",
-      "bajada": "Las alzas de los combustibles y el encarecimiento del costo de la vida terminaron por convertir una movilización de camioneros pequeños, medianos e independientes en un foco de descontento mucho más amplio, que convocó a la mayoría de quienes trabajan en rubros de transporte e incluso feriantes, pesqueros y estudiantes, que anunciaron una jornada de protesta para mañana. The post De camioneros a pesqueros, feriantes ",
-      "medio": "The Clinic",
-      "fecha": "2026-11-12",
-      "url": "https://www.theclinic.cl/2026/11/12/de-camioneros-a-pesqueros-feriantes-micros-y-estudiantes-como-el-paro-de-transportistas-ha-ido-sumando-adherentes-en-todo-el-pais/"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "camioneros",
-      "combustible",
-      "alza",
-      "paro",
-      "transporte"
-    ],
-    "explicacionMotor": "Coincidencia temática en 5 concepto(s) clave (camioneros, combustible, alza, paro, transporte). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-12",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-11-2dccb13bbe__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-11-2dccb13bbe",
@@ -531,6 +485,49 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-12",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-09-02462b854e__dicho-bencinas-impuestos",
+    "noticia": {
+      "id": "news-2026-11-09-02462b854e",
+      "titulo": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20",
+      "bajada": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20 El Desconcierto",
+      "medio": "El Desconcierto",
+      "fecha": "2026-11-09",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYV9uX3FZelFxYXFUOGFTTDh3ZFVYMEY1el9hMnlmZnhZMTltaXQxQkF0Tkw2MFl5OHl1cXRkV21Qa2lhTXZhTVA4Tmg2NWdYUDM0cThPaWIzV2stdUhtaXlSaGRnZlZIQzdHR240Rmd5T2RlTVlKdnhyY0IxbTZqNmdDMzJSMHBSc0pZbHROOGpRMnVieG5qQUM3VVVmNUtIamtNSGRRYkhiUWs0MVE3TlRYUWF2c0JtNWFWbjRGTlppSzZZRlZjVmpBVkljaWJvb05IX2ZWc0c?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
+      "conceptosClave": [
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 90,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "combustible",
+      "alza"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, alza). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
     "generadoEn": "2026-11-12",
     "metodoAnalisis": "motor-determinista"
   }

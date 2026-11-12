@@ -1,17 +1,11 @@
-import { useState, useMemo, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import datosEscupos from './data/escupos.json';
-import datosCandidatos from './data/candidatos.json';
-import datosNoticias from './data/noticias-recientes.json';
-import datosDichos from './data/archivo-dichos.json';
-import datosFrasesBronce from './data/frases-bronce.json';
 import type {
-  CandidatoContradiccion,
   CategoriaEscupo,
-  DichoHistorico,
   Escupo,
-  FraseBronce,
-  NoticiaScrapeada,
+  FraseBronce as FraseBronceTipo,
 } from './types/escupo';
+import datosFrasesBronce from './data/frases-bronce.json';
 import {
   obtenerFechaHoySantiago,
   calcularDiasSinEscupo,
@@ -30,8 +24,11 @@ import { FiltrosYBusqueda } from './components/FiltrosYBusqueda';
 import { HistorialEscupos } from './components/HistorialEscupos';
 import { FrasesBronce } from './components/FrasesBronce';
 import { EncuestaGobierno } from './components/EncuestaGobierno';
-import { MesaRedaccion } from './components/MesaRedaccion';
 import { Footer } from './components/Footer';
+
+const MesaRedaccionDev = import.meta.env.DEV
+  ? lazy(() => import('./components/MesaRedaccionDev'))
+  : null;
 
 function leerContextoNavegador() {
   if (typeof window === 'undefined') {
@@ -46,39 +43,32 @@ function leerContextoNavegador() {
 
 export function App() {
   const [escupos, setEscupos] = useState<Escupo[]>(datosEscupos as Escupo[]);
-  const [mostrarRedaccion, setMostrarRedaccion] = useState<boolean>(() =>
-    puedeAccederRedaccion(leerContextoNavegador())
-  );
+  const mostrarRedaccion = puedeAccederRedaccion({
+    isDev: import.meta.env.DEV,
+    search: '',
+    hash: '',
+  });
   const [vistaActiva, setVistaActiva] = useState<VistaActiva>(() =>
     determinarVistaInicial(leerContextoNavegador())
   );
+  const [totalCandidatosDev, setTotalCandidatosDev] = useState(0);
   const [categoria, setCategoria] = useState<CategoriaEscupo | 'todas'>('todas');
   const [busqueda, setBusqueda] = useState('');
 
   useEffect(() => {
-    const actualizarPermiso = () => {
-      const contexto = leerContextoNavegador();
-      const habilitado = puedeAccederRedaccion(contexto);
-      setMostrarRedaccion(habilitado);
-      if (!habilitado) {
-        setVistaActiva('archivo');
-      } else if (determinarVistaInicial(contexto) === 'redaccion') {
-        setVistaActiva('redaccion');
+    if (!import.meta.env.DEV) return;
+    let activo = true;
+    void import('./data/candidatos.json').then((modulo) => {
+      if (activo && Array.isArray(modulo.default)) {
+        setTotalCandidatosDev(modulo.default.length);
       }
-    };
-
-    window.addEventListener('hashchange', actualizarPermiso);
-    window.addEventListener('popstate', actualizarPermiso);
+    });
     return () => {
-      window.removeEventListener('hashchange', actualizarPermiso);
-      window.removeEventListener('popstate', actualizarPermiso);
+      activo = false;
     };
   }, []);
 
-  const candidatos = datosCandidatos as CandidatoContradiccion[];
-  const noticiasRecientes = datosNoticias as NoticiaScrapeada[];
-  const dichosHistoricos = datosDichos as DichoHistorico[];
-  const frasesBronce = datosFrasesBronce as FraseBronce[];
+  const frasesBronce = datosFrasesBronce as FraseBronceTipo[];
 
   const fechaHoy = useMemo(() => obtenerFechaHoySantiago(), []);
 
@@ -103,13 +93,13 @@ export function App() {
       <Header
         vistaActiva={vistaActiva}
         onCambiarVista={setVistaActiva}
-        totalCandidatos={candidatos.length}
+        totalCandidatos={totalCandidatosDev}
         fechaEdicion={fechaHoy}
         mostrarRedaccion={mostrarRedaccion}
       />
 
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6">
-        {vistaActiva === 'archivo' || !mostrarRedaccion ? (
+        {vistaActiva === 'archivo' || !mostrarRedaccion || !MesaRedaccionDev ? (
           <>
             <MarcadorPortada
               diasActuales={diasActuales}
@@ -135,13 +125,18 @@ export function App() {
             <EncuestaGobierno />
           </>
         ) : (
-          <MesaRedaccion
-            candidatosIniciales={candidatos}
-            noticiasRecientes={noticiasRecientes}
-            dichosHistoricos={dichosHistoricos}
-            escuposActuales={escupos}
-            onPublicarEscupo={handlePublicarEscupo}
-          />
+          <Suspense
+            fallback={
+              <div className="py-12 text-sm text-[#4a4843]">
+                Cargando Mesa de Redacción...
+              </div>
+            }
+          >
+            <MesaRedaccionDev
+              escuposActuales={escupos}
+              onPublicarEscupo={handlePublicarEscupo}
+            />
+          </Suspense>
         )}
       </main>
 
