@@ -8,6 +8,8 @@
     "build": "tsc && vite build",
     "test": "vitest run",
     "worker": "tsx pipeline/run-worker.ts",
+    "worker:watch": "tsx pipeline/run-worker.ts --watch",
+    "ingesta:tweets": "tsx pipeline/ingesta-tweets.ts",
     "preview": "vite preview"
   },
   "devDependencies": {

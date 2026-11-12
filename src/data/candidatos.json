@@ -403,94 +403,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-11-73b5c5b280__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-11-73b5c5b280",
-      "titulo": "No se logra acuerdo: Gremios de camioneros confirman que continúa el paro de forma indefinida",
-      "bajada": "No se logra acuerdo: Gremios de camioneros confirman que continúa el paro de forma indefinida CNN Chile",
-      "medio": "CNN Chile",
-      "fecha": "2026-11-11",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQ1Y2bkRPZDNDRVJ3UkJ4YmU3LW1JZjFNc19MWERNbThmejRWejdyOTJBRWJSMTJZSXdYY3ZTYmUzelhrSlNZcTBhUGc1MEpib280bURMVXNrd1gteWJleVB4bEtRMVVRZFB3dHl2YWt5OTJGd3dnTW1GdEs0SXFjSkxnUFNEQ05DTml5aGtZdVl0dFBJX19WVHhnMEpPVDBMbVM2aE5R?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 94,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "camioneros",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, paro, continua) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-12",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-11-196bcc364f__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-11-196bcc364f",
-      "titulo": "Kast viaja con amplia comitiva empresarial a China, Vietnam y Japón en busca de nuevas oportunidades comerciales",
-      "bajada": "Kast viaja con amplia comitiva empresarial a China, Vietnam y Japón en busca de nuevas oportunidades comerciales Diario Financiero",
-      "medio": "Diario Financiero",
-      "fecha": "2026-11-11",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZWFveUIycnJhX2lOWWtLeE90ZFJXTFZTTmdmM1pRLVdtMHV4NDRqZmxiMTNsQ0NfX3NvTFpJczNIOUx1alZ6RncydE9vUlNzTGtOZXB3SXFGWDgwQWk3SUwxMF91SnlRd3V3NS1WUXhaSExaNUdwemhNOGxhUjRySlkxTTA2RGx4dzgxVjVaY2loQUVvamZuU1psa1B5SXhGRzd1T2YyRlQzUmM5N1l2R0loZU9CUQ?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 90,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "comitiva",
-      "china",
-      "vietnam"
-    ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (comitiva, china, vietnam). El titular/bajada registra indicadores de ejecución contraria o conflicto (viaja, comitiva) frente a la postura original de \"condena\" emitida el 2023-07-18.",
-    "generadoEn": "2026-11-12",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-11-39bf44025f__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-11-39bf44025f",
@@ -530,6 +442,92 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro, continua) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-12",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-10-2a4d60e47b__dicho-bencinas-impuestos",
+    "noticia": {
+      "id": "news-2026-11-10-2a4d60e47b",
+      "titulo": "En medio del paro: Presidente Kast pide a camioneros \"pensar en Chile\"",
+      "bajada": "En medio del paro: Presidente Kast pide a camioneros \"pensar en Chile\" Mega.cl",
+      "medio": "Mega.cl",
+      "fecha": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRUVRNXhVNC1UX2lNa0p0TlNpYm9SQURpU0g0aEt1dmotaE5DQkdxZ0pfUmNLNDFXTmlVMGdjTmwzUTJvdjctUXB3UUJ4THVPWm44YzlPQkRkbFMzREVCTl9tYkQ2WVVyRU1uVUpaT0otdWtCMk5ScEt1aERVeUFQeFhqaWd2Ykw5YjIyU0x4cUhSVHdmLVJaTnhwM0o1THhaX3Z4Y9IBqgFBVV95cUxQTWRqR3BDX05PNXRBM0Y5dm5DczlWaU5fSUdWTlRPTzJtY3N3TTFFVVRlbW1kcWlSN0otXzlWQXJoYThoal9JOE1EMWZPN1M2dWhKcldnRWxWUTZDWThRMG51ZkNPNE9vSXhmejNWaVJneGNYQ05vRUZyUjY5a2MyYXdfOFdtdXlzYjIxeXRDaHBsV0k0aFdPS0I1VzRFcFZyZVBPRG9Cckg4QQ?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
+      "conceptosClave": [
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 90,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "camioneros",
+      "paro"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-12",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-09-02462b854e__dicho-bencinas-impuestos",
+    "noticia": {
+      "id": "news-2026-11-09-02462b854e",
+      "titulo": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20",
+      "bajada": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20 El Desconcierto",
+      "medio": "El Desconcierto",
+      "fecha": "2026-11-09",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYV9uX3FZelFxYXFUOGFTTDh3ZFVYMEY1el9hMnlmZnhZMTltaXQxQkF0Tkw2MFl5OHl1cXRkV21Qa2lhTXZhTVA4Tmg2NWdYUDM0cThPaWIzV2stdUhtaXlSaGRnZlZIQzdHR240Rmd5T2RlTVlKdnhyY0IxbTZqNmdDMzJSMHBSc0pZbHROOGpRMnVieG5qQUM3VVVmNUtIamtNSGRRYkhiUWs0MVE3TlRYUWF2c0JtNWFWbjRGTlppSzZZRlZjVmpBVkljaWJvb05IX2ZWc0c?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
+      "conceptosClave": [
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 90,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "combustible",
+      "alza"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, alza). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
     "generadoEn": "2026-11-12",
     "metodoAnalisis": "motor-determinista"
   }

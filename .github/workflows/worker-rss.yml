@@ -1,0 +1,50 @@
+name: Monitoreo RSS y Detección de Contradicciones
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rastreo-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar ingesta de tweets (si hay exportaciones o secretos)
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          SOCIALDATA_API_KEY: ${{ secrets.SOCIALDATA_API_KEY }}
+        run: npm run ingesta:tweets
+
+      - name: Ejecutar worker de RSS contra archivo histórico
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LLM_API_BASE: ${{ secrets.LLM_API_BASE }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: npm run worker
+
+      - name: Guardar nuevos candidatos detectados
+        run: |
+          if [ -n "$(git status --porcelain src/data/candidatos.json src/data/noticias-recientes.json src/data/archivo-dichos.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add src/data/candidatos.json src/data/noticias-recientes.json src/data/archivo-dichos.json
+            git commit -m "chore(datos): actualizar monitoreo RSS y candidatos detectados"
+            git push
+          else
+            echo "Sin cambios nuevos en candidatos ni archivo histórico."
+          fi

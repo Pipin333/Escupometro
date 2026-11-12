@@ -8,19 +8,26 @@ Archivo documental de coherencia política que contrasta declaraciones pasadas d
 
 El proyecto separa la **lectura documental pública** de un **pipeline automatizado de recolección y cruce semántico**:
 
-1. **Scrapers de Prensa Chilena (`pipeline/scrapers/rss-prensa.ts`)**:
+1. **Ingesta Histórica de Tweets y Clasificador (`pipeline/ingesta-tweets.ts`, `pipeline/scrapers/x-ingesta.ts`, `src/motor/clasificador-dichos.ts`)**:
+   - Consolida citas históricas en `src/data/archivo-dichos.json` sin duplicados e infiere automáticamente rol según fecha, categoría temática (`impuestos`, `nepotismo`, `seguridad`, `constitucion`, `gasto-publico`, `libertades`), postura normativa (`prohibe`, `condena`, `promete`, `exige`) y conceptos clave.
+   - Fuentes soportadas sin eludir controles de acceso: exportaciones locales (`.json`, `tweets.js`, `.csv`) en `pipeline/imports/`, X API v2 (`X_BEARER_TOKEN`), SocialData API (`SOCIALDATA_API_KEY`) o hidratación pública individual vía oEmbed (`--url`).
+
+2. **Scrapers de Prensa Chilena (`pipeline/scrapers/rss-prensa.ts`)**:
    - Consulta feeds RSS en vivo de Google Noticias Chile, CIPER Chile, The Clinic y El Ciudadano.
    - Normaliza titulares, fechas, medios y URLs exactas filtrando notas políticas relevantes.
 
-2. **Motor de Detección de Contradicciones (`src/motor/detector.ts`)**:
-   - Cruza noticias recientes contra la base histórica indexada en `src/data/archivo-dichos.json`.
+3. **Motor de Detección de Contradicciones (`src/motor/detector.ts`)**:
+   - Cruza noticias recientes contra toda la base histórica indexada en `src/data/archivo-dichos.json`.
    - Evalúa equivalencia temática (expansión léxica de dominio y raíces) más choque de polaridad/postura (`condena`, `prohibe`, `exige`, `promete` frente a hechos posteriores), asignando un puntaje de `0` a `99%` y clasificación del choque (*Doble estándar*, *Promesa incumplida*, *Inversión de postura*, *Bumerán retórico*).
    - Soporta verificación opcional con LLM compatible con OpenAI/Ollama (`pipeline/motor/llm-verifier.ts`) mediante variables de entorno, funcionando 100% gratis y determinista cuando no hay API key configurada.
 
-3. **Mesa de Redacción Integrada (`src/components/MesaRedaccion.tsx`)**:
+4. **Vigilancia Continua RSS y Cron (`.github/workflows/worker-rss.yml`, `npm run worker:watch`)**:
+   - Permite dejar el worker vigilando feeds RSS cada *N* minutos (`WORKER_INTERVAL_MINUTES`, por defecto 30) o correr automáticamente cada 2 horas en GitHub Actions comparando cada actualización de prensa contra todos los tweets almacenados.
+
+5. **Mesa de Redacción Integrada (`src/components/MesaRedaccion.tsx`)**:
    - Vista privada/operativa dentro de la propia web para revisar los candidatos generados por el worker (`src/data/candidatos.json`), probar noticias en vivo contra el motor, editar el titular/veredicto y exportar `escupos.json` actualizado.
 
-4. **Expediente Editorial (`src/components/MarcadorPortada.tsx`, `ExpedienteDestacado.tsx`, `HistorialEscupos.tsx`)**:
+6. **Expediente Editorial (`src/components/MarcadorPortada.tsx`, `ExpedienteDestacado.tsx`, `HistorialEscupos.tsx`)**:
    - Diseño claro tipo periódico y expediente de archivo público con tipografía auto-hospedada (`Source Serif 4`, `Public Sans`, `JetBrains Mono`).
 
 ---
@@ -38,10 +45,13 @@ El proyecto separa la **lectura documental pública** de un **pipeline automatiz
 # 1. Instalar dependencias
 npm install
 
-# 2. Ejecutar el worker/scraper para actualizar noticias recientes y candidatos
+# 2. (Opcional) Ingestar tweets históricos desde `pipeline/imports/` o APIs configuradas en `.env`
+npm run ingesta:tweets
+
+# 3. Ejecutar el worker/scraper para actualizar noticias recientes y candidatos
 npm run worker
 
-# 3. Levantar la aplicación web en desarrollo
+# 4. Levantar la aplicación web en desarrollo
 npm run dev
 ```
 
@@ -54,7 +64,9 @@ Abre [http://localhost:5173](http://localhost:5173).
 | `npm run dev` | Inicia el servidor de desarrollo Vite |
 | `npm run build` | Compila TypeScript y genera el bundle de producción |
 | `npm test` | Ejecuta la suite de pruebas unitarias con Vitest |
+| `npm run ingesta:tweets` | Clasifica e incorpora tweets históricos en `src/data/archivo-dichos.json` desde `pipeline/imports/`, APIs o `--url` |
 | `npm run worker` | Ejecuta el scraper RSS y el motor de contradicciones para actualizar `candidatos.json` y `noticias-recientes.json` |
+| `npm run worker:watch` | Mantiene el monitoreo RSS continuo en intervalos configurables (`--interval <min>` o `WORKER_INTERVAL_MINUTES`) |
 | `npm run preview` | Sirve localmente la build de producción |
 
 ---
@@ -74,12 +86,19 @@ Abre [http://localhost:3000](http://localhost:3000).
 
 ```text
 contadorKast/
+├── .github/workflows/
+│   └── worker-rss.yml            # Cron automático RSS cada 2 horas
 ├── pipeline/
+│   ├── imports/                  # Carpeta para exportaciones (.json, tweets.js, .csv)
+│   ├── lib/
+│   │   └── env.ts                # Lector liviano de `.env` local
 │   ├── motor/
 │   │   └── llm-verifier.ts       # Verificador opcional con LLM (OpenAI / Ollama / local)
 │   ├── scrapers/
-│   │   └── rss-prensa.ts         # Scraper RSS de prensa chilena
-│   └── run-worker.ts             # Orquestador CLI del worker
+│   │   ├── rss-prensa.ts         # Scraper RSS de prensa chilena
+│   │   └── x-ingesta.ts          # Adaptadores de ingesta histórica (local, X v2, SocialData, oEmbed)
+│   ├── ingesta-tweets.ts         # CLI de ingesta y deduplicación de tweets históricos
+│   └── run-worker.ts             # Orquestador CLI y modo `--watch` RSS
 ├── src/
 │   ├── components/               # UI editorial (Expediente + Mesa de Redacción)
 │   ├── data/
@@ -88,7 +107,9 @@ contadorKast/
 │   │   ├── candidatos.json       # Cruces generados por el worker
 │   │   └── noticias-recientes.json
 │   ├── lib/                      # Lógica del contador y filtros
-│   ├── motor/                    # Motor determinista compartido (CLI y navegador)
+│   ├── motor/
+│   │   ├── clasificador-dichos.ts # Clasificador automático de categoría, postura y conceptos
+│   │   └── detector.ts           # Motor determinista compartido (CLI y navegador)
 │   └── types/
 ├── PRODUCT.md
 ├── DESIGN.md
