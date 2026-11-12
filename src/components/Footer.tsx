@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             Hecho con memoria histórica y leyes inmutables de la física.
           </span>
           <div className="flex items-center gap-4">
-            <span className="text-slate-400">Chile, 2024</span>
+            <span className="text-slate-400">Chile, 2026</span>
           </div>
         </div>
       </div>
