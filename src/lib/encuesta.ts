@@ -156,3 +156,119 @@ export function guardarEncuestaLocal(estado: EstadoEncuesta): void {
     // Almacenamiento bloqueado en navegación privada
   }
 }
+
+export interface RespuestaEncuestaGlobal {
+  configurada: boolean;
+  conteos: Record<OpcionEncuesta, number>;
+  actualizadoEn: string | null;
+}
+
+function normalizarConteosApi(raw: unknown): Record<OpcionEncuesta, number> | null {
+  if (!raw || typeof raw !== 'object') return null;
+  const obj = raw as Record<string, unknown>;
+  const aprueba = Number(obj.aprueba);
+  const desaprueba = Number(obj.desaprueba);
+  const neutral = Number(obj.neutral);
+
+  if (
+    !Number.isFinite(aprueba) ||
+    !Number.isFinite(desaprueba) ||
+    !Number.isFinite(neutral) ||
+    aprueba < 0 ||
+    desaprueba < 0 ||
+    neutral < 0
+  ) {
+    return null;
+  }
+
+  return {
+    aprueba: Math.floor(aprueba),
+    desaprueba: Math.floor(desaprueba),
+    neutral: Math.floor(neutral),
+  };
+}
+
+/**
+ * Consulta los conteos globales compartidos desde `/api/encuesta`.
+ * Retorna `null` si el backend global no está disponible o configurado.
+ *
+ * @param fetchImpl Implementación de fetch inyectable para pruebas.
+ * @returns Conteos globales o `null` para mantener modo local.
+ */
+export async function cargarEncuestaGlobal(
+  fetchImpl: typeof fetch = fetch
+): Promise<RespuestaEncuestaGlobal | null> {
+  try {
+    const resp = await fetchImpl('./api/encuesta', {
+      headers: { Accept: 'application/json' },
+    });
+    if (!resp.ok) return null;
+
+    const payload = (await resp.json()) as {
+      configurada?: unknown;
+      conteos?: unknown;
+      actualizadoEn?: unknown;
+    };
+
+    const conteos = normalizarConteosApi(payload.conteos);
+    if (payload.configurada !== true || !conteos) {
+      return null;
+    }
+
+    return {
+      configurada: true,
+      conteos,
+      actualizadoEn:
+        typeof payload.actualizadoEn === 'string' ? payload.actualizadoEn : null,
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Envía un voto al endpoint global `/api/encuesta` y devuelve los totales actualizados.
+ * Retorna `null` si el backend global no está disponible.
+ *
+ * @param opcion Opción elegida por el lector.
+ * @param votoAnterior Opción previa del mismo navegador, si existía.
+ * @param fetchImpl Implementación de fetch inyectable para pruebas.
+ * @returns Totales globales actualizados o `null` si falla.
+ */
+export async function enviarVotoGlobal(
+  opcion: OpcionEncuesta,
+  votoAnterior: OpcionEncuesta | null,
+  fetchImpl: typeof fetch = fetch
+): Promise<RespuestaEncuestaGlobal | null> {
+  try {
+    const resp = await fetchImpl('./api/encuesta', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({ opcion, votoAnterior }),
+    });
+    if (!resp.ok) return null;
+
+    const payload = (await resp.json()) as {
+      configurada?: unknown;
+      conteos?: unknown;
+      actualizadoEn?: unknown;
+    };
+
+    const conteos = normalizarConteosApi(payload.conteos);
+    if (payload.configurada !== true || !conteos) {
+      return null;
+    }
+
+    return {
+      configurada: true,
+      conteos,
+      actualizadoEn:
+        typeof payload.actualizadoEn === 'string' ? payload.actualizadoEn : null,
+    };
+  } catch {
+    return null;
+  }
+}

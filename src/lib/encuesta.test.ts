@@ -1,7 +1,9 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import {
   calcularResumenEncuesta,
+  cargarEncuestaGlobal,
   crearEstadoInicialEncuesta,
+  enviarVotoGlobal,
   registrarVotoEncuesta,
 } from './encuesta';
 
@@ -34,5 +36,25 @@ describe('encuesta de apoyo al gobierno', () => {
       total: 1,
       porcentajes: { aprueba: 100, desaprueba: 0, neutral: 0 },
     });
+  });
+
+  it('sincroniza encuesta global cuando /api/encuesta está configurada y degrada a null si no', async () => {
+    const fetchNoConfig = vi.fn().mockResolvedValue({ ok: false, status: 503 }) as unknown as typeof fetch;
+    expect(await cargarEncuestaGlobal(fetchNoConfig)).toBeNull();
+
+    const fetchOk = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        configurada: true,
+        conteos: { aprueba: 12, desaprueba: 45, neutral: 3 },
+        actualizadoEn: '2026-11-12T18:50:00Z',
+      }),
+    }) as unknown as typeof fetch;
+
+    const globalResp = await cargarEncuestaGlobal(fetchOk);
+    expect(globalResp?.conteos).toEqual({ aprueba: 12, desaprueba: 45, neutral: 3 });
+
+    const postResp = await enviarVotoGlobal('desaprueba', null, fetchOk);
+    expect(postResp?.configurada).toBe(true);
   });
 });

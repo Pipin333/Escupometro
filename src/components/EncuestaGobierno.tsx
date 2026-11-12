@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import { BarChart3, CheckCircle2, RotateCcw } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { BarChart3, CheckCircle2, Globe2, RotateCcw } from 'lucide-react';
 import type { OpcionEncuesta } from '../types/escupo';
 import {
   calcularResumenEncuesta,
+  cargarEncuestaGlobal,
   crearEstadoInicialEncuesta,
+  enviarVotoGlobal,
   guardarEncuestaLocal,
   leerEncuestaLocal,
   registrarVotoEncuesta,
@@ -41,15 +43,56 @@ const OPCIONES_ENCUESTA: ReadonlyArray<{
  */
 export const EncuestaGobierno: React.FC = () => {
   const [estado, setEstado] = useState<EstadoEncuesta>(() => leerEncuestaLocal());
+  const [modoGlobal, setModoGlobal] = useState(false);
+  const [enviando, setEnviando] = useState(false);
   const resumen = calcularResumenEncuesta(estado.conteos);
 
-  const manejarVoto = (opcion: OpcionEncuesta) => {
-    const actualizado = registrarVotoEncuesta(estado, opcion);
-    setEstado(actualizado);
-    guardarEncuestaLocal(actualizado);
+  useEffect(() => {
+    let activo = true;
+    void cargarEncuestaGlobal().then((globalResp) => {
+      if (!activo || !globalResp) return;
+      setModoGlobal(true);
+      setEstado((prev) => ({
+        ...prev,
+        conteos: globalResp.conteos,
+        actualizadoEn: globalResp.actualizadoEn,
+      }));
+    });
+    return () => {
+      activo = false;
+    };
+  }, []);
+
+  const manejarVoto = async (opcion: OpcionEncuesta) => {
+    if (estado.votoUsuario === opcion || enviando) return;
+    const votoAnterior = estado.votoUsuario;
+    const optimista = registrarVotoEncuesta(estado, opcion);
+    setEstado(optimista);
+    guardarEncuestaLocal(optimista);
+
+    if (!modoGlobal) return;
+
+    setEnviando(true);
+    try {
+      const globalResp = await enviarVotoGlobal(opcion, votoAnterior);
+      if (globalResp) {
+        setEstado((prev) => {
+          const sincronizado: EstadoEncuesta = {
+            ...prev,
+            conteos: globalResp.conteos,
+            actualizadoEn: globalResp.actualizadoEn,
+          };
+          guardarEncuestaLocal(sincronizado);
+          return sincronizado;
+        });
+      }
+    } finally {
+      setEnviando(false);
+    }
   };
 
   const reiniciarEncuesta = () => {
+    if (modoGlobal) return;
     const limpio = crearEstadoInicialEncuesta();
     setEstado(limpio);
     guardarEncuestaLocal(limpio);
@@ -67,6 +110,12 @@ export const EncuestaGobierno: React.FC = () => {
             <div className="inline-flex items-center gap-1.5 font-tabular text-xs uppercase tracking-[0.12em] text-[#4a4843] font-semibold">
               <BarChart3 className="w-3.5 h-3.5 text-[#b91c1c]" aria-hidden="true" />
               <span>Pulso de lectores</span>
+              {modoGlobal && (
+                <span className="inline-flex items-center gap-1 ml-1 px-2 py-0.5 rounded-full bg-[#efeae0] text-[#141413] text-[10px] tracking-normal normal-case">
+                  <Globe2 className="w-3 h-3 text-[#b91c1c]" aria-hidden="true" />
+                  Global en vivo
+                </span>
+              )}
             </div>
             <h2
               id="titulo-encuesta-gobierno"
@@ -75,7 +124,9 @@ export const EncuestaGobierno: React.FC = () => {
               Encuesta de apoyo al gobierno
             </h2>
             <p className="text-sm text-[#4a4843] max-w-[65ch]">
-              ¿Cómo evalúas la gestión actual del gobierno de José Antonio Kast? Los votos se guardan localmente en este navegador como consulta abierta de lectores.
+              {modoGlobal
+                ? '¿Cómo evalúas la gestión actual del gobierno de José Antonio Kast? Votación abierta en tiempo real entre todos los lectores.'
+                : '¿Cómo evalúas la gestión actual del gobierno de José Antonio Kast? Los votos se guardan localmente en este navegador como consulta abierta de lectores.'}
             </p>
           </div>
 
@@ -100,7 +151,8 @@ export const EncuestaGobierno: React.FC = () => {
                 key={opcion.id}
                 type="button"
                 aria-pressed={seleccionada}
-                onClick={() => manejarVoto(opcion.id)}
+                disabled={enviando}
+                onClick={() => void manejarVoto(opcion.id)}
                 className={`text-left p-4 rounded-lg border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
                   seleccionada
                     ? 'border-[#141413] bg-[#f7f5f0]'
@@ -149,7 +201,7 @@ export const EncuestaGobierno: React.FC = () => {
               : 'Selecciona una opción para emitir tu voto.'}
           </span>
 
-          {resumen.total > 0 && (
+          {!modoGlobal && resumen.total > 0 && (
             <button
               type="button"
               onClick={reiniciarEncuesta}
