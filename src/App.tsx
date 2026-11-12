@@ -24,6 +24,7 @@ import { FiltrosYBusqueda } from './components/FiltrosYBusqueda';
 import { HistorialEscupos } from './components/HistorialEscupos';
 import { FrasesBronce } from './components/FrasesBronce';
 import { EncuestaGobierno } from './components/EncuestaGobierno';
+import { PaginaLegal } from './components/PaginaLegal';
 import { Footer } from './components/Footer';
 
 const MesaRedaccionDev = import.meta.env.DEV
@@ -88,6 +89,16 @@ export function App() {
     setEscupos((prev) => [nuevo, ...prev.filter((item) => item.id !== nuevo.id)]);
   };
 
+  const abrirLegal = () => {
+    setVistaActiva('legal');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const volverAlArchivo = () => {
+    setVistaActiva('archivo');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#f7f5f0] text-[#141413]">
       <Header
@@ -99,7 +110,9 @@ export function App() {
       />
 
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6">
-        {vistaActiva === 'archivo' || !mostrarRedaccion || !MesaRedaccionDev ? (
+        {vistaActiva === 'legal' ? (
+          <PaginaLegal onVolverArchivo={volverAlArchivo} />
+        ) : vistaActiva === 'archivo' || !mostrarRedaccion || !MesaRedaccionDev ? (
           <>
             <MarcadorPortada
               diasActuales={diasActuales}
@@ -140,7 +153,7 @@ export function App() {
         )}
       </main>
 
-      <Footer />
+      <Footer onAbrirLegal={abrirLegal} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FileText, Cpu, Quote, BarChart3 } from 'lucide-react';
 
-export type VistaActiva = 'archivo' | 'redaccion';
+export type VistaActiva = 'archivo' | 'redaccion' | 'legal';
 
 interface HeaderProps {
   vistaActiva: VistaActiva;
@@ -56,6 +56,7 @@ export const Header: React.FC<HeaderProps> = ({
             <>
               <a
                 href="#frases-bronce"
+                onClick={() => onCambiarVista('archivo')}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium text-[#4a4843] hover:text-[#141413] transition-colors whitespace-nowrap flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
               >
                 <Quote className="w-3.5 h-3.5" aria-hidden="true" />
@@ -63,6 +64,7 @@ export const Header: React.FC<HeaderProps> = ({
               </a>
               <a
                 href="#encuesta-gobierno"
+                onClick={() => onCambiarVista('archivo')}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium text-[#4a4843] hover:text-[#141413] transition-colors whitespace-nowrap flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
               >
                 <BarChart3 className="w-3.5 h-3.5" aria-hidden="true" />
