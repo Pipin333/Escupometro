@@ -1,48 +1,72 @@
 import React from 'react';
-import { PlusCircle, ShieldAlert } from 'lucide-react';
+import { FileText, Cpu } from 'lucide-react';
+
+export type VistaActiva = 'archivo' | 'redaccion';
 
 interface HeaderProps {
-  onAbrirReporte: () => void;
+  vistaActiva: VistaActiva;
+  onCambiarVista: (vista: VistaActiva) => void;
+  totalCandidatos: number;
+  fechaEdicion: string;
 }
 
 /**
- * Cabecera institucional satírica con advertencia de riesgo de gravedad.
+ * Cabecera editorial tipo periódico y expediente de archivo público.
  */
-export const Header: React.FC<HeaderProps> = ({ onAbrirReporte }) => {
+export const Header: React.FC<HeaderProps> = ({
+  vistaActiva,
+  onCambiarVista,
+  totalCandidatos,
+  fechaEdicion,
+}) => {
   return (
-    <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-40">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 flex-shrink-0">
-            <ShieldAlert className="w-5 h-5" aria-hidden="true" />
-          </div>
-          <div className="min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs font-mono uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20 whitespace-nowrap">
-                Física Política Cuántica
-              </span>
-              <span className="text-xs text-slate-400 hidden sm:inline whitespace-nowrap">
-                Boletín de Trayectoria Salival
-              </span>
-            </div>
-            <h1 className="text-base sm:text-lg font-bold text-slate-100 truncate">
-              Contador de Escupos al Cielo
+    <header className="border-b border-[#dcd7cc] bg-[#f7f5f0]/95 backdrop-blur-sm sticky top-0 z-40">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="min-w-0">
+          <div className="flex items-baseline gap-3">
+            <h1 className="font-editorial text-xl sm:text-2xl font-bold tracking-[-0.02em] text-[#141413] whitespace-nowrap">
+              El Contador del Escupo
             </h1>
+            <span className="font-tabular text-xs text-[#4a4843] hidden md:inline whitespace-nowrap">
+              Edición {fechaEdicion}
+            </span>
           </div>
+          <p className="text-xs sm:text-sm text-[#4a4843]">
+            Registro documental de declaraciones pasadas frente a hechos actuales
+          </p>
         </div>
 
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <nav aria-label="Navegación principal" className="flex items-center gap-1 border border-[#dcd7cc] bg-[#efeae0] p-1 rounded-lg self-start sm:self-auto flex-shrink-0">
           <button
             type="button"
-            onClick={onAbrirReporte}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium bg-amber-500 text-slate-950 hover:bg-amber-400 active:scale-95 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 whitespace-nowrap shadow-sm shadow-amber-500/20"
+            onClick={() => onCambiarVista('archivo')}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
+              vistaActiva === 'archivo'
+                ? 'bg-[#ffffff] text-[#141413] shadow-xs'
+                : 'text-[#4a4843] hover:text-[#141413]'
+            }`}
           >
-            <PlusCircle className="w-4 h-4" aria-hidden="true" />
-            <span>Denunciar Contradicción</span>
+            <FileText className="w-3.5 h-3.5" aria-hidden="true" />
+            <span>Expediente</span>
           </button>
-        </div>
+
+          <button
+            type="button"
+            onClick={() => onCambiarVista('redaccion')}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
+              vistaActiva === 'redaccion'
+                ? 'bg-[#ffffff] text-[#141413] shadow-xs'
+                : 'text-[#4a4843] hover:text-[#141413]'
+            }`}
+          >
+            <Cpu className="w-3.5 h-3.5" aria-hidden="true" />
+            <span>Mesa de Redacción</span>
+            <span className="font-tabular text-[11px] px-1.5 py-0.5 rounded bg-[#141413]/10 text-[#141413]">
+              {totalCandidatos}
+            </span>
+          </button>
+        </nav>
       </div>
-      <div className="h-1 w-full hazard-stripes opacity-70" aria-hidden="true" />
     </header>
   );
 };

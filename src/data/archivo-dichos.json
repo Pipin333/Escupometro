@@ -1,0 +1,118 @@
+[
+  {
+    "id": "dicho-giras-extranjero",
+    "fecha": "2023-07-18",
+    "rol": "Líder de la Oposición",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+    "fuenteUrl": "https://x.com/joseantoniokast",
+    "categoria": "gasto-publico",
+    "postura": "condena",
+    "conceptosClave": ["gira", "viaje", "europa", "asia", "china", "vietnam", "extranjero", "crisis", "moneda", "presidente", "paro"]
+  },
+  {
+    "id": "dicho-indulto-abusadores",
+    "fecha": "2025-12-10",
+    "rol": "Candidato Presidencial (Debate ANATEL)",
+    "tipoMedio": "debate",
+    "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+    "fuenteUrl": "https://www.anatel.cl",
+    "categoria": "seguridad",
+    "postura": "prohibe",
+    "conceptosClave": ["indulto", "rebaja", "condena", "pena", "abusador", "pederasta", "violador", "justicia", "rabat", "reos", "carcel"]
+  },
+  {
+    "id": "dicho-bencinas-impuestos",
+    "fecha": "2022-06-14",
+    "rol": "Ex Candidato Presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+    "fuenteUrl": "https://x.com/joseantoniokast",
+    "categoria": "impuestos",
+    "postura": "exige",
+    "conceptosClave": ["bencina", "combustible", "alza", "impuesto", "camioneros", "paro", "transporte", "diesel", "precio", "bencinazo"]
+  },
+  {
+    "id": "dicho-cargos-preparados-sedini",
+    "fecha": "2024-06-15",
+    "rol": "Panelista en Sin Filtros / Cuadro Republicano",
+    "tipoMedio": "prensa",
+    "cita": "El primer y mayor acto de corrupción que un ser humano comete es aceptar un cargo para el cual no está preparado.",
+    "fuenteUrl": "https://www.ellibero.cl",
+    "categoria": "nepotismo",
+    "postura": "condena",
+    "conceptosClave": ["cargo", "corrupcion", "preparado", "vocera", "segegob", "renuncia", "sedini", "gabinete", "ministra", "inexperiencia"]
+  },
+  {
+    "id": "dicho-fundaciones-corrupcion",
+    "fecha": "2023-06-28",
+    "rol": "Líder Partido Republicano",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "El escándalo de las fundaciones es la punta del iceberg de la corrupción. No puede haber impunidad ni defensas corporativas. Caiga quien caiga, los que se robaron la plata de los chilenos deben terminar presos.",
+    "fuenteUrl": "https://x.com/joseantoniokast",
+    "categoria": "gasto-publico",
+    "postura": "condena",
+    "conceptosClave": ["fundaciones", "convenios", "fraude", "fisco", "desafuero", "corrupcion", "ojeda", "trato directo", "millones"]
+  },
+  {
+    "id": "dicho-sueldos-elite",
+    "fecha": "2021-11-04",
+    "rol": "Candidato Presidencial",
+    "tipoMedio": "debate",
+    "cita": "En Chile hay una élite de políticos apernados con sueldos exorbitantes e injustificables que se ríen en la cara de los trabajadores que se sacan la mugre a fin de mes. Eso se tiene que acabar.",
+    "fuenteUrl": "https://www.anatel.cl",
+    "categoria": "nepotismo",
+    "postura": "condena",
+    "conceptosClave": ["sueldo", "millonario", "apernado", "pituto", "uss", "cubillos", "universidad", "asesor", "operador", "municipio"]
+  },
+  {
+    "id": "dicho-recursos-fiscales-sagrados",
+    "fecha": "2022-03-15",
+    "rol": "Líder Republicano",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "Los recursos de los chilenos son sagrados. Quien use recursos fiscales para beneficio propio o de su familia está cometiendo una traición ética inaceptable.",
+    "fuenteUrl": "https://x.com/joseantoniokast",
+    "categoria": "gasto-publico",
+    "postura": "prohibe",
+    "conceptosClave": ["bencina", "tarjeta", "congreso", "fiscal", "familia", "urruticoechea", "devolucion", "viatico", "asignacion"]
+  },
+  {
+    "id": "dicho-china-comunismo-onu",
+    "fecha": "2021-10-02",
+    "rol": "Programa Presidencial",
+    "tipoMedio": "prensa",
+    "cita": "Propondremos la salida de Chile del Consejo de Derechos Humanos de la ONU y marcaremos distancia firme frente a regímenes autoritarios y dictaduras comunistas que violan libertades.",
+    "fuenteUrl": "https://www.servel.cl",
+    "categoria": "libertades",
+    "postura": "condena",
+    "conceptosClave": ["china", "vietnam", "comunista", "comunismo", "beijing", "xi jinping", "onu", "tratado", "soberania", "comitiva"]
+  },
+  {
+    "id": "dicho-desempleo-crecimiento",
+    "fecha": "2024-08-19",
+    "rol": "Líder de la Oposición",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "La incapacidad económica del gobierno tiene al país estancado y destruyendo empleos. Con orden y sentido común vamos a recuperar la inversión y el trabajo de las familias chilenas desde el primer día.",
+    "fuenteUrl": "https://x.com/joseantoniokast",
+    "categoria": "impuestos",
+    "postura": "promete",
+    "conceptosClave": ["desempleo", "empleo", "cesantia", "economia", "crecimiento", "ajuste", "inversion", "quiroz", "reforma", "jpmorgan"]
+  },
+  {
+    "id": "dicho-constitucion-80",
+    "fecha": "2020-10-15",
+    "rol": "Líder Partido Republicano",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "La Constitución del 80 nos dio los 40 años más prósperos de nuestra historia. Rechazo con orgullo y fuerza. Cambiarla es rendirse ante el chantaje de la izquierda violenta.",
+    "fuenteUrl": "https://x.com/joseantoniokast",
+    "categoria": "constitucion",
+    "postura": "prohibe",
+    "conceptosClave": ["constitucion", "reforma", "consejo", "rechazo", "a favor", "carta magna", "plebiscito"]
+  }
+]

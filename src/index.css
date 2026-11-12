@@ -2,57 +2,80 @@
 
 @layer base {
   :root {
-    --color-bg-deep: #090d16;
-    --color-surface: #111827;
-    --color-surface-hover: #1f2937;
-    --color-border: #374151;
-    --color-danger: #ef4444;
-    --color-warning: #f59e0b;
-    --color-success: #10b981;
+    --paper: #f7f5f0;
+    --surface: #ffffff;
+    --surface-subtle: #efeae0;
+    --ink: #141413;
+    --ink-muted: #4a4843;
+    --rule: #dcd7cc;
+    --accent: #b91c1c;
+    --accent-soft: #fef2f2;
+    --verified: #166534;
+    --verified-soft: #f0fdf4;
+  }
+
+  html {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: 'Public Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
-    background-color: var(--color-bg-deep);
-    color: #f3f4f6;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--paper);
+    color: var(--ink);
     min-height: 100vh;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #141413;
+    color: #f7f5f0;
+  }
+
+  /* Scrollbar editorial limpio */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--paper);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c8c2b5;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8f897d;
   }
 }
 
-/* Patrón de rayas de peligro industrial */
-.hazard-stripes {
-  background: repeating-linear-gradient(
-    -45deg,
-    #f59e0b,
-    #f59e0b 16px,
-    #111827 16px,
-    #111827 32px
-  );
+.font-editorial {
+  font-family: 'Source Serif 4', Georgia, serif;
 }
 
-.hazard-stripes-danger {
-  background: repeating-linear-gradient(
-    -45deg,
-    #ef4444,
-    #ef4444 16px,
-    #111827 16px,
-    #111827 32px
-  );
+.font-ui {
+  font-family: 'Public Sans', system-ui, -apple-system, sans-serif;
 }
 
-/* Display de 7 segmentos / LED industrial */
-.digital-display {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  text-shadow: 0 0 20px rgba(239, 68, 68, 0.7), 0 0 40px rgba(239, 68, 68, 0.4);
+.font-tabular {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
 }
 
-.digital-display-amber {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  text-shadow: 0 0 20px rgba(245, 158, 11, 0.7), 0 0 40px rgba(245, 158, 11, 0.4);
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-/* Respeto riguroso a usuarios con sensibilidad a movimiento */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
