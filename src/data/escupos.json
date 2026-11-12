@@ -1,5 +1,103 @@
 [
   {
+    "id": "caso-convenios-mauricio-ojeda",
+    "titulo": "Guerra al 'Caso Convenios' vs. Desafuero del diputado republicano Mauricio Ojeda por $730 millones",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2024-10-02",
+    "diasSinEscupoPrevios": 14,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2023-06-28",
+      "rol": "Líder Partido Republicano",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "El escándalo de las fundaciones es la punta del iceberg de la corrupción. No puede haber impunidad ni defensas corporativas. Caiga quien caiga, los que se robaron la plata de los chilenos deben terminar presos.",
+      "fuenteUrl": "https://twitter.com/joseantoniokast"
+    },
+    "presente": {
+      "fecha": "2024-09-30",
+      "titulo": "Corte Suprema ratifica desafuero de Mauricio Ojeda por fraude al fisco",
+      "descripcion": "El diputado de la bancada republicana Mauricio Ojeda fue desaforado por la Corte Suprema por su vinculación al fraude de más de $730 millones en la arista 'Manicure' del Caso Convenios (fundaciones Folab y Educc), entregando a la Fiscalía su teléfono destruido aduciendo que 'su hijo lo rompió jugando'.",
+      "impacto": "La Fiscalía solicitó penas efectivas de cárcel para el parlamentario por fraude reiterado al fisco, soborno y cohecho.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2024/09/30/corte-suprema-ratifica-desafuero-de-diputado-mauricio-ojeda-por-caso-manicure.shtml"
+    },
+    "veredictoSatirico": "El escupo al cielo contra el Caso Convenios dio una vuelta orbital completa y le cayó en la cara al diputado de su propia bancada... con el celular destrozado de yapa.",
+    "votosComunidad": 4120
+  },
+  {
+    "id": "marcela-cubillos-uss-sueldo",
+    "titulo": "Cruzada contra 'los pitutos millonarios' vs. Apoyo a Marcela Cubillos y su sueldo de $17 millones en la USS",
+    "categoria": "nepotismo",
+    "fechaIncidente": "2024-10-27",
+    "diasSinEscupoPrevios": 25,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2021-11-04",
+      "rol": "Candidato Presidencial",
+      "tipoMedio": "debate",
+      "cita": "En Chile hay una élite de políticos apernados con sueldos exorbitantes e injustificables que se ríen en la cara de los trabajadores que se sacan la mugre a fin de mes. Eso se tiene que acabar.",
+      "fuenteUrl": "https://www.anatel.cl"
+    },
+    "presente": {
+      "fecha": "2024-09-25",
+      "titulo": "Defensa matizada del sueldo de $17 millones y apoyo en Las Condes",
+      "descripcion": "Tras revelarse que Marcela Cubillos cobraba $17 millones mensuales brutos en la USS incluso viviendo en Madrid, Kast admitió que 'era un sueldo para algo más que hacer clases', pero Republicanos respaldó su candidatura en Las Condes, sufriendo una derrota histórica ante Catalina San Martín.",
+      "impacto": "Derrota electoral en el bastión histórico de la derecha y apertura de investigación penal por la Fiscalía.",
+      "fuenteUrl": "https://ciperchile.cl/2024/09/23/marcela-cubillos-y-su-sueldo-de-17-millones-en-la-universidad-san-sebastian/"
+    },
+    "veredictoSatirico": "La meritocracia republicana: 17 millones de pesos al mes por mandar correos desde España con financiamiento del CAE estatal.",
+    "votosComunidad": 3890
+  },
+  {
+    "id": "bencina-urruticoechea-republicanos",
+    "titulo": "'Cuidar cada peso de los chilenos' vs. La tarjeta de bencina fiscal de la esposa de Cristóbal Urruticoechea",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2024-04-18",
+    "diasSinEscupoPrevios": 11,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2022-03-15",
+      "rol": "Líder Republicano",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Los recursos de los chilenos son sagrados. Quien use recursos fiscales para beneficio propio o de su familia está cometiendo una traición ética inaceptable.",
+      "fuenteUrl": "https://twitter.com/joseantoniokast"
+    },
+    "presente": {
+      "fecha": "2024-04-12",
+      "titulo": "CIPER revela 5 años de cargas de bencina fiscal para uso familiar",
+      "descripcion": "Investigación periodística de CIPER destapó que Tamara Küpfer, entonces esposa del diputado republicano Cristóbal Urruticoechea, utilizó la tarjeta del Congreso para cargar combustible fiscal en al menos 38 ocasiones. El parlamentario tuvo que devolver $7 millones y renunciar a la tienda.",
+      "impacto": "Urruticoechea debió restituir los millones mediante un cheque a la Cámara de Diputados.",
+      "fuenteUrl": "https://ciperchile.cl/2024/04/11/esposa-de-diputado-urruticoechea-republicano-uso-tarjetas-de-bencina-del-congreso-durante-cinco-anos/"
+    },
+    "veredictoSatirico": "El 'achique del Estado' consistía en achicar las reservas de la bencinera a costa de la tarjeta del Congreso.",
+    "votosComunidad": 3250
+  },
+  {
+    "id": "caso-hermosilla-chadwick-redes",
+    "titulo": "'No le debemos nada a nadie' vs. El blindaje quebrado de Andrés Chadwick en el Caso Audios",
+    "categoria": "seguridad",
+    "fechaIncidente": "2024-09-12",
+    "diasSinEscupoPrevios": 8,
+    "gravedad": "moderada",
+    "pasado": {
+      "fecha": "2021-11-18",
+      "rol": "Candidato Presidencial",
+      "tipoMedio": "prensa",
+      "cita": "Nosotros no pertenecemos a la rosca de los abogados de pasillo ni a los operadores de influencias de Sanhattan. Tenemos las manos limpias.",
+      "fuenteUrl": "https://www.latercera.com"
+    },
+    "presente": {
+      "fecha": "2024-09-10",
+      "titulo": "Presión a Andrés Chadwick para transparentar chats con Luis Hermosilla",
+      "descripcion": "Ante los chats destapados por Ciper entre Luis Hermosilla y Andrés Chadwick que evidenciaron tráfico de influencias y transferencias millonarias, Kast debió salir a exigir públicamente que Chadwick hablara para frenar el daño colateral a toda la oposición.",
+      "impacto": "Chadwick renunció a la presidencia de la junta directiva de la USS y a la UDI.",
+      "fuenteUrl": "https://www.theclinic.cl/2024/09/10/kast-presiona-chadwick-caso-hermosilla/"
+    },
+    "veredictoSatirico": "Las manos limpias duran hasta que el teléfono de Hermosilla enciende la pantalla en WhatsApp.",
+    "votosComunidad": 2980
+  },
+  {
     "id": "constitucion-a-favor",
     "titulo": "De 'La Constitución no se toca' a redactar y pedir A Favor para cambiarla entera",
     "categoria": "constitucion",
@@ -19,7 +117,7 @@
       "titulo": "Defensa cerrada del texto del Consejo Constitucional Republicano",
       "descripcion": "Tras liderar con mayoría absoluta el Consejo Constitucional y redactar una propuesta de más de 400 artículos, Kast convocó en cadena nacional a votar 'A Favor' para derogar la Constitución del 80.",
       "impacto": "La propuesta republicana fue rechazada masivamente por 55.7% del electorado.",
-      "fuenteUrl": "https://www.latercera.com"
+      "fuenteUrl": "https://www.latercera.com/politica/noticia/a-favor-de-chile-jose-antonio-kast-inicia-campana-por-el-texto-constitucional/M7K42V7B3JFPZLXWOPB7T7Y66M/"
     },
     "veredictoSatirico": "El escupo subió hasta la estratósfera en 2020 y cayó con la fuerza de un meteorito sobre las urnas en diciembre de 2023.",
     "votosComunidad": 1420
@@ -49,31 +147,6 @@
     "votosComunidad": 2890
   },
   {
-    "id": "pitutos-operadores-politicos",
-    "titulo": "Guerra a la 'Grasa del Estado' vs. Red de contratos en municipios amigos",
-    "categoria": "nepotismo",
-    "fechaIncidente": "2024-04-12",
-    "diasSinEscupoPrevios": 12,
-    "gravedad": "moderada",
-    "pasado": {
-      "fecha": "2021-08-14",
-      "rol": "Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Vamos a entrar con machete al Estado. Se acabó la fiesta de los apitutados, los familiares de políticos viviendo a costa de los impuestos de los chilenos y los sueldos millonarios.",
-      "fuenteUrl": "https://twitter.com/joseantoniokast"
-    },
-    "presente": {
-      "fecha": "2024-03-20",
-      "titulo": "Contrataciones cruzadas y asesores del Partido Republicano en municipios",
-      "descripcion": "Reportajes de Ciper y El Mostrador evidenciaron millonarios sueldos de asesores clave, ex candidatos y familiares de la directiva republicana contratados por trato directo en corporaciones municipales aliadas.",
-      "impacto": "El machete resultó ser para cortar la cinta de inauguración de nuevas oficinas de operadores.",
-      "fuenteUrl": "https://www.ciperchile.cl"
-    },
-    "veredictoSatirico": "El machete contra la grasa estatal no cortó ni mantequilla cuando se trató de los amigos de la casa.",
-    "votosComunidad": 980
-  },
-  {
     "id": "punta-peuco-mano-dura",
     "titulo": "Tolerancia Cero y Cárcel sin Beneficios vs. 'Punta Peuco no es una cárcel común'",
     "categoria": "seguridad",
@@ -93,7 +166,7 @@
       "titulo": "Enmiendas republicanas para liberar a reos de Punta Peuco mayores de 75 años",
       "descripcion": "La bancada republicana presentó y defendió una enmienda constitucional a la medida para otorgar arresto domiciliario a criminales de lesa humanidad recluidos en el penal especial de Punta Peuco.",
       "impacto": "La 'mano dura' se volvió guante de seda ante condenados por tortura, degollamiento y desaparición.",
-      "fuenteUrl": "https://www.elmostrador.cl"
+      "fuenteUrl": "https://www.elmostrador.cl/noticias/pais/2023/08/30/republicanos-defienden-enmienda-que-beneficiaria-a-reos-de-punta-peuco/"
     },
     "veredictoSatirico": "Mano dura para el que roba un celular; indulto con alfombra roja para Krassnoff.",
     "votosComunidad": 3120
@@ -121,29 +194,5 @@
     },
     "veredictoSatirico": "Principios inquebrantables hasta que llega la transferencia electrónica de la Tesorería General.",
     "votosComunidad": 845
-  },
-  {
-    "id": "onu-agenda-globalista",
-    "titulo": "'¡Fuera de la ONU y foros extranjeros!' vs. Giras internacionales a pedir bendiciones en CPAC",
-    "categoria": "libertades",
-    "fechaIncidente": "2024-02-24",
-    "diasSinEscupoPrevios": 7,
-    "gravedad": "leve",
-    "pasado": {
-      "fecha": "2021-10-02",
-      "rol": "Programa Presidencial",
-      "tipoMedio": "prensa",
-      "cita": "Propondremos la salida de Chile del Consejo de Derechos Humanos de la ONU y revisaremos los tratados internacionales que amenazan la soberanía nacional.",
-      "fuenteUrl": "https://www.servel.cl"
-    },
-    "presente": {
-      "fecha": "2024-02-23",
-      "titulo": "Asistencia a cumbres políticas internacionales en Washington, Budapest y Madrid",
-      "descripcion": "Viajes frecuentes para coordinar estrategias globales con dirigentes de extrema derecha internacional en foros multilaterales de EE.UU. y Europa.",
-      "impacto": "El antiglobalismo parece aplicar solo cuando el pasaje no lo paga la fundación anfitriona.",
-      "fuenteUrl": "https://www.emol.com"
-    },
-    "veredictoSatirico": "El globalismo es malo cuando habla de derechos humanos, pero fantástico cuando hay selfie con Trump y Orbán.",
-    "votosComunidad": 1650
   }
 ]
