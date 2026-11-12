@@ -66,7 +66,7 @@ Abre [http://localhost:5173](http://localhost:5173).
 | `npm run build` | Compila TypeScript y genera el bundle de producción |
 | `npm test` | Ejecuta la suite de pruebas unitarias con Vitest |
 | `npm run ingesta:tweets` | Clasifica e incorpora tweets históricos en `src/data/archivo-dichos.json` desde `pipeline/imports/`, APIs, `--url` o `--wayback` |
-| `npm run ingesta:wayback` | Descubre e hidrata tweets históricos desde Wayback Machine (`--desde`, `--hasta`, `--max`, `--dry-run`) |
+| `npm run ingesta:wayback` | Descubre e hidrata tweets históricos desde Wayback Machine (`--desde`, `--hasta`, `--prefijo`, `--max`, `--dry-run`, con respaldo oEmbed para eras modernas) |
 | `npm run ingesta:debates` | Transcribe debates/entrevistas de YouTube con `yt-dlp` (o `--whisper` local) enlazando cada cita a `?t=<seg>` |
 | `npm run worker` | Ejecuta el scraper RSS y el motor de contradicciones para actualizar `candidatos.json` y `noticias-recientes.json` |
 | `npm run worker:watch` | Mantiene el monitoreo RSS continuo en intervalos configurables (`--interval <min>` o `WORKER_INTERVAL_MINUTES`) |

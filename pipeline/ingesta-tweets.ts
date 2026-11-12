@@ -28,6 +28,7 @@ interface OpcionesCliIngesta {
   hasta?: string;
   resumeKey?: string;
   pausaMs?: number;
+  prefijoId?: string;
   incluirTodo: boolean;
   dryRun: boolean;
 }
@@ -50,6 +51,7 @@ function parsearArgumentos(argv: string[]): OpcionesCliIngesta {
     desde: leerValorNpm('desde'),
     hasta: leerValorNpm('hasta'),
     resumeKey: leerValorNpm('resume_key'),
+    prefijoId: leerValorNpm('prefijo'),
     incluirTodo: process.env.npm_config_incluir_todo === 'true',
     dryRun: process.env.npm_config_dry_run === 'true',
   };
@@ -124,6 +126,11 @@ function parsearArgumentos(argv: string[]): OpcionesCliIngesta {
     } else if (arg.startsWith('--pausa-ms=')) {
       const parsed = Number.parseInt(arg.slice('--pausa-ms='.length), 10);
       if (Number.isFinite(parsed) && parsed >= 0) opciones.pausaMs = parsed;
+    } else if (arg.startsWith('--prefijo=')) {
+      opciones.prefijoId = arg.slice('--prefijo='.length).trim() || undefined;
+    } else if (arg === '--prefijo' && valor) {
+      opciones.prefijoId = valor.trim();
+      i += 1;
     } else if (arg === '--incluir-todo') {
       opciones.incluirTodo = true;
     } else if (arg === '--dry-run') {
@@ -222,6 +229,7 @@ async function ejecutarIngestaTweets(): Promise<void> {
       maxTweets: limiteWayback,
       resumeKey: opciones.resumeKey,
       pausaMs: opciones.pausaMs,
+      prefijoId: opciones.prefijoId,
       idsExistentes,
     });
 

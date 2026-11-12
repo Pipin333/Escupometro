@@ -7,6 +7,7 @@
       "bajada": "Kast criticó a Boric por viajar en crisis y ahora mantiene gira a Asia en pleno paro de camioneros Novena Digital",
       "medio": "Novena Digital",
       "fecha": "2026-11-12",
+      "publicadoEn": "2026-11-12T20:20:31.000Z",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTXN4MUFqSlhGQXdkZEZ4TFFJMDY2MWZ3RkZGaUtzSEZZZXhmUWx2OUptclBsRTZOcTFBSnFGejNLMjBHaWx3ZlpTY1pZdzdtTlN4X2dTNmQ5bEtUME1yZ3BYcXFUYXBIU1Q2Z2c1TnJYMmhROHY2b01hRWVNZk10M2p6N1Z3WFEyUkdlSGZQRmx6R01Fck1aLTFFZzZWdFEzUm9fZjREQVBEYWZ6bFoxdFVSajNMTU5uVlpFZGhQN2NwUQ?oc=5"
     },
     "dicho": {
@@ -46,51 +47,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-12-0e4117ffe7__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-12-0e4117ffe7",
-      "titulo": "Presidencia confirma gira de Kast a Asia en medio de paro de transportistas y caso Rabat",
-      "bajada": "Presidencia confirma gira de Kast a Asia en medio de paro de transportistas y caso Rabat Insular FM",
-      "medio": "Insular FM",
-      "fecha": "2026-11-12",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNnZCbWt1SU5NenhpOFc0M05XeDhKWE5qcWZIdDEzeWhVTGFhMzYxRmpMNWFRVTVNWEh4UDNXbzdrUzdGSXBBMUUwQ0VvZndYd01ISHU4R2sxUUhHMk9MUVhMTGZZTi04SGJkMnVoUEJZVjZwZmg2SnVKV3Q5aWtXZ0w4aF9XWXk2Yl9PNG5vLUdvS3g4T0NidTFPTUZWM3FNLTFVTnlfSTdmUHhyZ0tmVks4aEU?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 99,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "gira",
-      "asia",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (gira, asia, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, medio, paro) frente a la postura original de \"condena\" emitida el 2023-07-18.",
-    "generadoEn": "2026-11-12",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-11-bb20bfeb2e__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-11-bb20bfeb2e",
@@ -98,52 +54,8 @@
       "bajada": "Gobierno retira proyecto para contener alza de combustibles y prepara cambios en medio del paro de camioneros La Tribuna",
       "medio": "La Tribuna",
       "fecha": "2026-11-11",
+      "publicadoEn": "2026-11-11T19:32:49.000Z",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaExPLXpRc01tTGFRWjhYcktmRFh2VVptMndJbzNuR2duTjE1YndoSWUteTRrWnBLUk52ZGtRYTdCLXQwTF9hUVQ5ZzV3ZTZxMDFyOXk5UXFPU3cxZHpfREQ4a3Z0SWF5b0xYQWt3QkRZVTF4aFc5cjRlbVlYZjRpYVRRSzNtcEV1VlNTSTBTMWRuaWgxYkdLdWZ2eGNsd0I3TGF5V2h0ZF9Bc251UFNCd2dseTdSSUZGSVVZS2M5ZEFDbzFDRU5oUm9tbjI5WDNlQzVLLUUzZS1WOUc0b3JLRWJFT205YjZLcjBTUFRKbknSAfgBQVVfeXFMT0lCMkVfczFzUnFPbF9FMFBNdDdaRGp5VFRFUklSVWZ4TEkybENDRTNsQ004UDBqOThQeWhlYXdKa0hBS0JodU5MSllLWEtTb2Z5Z1k5QWMxVnlwVUJWTVBNME1BdEkzb05EdXJseW1lWlpkRnN2YW1JUV9jS18wMkZUaFp1SFNndFUxV2gwcmRhTVdGTnRCTHdreHhfU3p1OGpuNnFUX2ZFWTZBY1R5V3ZXZnpoS1dSSTBkcGlsaGpURVVaV0I1RE83Nm5lZzlpVno2TzNpWFRPZ1liWVBpS0dXUGRxWGthakxkcnNnX3ZWZzMxMTdmWkk?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 99,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "combustible",
-      "alza",
-      "camioneros",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (combustible, alza, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-12",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-10-303e6d88bc__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-10-303e6d88bc",
-      "titulo": "Presidente Kast reconoce tensión con camioneros en medio de paro por alza de combustibles",
-      "bajada": "Presidente Kast reconoce tensión con camioneros en medio de paro por alza de combustibles Revista Digital Minera REDIMIN",
-      "medio": "Revista Digital Minera REDIMIN",
-      "fecha": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRjZheUxZTEhNaU9nd0NRVlBwWUl5MXhjQV92WVdVV3hGRjFJNUM0ZmxfaEwzQm9ibFJoNlh4OFVPNkNuTzlidlhUaVJUZHlKZDViS1phS1FBQnNQaTNycUctX0FsLXhGNnVmZE5ZdmVUaEhGLUQyNXY0REJDZXl0S3JVdGJFYjJlWFJ2bW9hSE5hUHMxaG9oZ3Q2aFdHMXpiSy1yWjJUaVpPYnl0eDYtVjl3?oc=5"
     },
     "dicho": {
       "id": "dicho-bencinas-impuestos",
@@ -188,6 +100,7 @@
       "bajada": "La entrada Gobierno amenaza a camioneros con despejar carreteras si continúa paro; exministra Steinert es nombrada agregada de Seguridad en embajada en Paraguay, y rebaja de condena a mujer agresora salpica a Rabat se publicó primero en CIPER Chile .",
       "medio": "CIPER Chile",
       "fecha": "2026-11-10",
+      "publicadoEn": "2026-11-10T23:31:31.000Z",
       "url": "https://www.ciperchile.cl/2026/11/10/radar-10-11-26/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=radar-10-11-26"
     },
     "dicho": {
@@ -225,14 +138,15 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-12-11c4a23a7d__dicho-bencinas-impuestos",
+    "id": "news-2026-11-10-303e6d88bc__dicho-bencinas-impuestos",
     "noticia": {
-      "id": "news-2026-11-12-11c4a23a7d",
-      "titulo": "Los camioneros mantienen sus protestas pese a que el Gobierno de Kast congela el precio de los combustibles",
-      "bajada": "Los camioneros mantienen sus protestas pese a que el Gobierno de Kast congela el precio de los combustibles EL PAÍS",
-      "medio": "EL PAÍS",
-      "fecha": "2026-11-12",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNcElrZ3BJcVFrNXd2T2JTRXlXS014clBJcnotNnQ1OWxZbl95N0J4RXU4Qng0b01xLUJtVkN2RDJtSlhZX1c2X3k0Wmd0dW56b21wb2hsRURnU0tlQ3pCbnpQZXVOblFMNXFMUWpDa1hXSUE5NXQ5bGdoY2ZlQ2RDT2NtU1VUZnVYazBUY3BZMFdvWDlSVVlXSXF3R1Bndm5nZjZBQW80bWZqSlU5SHFLMGtBa2NaNmowZnVGTXo3WVVBOEtmbjkxQUZaV0d2SGZ4RThYWGpVZFkwMlVpR2F5OUJR0gH2AUFVX3lxTE1FYm9CMGhQb2s3endlWE0tX1pmbWxadXVpUWJwcVBPMlhpVWlCalVfakNZU0VLbFpkMnR5eko4UXZaeFdKeXVsOUdTaFAxME56ZEh2cEdpSUJpbmdodkJic0Y5TkhlVTU1WGFrMUVaZmNfV0RUbVhSYUpKZ2V0dHNKUVVjSTEwOXVpX2RGWHNPSllqbmpPLXRCV3A1NXVKYnlkU2tjUlVZY0FjNUhuS0R1cmZrd2kza2ZxbTBXc1JDT3M0U09HcXNhSEpnN1lMYkRGeUpaZ25uWmlrb2FhQUpQWjRwcnBNWlRKQnJaX0MyN1lwVnhKQQ?oc=5"
+      "id": "news-2026-11-10-303e6d88bc",
+      "titulo": "Presidente Kast reconoce tensión con camioneros en medio de paro por alza de combustibles",
+      "bajada": "Presidente Kast reconoce tensión con camioneros en medio de paro por alza de combustibles Revista Digital Minera REDIMIN",
+      "medio": "Revista Digital Minera REDIMIN",
+      "fecha": "2026-11-10",
+      "publicadoEn": "2026-11-10T15:31:38.000Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRjZheUxZTEhNaU9nd0NRVlBwWUl5MXhjQV92WVdVV3hGRjFJNUM0ZmxfaEwzQm9ibFJoNlh4OFVPNkNuTzlidlhUaVJUZHlKZDViS1phS1FBQnNQaTNycUctX0FsLXhGNnVmZE5ZdmVUaEhGLUQyNXY0REJDZXl0S3JVdGJFYjJlWFJ2bW9hSE5hUHMxaG9oZ3Q2aFdHMXpiSy1yWjJUaVpPYnl0eDYtVjl3?oc=5"
     },
     "dicho": {
       "id": "dicho-bencinas-impuestos",
@@ -257,14 +171,15 @@
         "bencinazo"
       ]
     },
-    "scoreContradiccion": 96,
+    "scoreContradiccion": 99,
     "tipoChoque": "Promesa incumplida",
     "evidenciasLexicas": [
       "combustible",
+      "alza",
       "camioneros",
-      "precio"
+      "paro"
     ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (combustible, camioneros, precio). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, pese) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (combustible, alza, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
     "generadoEn": "2026-11-12",
     "metodoAnalisis": "motor-determinista"
   },
@@ -276,6 +191,7 @@
       "bajada": "La Moneda informa que viaje de Kast a Asia se mantiene: confirmadas reuniones con Xi Jinping y primera ministra de Japón Diario Financiero",
       "medio": "Diario Financiero",
       "fecha": "2026-11-12",
+      "publicadoEn": "2026-11-12T14:36:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb25IeGh2UFA4Y1JwclVUYl9VbHlHb0ZzbFZLd3VFUW9JcFFfRmxwOTNKNC1uS24xbTJVRVZJWk5GVl95YlFleTV0TFpCQXVhOVNRRmVLN1UtaXpJV1UyTzRCaEFfQzFhdVNaekptaVZLTmFpQTFveEpZWEE5YUY4ejN5UDV2RzljS0JQRGsxQVFmSExWZF9VMFhldy1QVGxTOFJxR0NKTVFwaTE3THRsa3N3UQ?oc=5"
     },
     "dicho": {
@@ -315,6 +231,51 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
+    "id": "news-2026-11-12-11c4a23a7d__dicho-bencinas-impuestos",
+    "noticia": {
+      "id": "news-2026-11-12-11c4a23a7d",
+      "titulo": "Los camioneros mantienen sus protestas pese a que el Gobierno de Kast congela el precio de los combustibles",
+      "bajada": "Los camioneros mantienen sus protestas pese a que el Gobierno de Kast congela el precio de los combustibles EL PAÍS",
+      "medio": "EL PAÍS",
+      "fecha": "2026-11-12",
+      "publicadoEn": "2026-11-12T01:45:46.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNcElrZ3BJcVFrNXd2T2JTRXlXS014clBJcnotNnQ1OWxZbl95N0J4RXU4Qng0b01xLUJtVkN2RDJtSlhZX1c2X3k0Wmd0dW56b21wb2hsRURnU0tlQ3pCbnpQZXVOblFMNXFMUWpDa1hXSUE5NXQ5bGdoY2ZlQ2RDT2NtU1VUZnVYazBUY3BZMFdvWDlSVVlXSXF3R1Bndm5nZjZBQW80bWZqSlU5SHFLMGtBa2NaNmowZnVGTXo3WVVBOEtmbjkxQUZaV0d2SGZ4RThYWGpVZFkwMlVpR2F5OUJR0gH2AUFVX3lxTE1FYm9CMGhQb2s3endlWE0tX1pmbWxadXVpUWJwcVBPMlhpVWlCalVfakNZU0VLbFpkMnR5eko4UXZaeFdKeXVsOUdTaFAxME56ZEh2cEdpSUJpbmdodkJic0Y5TkhlVTU1WGFrMUVaZmNfV0RUbVhSYUpKZ2V0dHNKUVVjSTEwOXVpX2RGWHNPSllqbmpPLXRCV3A1NXVKYnlkU2tjUlVZY0FjNUhuS0R1cmZrd2kza2ZxbTBXc1JDT3M0U09HcXNhSEpnN1lMYkRGeUpaZ25uWmlrb2FhQUpQWjRwcnBNWlRKQnJaX0MyN1lwVnhKQQ?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
+      "conceptosClave": [
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 96,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "combustible",
+      "camioneros",
+      "precio"
+    ],
+    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (combustible, camioneros, precio). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, pese) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-12",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
     "id": "news-2026-11-11-2dccb13bbe__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-11-2dccb13bbe",
@@ -322,6 +283,7 @@
       "bajada": "El jaque de los camioneros a Kast: paro indefinido y nueva alza de combustibles ponen a prueba la capacidad de negociación del Gobierno TemucoDiario.cl",
       "medio": "TemucoDiario.cl",
       "fecha": "2026-11-11",
+      "publicadoEn": "2026-11-11T01:49:32.000Z",
       "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPOUdmSWVYd1JSYjNBZDZUcXdCWGZVQlpHUnZJdXBfMFllcUpWRzI3ajhaajBHYzJFNGNuNG40TDBZcUNYNHJBQnFaUVNHX1NxSWpvYUR0Rms5bW5UYk9EOTBBUno2Nl9lQm1SbDRMMUhiY1k2QWtrZnRHOHJBZkdMMjFDUUlDS0Z2djhBUnlQLWxCQndsNFRzTURzSmhCanR0akltSVNLdVBPckRkM0Q1SWFhRXRpMER6NnFtSnBiMTNjTFRyNUloRnZJYjhoWG5IbkxmMnVKZzh0Z2cxZE1EVXg1cThVTnZVR1JjTVFUUF9oNVdreGltUWIteFlEdXM?oc=5"
     },
     "dicho": {
@@ -360,49 +322,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-12-ac9400d82c__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-12-ac9400d82c",
-      "titulo": "Kast alude al estallido social en medio de paro de camioneros: &#8220;No volvamos a ese pasado donde se destruyó nuestra nación&#8221;",
-      "bajada": "En el marco del paro de camioneros que se mantiene en distintos puntos del país, el Presidente José Antonio Kast hizo un llamado este jueves a mantener la unidad y el diálogo en medio de la crisis. En esa línea, el Mandatario solicitó la colaboración de distintos sectores y gremios para detener las movilizaciones para no entrar en un ambiente similar al del pasado 18 de octubre del año 2019: “no volvamos a ese pasado",
-      "medio": "The Clinic",
-      "fecha": "2026-11-12",
-      "url": "https://www.theclinic.cl/2026/11/12/en-medio-del-paro-de-camioneros-kast-recuerda-estallido-social-no-volvamos-a-ese-pasado-donde-se-destruyo-nuestra-nacion/"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 94,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "camioneros",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, medio, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-12",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-11-39bf44025f__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-11-39bf44025f",
@@ -410,6 +329,7 @@
       "bajada": "La entrada Gobierno se reúne con camioneros pero el paro continúa; Quiroz reconoce recesión técnica, y Ejecutivo repondrá “Yo elijo mi PC” en presupuesto 2027 se publicó primero en CIPER Chile .",
       "medio": "CIPER Chile",
       "fecha": "2026-11-11",
+      "publicadoEn": "2026-11-11T23:00:13.000Z",
       "url": "https://www.ciperchile.cl/2026/11/11/radar-11-11-26/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=radar-11-11-26"
     },
     "dicho": {
@@ -446,6 +366,52 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
+    "id": "news-2026-11-11-196bcc364f__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-11-196bcc364f",
+      "titulo": "Kast viaja con amplia comitiva empresarial a China, Vietnam y Japón en busca de nuevas oportunidades comerciales",
+      "bajada": "Kast viaja con amplia comitiva empresarial a China, Vietnam y Japón en busca de nuevas oportunidades comerciales Diario Financiero",
+      "medio": "Diario Financiero",
+      "fecha": "2026-11-11",
+      "publicadoEn": "2026-11-11T22:12:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZWFveUIycnJhX2lOWWtLeE90ZFJXTFZTTmdmM1pRLVdtMHV4NDRqZmxiMTNsQ0NfX3NvTFpJczNIOUx1alZ6RncydE9vUlNzTGtOZXB3SXFGWDgwQWk3SUwxMF91SnlRd3V3NS1WUXhaSExaNUdwemhNOGxhUjRySlkxTTA2RGx4dzgxVjVaY2loQUVvamZuU1psa1B5SXhGRzd1T2YyRlQzUmM5N1l2R0loZU9CUQ?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 90,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "comitiva",
+      "china",
+      "vietnam"
+    ],
+    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (comitiva, china, vietnam). El titular/bajada registra indicadores de ejecución contraria o conflicto (viaja, comitiva) frente a la postura original de \"condena\" emitida el 2023-07-18.",
+    "generadoEn": "2026-11-12",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
     "id": "news-2026-11-10-2a4d60e47b__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-10-2a4d60e47b",
@@ -453,6 +419,7 @@
       "bajada": "En medio del paro: Presidente Kast pide a camioneros \"pensar en Chile\" Mega.cl",
       "medio": "Mega.cl",
       "fecha": "2026-11-10",
+      "publicadoEn": "2026-11-10T16:38:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRUVRNXhVNC1UX2lNa0p0TlNpYm9SQURpU0g0aEt1dmotaE5DQkdxZ0pfUmNLNDFXTmlVMGdjTmwzUTJvdjctUXB3UUJ4THVPWm44YzlPQkRkbFMzREVCTl9tYkQ2WVVyRU1uVUpaT0otdWtCMk5ScEt1aERVeUFQeFhqaWd2Ykw5YjIyU0x4cUhSVHdmLVJaTnhwM0o1THhaX3Z4Y9IBqgFBVV95cUxQTWRqR3BDX05PNXRBM0Y5dm5DczlWaU5fSUdWTlRPTzJtY3N3TTFFVVRlbW1kcWlSN0otXzlWQXJoYThoal9JOE1EMWZPN1M2dWhKcldnRWxWUTZDWThRMG51ZkNPNE9vSXhmejNWaVJneGNYQ05vRUZyUjY5a2MyYXdfOFdtdXlzYjIxeXRDaHBsV0k0aFdPS0I1VzRFcFZyZVBPRG9Cckg4QQ?oc=5"
     },
     "dicho": {
@@ -489,6 +456,50 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
+    "id": "news-2026-11-09-71afc22ea8__dicho-indulto-abusadores",
+    "noticia": {
+      "id": "news-2026-11-09-71afc22ea8",
+      "titulo": "Kast anuncia nueva alza de $40 en los combustibles, pero presenta proyecto para limitar los aumentos; gobierno amplía suspensión de rebajas de condena a todos los delitos, y avisos de ofertas laborales caen 12,6% anual",
+      "bajada": "La entrada Kast anuncia nueva alza de $40 en los combustibles, pero presenta proyecto para limitar los aumentos; gobierno amplía suspensión de rebajas de condena a todos los delitos, y avisos de ofertas laborales caen 12,6% anual se publicó primero en CIPER Chile .",
+      "medio": "CIPER Chile",
+      "fecha": "2026-11-09",
+      "publicadoEn": "2026-11-09T22:59:08.000Z",
+      "url": "https://www.ciperchile.cl/2026/11/09/radar-09-11-26/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=radar-09-11-26"
+    },
+    "dicho": {
+      "id": "dicho-indulto-abusadores",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "tipoMedio": "debate",
+      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+      "fuenteUrl": "https://www.anatel.cl",
+      "categoria": "seguridad",
+      "postura": "prohibe",
+      "conceptosClave": [
+        "indulto",
+        "rebaja",
+        "condena",
+        "pena",
+        "abusador",
+        "pederasta",
+        "violador",
+        "justicia",
+        "rabat",
+        "reos",
+        "carcel"
+      ]
+    },
+    "scoreContradiccion": 90,
+    "tipoChoque": "Inversión de postura",
+    "evidenciasLexicas": [
+      "rebaja",
+      "condena"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rebaja, condena). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, alza) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "generadoEn": "2026-11-12",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
     "id": "news-2026-11-09-02462b854e__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-09-02462b854e",
@@ -496,6 +507,7 @@
       "bajada": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20 El Desconcierto",
       "medio": "El Desconcierto",
       "fecha": "2026-11-09",
+      "publicadoEn": "2026-11-09T14:11:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYV9uX3FZelFxYXFUOGFTTDh3ZFVYMEY1el9hMnlmZnhZMTltaXQxQkF0Tkw2MFl5OHl1cXRkV21Qa2lhTXZhTVA4Tmg2NWdYUDM0cThPaWIzV2stdUhtaXlSaGRnZlZIQzdHR240Rmd5T2RlTVlKdnhyY0IxbTZqNmdDMzJSMHBSc0pZbHROOGpRMnVieG5qQUM3VVVmNUtIamtNSGRRYkhiUWs0MVE3TlRYUWF2c0JtNWFWbjRGTlppSzZZRlZjVmpBVkljaWJvb05IX2ZWc0c?oc=5"
     },
     "dicho": {

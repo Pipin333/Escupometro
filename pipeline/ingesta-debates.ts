@@ -11,7 +11,6 @@ import {
   buscarVideosYoutube,
   construirUrlConTiempo,
   extraerIdVideoYoutube,
-  filtrarPorTramos,
   obtenerTranscripcionYoutube,
   parsearTramos,
   type SegmentoTranscripcion,
@@ -218,9 +217,16 @@ async function ejecutarIngestaDebates(): Promise<void> {
       continue;
     }
 
-    const todosSegmentos = agruparEnSegmentos(transcripcion.lineas);
     const segmentosSeleccionados: SegmentoTranscripcion[] =
-      tramos.length > 0 ? filtrarPorTramos(todosSegmentos, tramos) : todosSegmentos;
+      tramos.length > 0
+        ? tramos.flatMap((tramo) =>
+            agruparEnSegmentos(
+              transcripcion.lineas.filter(
+                (linea) => linea.inicio >= tramo.desde && linea.inicio <= tramo.hasta
+              )
+            )
+          )
+        : agruparEnSegmentos(transcripcion.lineas);
 
     const sustantivos = opciones.incluirTodo
       ? segmentosSeleccionados
