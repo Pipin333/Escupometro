@@ -81,7 +81,13 @@ function generarIdEstable(titulo: string, fecha: string): string {
   return `news-${fecha}-${hash}`;
 }
 
+const REGEX_ALFABETO_NO_LATINO =
+  /[\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af\u0400-\u04ff\u0600-\u06ff]/;
+
 function esNoticiaRelevante(titulo: string, bajada: string): boolean {
+  if (REGEX_ALFABETO_NO_LATINO.test(titulo) || REGEX_ALFABETO_NO_LATINO.test(bajada)) {
+    return false;
+  }
   const texto = normalizarTexto(`${titulo} ${bajada}`);
   return TERMINOS_RELEVANCIA.some((termino) => texto.includes(termino));
 }
