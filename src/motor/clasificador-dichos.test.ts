@@ -144,3 +144,67 @@ describe('clasificador-dichos', () => {
     expect(resultado.dichos[0].id).toBe('tweet-555444333');
   });
 });
+
+describe('clasificador-dichos soporte YouTube y archivoUrl', () => {
+  it('normaliza URLs de YouTube preservando el segundo de inicio t cuando existe', () => {
+    expect(
+      normalizarUrlFuente('https://www.youtube.com/watch?v=fUfJmxVgttA&t=95s')
+    ).toBe('https://youtu.be/fUfJmxVgttA?t=95');
+    expect(normalizarUrlFuente('https://youtu.be/fUfJmxVgttA?t=95')).toBe(
+      'https://youtu.be/fUfJmxVgttA?t=95'
+    );
+    expect(normalizarUrlFuente('https://www.youtube.com/watch?v=fUfJmxVgttA')).toBe(
+      'https://youtu.be/fUfJmxVgttA'
+    );
+  });
+
+  it('no trata como duplicados dos segmentos del mismo video de YouTube con distinto tiempo t', () => {
+    const segmento1 = construirDichoHistorico({
+      fecha: '2025-12-09',
+      tipoMedio: 'debate',
+      texto:
+        'En nuestro gobierno vamos a reducir los ministerios y terminar con el despilfarro en el Estado.',
+      url: 'https://www.youtube.com/watch?v=fUfJmxVgttA&t=95s',
+    });
+    const segmento2 = construirDichoHistorico({
+      fecha: '2025-12-09',
+      tipoMedio: 'debate',
+      texto:
+        'Tambien vamos a eliminar los pitutos y exigir auditorias reales a cada programa fiscal del pais.',
+      url: 'https://www.youtube.com/watch?v=fUfJmxVgttA&t=412s',
+    });
+
+    expect(segmento1).not.toBeNull();
+    expect(segmento2).not.toBeNull();
+
+    const resultado = fusionarDichosSinDuplicados([segmento1!], [segmento2!]);
+    expect(resultado.agregados).toBe(1);
+    expect(resultado.omitidosDuplicados).toBe(0);
+    expect(resultado.dichos).toHaveLength(2);
+  });
+
+  it('copia archivoUrl en construirDichoHistorico cuando se provee y omite la clave cuando falta', () => {
+    const conArchivo = construirDichoHistorico({
+      fecha: '2018-05-25',
+      texto:
+        'En nuestro gobierno vamos a terminar con los pitutos y reducir el gasto publico innecesario.',
+      url: 'https://twitter.com/joseantoniokast/status/1000081964085497861',
+      archivoUrl:
+        'https://web.archive.org/web/20211220021329/https://twitter.com/joseantoniokast/status/1000081964085497861',
+    });
+
+    const sinArchivo = construirDichoHistorico({
+      fecha: '2018-05-25',
+      texto:
+        'En nuestro gobierno vamos a terminar con los pitutos y reducir el gasto publico innecesario.',
+      url: 'https://twitter.com/joseantoniokast/status/1000081964085497861',
+    });
+
+    expect(conArchivo).not.toBeNull();
+    expect(conArchivo?.archivoUrl).toBe(
+      'https://web.archive.org/web/20211220021329/https://twitter.com/joseantoniokast/status/1000081964085497861'
+    );
+    expect(sinArchivo).not.toBeNull();
+    expect(Object.prototype.hasOwnProperty.call(sinArchivo, 'archivoUrl')).toBe(false);
+  });
+});

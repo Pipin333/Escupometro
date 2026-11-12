@@ -10,6 +10,8 @@
     "worker": "tsx pipeline/run-worker.ts",
     "worker:watch": "tsx pipeline/run-worker.ts --watch",
     "ingesta:tweets": "tsx pipeline/ingesta-tweets.ts",
+    "ingesta:wayback": "tsx pipeline/ingesta-tweets.ts --wayback",
+    "ingesta:debates": "tsx pipeline/ingesta-debates.ts",
     "preview": "vite preview"
   },
   "devDependencies": {

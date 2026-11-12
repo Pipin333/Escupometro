@@ -10,6 +10,7 @@ export interface RegistroDichoCrudo {
   fecha: string;
   texto: string;
   url: string;
+  archivoUrl?: string;
   usuario?: string;
   rol?: string;
   tipoMedio?: DichoHistorico['tipoMedio'];
@@ -305,14 +306,57 @@ export function extraerIdTweetDesdeUrl(url: string): string | null {
   return match ? match[1] : null;
 }
 
+function parsearSegundosParam(raw: string | null): number | null {
+  if (!raw) return null;
+  const limpio = raw.trim().toLowerCase();
+  if (/^\d+s?$/.test(limpio)) {
+    return Number.parseInt(limpio, 10);
+  }
+  const hms = limpio.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
+  if (hms && (hms[1] || hms[2] || hms[3])) {
+    return (
+      Number.parseInt(hms[1] ?? '0', 10) * 3600 +
+      Number.parseInt(hms[2] ?? '0', 10) * 60 +
+      Number.parseInt(hms[3] ?? '0', 10)
+    );
+  }
+  return null;
+}
+
 /**
- * Normaliza una URL de publicación para detectar duplicados entre `twitter.com` y `x.com`.
+ * Normaliza una URL de publicación para detectar duplicados entre `twitter.com` y `x.com`,
+ * o unificar enlaces de YouTube preservando su marca de tiempo `?t=<seg>`.
  *
  * @param url URL original de fuente.
- * @returns URL canónica en minúsculas sin parámetros de seguimiento.
+ * @returns URL canónica normalizada sin parámetros de seguimiento innecesarios.
  */
 export function normalizarUrlFuente(url: string): string {
-  const sinQuery = url.trim().split('?')[0].split('#')[0].replace(/\/+$/, '');
+  const recorte = url.trim();
+  try {
+    const parsed = new URL(recorte);
+    const host = parsed.hostname.toLowerCase().replace(/^www\./, '').replace(/^m\./, '');
+    if (host === 'youtube.com' || host === 'youtu.be') {
+      const partes = parsed.pathname.split('/').filter(Boolean);
+      const id =
+        host === 'youtu.be'
+          ? partes[0]
+          : partes[0] === 'watch'
+            ? parsed.searchParams.get('v')
+            : partes[0] === 'live' || partes[0] === 'shorts' || partes[0] === 'embed'
+              ? partes[1]
+              : null;
+      if (id && /^[A-Za-z0-9_-]{11}$/.test(id)) {
+        const seg =
+          parsearSegundosParam(parsed.searchParams.get('t')) ??
+          parsearSegundosParam(parsed.searchParams.get('start'));
+        return seg !== null ? `https://youtu.be/${id}?t=${seg}` : `https://youtu.be/${id}`;
+      }
+    }
+  } catch {
+    // Continuar con normalización textual básica
+  }
+
+  const sinQuery = recorte.split('?')[0].split('#')[0].replace(/\/+$/, '');
   return sinQuery
     .toLowerCase()
     .replace(/^https?:\/\/(?:www\.)?twitter\.com\//, 'https://x.com/')
@@ -507,6 +551,8 @@ export function construirDichoHistorico(
       : `@${crudo.usuario}`
     : '@joseantoniokast';
 
+  const archivoLimpio = crudo.archivoUrl?.trim();
+
   return {
     id: idBase,
     fecha: fechaIso,
@@ -517,6 +563,7 @@ export function construirDichoHistorico(
       : {}),
     cita,
     fuenteUrl: url,
+    ...(archivoLimpio ? { archivoUrl: archivoLimpio } : {}),
     categoria: inferirCategoriaDicho(cita),
     postura: inferirPosturaDicho(cita),
     conceptosClave: extraerConceptosClave(cita),

@@ -8,9 +8,10 @@ Archivo documental de coherencia política que contrasta declaraciones pasadas d
 
 El proyecto separa la **lectura documental pública** de un **pipeline automatizado de recolección y cruce semántico**:
 
-1. **Ingesta Histórica de Tweets y Clasificador (`pipeline/ingesta-tweets.ts`, `pipeline/scrapers/x-ingesta.ts`, `src/motor/clasificador-dichos.ts`)**:
+1. **Ingesta Histórica (Tweets vía Wayback / X y Debates vía YouTube + Whisper)**:
    - Consolida citas históricas en `src/data/archivo-dichos.json` sin duplicados e infiere automáticamente rol según fecha, categoría temática (`impuestos`, `nepotismo`, `seguridad`, `constitucion`, `gasto-publico`, `libertades`), postura normativa (`prohibe`, `condena`, `promete`, `exige`) y conceptos clave.
-   - Fuentes soportadas sin eludir controles de acceso: exportaciones locales (`.json`, `tweets.js`, `.csv`) en `pipeline/imports/`, X API v2 (`X_BEARER_TOKEN`), SocialData API (`SOCIALDATA_API_KEY`) o hidratación pública individual vía oEmbed (`--url`).
+   - **Tweets (`pipeline/ingesta-tweets.ts`, `pipeline/scrapers/wayback-tweets.ts`, `x-ingesta.ts`)**: soporta índice CDX y snapshots de **Wayback Machine** (`--wayback`, guardando enlace verificable en `archivoUrl`), exportaciones locales (`.json`, `tweets.js`, `.csv`) en `pipeline/imports/`, X API v2 (`X_BEARER_TOKEN`), SocialData API (`SOCIALDATA_API_KEY`) u oEmbed individual (`--url`).
+   - **Debates y Entrevistas (`pipeline/ingesta-debates.ts`, `pipeline/scrapers/youtube-transcripciones.ts`)**: descarga subtítulos VTT de YouTube vía `yt-dlp` (sin transcribir APIs externas), agrupa en pasajes y enlaza cada segmento al segundo exacto (`https://youtu.be/<id>?t=<seg>`), con filtro opcional de tramos de intervención (`--tramos`) y respaldo local en Python con `faster-whisper` (`--whisper`).
 
 2. **Scrapers de Prensa Chilena (`pipeline/scrapers/rss-prensa.ts`)**:
    - Consulta feeds RSS en vivo de Google Noticias Chile, CIPER Chile, The Clinic y El Ciudadano.
@@ -64,7 +65,9 @@ Abre [http://localhost:5173](http://localhost:5173).
 | `npm run dev` | Inicia el servidor de desarrollo Vite |
 | `npm run build` | Compila TypeScript y genera el bundle de producción |
 | `npm test` | Ejecuta la suite de pruebas unitarias con Vitest |
-| `npm run ingesta:tweets` | Clasifica e incorpora tweets históricos en `src/data/archivo-dichos.json` desde `pipeline/imports/`, APIs o `--url` |
+| `npm run ingesta:tweets` | Clasifica e incorpora tweets históricos en `src/data/archivo-dichos.json` desde `pipeline/imports/`, APIs, `--url` o `--wayback` |
+| `npm run ingesta:wayback` | Descubre e hidrata tweets históricos desde Wayback Machine (`--desde`, `--hasta`, `--max`, `--dry-run`) |
+| `npm run ingesta:debates` | Transcribe debates/entrevistas de YouTube con `yt-dlp` (o `--whisper` local) enlazando cada cita a `?t=<seg>` |
 | `npm run worker` | Ejecuta el scraper RSS y el motor de contradicciones para actualizar `candidatos.json` y `noticias-recientes.json` |
 | `npm run worker:watch` | Mantiene el monitoreo RSS continuo en intervalos configurables (`--interval <min>` o `WORKER_INTERVAL_MINUTES`) |
 | `npm run preview` | Sirve localmente la build de producción |
@@ -115,12 +118,18 @@ contadorKast/
 ├── pipeline/
 │   ├── imports/                  # Carpeta para exportaciones (.json, tweets.js, .csv)
 │   ├── lib/
+│   │   ├── archivo-dichos.ts     # Lectura y fusión deduplicada sobre `archivo-dichos.json`
 │   │   └── env.ts                # Lector liviano de `.env` local
 │   ├── motor/
 │   │   └── llm-verifier.ts       # Verificador opcional con LLM (OpenAI / Ollama / local)
 │   ├── scrapers/
 │   │   ├── rss-prensa.ts         # Scraper RSS de prensa chilena
-│   │   └── x-ingesta.ts          # Adaptadores de ingesta histórica (local, X v2, SocialData, oEmbed)
+│   │   ├── wayback-tweets.ts     # Descubrimiento CDX e hidratación de tweets vía Wayback Machine
+│   │   ├── x-ingesta.ts          # Adaptadores de ingesta histórica (local, X v2, SocialData, oEmbed)
+│   │   └── youtube-transcripciones.ts # Parser VTT, segmentador y wrapper de `yt-dlp` / Whisper
+│   ├── scripts/
+│   │   └── transcribir_whisper.py # Transcripción local opcional con `faster-whisper`
+│   ├── ingesta-debates.ts        # CLI de ingesta de debates/entrevistas en YouTube
 │   ├── ingesta-tweets.ts         # CLI de ingesta y deduplicación de tweets históricos
 │   └── run-worker.ts             # Orquestador CLI y modo `--watch` RSS
 ├── src/

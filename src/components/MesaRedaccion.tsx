@@ -111,6 +111,7 @@ export const MesaRedaccion: React.FC<MesaRedaccionProps> = ({
         usuarioTweet: cand.dicho.usuarioTweet,
         cita: cand.dicho.cita,
         fuenteUrl: cand.dicho.fuenteUrl,
+        ...(cand.dicho.archivoUrl ? { archivoUrl: cand.dicho.archivoUrl } : {}),
       },
       presente: {
         fecha: cand.noticia.fecha,

@@ -52,17 +52,30 @@ export const ExpedienteDestacado: React.FC<ExpedienteDestacadoProps> = ({ incide
               </blockquote>
             </div>
 
-            {incidente.pasado.fuenteUrl && (
-              <div className="pt-2">
-                <a
-                  href={incidente.pasado.fuenteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
-                >
-                  <span>Archivo de declaración</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
-                </a>
+            {(incidente.pasado.fuenteUrl || incidente.pasado.archivoUrl) && (
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                {incidente.pasado.fuenteUrl && (
+                  <a
+                    href={incidente.pasado.fuenteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
+                  >
+                    <span>Archivo de declaración</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                  </a>
+                )}
+                {incidente.pasado.archivoUrl && (
+                  <a
+                    href={incidente.pasado.archivoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
+                  >
+                    <span>Respaldo archivado</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                  </a>
+                )}
               </div>
             )}
           </div>

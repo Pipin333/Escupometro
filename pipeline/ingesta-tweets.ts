@@ -1,19 +1,21 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {
-  construirDichoHistorico,
   esTweetSustantivo,
-  fusionarDichosSinDuplicados,
   type RegistroDichoCrudo,
-} from '../src/motor/clasificador-dichos';
-import type { DichoHistorico } from '../src/types/escupo';
-import { cargarEnvLocal } from './lib/env';
+} from '../src/motor/clasificador-dichos.js';
+import {
+  incorporarRegistrosAlArchivo,
+  leerArchivoDichos,
+} from './lib/archivo-dichos.js';
+import { cargarEnvLocal, leerValorNpm } from './lib/env.js';
+import { ingestarDesdeWayback } from './scrapers/wayback-tweets.js';
 import {
   hidratarTweetOEmbed,
   ingestarDesdeArchivoLocal,
   ingestarDesdeSocialData,
   ingestarDesdeXApiV2,
-} from './scrapers/x-ingesta';
+} from './scrapers/x-ingesta.js';
 
 interface OpcionesCliIngesta {
   usuario: string;
@@ -21,36 +23,49 @@ interface OpcionesCliIngesta {
   archivos: string[];
   maxResultados: number;
   maxPaginas: number;
+  usarWayback: boolean;
+  desde?: string;
+  hasta?: string;
+  resumeKey?: string;
+  pausaMs?: number;
   incluirTodo: boolean;
   dryRun: boolean;
 }
 
 const EXTENSIONES_SOPORTADAS = new Set(['.json', '.js', '.csv']);
 const ROOT_DIR = process.cwd();
-const DICHOS_PATH = path.join(ROOT_DIR, 'src/data/archivo-dichos.json');
 const IMPORTS_DIR = path.join(ROOT_DIR, 'pipeline/imports');
 
 function parsearArgumentos(argv: string[]): OpcionesCliIngesta {
   const opciones: OpcionesCliIngesta = {
     usuario:
-      process.env.npm_config_usuario?.trim() ||
+      leerValorNpm('usuario') ||
       process.env.X_TARGET_USER?.trim() ||
       'joseantoniokast',
     urls: [],
     archivos: [],
     maxResultados: 500,
     maxPaginas: 10,
+    usarWayback: process.env.npm_config_wayback === 'true',
+    desde: leerValorNpm('desde'),
+    hasta: leerValorNpm('hasta'),
+    resumeKey: leerValorNpm('resume_key'),
     incluirTodo: process.env.npm_config_incluir_todo === 'true',
     dryRun: process.env.npm_config_dry_run === 'true',
   };
 
-  if (process.env.npm_config_url?.trim()) {
-    opciones.urls.push(process.env.npm_config_url.trim());
+  const maxNpm = leerValorNpm('max');
+  if (maxNpm) {
+    const parsed = Number.parseInt(maxNpm, 10);
+    if (Number.isFinite(parsed) && parsed > 0) opciones.maxResultados = parsed;
   }
-  if (process.env.npm_config_archivo?.trim()) {
-    opciones.archivos.push(
-      path.resolve(ROOT_DIR, process.env.npm_config_archivo.trim())
-    );
+  const urlNpm = leerValorNpm('url');
+  if (urlNpm) {
+    opciones.urls.push(urlNpm);
+  }
+  const archivoNpm = leerValorNpm('archivo');
+  if (archivoNpm) {
+    opciones.archivos.push(path.resolve(ROOT_DIR, archivoNpm));
   }
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -89,6 +104,26 @@ function parsearArgumentos(argv: string[]): OpcionesCliIngesta {
       const parsed = Number.parseInt(valor, 10);
       if (Number.isFinite(parsed) && parsed > 0) opciones.maxPaginas = parsed;
       i += 1;
+    } else if (arg === '--wayback') {
+      opciones.usarWayback = true;
+    } else if (arg.startsWith('--desde=')) {
+      opciones.desde = arg.slice('--desde='.length).trim() || undefined;
+    } else if (arg === '--desde' && valor) {
+      opciones.desde = valor.trim();
+      i += 1;
+    } else if (arg.startsWith('--hasta=')) {
+      opciones.hasta = arg.slice('--hasta='.length).trim() || undefined;
+    } else if (arg === '--hasta' && valor) {
+      opciones.hasta = valor.trim();
+      i += 1;
+    } else if (arg.startsWith('--resume-key=')) {
+      opciones.resumeKey = arg.slice('--resume-key='.length).trim() || undefined;
+    } else if (arg === '--resume-key' && valor) {
+      opciones.resumeKey = valor.trim();
+      i += 1;
+    } else if (arg.startsWith('--pausa-ms=')) {
+      const parsed = Number.parseInt(arg.slice('--pausa-ms='.length), 10);
+      if (Number.isFinite(parsed) && parsed >= 0) opciones.pausaMs = parsed;
     } else if (arg === '--incluir-todo') {
       opciones.incluirTodo = true;
     } else if (arg === '--dry-run') {
@@ -100,6 +135,12 @@ function parsearArgumentos(argv: string[]): OpcionesCliIngesta {
       EXTENSIONES_SOPORTADAS.has(path.extname(arg).toLowerCase())
     ) {
       opciones.archivos.push(path.resolve(ROOT_DIR, arg));
+    } else if (
+      process.env.npm_config_max === 'true' &&
+      /^\d+$/.test(arg)
+    ) {
+      const parsed = Number.parseInt(arg, 10);
+      if (Number.isFinite(parsed) && parsed > 0) opciones.maxResultados = parsed;
     }
   }
 
@@ -138,6 +179,7 @@ async function ejecutarIngestaTweets(): Promise<void> {
   const socialDataKey = process.env.SOCIALDATA_API_KEY?.trim() || '';
 
   const hayAlgunaFuente =
+    opciones.usarWayback ||
     opciones.urls.length > 0 ||
     todosLosArchivos.length > 0 ||
     bearerToken !== '' ||
@@ -151,16 +193,49 @@ async function ejecutarIngestaTweets(): Promise<void> {
       '[Ingesta X] No se detectaron archivos en pipeline/imports/ ni credenciales en .env.'
     );
     console.log('Opciones listas para ingestar tweets históricos:');
-    console.log('  1. Exportación local (.json / tweets.js / .csv): guárdala en pipeline/imports/');
-    console.log('  2. X API v2 oficial: define X_BEARER_TOKEN en .env');
-    console.log('  3. SocialData API: define SOCIALDATA_API_KEY en .env');
+    console.log('  1. Wayback Machine (gratis y público): npm run ingesta:wayback -- --max 25 --dry-run');
+    console.log('  2. Exportación local (.json / tweets.js / .csv): guárdala en pipeline/imports/');
+    console.log('  3. X API v2 oficial: define X_BEARER_TOKEN en .env');
+    console.log('  4. SocialData API: define SOCIALDATA_API_KEY en .env');
     console.log(
-      '  4. URL individual pública (oEmbed sin clave): npm run ingesta:tweets https://x.com/joseantoniokast/status/ID'
+      '  5. URL individual pública (oEmbed sin clave): npm run ingesta:tweets https://x.com/joseantoniokast/status/ID'
     );
     return;
   }
 
   const registrosCrudos: RegistroDichoCrudo[] = [];
+
+  if (opciones.usarWayback) {
+    const existentes = await leerArchivoDichos();
+    const idsExistentes = new Set(existentes.map((d) => d.id));
+    const limiteWayback = opciones.maxResultados === 500 ? 40 : opciones.maxResultados;
+
+    console.log(
+      `[Ingesta X] Consultando Wayback Machine (máx. ${limiteWayback} tweets nuevos${
+        opciones.desde ? `, desde ${opciones.desde}` : ''
+      }${opciones.hasta ? `, hasta ${opciones.hasta}` : ''})...`
+    );
+
+    const resultadoWb = await ingestarDesdeWayback(opciones.usuario, {
+      desde: opciones.desde,
+      hasta: opciones.hasta,
+      maxTweets: limiteWayback,
+      resumeKey: opciones.resumeKey,
+      pausaMs: opciones.pausaMs,
+      idsExistentes,
+    });
+
+    for (const err of resultadoWb.errores) console.warn(`[Ingesta X] Wayback: ${err}`);
+    console.log(
+      `[Ingesta X] Wayback: ${resultadoWb.tweetsDescubiertos} URLs en índice CDX | ${resultadoWb.capturasConsultadas} capturas leídas | ${resultadoWb.registros.length} tweets recuperados`
+    );
+    if (resultadoWb.resumeKeySiguiente) {
+      console.log(
+        `[Ingesta X] Para continuar paginando Wayback usa: --resume-key "${resultadoWb.resumeKeySiguiente}"`
+      );
+    }
+    registrosCrudos.push(...resultadoWb.registros);
+  }
 
   for (const url of opciones.urls) {
     const hidratado = await hidratarTweetOEmbed(url);
@@ -208,32 +283,23 @@ async function ejecutarIngestaTweets(): Promise<void> {
     : registrosCrudos.filter((registro) => esTweetSustantivo(registro.texto));
 
   const omitidosRuido = registrosCrudos.length - filtrados.length;
-  const clasificados: DichoHistorico[] = [];
-
-  for (const registro of filtrados) {
-    const dicho = construirDichoHistorico(registro);
-    if (dicho) clasificados.push(dicho);
-  }
-
-  const actualesRaw = await fs.readFile(DICHOS_PATH, 'utf-8');
-  const actuales = JSON.parse(actualesRaw) as DichoHistorico[];
-
-  const fusion = fusionarDichosSinDuplicados(actuales, clasificados);
+  const resultado = await incorporarRegistrosAlArchivo(filtrados, opciones.dryRun);
 
   console.log(
-    `[Ingesta X] Crudos: ${registrosCrudos.length} | Descartados por ruido/RT: ${omitidosRuido} | Clasificados: ${clasificados.length}`
+    `[Ingesta X] Crudos: ${registrosCrudos.length} | Descartados por ruido/RT: ${omitidosRuido} | Clasificados: ${resultado.clasificados}`
   );
   console.log(
-    `[Ingesta X] Nuevos agregados: ${fusion.agregados} | Duplicados omitidos: ${fusion.omitidosDuplicados} | Total en archivo: ${fusion.dichos.length}`
+    `[Ingesta X] Nuevos agregados: ${resultado.agregados} | Duplicados omitidos: ${resultado.omitidosDuplicados} | Total en archivo: ${resultado.total}`
   );
 
   if (opciones.dryRun) {
+    for (const r of filtrados.slice(0, 10)) {
+      console.log(
+        `  [${r.fecha}] ${r.texto.slice(0, 110)}${r.texto.length > 110 ? '...' : ''}`
+      );
+    }
     console.log('[Ingesta X] Modo --dry-run activo: no se modificó src/data/archivo-dichos.json.');
-    return;
-  }
-
-  if (fusion.agregados > 0) {
-    await fs.writeFile(DICHOS_PATH, `${JSON.stringify(fusion.dichos, null, 2)}\n`, 'utf-8');
+  } else if (resultado.agregados > 0) {
     console.log('[Ingesta X] Archivo histórico actualizado en src/data/archivo-dichos.json.');
   } else {
     console.log('[Ingesta X] Sin cambios nuevos para persistir.');

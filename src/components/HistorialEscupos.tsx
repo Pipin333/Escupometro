@@ -88,6 +88,32 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
                   {item.pasado.rol}
                   {item.pasado.usuarioTweet ? ` · ${item.pasado.usuarioTweet}` : ''}
                 </p>
+                {(item.pasado.fuenteUrl || item.pasado.archivoUrl) && (
+                  <div className="flex flex-wrap items-center gap-3 pt-1">
+                    {item.pasado.fuenteUrl && (
+                      <a
+                        href={item.pasado.fuenteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4"
+                      >
+                        <span>Fuente original</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                      </a>
+                    )}
+                    {item.pasado.archivoUrl && (
+                      <a
+                        href={item.pasado.archivoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4"
+                      >
+                        <span>Respaldo archivado</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
 
               <div className="space-y-2 md:border-l md:border-[#dcd7cc] md:pl-8">

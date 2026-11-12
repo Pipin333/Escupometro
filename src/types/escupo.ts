@@ -51,6 +51,7 @@ export interface DichoHistorico {
   usuarioTweet?: string;
   cita: string;
   fuenteUrl: string;
+  archivoUrl?: string;
   categoria: CategoriaEscupo;
   postura: PosturaDicho;
   conceptosClave: string[];

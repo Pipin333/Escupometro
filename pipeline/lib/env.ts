@@ -38,3 +38,17 @@ export async function cargarEnvLocal(rootDir = process.cwd()): Promise<void> {
     }
   }
 }
+
+/**
+ * Lee el valor textual de una bandera `--clave=valor` pasada vía `npm run` sin confundir
+ * indicadores booleanos (`"true"`/`"false"`) con valores reales cuando PowerShell omite `--`.
+ *
+ * @param nombreNombre Clave en formato snake_case tras `npm_config_`.
+ * @returns Valor textual limpio o `undefined`.
+ */
+export function leerValorNpm(nombreClave: string): string | undefined {
+  const raw = process.env[`npm_config_${nombreClave}`]?.trim();
+  if (!raw || raw === 'true' || raw === 'false') return undefined;
+  return raw;
+}
+
