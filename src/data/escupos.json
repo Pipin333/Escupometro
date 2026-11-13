@@ -1,5 +1,56 @@
 [
   {
+    "id": "aprobacion-18-renuncia-bachelet-2026",
+    "titulo": "Pidió a Bachelet renunciar por baja aprobación ('7 de cada 10 no le cree') vs. Cae al 18% en Black & White",
+    "categoria": "constitucion",
+    "fechaIncidente": "2026-11-13",
+    "diasSinEscupoPrevios": 1,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2016-09-02",
+      "rol": "Diputado independiente (entrevista en CNN Chile tras encuesta Adimark)",
+      "tipoMedio": "prensa",
+      "cita": "Ojalá la Presidenta se sincerara y renunciara así como están las cosas porque 7 de cada 10 chilenos no le cree, y eso es dramático.",
+      "fuenteUrl": "https://www.eldinamo.cl/pais/2016/09/02/el-llamado-de-jose-antonio-kast-a-bachelet-ojala-la-presidenta-se-sincerara-y-renunciara/"
+    },
+    "presente": {
+      "fecha": "2026-11-13",
+      "medio": "Chicureo Hoy / Encuesta Black & White",
+      "titulo": "Encuesta Black & White revela que solo un 18% aprueba cómo Kast conduce su Gobierno",
+      "descripcion": "El sondeo mostró una nueva caída de dos puntos en la aprobación presidencial, impulsada principalmente por el alza de las bencinas: un 84% indicó que el encarecimiento de los combustibles afectó mucho (66%) o bastante (18%) su opinión sobre el mandatario, y un 76% tiene poca o ninguna confianza en que mejore la economía en los próximos 12 meses.",
+      "impacto": "Más de ocho de cada diez encuestados castigan la conducción económica y el Gobierno enfrenta su peor registro de respaldo ciudadano mientras mantiene su agenda internacional.",
+      "fuenteUrl": "https://www.chicureohoy.cl/actualidad/encuesta-revela-que-solo-un-18-aprueba-forma-en-que-kast-conduce-su-gobierno/"
+    },
+    "veredictoSatirico": "Cuando el 70% de desaprobación era ajeno, exigía sinceridad y renuncia en La Moneda; con el 18% propio, la solución fue subir al avión rumbo a Asia.",
+    "votosComunidad": 0
+  },
+  {
+    "id": "bencina-mas-barata-america-datos-2026",
+    "titulo": "Afirmó que la bencina chilena es más barata que en casi toda América vs. 12.ª más cara de 36 países",
+    "categoria": "impuestos",
+    "fechaIncidente": "2026-11-13",
+    "diasSinEscupoPrevios": 0,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast"
+    },
+    "presente": {
+      "fecha": "2026-11-13",
+      "medio": "ContrapoderChile.cl / GlobalPetrolPrices",
+      "titulo": "Datos comparados desmienten dicho de Kast en AWS South America sobre combustibles 'más bajos' del continente",
+      "descripcion": "El 11 de noviembre, en el lanzamiento de AWS South America, Kast sostuvo que el precio de los combustibles en Chile es más bajo que en la mayoría de América. Sin embargo, el análisis del economista Felipe Salce con cifras de GlobalPetrolPrices (36 países y territorios al 9 de noviembre) ubicó la gasolina de 95 octanos chilena ($1.537/L) como la 12.ª más cara: 24 países pagan menos y Chile está $165/L (12%) sobre la mediana regional ($1.372/L), mientras la de 93 octanos acumuló un alza de 32% desde marzo hasta $1.619/L.",
+      "impacto": "Choque directo entre el relato presidencial ante inversionistas y el costo real de llenar el estanque para los hogares chilenos.",
+      "fuenteUrl": "https://contrapoderchile.cl/los-datos-que-desmienten-a-kast-la-bencina-chilena-esta-entre-las-mas-caras-de-america/"
+    },
+    "veredictoSatirico": "En 2022 el alza de la bencina era 'brutal' y exigía bajar el impuesto específico; en 2026, con la de 93 en $1.619, intenta convencer al continente de que en Chile es barata.",
+    "votosComunidad": 0
+  },
+  {
     "id": "gira-asia-en-paro-camioneros-2026",
     "titulo": "Confirma gira a China, Vietnam y Japón en medio de paro indefinido de camioneros y crisis en Justicia",
     "categoria": "gasto-publico",
