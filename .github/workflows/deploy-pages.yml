@@ -1,25 +1,21 @@
-name: Desplegar en GitHub Pages
+name: CI (Tests y Build)
 
 on:
   push:
     branches: ['main']
-  workflow_run:
-    workflows: ['Monitoreo RSS y Detección de Contradicciones']
-    types: ['completed']
+  pull_request:
+    branches: ['main']
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+  verificar:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repositorio
@@ -31,36 +27,11 @@ jobs:
           node-version: '22'
           cache: 'npm'
 
-      - name: Configurar rutas de GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       - name: Instalar dependencias
         run: npm ci
 
       - name: Ejecutar pruebas unitarias
         run: npm test
 
-      - name: Compilar aplicación para GitHub Pages
-        env:
-          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          VITE_SITE_URL: ${{ steps.pages.outputs.origin }}${{ steps.pages.outputs.base_path }}
-        run: |
-          export VITE_BASE_PATH="${PAGES_BASE_PATH%/}/"
-          npm run build
-
-      - name: Subir artefacto de Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Desplegar en GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Compilar aplicación
+        run: npm run build
