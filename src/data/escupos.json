@@ -235,6 +235,31 @@
     "votosComunidad": 6830
   },
   {
+    "id": "metafora-92-dias-300mil-migrantes-2026",
+    "titulo": "Cuenta regresiva de '92 días' para 330 mil migrantes vs. 'Era una metáfora... quizás hipérbole' y 2.136 expulsiones",
+    "categoria": "seguridad",
+    "fechaIncidente": "2026-05-13",
+    "diasSinEscupoPrevios": 63,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL 2025)",
+      "tipoMedio": "debate",
+      "cita": "No vamos a regularizar, no vamos a ordenar, no vamos a empadronar a ninguno de los 330.000... nosotros no vamos a regularizar a ninguno y le estamos diciendo a todos ellos que les quedan 92 días.",
+      "fuenteUrl": "https://youtu.be/fUfJmxVgttA?t=1753"
+    },
+    "presente": {
+      "fecha": "2026-05-13",
+      "medio": "BioBioChile / Diario USACH / Sermig",
+      "titulo": "Kast califica de 'metáfora' y luego 'hipérbole' la promesa de expulsar a 300 mil migrantes el primer día",
+      "descripcion": "A dos meses de asumir, ante preguntas en la CChC el 13 de mayo de 2026, Kast señaló: 'Llevan 60 días y usted dijo que el primer día iba a expulsar a 300 mil migrantes. Es una metáfora'. Al día siguiente en Atacama corrigió: 'Quizás la palabra era hipérbole, no metáfora'. Según el balance del Servicio Nacional de Migraciones, las expulsiones acumuladas del año llegan a 2.136 casos.",
+      "impacto": "La oposición y analistas cuestionaron el uso de cuentas regresivas literales en campaña frente a las cifras reales de deportación administrativa y judicial.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2026/05/13/presidente-kast-dice-que-su-promesa-de-expulsar-300-mil-migrantes-el-primer-dia-era-solo-una-metafora.shtml"
+    },
+    "veredictoSatirico": "Durante 92 días la cuenta regresiva sonó literal; ya en La Moneda resultó ser una metáfora, al día siguiente una hipérbole, y en la planilla de Migraciones apenas van 2.136 expulsiones.",
+    "votosComunidad": 0
+  },
+  {
     "id": "caso-convenios-mauricio-ojeda",
     "titulo": "Guerra al 'Caso Convenios' vs. Desafuero del diputado republicano Mauricio Ojeda por $730 millones",
     "categoria": "gasto-publico",
