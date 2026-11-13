@@ -362,6 +362,32 @@
     "votosComunidad": 0
   },
   {
+    "id": "viaje-peru-emergencia-coquimbo-nuble-2026",
+    "titulo": "Exigía a Boric quedarse en Chile ante temporales ('Se necesita al gobierno en Chile') vs. Viaje a Lima tras tornados en Ñuble y crisis en Coquimbo",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-07-28",
+    "diasSinEscupoPrevios": 19,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2024-06-12",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Presidente Boric debiera evaluar el retorno de los ministros de Educación, Transporte y Energía de su 'gira' por Europa. Es inexplicable que 7 ministros estén de viaje, mientras Chile vive una de las peores inundaciones en décadas. Se necesita al gobierno en Chile, no en Europa.",
+      "fuenteUrl": "https://www.elmostrador.cl/noticias/sin-editar/2026/07/28/otra-cosa-es-con-guitarra-cuando-jose-antonio-kast-criticaba-las-giras-de-gabriel-boric/"
+    },
+    "presente": {
+      "fecha": "2026-07-28",
+      "medio": "El Mostrador / La Tercera",
+      "titulo": "Kast viajó a Lima para cambio de mando de Keiko Fujimori en medio de emergencia climática y horas después de tornados en Ñuble",
+      "descripcion": "El 27 de julio de 2026, mientras el país enfrentaba la emergencia climática de julio (con Coquimbo y Huasco bajo Estado de Catástrofe) y apenas horas después del paso de al menos tres tornados por la Región de Ñuble, el presidente Kast viajó a Perú para asistir a la asunción de Keiko Fujimori. Medios recordaron que entre 2023 y 2025 exigió al menos cinco veces a Gabriel Boric suspender o interrumpir viajes —incluido uno a la Antártica en junio de 2023 que calificó de 'capricho'— durante temporales e inundaciones.",
+      "impacto": "Amplio reflote de sus propios tuits de 2023 y 2024 bajo el lema 'otra cosa es con guitarra'.",
+      "fuenteUrl": "https://www.elmostrador.cl/noticias/sin-editar/2026/07/28/otra-cosa-es-con-guitarra-cuando-jose-antonio-kast-criticaba-las-giras-de-gabriel-boric/"
+    },
+    "veredictoSatirico": "En junio de 2023 llamaba 'capricho' un viaje presidencial en lluvias y en 2024 exigía que el Gobierno se quedara en Chile; en julio de 2026 voló a Lima horas después de tres tornados en Ñuble y con Coquimbo en catástrofe.",
+    "votosComunidad": 0
+  },
+  {
     "id": "cable-chino-transparencia-peter-thiel-2026",
     "titulo": "Quiebre por 'falta de transparencia' en el cable chino vs. Reunión secreta con Peter Thiel (Palantir) sin registro ni actas",
     "categoria": "libertades",
