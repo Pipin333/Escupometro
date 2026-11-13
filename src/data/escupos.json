@@ -310,6 +310,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "coquimbo-6-dias-las-condes-5-horas-2026",
+    "titulo": "Acusó 'falta de iniciativa y conocimiento en terreno' en catástrofes vs. 6 días de espera en Coquimbo y 5 horas en Las Condes",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-10-09",
+    "diasSinEscupoPrevios": 30,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2026-02-05",
+      "rol": "Presidente electo (declaraciones desde Roma tras incendios en Ñuble y Biobío)",
+      "tipoMedio": "prensa",
+      "cita": "Lamentablemente, hemos visto que en la emergencia ha faltado quizás iniciativa, ha faltado conocimiento en el terreno.",
+      "fuenteUrl": "https://www.infobae.com/america/america-latina/2026/02/06/boric-reconocio-lentitud-en-la-reconstruccion-tras-incendios-en-el-sur-de-chile-y-kast-critico-su-falta-de-iniciativa/"
+    },
+    "presente": {
+      "fecha": "2026-10-09",
+      "medio": "El Mostrador / El Desconcierto",
+      "titulo": "Coquimbo esperó 6 días por Estado de Catástrofe tras temporal con 6 fallecidos; Las Condes lo obtuvo en 5 horas",
+      "descripcion": "Durante el temporal de julio en Coquimbo y Huasco —que dejó 6 fallecidos, 12.997 damnificados y 21.480 viviendas dañadas— el Gobierno tardó 6 días (del 14 al 20 de julio) en decretar Estado de Excepción Constitucional de Catástrofe, mientras el alcalde Alí Manouchehri denunciaba abandono y cancelaba La Pampilla para financiar la reconstrucción. En contraste, ante el aluvión de San Carlos de Apoquindo en Las Condes (8 de octubre, con 6 lesionados), la zona de catástrofe se decretó en cerca de 5 horas. Desde el Ejecutivo, Máximo Pavez negó trato preferencial y atribuyó la diferencia a geografía y conectividad.",
+      "impacto": "Fuerte cuestionamiento de autoridades regionales y oposición por la disparidad de tiempos entre regiones y el sector oriente capitalino.",
+      "fuenteUrl": "https://www.elmostrador.cl/noticias/pais/2026/10/09/la-doble-vara-del-gobierno-coquimbo-espero-6-dias-por-estado-de-catastrofe-y-las-condes-5-horas/"
+    },
+    "veredictoSatirico": "Desde Roma acusaba 'falta de iniciativa y conocimiento en terreno' por las demoras en emergencias; ya en La Moneda, Coquimbo esperó 6 días por el decreto de catástrofe y Las Condes apenas 5 horas.",
+    "votosComunidad": 0
+  },
+  {
     "id": "gobierno-de-practicantes-contrataciones-2026",
     "titulo": "Del 'gobierno de practicantes' a estudiantes de pregrado y expracticantes con sueldos millonarios en La Moneda",
     "categoria": "nepotismo",
