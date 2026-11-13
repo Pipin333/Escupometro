@@ -127,6 +127,32 @@
     "votosComunidad": 0
   },
   {
+    "id": "yo-elijo-mi-pc-presupuesto-2027-2026",
+    "titulo": "Prometió 'un computador para cada niño de la educación pública' vs. Eliminación y marcha atrás en 'Yo Elijo Mi PC'",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-11-11",
+    "diasSinEscupoPrevios": 0,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2021-02-25",
+      "rol": "Candidato Presidencial (cuenta regresiva electoral)",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Un computador con acceso a internet para cada niño que estudia en la educación pública en Chile. Invertir en conexión y tecnología para educar y formar es fundamental. Nos permitirá reducir las brechas y avanzar aceleradamente en el aprendizaje y capacidades del siglo XXI.",
+      "fuenteUrl": "https://www.theclinic.cl/2026/10/05/el-dia-que-kast-prometio-un-computador-para-cada-nino-de-la-educacion-publica-cinco-anos-antes-de-descontinuar-el-programa-yo-elijo-mi-pc/"
+    },
+    "presente": {
+      "fecha": "2026-11-11",
+      "medio": "BioBioChile / The Clinic / Chilevisión",
+      "titulo": "Tras intentar descontinuar 'Yo Elijo Mi PC' en el Presupuesto 2027, Gobierno da marcha atrás y confirma reposición en el Senado",
+      "descripcion": "En octubre, el Presupuesto 2027 dejó sin financiamiento las Becas TIC ('Yo Elijo Mi PC') tras 17 años —citando evaluaciones de Dipres y auditorías de Contraloría sobre miles de equipos sin entregar en bodegas de Junaeb— mientras Kast llamó a 'retardar' el uso de pantallas. Sin embargo, tras el rechazo de la partida de Educación en la Cámara y críticas transversales, Hacienda confirmó el 11 de noviembre que repondrá los recursos del programa en el Senado.",
+      "impacto": "Ida y vuelta presupuestaria completa: de prometer un computador por niño en campaña a suprimir el programa y luego reponerlo ante el rechazo parlamentario.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2026/11/11/gobierno-da-marcha-atras-y-confirma-que-yo-elijo-mi-pc-se-repondra-en-el-senado.shtml"
+    },
+    "veredictoSatirico": "Primero prometió un computador para cada estudiante público; luego su Presupuesto 2027 borró 'Yo Elijo Mi PC' alegando que había que retardar las pantallas; y al final tuvo que reponerlo igual en el Senado.",
+    "votosComunidad": 0
+  },
+  {
     "id": "recesion-tecnica-quiroz-2026",
     "titulo": "Citaba a Jorge Quiroz contra el 'bajo crecimiento' vs. Su ministro Quiroz reconoce recesión técnica",
     "categoria": "gasto-publico",
