@@ -184,53 +184,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-12-a941724a9c__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-12-a941724a9c",
-      "titulo": "La negociación contrarreloj que llevó a La Moneda a ceder ante los camioneros y desactivar el paro que amenazaba con opacar la gira de Kast por Asia",
-      "bajada": "Múltiples concesiones hizo el Gobierno en la reunión que sostuvo con distintos representantes del gremio de los camioneros del país. Tras varias horas de incertidumbre, el biministro Alvarado afirmó que —vía proyecto de ley— se congelarán las alzas de los combustibles hasta el 31 de marzo, habrá beneficios tributarios contemplados para los transportistas durante todo 2027, así como también existirá devolución de cobr",
-      "medio": "The Clinic",
-      "fecha": "2026-11-12",
-      "publicadoEn": "2026-11-12T23:24:34.000Z",
-      "url": "https://www.theclinic.cl/2026/11/12/la-negociacion-contrarreloj-que-llevo-a-la-moneda-a-ceder-ante-los-camioneros-y-desactivar-el-paro-que-amenazaba-con-opacar-la-gira-de-kast-por-asia/"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "gira",
-      "asia",
-      "moneda",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, asia, moneda, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro, alza) frente a la postura original de \"condena\" emitida el 2023-07-18.",
-    "generadoEn": "2026-11-13",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-12-e4d53de9d3__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-12-e4d53de9d3",
@@ -272,53 +225,6 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (diesel, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-12-fbb35f6cba__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-12-fbb35f6cba",
-      "titulo": "La Moneda informa que viaje de Kast a Asia se mantiene: confirmadas reuniones con Xi Jinping y primera ministra de Japón",
-      "bajada": "La Moneda informa que viaje de Kast a Asia se mantiene: confirmadas reuniones con Xi Jinping y primera ministra de Japón Diario Financiero",
-      "medio": "Diario Financiero",
-      "fecha": "2026-11-12",
-      "publicadoEn": "2026-11-12T14:36:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb25IeGh2UFA4Y1JwclVUYl9VbHlHb0ZzbFZLd3VFUW9JcFFfRmxwOTNKNC1uS24xbTJVRVZJWk5GVl95YlFleTV0TFpCQXVhOVNRRmVLN1UtaXpJV1UyTzRCaEFfQzFhdVNaekptaVZLTmFpQTFveEpZWEE5YUY4ejN5UDV2RzljS0JQRGsxQVFmSExWZF9VMFhldy1QVGxTOFJxR0NKTVFwaTE3THRsa3N3UQ?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "viaje",
-      "asia",
-      "xi",
-      "moneda"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (viaje, asia, xi, moneda). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, confirma) frente a la postura original de \"condena\" emitida el 2023-07-18.",
     "generadoEn": "2026-11-13",
     "metodoAnalisis": "motor-determinista"
   },
@@ -542,6 +448,95 @@
       "condena"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rebaja, condena). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, alza) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "generadoEn": "2026-11-13",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-09-02462b854e__dicho-bencinas-impuestos",
+    "noticia": {
+      "id": "news-2026-11-09-02462b854e",
+      "titulo": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20",
+      "bajada": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20 El Desconcierto",
+      "medio": "El Desconcierto",
+      "fecha": "2026-11-09",
+      "publicadoEn": "2026-11-09T14:11:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYV9uX3FZelFxYXFUOGFTTDh3ZFVYMEY1el9hMnlmZnhZMTltaXQxQkF0Tkw2MFl5OHl1cXRkV21Qa2lhTXZhTVA4Tmg2NWdYUDM0cThPaWIzV2stdUhtaXlSaGRnZlZIQzdHR240Rmd5T2RlTVlKdnhyY0IxbTZqNmdDMzJSMHBSc0pZbHROOGpRMnVieG5qQUM3VVVmNUtIamtNSGRRYkhiUWs0MVE3TlRYUWF2c0JtNWFWbjRGTlppSzZZRlZjVmpBVkljaWJvb05IX2ZWc0c?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
+      "conceptosClave": [
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 90,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "combustible",
+      "alza"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, alza). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-13",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-13-504b6ed75f__dicho-bencinas-impuestos",
+    "noticia": {
+      "id": "news-2026-11-13-504b6ed75f",
+      "titulo": "Kast acordó con los camioneros y desactivó el paro en Chile: importante baja del diésel y congelamiento de naftas",
+      "bajada": "Kast acordó con los camioneros y desactivó el paro en Chile: importante baja del diésel y congelamiento de naftas Los Andes",
+      "medio": "Los Andes",
+      "fecha": "2026-11-13",
+      "publicadoEn": "2026-11-13T12:08:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPeTR3N2Q3R3ZpbkhqY0g3aEhEQl94S1d5dmVjcnZKUEZzdnJjNVF6bC1vYlo5aDhveUgyY2hLVVVzNDVXaWtacmEzRWFpTGJJS3p3cnRwdHljOWJnY1otU1NrVVZENVFONXhBMDkzM0RfRDY5dWRUS3ExckVHb1V3MDJOTmMyWDh6R3FXOTRWaTRBRnZTLV93RUhENnRJYmxxb2JpclBkb3dUdXVqNnNxa3hyWWtsRmFrMTVyQkt3SDJ5SHB1UDl3VHVVelQyUlZ3bDVVaU5SWE4yMmJ4VVE?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
+      "conceptosClave": [
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 84,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "diesel",
+      "camioneros",
+      "paro"
+    ],
+    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (diesel, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
     "generadoEn": "2026-11-13",
     "metodoAnalisis": "motor-determinista"
   }
