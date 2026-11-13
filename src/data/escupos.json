@@ -51,6 +51,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "china-xi-jinping-dictaduras-comunistas-2026",
+    "titulo": "Prometía 'distancia firme frente a dictaduras comunistas' vs. Gira oficial a Vietnam y bilateral con Xi Jinping en China",
+    "categoria": "libertades",
+    "fechaIncidente": "2026-11-12",
+    "diasSinEscupoPrevios": 0,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2021-10-02",
+      "rol": "Candidato Presidencial (Programa de Gobierno 2021)",
+      "tipoMedio": "prensa",
+      "cita": "Propondremos la salida de Chile del Consejo de Derechos Humanos de la ONU y marcaremos distancia firme frente a regímenes autoritarios y dictaduras comunistas que violan libertades.",
+      "fuenteUrl": "https://www.servel.cl"
+    },
+    "presente": {
+      "fecha": "2026-11-12",
+      "medio": "El País Chile / Infobae",
+      "titulo": "Kast inicia gira a Vietnam y China con cumbre APEC en Shenzhen y bilateral con Xi Jinping",
+      "descripcion": "La Moneda ratificó la primera gira presidencial a Asia-Pacífico, con escala en Hanói (Vietnam) y participación en la cumbre APEC en Shenzhen (China), donde Kast sostiene una reunión bilateral con el presidente Xi Jinping acompañado de ministros y gremios empresariales (CPC y Sofofa) para afianzar el vínculo comercial con Beijing.",
+      "impacto": "Giro pragmático hacia la relación comercial y diplomática con China y Vietnam frente a las definiciones ideológicas de campaña.",
+      "fuenteUrl": "https://elpais.com/chile/2026-11-10/kast-arranca-su-primer-viaje-a-asia-con-el-comercio-y-la-relacion-con-china-en-el-horizonte.html"
+    },
+    "veredictoSatirico": "La 'distancia firme frente a dictaduras comunistas' duró hasta que tocó subirse al avión rumbo a Hanói y Shenzhen para reunirse con Xi Jinping.",
+    "votosComunidad": 0
+  },
+  {
     "id": "recesion-tecnica-quiroz-2026",
     "titulo": "Citaba a Jorge Quiroz contra el 'bajo crecimiento' vs. Su ministro Quiroz reconoce recesión técnica",
     "categoria": "gasto-publico",

@@ -1136,6 +1136,131 @@
     ]
   },
   {
+    "id": "tweet-1566459870102007808",
+    "fecha": "2022-09-04",
+    "rol": "Líder de oposición / Candidato presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "El Gobierno debe hacerse cargo. Los chilenos tienen derecho a votar! #QueremosVotar",
+    "fuenteUrl": "https://x.com/joseantoniokast/status/1566459870102007808",
+    "archivoUrl": "https://web.archive.org/web/20220905070348/https://twitter.com/joseantoniokast/status/1566459870102007808",
+    "categoria": "nepotismo",
+    "postura": "exige",
+    "conceptosClave": [
+      "derecho",
+      "cargo",
+      "queremosvotar",
+      "hacerse",
+      "chileno",
+      "votar",
+      "debe"
+    ]
+  },
+  {
+    "id": "tweet-1566511947184369664",
+    "fecha": "2022-09-04",
+    "rol": "Líder de oposición / Candidato presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "Un voto por la libertad y por el futuro de nuestra patria #RecuperemosChile pic.twitter.com/usp34ouU5A",
+    "fuenteUrl": "https://x.com/joseantoniokast/status/1566511947184369664",
+    "archivoUrl": "https://web.archive.org/web/20220904194254/https://twitter.com/joseantoniokast/status/1566511947184369664",
+    "categoria": "libertades",
+    "postura": "condena",
+    "conceptosClave": [
+      "libertad",
+      "recuperemoschile",
+      "usp34ouu5a",
+      "nuestra",
+      "twitter",
+      "futuro",
+      "patria",
+      "voto"
+    ]
+  },
+  {
+    "id": "tweet-1566574180790784001",
+    "fecha": "2022-09-04",
+    "rol": "Líder de oposición / Candidato presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "Chile es una gran nación y después de esta noche, un pais más libre y con más esperanza. #VamosARecuperarChile 🇨🇱 pic.twitter.com/973TFrf7Ch",
+    "fuenteUrl": "https://x.com/joseantoniokast/status/1566574180790784001",
+    "archivoUrl": "https://web.archive.org/web/20220904235149/https://twitter.com/joseantoniokast/status/1566574180790784001",
+    "categoria": "gasto-publico",
+    "postura": "condena",
+    "conceptosClave": [
+      "vamosarecuperarchile",
+      "973tfrf7ch",
+      "esperanza",
+      "despues",
+      "twitter",
+      "nacion",
+      "noche",
+      "libre"
+    ]
+  },
+  {
+    "id": "tweet-1565869545402667008",
+    "fecha": "2022-09-03",
+    "rol": "Líder de oposición / Candidato presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "Tienen que ver este video de @beaheviaw y sigan a @i_republicanas !✌️",
+    "fuenteUrl": "https://x.com/joseantoniokast/status/1565869545402667008",
+    "archivoUrl": "https://web.archive.org/web/20220903210549/https://twitter.com/joseantoniokast/status/1565869545402667008",
+    "categoria": "constitucion",
+    "postura": "exige",
+    "conceptosClave": [
+      "video",
+      "sigan"
+    ]
+  },
+  {
+    "id": "tweet-1565887907985891329",
+    "fecha": "2022-09-03",
+    "rol": "Líder de oposición / Candidato presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "Que rabia el robo y el incendio en El Peral. Nos falta tanta infraestructura! Hasta cuándo permitimos que la delincuencia siga avanzando! pic.twitter.com/0xgszPVwPu",
+    "fuenteUrl": "https://x.com/joseantoniokast/status/1565887907985891329",
+    "archivoUrl": "https://web.archive.org/web/20220903041533/https://twitter.com/joseantoniokast/status/1565887907985891329",
+    "categoria": "seguridad",
+    "postura": "condena",
+    "conceptosClave": [
+      "delincuencia",
+      "infraestructura",
+      "0xgszpvwpu",
+      "permitimo",
+      "avanzando",
+      "incendio",
+      "twitter",
+      "cuando"
+    ]
+  },
+  {
+    "id": "tweet-1566145940007706624",
+    "fecha": "2022-09-03",
+    "rol": "Líder de oposición / Candidato presidencial",
+    "tipoMedio": "tweet",
+    "usuarioTweet": "@joseantoniokast",
+    "cita": "Mala noticia. El Gobierno debería permitir que millones de chilenos voten, no obstaculizarlos. A organizarse mañana! Hay que salir a votar!",
+    "fuenteUrl": "https://x.com/joseantoniokast/status/1566145940007706624",
+    "archivoUrl": "https://web.archive.org/web/20220903192822/https://twitter.com/joseantoniokast/status/1566145940007706624",
+    "categoria": "gasto-publico",
+    "postura": "exige",
+    "conceptosClave": [
+      "obstaculizarlo",
+      "organizarse",
+      "permitir",
+      "noticia",
+      "deberia",
+      "chileno",
+      "millon",
+      "manana"
+    ]
+  },
+  {
     "id": "dicho-bencinas-impuestos",
     "fecha": "2022-06-14",
     "rol": "Ex Candidato Presidencial",
