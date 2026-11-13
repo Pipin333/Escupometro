@@ -26,6 +26,31 @@
     "votosComunidad": 6240
   },
   {
+    "id": "acusacion-constitucional-rabat-desafio-2026",
+    "titulo": "Desafió a presentar la acusación contra Rabat 'mañana' vs. Ingreso formal del libelo en la Cámara",
+    "categoria": "seguridad",
+    "fechaIncidente": "2026-11-12",
+    "diasSinEscupoPrevios": 0,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2026-11-03",
+      "rol": "Presidente de la República (desde Roma)",
+      "tipoMedio": "prensa",
+      "cita": "Han tenido una semana para presentar la acusación constitucional, no lo han hecho. ¿Por qué? Que la presenten y que se vote... La responsabilidad política la asumí yo, porque soy el presidente de la República.",
+      "fuenteUrl": "https://elpais.com/chile/2026-11-03/kast-vuelve-a-respaldar-a-rabat-y-desafia-a-la-oposicion-que-presenten-la-acusacion-manana.html"
+    },
+    "presente": {
+      "fecha": "2026-11-12",
+      "medio": "The Clinic",
+      "titulo": "Oposición ingresa acusación constitucional contra el ministro de Justicia Fernando Rabat",
+      "descripcion": "Nueve días después del emplazamiento presidencial desde Roma, diez diputados de oposición (FA, PS, PC, PPD, DC y Partido Liberal) ingresaron formalmente la acusación constitucional contra Fernando Rabat con tres capítulos: rebajas de condenas en casos de delitos sexuales contra menores, beneficios a tres exagentes condenados por crímenes de lesa humanidad y antecedentes entregados ante el Congreso.",
+      "impacto": "Inicio de la tramitación formal del libelo en la Cámara de Diputados en medio de la crisis política de Justicia.",
+      "fuenteUrl": "https://www.theclinic.cl/2026/11/12/oposicion-ingresa-acusacion-constitucional-contra-ministro-fernando-rabat/"
+    },
+    "veredictoSatirico": "Del 'que la presenten y que se vote' desde Europa al ingreso efectivo de una acusación constitucional de tres capítulos nueve días después.",
+    "votosComunidad": 0
+  },
+  {
     "id": "recesion-tecnica-quiroz-2026",
     "titulo": "Citaba a Jorge Quiroz contra el 'bajo crecimiento' vs. Su ministro Quiroz reconoce recesión técnica",
     "categoria": "gasto-publico",
