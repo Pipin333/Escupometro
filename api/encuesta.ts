@@ -1,3 +1,10 @@
+import {
+  aEnteroNoNegativo,
+  ejecutarPipelineRedis,
+  jsonResponse,
+  obtenerCredencialesRedis,
+} from './_upstash.js';
+
 const CLAVE_HASH_ENCUESTA = 'contadorkast:encuesta:v1';
 const OPCIONES_VALIDAS = ['aprueba', 'desaprueba', 'neutral'] as const;
 type OpcionEncuesta = (typeof OPCIONES_VALIDAS)[number];
@@ -6,24 +13,6 @@ interface ConteosEncuesta {
   aprueba: number;
   desaprueba: number;
   neutral: number;
-}
-
-function obtenerCredencialesRedis(): { url: string; token: string } | null {
-  const env =
-    (globalThis as { process?: { env?: Record<string, string | undefined> } }).process
-      ?.env ?? {};
-
-  const url = env.UPSTASH_REDIS_REST_URL ?? env.KV_REST_API_URL ?? '';
-  const token = env.UPSTASH_REDIS_REST_TOKEN ?? env.KV_REST_API_TOKEN ?? '';
-
-  if (!url.trim() || !token.trim()) {
-    return null;
-  }
-
-  return {
-    url: url.replace(/\/+$/, ''),
-    token: token.trim(),
-  };
 }
 
 function esOpcionValida(valor: unknown): valor is OpcionEncuesta {
@@ -35,51 +24,11 @@ function esOpcionValida(valor: unknown): valor is OpcionEncuesta {
 
 function parsearConteosDesdeHmget(resultado: unknown): ConteosEncuesta {
   const valores = Array.isArray(resultado) ? resultado : [];
-  const aEnteroSeguro = (raw: unknown): number => {
-    const num = typeof raw === 'string' || typeof raw === 'number' ? Number(raw) : 0;
-    return Number.isFinite(num) && num > 0 ? Math.floor(num) : 0;
-  };
-
   return {
-    aprueba: aEnteroSeguro(valores[0]),
-    desaprueba: aEnteroSeguro(valores[1]),
-    neutral: aEnteroSeguro(valores[2]),
+    aprueba: aEnteroNoNegativo(valores[0]),
+    desaprueba: aEnteroNoNegativo(valores[1]),
+    neutral: aEnteroNoNegativo(valores[2]),
   };
-}
-
-async function ejecutarPipelineRedis(
-  credenciales: { url: string; token: string },
-  comandos: unknown[][]
-): Promise<Array<{ result?: unknown; error?: string }>> {
-  const resp = await fetch(`${credenciales.url}/pipeline`, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${credenciales.token}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(comandos),
-  });
-
-  if (!resp.ok) {
-    throw new Error(`Upstash HTTP ${resp.status}`);
-  }
-
-  const data = (await resp.json()) as Array<{ result?: unknown; error?: string }>;
-  if (!Array.isArray(data)) {
-    throw new Error('Respuesta inesperada de Upstash');
-  }
-
-  return data;
-}
-
-function jsonResponse(payload: unknown, status = 200): Response {
-  return new Response(JSON.stringify(payload), {
-    status,
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Cache-Control': 'no-store',
-    },
-  });
 }
 
 /**

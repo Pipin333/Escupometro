@@ -89,8 +89,8 @@ Para contar con refresco automático de prensa chilena cada 15 minutos sin rebui
 
 1. Importa el repositorio en **Vercel** (detecta Vite automáticamente mediante [`vercel.json`](vercel.json)).
 2. La función serverless [`api/rss.ts`](api/rss.ts) expone `GET /api/rss`, reutiliza el scraper político (`scrapearPrensaChilena`) y responde con caché CDN en el edge (`s-maxage=900, stale-while-revalidate=300`).
-3. Para activar la **encuesta global en tiempo real**, conecta una base gratuita de **Upstash Redis** desde el Marketplace de Vercel (esto inyecta `UPSTASH_REDIS_REST_URL` y `UPSTASH_REDIS_REST_TOKEN` o `KV_REST_API_*` para [`api/encuesta.ts`](api/encuesta.ts)). Si no está configurada, degrada automáticamente a modo local por navegador.
-4. En hosts puramente estáticos (como GitHub Pages) donde `/api/rss` y `/api/encuesta` no existen, la pestaña **Noticias** usa `src/data/noticias-recientes.json` y la encuesta guarda votos localmente.
+3. Para activar la **encuesta global** y los **respaldos globales por expediente** en tiempo real, conecta una base gratuita de **Upstash Redis** desde el Marketplace de Vercel (esto inyecta `UPSTASH_REDIS_REST_URL` y `UPSTASH_REDIS_REST_TOKEN` o `KV_REST_API_*` para [`api/encuesta.ts`](api/encuesta.ts) y [`api/votos.ts`](api/votos.ts)). Si no está configurada, ambos degradan automáticamente a modo local por navegador.
+4. En hosts puramente estáticos donde `/api/rss`, `/api/encuesta` y `/api/votos` no existen, la pestaña **Noticias** usa `src/data/noticias-recientes.json` y los votos se mantienen localmente.
 
 ---
 

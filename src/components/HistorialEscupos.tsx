@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowUpRight, ThumbsUp } from 'lucide-react';
 import type { Escupo } from '../types/escupo';
+import {
+  calcularTotalVotosExpediente,
+  cargarVotosGlobales,
+  enviarVotoExpedienteGlobal,
+  guardarVotadosLocales,
+  leerVotadosLocales,
+} from '../lib/votos';
 
 interface HistorialEscuposProps {
   incidentes: Escupo[];
@@ -19,18 +26,42 @@ const ETIQUETAS_CATEGORIA: Record<string, string> = {
  * Listado cronológico de expedientes documentados en formato editorial limpio.
  */
 export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }) => {
-  const [votos, setVotos] = useState<Record<string, number>>({});
-  const [votados, setVotados] = useState<Record<string, boolean>>({});
+  const [votosGlobales, setVotosGlobales] = useState<Record<string, number>>({});
+  const [deltasLocales, setDeltasLocales] = useState<Record<string, number>>({});
+  const [votados, setVotados] = useState<Record<string, boolean>>(() => leerVotadosLocales());
 
-  const toggleVoto = (id: string, votosBase = 0) => {
-    const yaVotado = votados[id];
-    setVotados((prev) => ({ ...prev, [id]: !yaVotado }));
-    setVotos((prev) => {
-      const actual = prev[id] !== undefined ? prev[id] : votosBase;
-      return {
-        ...prev,
-        [id]: yaVotado ? actual - 1 : actual + 1,
-      };
+  useEffect(() => {
+    let activo = true;
+    void cargarVotosGlobales().then((mapa) => {
+      if (activo && mapa) {
+        setVotosGlobales(mapa);
+      }
+    });
+    return () => {
+      activo = false;
+    };
+  }, []);
+
+  const toggleVoto = (id: string) => {
+    const yaVotado = !!votados[id];
+    const accion = yaVotado ? 'restar' : 'sumar';
+    const delta = yaVotado ? -1 : 1;
+
+    setVotados((prev) => {
+      const siguiente = { ...prev, [id]: !yaVotado };
+      guardarVotadosLocales(siguiente);
+      return siguiente;
+    });
+
+    setDeltasLocales((prev) => ({
+      ...prev,
+      [id]: (prev[id] ?? 0) + delta,
+    }));
+
+    void enviarVotoExpedienteGlobal(id, accion).then((nuevoGlobal) => {
+      if (nuevoGlobal === null) return;
+      setVotosGlobales((prev) => ({ ...prev, [id]: nuevoGlobal }));
+      setDeltasLocales((prev) => ({ ...prev, [id]: 0 }));
     });
   };
 
@@ -50,7 +81,11 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
   return (
     <section aria-label="Registros históricos" className="divide-y divide-[#dcd7cc] border-t border-b border-[#dcd7cc]">
       {incidentes.map((item) => {
-        const totalVotos = votos[item.id] !== undefined ? votos[item.id] : (item.votosComunidad || 0);
+        const totalVotos = calcularTotalVotosExpediente(
+          item.votosComunidad,
+          votosGlobales[item.id],
+          deltasLocales[item.id] ?? 0
+        );
         const haVotado = !!votados[item.id];
 
         return (
@@ -152,7 +187,7 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
 
                 <button
                   type="button"
-                  onClick={() => toggleVoto(item.id, item.votosComunidad)}
+                  onClick={() => toggleVoto(item.id)}
                   className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-tabular border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] ${
                     haVotado
                       ? 'bg-[#141413] text-[#f7f5f0] border-[#141413]'
