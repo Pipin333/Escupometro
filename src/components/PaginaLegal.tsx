@@ -26,7 +26,7 @@ export const PaginaLegal: React.FC<PaginaLegalProps> = ({ onVolverArchivo }) => 
 
         <div className="space-y-2">
           <p className="font-tabular text-xs uppercase tracking-[0.12em] text-[#b91c1c] font-semibold">
-            Transparencia editorial · Actualizado 2026-11-12
+            Transparencia editorial · Actualizado 2026-11-13
           </p>
           <h2
             id="titulo-legal"
@@ -35,7 +35,7 @@ export const PaginaLegal: React.FC<PaginaLegalProps> = ({ onVolverArchivo }) => 
             Términos de Uso, Nota Legal y Privacidad
           </h2>
           <p className="text-sm text-[#4a4843] leading-relaxed">
-            Criterios editoriales, alcance jurídico de la sátira política y tratamiento de datos locales en este sitio estático.
+            Criterios editoriales, alcance jurídico de la sátira política y tratamiento de datos locales y conteos anónimos agregados en este sitio.
           </p>
         </div>
       </div>
@@ -72,7 +72,7 @@ export const PaginaLegal: React.FC<PaginaLegalProps> = ({ onVolverArchivo }) => 
               Atribución de fuentes y rectificación
             </h4>
             <p>
-              Cada ficha distingue las citas textuales de los hechos reportados por terceros y enlaza a su fuente original. Asimismo, la sección <strong>Noticias</strong> muestra únicamente titulares, extractos breves y enlaces directos provenientes de feeds RSS públicos de medios chilenos, sin reproducir artículos completos. La mención a investigaciones judiciales o administrativas refleja exclusivamente información publicada por medios de prensa y no constituye imputación personal de responsabilidad penal. Si detectas un error de fecha, cita o enlace, puedes solicitar su revisión y enmienda aportando la fuente verificable mediante un Issue en el repositorio del proyecto.
+              Cada ficha distingue las citas textuales de los hechos reportados por terceros y enlaza a su fuente original verificable (publicaciones en X/Twitter —incluyendo respaldos en Wayback Machine—, registros audiovisuales y prensa nacional). Asimismo, la sección <strong>Noticias</strong> muestra únicamente titulares, extractos breves y enlaces directos provenientes de feeds RSS públicos de medios chilenos (consultados mediante <code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">/api/rss</code> y respaldos estáticos), sin reproducir artículos completos. La mención a investigaciones judiciales o administrativas refleja exclusivamente información publicada por medios de prensa y no constituye imputación personal de responsabilidad penal. Si detectas un error de fecha, cita o enlace, puedes solicitar su revisión y enmienda aportando la fuente verificable mediante un Issue en el repositorio del proyecto.
             </p>
           </div>
 
@@ -107,19 +107,19 @@ export const PaginaLegal: React.FC<PaginaLegalProps> = ({ onVolverArchivo }) => 
 
           <div>
             <h4 className="font-semibold text-[#141413] mb-1">
-              Almacenamiento local de la encuesta (<code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">localStorage</code>)
+              Almacenamiento local (<code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">localStorage</code>) y conteos anónimos agregados
             </h4>
             <p>
-              La sección <em>Encuesta de apoyo al gobierno</em> guarda tu selección únicamente en el almacenamiento local de tu propio navegador bajo la clave <code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">contadorKast.encuesta.v1</code>. Esos datos no se envían a ningún servidor propio y puedes eliminarlos en cualquier instante pulsando <strong>Reiniciar encuesta</strong> o borrando los datos del sitio en tu navegador.
+              Para evitar duplicar participaciones desde un mismo navegador sin pedir registro, el sitio guarda tu selección de la <em>Encuesta Ciudadana</em> bajo la clave <code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">contadorKast.encuesta.v1</code> y tus apoyos a expedientes (<code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">👍</code>) bajo <code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">contadorkast:expedientes-votados:v1</code> en tu propio navegador. Puedes borrar esos registros locales en cualquier momento pulsando <strong>Reiniciar encuesta</strong> o limpiando los datos del sitio en tu navegador. Adicionalmente, los totales agregados de la encuesta y de los votos por expediente se sincronizan de forma anónima con una base de contadores en <strong>Upstash Redis</strong> a través de funciones serverless (<code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">/api/encuesta</code> y <code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">/api/votos</code>), almacenando únicamente totales numéricos por opción o ficha, sin vincularlos a nombres, correos, cuentas ni perfiles personales.
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold text-[#141413] mb-1">
-              Infraestructura de alojamiento
+              Infraestructura de alojamiento y servicios
             </h4>
             <p>
-              Cuando la aplicación se publica como sitio estático en GitHub Pages, la plataforma de alojamiento puede procesar registros técnicos mínimos de red (como dirección IP o encabezados HTTP) conforme a sus propias políticas de privacidad y seguridad.
+              La aplicación web y sus funciones serverless (<code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">/api/encuesta</code>, <code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">/api/votos</code> y <code className="font-tabular text-xs bg-[#efeae0] px-1 py-0.5 rounded">/api/rss</code>) se alojan en <strong>Vercel</strong>, con persistencia de contadores agregados en <strong>Upstash Redis</strong>. Dichos proveedores pueden procesar registros técnicos mínimos de red (como dirección IP o encabezados HTTP) conforme a sus propias políticas de privacidad, seguridad y retención.
             </p>
           </div>
         </div>
