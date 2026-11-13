@@ -207,6 +207,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "chile-se-cae-a-pedazos-crecimiento-cero-ipc-2026",
+    "titulo": "Eslogan 'Chile se cae a pedazos' con 2,6% de crecimiento vs. Proyección de PIB en 0% e IPC anual en 4,5%",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-11-06",
+    "diasSinEscupoPrevios": 9,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2025-10-15",
+      "rol": "Candidato Presidencial (campaña 2025)",
+      "tipoMedio": "prensa",
+      "cita": "Chile se cae a pedazos.",
+      "fuenteUrl": "https://elpais.com/chile/2026-09-15/los-primeros-seis-meses-de-kast-desempleo-record-y-una-economia-que-no-logra-despegar.html"
+    },
+    "presente": {
+      "fecha": "2026-11-06",
+      "medio": "INE / Banco Central / CNN Chile",
+      "titulo": "Expectativas recortan crecimiento de 2026 a 0% mientras el IPC acumulado y a 12 meses alcanza 4,5%",
+      "descripcion": "Mientras en 2025 Kast basó su campaña en el eslogan 'Chile se cae a pedazos' con la economía creciendo en torno a 2,6%, en noviembre de 2026 la Encuesta de Expectativas Económicas del Banco Central situó en 0% la mediana de crecimiento del PIB para 2026 (tras el recorte del IPoM de septiembre a 0,25%-0,75%). En paralelo, el INE informó el 6 de noviembre que el IPC de octubre subió 0,5% mensual, acumulando 4,5% en el año y 4,5% en 12 meses impulsado por Transporte (+2,0%) y Alimentos (+1,0%).",
+      "impacto": "Estancamiento proyectado en 0% para 2026, inflación anual de 4,5% y contraste directo con el relato económico de campaña.",
+      "fuenteUrl": "https://www.cnnchile.com/negocios/expertos-recortan-a-0-proyeccion-crecimiento-para-2026/"
+    },
+    "veredictoSatirico": "Con 2,6% de crecimiento y precios contenidos repetía que 'Chile se cae a pedazos'; hoy el mercado proyecta 0% para 2026 y el IPC a 12 meses va en 4,5%.",
+    "votosComunidad": 0
+  },
+  {
     "id": "rebaja-condenas-abusadores-justicia-2026",
     "titulo": "'Jamás indultaría a un abusador de niños' vs. Decretos del Ministerio de Justicia que rebajaron penas a 56 reos",
     "categoria": "seguridad",
