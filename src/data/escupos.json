@@ -285,6 +285,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "chao-guias-ambientales-aluvion-2026",
+    "titulo": "Prometió '¡Chao guías ambientales, chao ideología!' vs. Aluvión en Las Condes y recorte del 59,1% en cambio climático",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-10-14",
+    "diasSinEscupoPrevios": 35,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2025-09",
+      "rol": "Candidato Presidencial (XX Encuentro Empresarial del Sur, Valdivia)",
+      "tipoMedio": "prensa",
+      "cita": "¡Chao guías ambientales, chao ideología!",
+      "fuenteUrl": "https://eldesconcierto.cl/actualidad/chao-guias-ambientales-chao-ideologia-reflotan-polemica-frase-kast-aluvion-las-condes-n5462999"
+    },
+    "presente": {
+      "fecha": "2026-10-14",
+      "medio": "Interferencia / El Desconcierto",
+      "titulo": "Tras aluvión en Las Condes y tornado EF-0 en Santiago, Presupuesto 2027 recorta 59,1% en cambio climático",
+      "descripcion": "El 8 de octubre de 2026 un aluvión en San Carlos de Apoquindo obligó a decretar Estado de Catástrofe en Las Condes y Alerta Roja en diez comunas; cinco días después una tormenta eléctrica con granizos y tornado EF-0 marcó el octubre más lluvioso de la serie histórica de Santiago. En paralelo, Interferencia reveló que el proyecto de Presupuesto 2027 recorta en 59,1% la línea de cambio climático y NDC y deja sin fondos específicos al Acuerdo de Escazú por primera vez desde 2022.",
+      "impacto": "La frase de Valdivia volvió a viralizarse ante la contradicción entre desestimar normas ambientales y decretar zonas de catástrofe mientras se recortan fondos de adaptación climática.",
+      "fuenteUrl": "https://interferencia.cl/articulos/un-octubre-de-extremos-climaticos-y-un-gobierno-que-recorta-su-respuesta"
+    },
+    "veredictoSatirico": "En campaña despachaba las normas ecológicas con un '¡Chao guías ambientales, chao ideología!'; en octubre le tocó decretar Estado de Catástrofe en Las Condes por un aluvión mientras recortaba 59,1% al ítem de cambio climático.",
+    "votosComunidad": 0
+  },
+  {
     "id": "gobierno-de-practicantes-contrataciones-2026",
     "titulo": "Del 'gobierno de practicantes' a estudiantes de pregrado y expracticantes con sueldos millonarios en La Moneda",
     "categoria": "nepotismo",
