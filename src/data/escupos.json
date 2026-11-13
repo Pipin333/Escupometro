@@ -310,6 +310,32 @@
     "votosComunidad": 0
   },
   {
+    "id": "almuerzo-exalumnos-uc-la-moneda-2026",
+    "titulo": "Prometía que 'los recursos de los chilenos son sagrados' vs. Almuerzo privado para 70 excompañeros de Derecho UC en La Moneda",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-04-10",
+    "diasSinEscupoPrevios": 30,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2022-03-15",
+      "rol": "Líder Republicano",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Los recursos de los chilenos son sagrados. Quien use recursos fiscales para beneficio propio o de su familia está cometiendo una traición ética inaceptable.",
+      "fuenteUrl": "https://x.com/joseantoniokast"
+    },
+    "presente": {
+      "fecha": "2026-04-10",
+      "medio": "BioBioChile Investiga / El País Chile",
+      "titulo": "Organiza almuerzo para cerca de 70 excompañeros de la UC en La Moneda y termina denunciado ante Contraloría",
+      "descripcion": "El 10 de abril de 2026, Kast recibió en los salones del Palacio de La Moneda a unos 70 excompañeros de Derecho UC (generación 1984) con menú y vinos de reserva. Parlamentarios del PS denunciaron la actividad ante la Contraloría por el uso de instalaciones y personal estatal en un encuentro privado; Presidencia señaló que el banquete fue costeado con fondos personales del Mandatario, quien semanas después reconoció públicamente que fue un 'error por desconocimiento'.",
+      "impacto": "Denuncia formal ante la Contraloría General de la República y reconocimiento público del propio Presidente de que no repetiría eventos personales en dependencias fiscales.",
+      "fuenteUrl": "https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2026/04/13/el-menu-con-que-kast-recibio-a-excompaneros-en-la-moneda-actividad-fue-denunciada-a-la-contraloria.shtml"
+    },
+    "veredictoSatirico": "De predicar que nadie use bienes fiscales para fines propios a armar el reencuentro de generación 1984 en los salones de La Moneda y tener que pedir disculpas por 'desconocimiento'.",
+    "votosComunidad": 0
+  },
+  {
     "id": "gobierno-austero-6000m-helicoptero-2026",
     "titulo": "Promesa de 'gobierno austero' y recorte de US$ 6.000 millones vs. Relativización del ajuste y traslado en helicóptero el Día 1",
     "categoria": "gasto-publico",
