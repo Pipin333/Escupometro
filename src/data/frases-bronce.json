@@ -1,5 +1,25 @@
 [
   {
+    "id": "kast-metafora-300mil-2026",
+    "fecha": "2026-05-13",
+    "autor": "José Antonio Kast",
+    "cargo": "Presidente de la República",
+    "cita": "Si alguien creyó que en un día uno va a expulsar a 300 mil, creo que entendió mal el mensaje... era una metáfora.",
+    "contexto": "Declaración pública al ser consultado por el vencimiento de la cuenta regresiva de '92 días' de campaña para que abandonaran el país más de 300 mil migrantes irregulares.",
+    "medio": "T13 / BioBioChile",
+    "fuenteUrl": "https://www.t13.cl/noticia/politica/es-una-metafora-kast-sobre-su-promesa-expulsar-migrantes-irregulares-primer-dia-13-5-2026"
+  },
+  {
+    "id": "sedini-contra-la-seguridad-2026",
+    "fecha": "2026-04-21",
+    "autor": "Mara Sedini",
+    "cargo": "Ministra Secretaria General de Gobierno (Segegob)",
+    "cita": "Tenemos proyectos importantes, estamos trabajando contra el crimen organizado, contra la seguridad, contra la migración irregular...",
+    "contexto": "Lapsus durante una vocería oficial desde el Palacio de La Moneda al enumerar los ejes prioritarios de orden público del Ejecutivo.",
+    "medio": "El Desconcierto / Le Monde Diplomatique",
+    "fuenteUrl": "https://eldesconcierto.cl/actualidad/el-nuevo-impasse-vocera-mara-sedini-al-intentar-defender-dichos-ministras-natalia-duco-y-ximena-lincolao-n5458252"
+  },
+  {
     "id": "carter-mas-pobres-mas-felices-2026",
     "fecha": "2026-03-11",
     "autor": "Álvaro Carter",
