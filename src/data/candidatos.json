@@ -184,51 +184,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-13-14cbed24d6__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-13-14cbed24d6",
-      "titulo": "(VIDEO) Camioneros chilenos de Freire exigen rebaja de tarifas y renuncia de dirigentes de Santiago",
-      "bajada": "El Ciudadano Camioneros de Freire, Chile, rechazan ofertas insatisfactorias y exigen una rebaja de tarifas que beneficie a todo el gremio del transporte. Critican duramente a los dirigentes de Santiago por no representarlos adecuadamente, exigiendo su renuncia en medio de un paro nacional. La tensión resalta la fractura interna y la necesidad de reformas en la representación [&#8230;] La entrada (VIDEO) Camioneros ch",
-      "medio": "El Ciudadano",
-      "fecha": "2026-11-13",
-      "publicadoEn": "2026-11-13T11:15:09.000Z",
-      "url": "https://www.elciudadano.com/reels/video-camioneros-chilenos-de-freire-exigen-rebaja-de-tarifas-y-renuncia-de-dirigentes-de-santiago/11/13/"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "camioneros",
-      "paro",
-      "transporte"
-    ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (camioneros, paro, transporte). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, medio, paro, renuncia) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-12-a941724a9c__dicho-giras-extranjero",
     "noticia": {
       "id": "news-2026-11-12-a941724a9c",
@@ -462,8 +417,8 @@
     "id": "news-2026-11-11-39bf44025f__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-11-39bf44025f",
-      "titulo": "Gobierno se reúne con camioneros pero el paro continúa; Quiroz reconoce recesión técnica, y Ejecutivo repondrá “Yo elijo mi PC” en presupuesto 2027",
-      "bajada": "La entrada Gobierno se reúne con camioneros pero el paro continúa; Quiroz reconoce recesión técnica, y Ejecutivo repondrá “Yo elijo mi PC” en presupuesto 2027 se publicó primero en CIPER Chile .",
+      "titulo": "Gobierno se reúne con camioneros pero el paro continúa; Quiroz reconoce recesión técnica, y Ejecutivo repondrá \"Yo elijo mi PC\" en presupuesto 2027",
+      "bajada": "La entrada Gobierno se reúne con camioneros pero el paro continúa; Quiroz reconoce recesión técnica, y Ejecutivo repondrá \"Yo elijo mi PC\" en presupuesto 2027 se publicó primero en CIPER Chile .",
       "medio": "CIPER Chile",
       "fecha": "2026-11-11",
       "publicadoEn": "2026-11-11T23:00:13.000Z",
@@ -543,6 +498,50 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-13",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-09-71afc22ea8__dicho-indulto-abusadores",
+    "noticia": {
+      "id": "news-2026-11-09-71afc22ea8",
+      "titulo": "Kast anuncia nueva alza de $40 en los combustibles, pero presenta proyecto para limitar los aumentos; gobierno amplía suspensión de rebajas de condena a todos los delitos, y avisos de ofertas laborales caen 12,6% anual",
+      "bajada": "La entrada Kast anuncia nueva alza de $40 en los combustibles, pero presenta proyecto para limitar los aumentos; gobierno amplía suspensión de rebajas de condena a todos los delitos, y avisos de ofertas laborales caen 12,6% anual se publicó primero en CIPER Chile .",
+      "medio": "CIPER Chile",
+      "fecha": "2026-11-09",
+      "publicadoEn": "2026-11-09T22:59:08.000Z",
+      "url": "https://www.ciperchile.cl/2026/11/09/radar-09-11-26/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=radar-09-11-26"
+    },
+    "dicho": {
+      "id": "dicho-indulto-abusadores",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "tipoMedio": "debate",
+      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+      "fuenteUrl": "https://www.anatel.cl",
+      "categoria": "seguridad",
+      "postura": "prohibe",
+      "conceptosClave": [
+        "indulto",
+        "rebaja",
+        "condena",
+        "pena",
+        "abusador",
+        "pederasta",
+        "violador",
+        "justicia",
+        "rabat",
+        "reos",
+        "carcel"
+      ]
+    },
+    "scoreContradiccion": 90,
+    "tipoChoque": "Inversión de postura",
+    "evidenciasLexicas": [
+      "rebaja",
+      "condena"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rebaja, condena). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, alza) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
     "generadoEn": "2026-11-13",
     "metodoAnalisis": "motor-determinista"
   }
