@@ -235,6 +235,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "cable-chino-transparencia-peter-thiel-2026",
+    "titulo": "Quiebre por 'falta de transparencia' en el cable chino vs. Reunión secreta con Peter Thiel (Palantir) sin registro ni actas",
+    "categoria": "libertades",
+    "fechaIncidente": "2026-07-09",
+    "diasSinEscupoPrevios": 51,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2026-03-03",
+      "rol": "Presidente Electo (en reunión de transición)",
+      "tipoMedio": "prensa",
+      "cita": "El equipo entrante acusó falta de transparencia y sostuvo que nunca fueron informados sobre el cable submarino con China, suspendiendo abruptamente las reuniones bilaterales de traspaso tras 22 minutos en La Moneda.",
+      "fuenteUrl": "https://www.cooperativa.cl/noticias/pais/gabriel-boric/tension-por-cable-chino-causa-quiebre-absoluto-entre-boric-y-kast/2026-03-03/084011.html"
+    },
+    "presente": {
+      "fecha": "2026-07-09",
+      "medio": "The Clinic / El Mostrador",
+      "titulo": "Presidencia reconoce reunión reservada con Peter Thiel sobre IA para el Estado, pero rechaza entregar antecedentes",
+      "descripcion": "Tras oficios fiscalizadores, La Moneda confirmó que Kast recibió en reserva en mayo a Peter Thiel (cofundador de Palantir, ligada a vigilancia y análisis masivo de datos), sin registro en agenda ni Ley de Lobby. Presidencia admitió que trataron 'los desafíos de la IA para el Estado', pero se negó a entregar actas invocando la inviolabilidad de comunicaciones privadas; además, en agosto la Subtel mantuvo reuniones por el propio cable chino.",
+      "impacto": "Organizaciones como Derechos Digitales y parlamentarios cuestionaron la opacidad sobre IA estatal y vigilancia tras haber exigido transparencia total por el cable chino.",
+      "fuenteUrl": "https://www.theclinic.cl/2026/07/09/presidencia-reconoce-que-kast-y-peter-thiel-abordaron-los-desafios-de-la-ia-para-el-estado-pero-rechaza-entregar-mas-antecedentes-de-la-reunion/"
+    },
+    "veredictoSatirico": "En marzo rompió la transición acusando falta de transparencia por el cable chino; en mayo recibió en secreto al fundador de Palantir y en julio invocó reserva privada para no entregar actas sobre IA estatal.",
+    "votosComunidad": 0
+  },
+  {
     "id": "mara-sedini-voceria-corrupcion",
     "titulo": "La 'corrupción de asumir cargos no preparados' de Mara Sedini: de lección moral en TV a 69 días como vocera",
     "categoria": "nepotismo",
