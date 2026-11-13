@@ -310,6 +310,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "gobierno-austero-6000m-helicoptero-2026",
+    "titulo": "Promesa de 'gobierno austero' y recorte de US$ 6.000 millones vs. Relativización del ajuste y traslado en helicóptero el Día 1",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-03-11",
+    "diasSinEscupoPrevios": 0,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2025-10-26",
+      "rol": "Candidato Presidencial",
+      "tipoMedio": "prensa",
+      "cita": "Prometió un recorte fiscal de US$ 6.000 millones en 18 meses combatiendo la 'grasa estatal' bajo un 'gobierno austero', asegurando que 'no vamos a cortar ningún beneficio social'.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2025/10/26/kast-explica-recorte-presupuestario-de-us-6-000-millones-no-vamos-a-cortar-ningun-beneficio-social.shtml"
+    },
+    "presente": {
+      "fecha": "2026-03-11",
+      "medio": "The Clinic / El País Chile",
+      "titulo": "Hacienda relativiza el recorte de US$ 6.000 millones y el estreno en el cambio de mando incluye vuelo en helicóptero a Santiago",
+      "descripcion": "Antes del traspaso, el ministro Jorge Quiroz ya había relativizado la meta rígida de US$ 6.000 millones en 18 meses; y en la propia jornada del cambio de mando el 11 de marzo de 2026, tras el almuerzo en Cerro Castillo, Kast y María Pía Adriasola abordaron un helicóptero de Carabineros hacia Santiago antes de llegar a La Moneda.",
+      "impacto": "Contraste entre la retórica de austeridad extrema de campaña y la puesta en escena y flexibilización fiscal del Ejecutivo.",
+      "fuenteUrl": "https://www.theclinic.cl/2026/03/11/cambio-de-mando-el-itinerario-de-gabriel-boric-y-jose-antonio-kast-para-esta-jornada-de-tradicion-republicana/"
+    },
+    "veredictoSatirico": "El 'gobierno austero' del recorte récord en 18 meses partió flexibilizando la meta con Hacienda y volviendo de Cerro Castillo a Santiago en helicóptero institucional el mismo 11 de marzo.",
+    "votosComunidad": 0
+  },
+  {
     "id": "caso-convenios-mauricio-ojeda",
     "titulo": "Guerra al 'Caso Convenios' vs. Desafuero del diputado republicano Mauricio Ojeda por $730 millones",
     "categoria": "gasto-publico",
