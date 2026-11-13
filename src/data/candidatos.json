@@ -184,48 +184,47 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-13-c64e0abedf__dicho-indulto-abusadores",
+    "id": "news-2026-11-13-14cbed24d6__dicho-bencinas-impuestos",
     "noticia": {
-      "id": "news-2026-11-13-c64e0abedf",
-      "titulo": "«El blindaje del Presidente Kast no da para más»: Presentan acusación constitucional contra ministro de Justicia Fernando Rabat",
-      "bajada": "El Ciudadano Parlamentarios y parlamentarias de oposición ingresaron la noche del jueves 12/11 la anunciada acusación constitucional contra el ministro de Justicia, Fernando Rabat, por su responsabilidad en la rebaja de condena a delincuentes, incluyendo algunos sentenciados por delitos sexuales contra menores y criminales de lesa humanidad. Según consignó la prensa nacional, el documento consta de tres [&#8230;] La ",
+      "id": "news-2026-11-13-14cbed24d6",
+      "titulo": "(VIDEO) Camioneros chilenos de Freire exigen rebaja de tarifas y renuncia de dirigentes de Santiago",
+      "bajada": "El Ciudadano Camioneros de Freire, Chile, rechazan ofertas insatisfactorias y exigen una rebaja de tarifas que beneficie a todo el gremio del transporte. Critican duramente a los dirigentes de Santiago por no representarlos adecuadamente, exigiendo su renuncia en medio de un paro nacional. La tensión resalta la fractura interna y la necesidad de reformas en la representación [&#8230;] La entrada (VIDEO) Camioneros ch",
       "medio": "El Ciudadano",
       "fecha": "2026-11-13",
-      "publicadoEn": "2026-11-13T00:35:09.000Z",
-      "url": "https://www.elciudadano.com/justicia/el-blindaje-del-presidente-kast-no-da-para-mas-presentan-acusacion-constitucional-contra-ministro-de-justicia-fernando-rabat/11/12/"
+      "publicadoEn": "2026-11-13T11:15:09.000Z",
+      "url": "https://www.elciudadano.com/reels/video-camioneros-chilenos-de-freire-exigen-rebaja-de-tarifas-y-renuncia-de-dirigentes-de-santiago/11/13/"
     },
     "dicho": {
-      "id": "dicho-indulto-abusadores",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
-      "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl",
-      "categoria": "seguridad",
-      "postura": "prohibe",
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
       "conceptosClave": [
-        "indulto",
-        "rebaja",
-        "condena",
-        "pena",
-        "abusador",
-        "pederasta",
-        "violador",
-        "justicia",
-        "rabat",
-        "reos",
-        "carcel"
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
       ]
     },
     "scoreContradiccion": 96,
-    "tipoChoque": "Inversión de postura",
+    "tipoChoque": "Promesa incumplida",
     "evidenciasLexicas": [
-      "rabat",
-      "rebaja",
-      "condena",
-      "justicia"
+      "camioneros",
+      "paro",
+      "transporte"
     ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (rabat, rebaja, condena, justicia). El titular/bajada registra indicadores de ejecución contraria o conflicto (blinda, rebaja) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (camioneros, paro, transporte). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, medio, paro, renuncia) frente a la postura original de \"exige\" emitida el 2022-06-14.",
     "generadoEn": "2026-11-13",
     "metodoAnalisis": "motor-determinista"
   },
