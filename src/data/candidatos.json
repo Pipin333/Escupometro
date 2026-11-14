@@ -43,7 +43,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, asia, crisis, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, viaja, paro) frente a la postura original de \"condena\" emitida el 2023-07-18.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -89,7 +89,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (combustible, alza, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -134,7 +134,7 @@
       "rabat"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (rebaja, condena, rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro, continua) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -180,7 +180,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (combustible, alza, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -225,7 +225,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (diesel, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -270,7 +270,7 @@
       "precio"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (combustible, camioneros, precio). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, pese) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -316,7 +316,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (combustible, alza, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -360,7 +360,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro, continua) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -404,51 +404,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-09-71afc22ea8__dicho-indulto-abusadores",
-    "noticia": {
-      "id": "news-2026-11-09-71afc22ea8",
-      "titulo": "Kast anuncia nueva alza de $40 en los combustibles, pero presenta proyecto para limitar los aumentos; gobierno amplía suspensión de rebajas de condena a todos los delitos, y avisos de ofertas laborales caen 12,6% anual",
-      "bajada": "La entrada Kast anuncia nueva alza de $40 en los combustibles, pero presenta proyecto para limitar los aumentos; gobierno amplía suspensión de rebajas de condena a todos los delitos, y avisos de ofertas laborales caen 12,6% anual se publicó primero en CIPER Chile .",
-      "medio": "CIPER Chile",
-      "fecha": "2026-11-09",
-      "publicadoEn": "2026-11-09T22:59:08.000Z",
-      "url": "https://www.ciperchile.cl/2026/11/09/radar-09-11-26/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=radar-09-11-26"
-    },
-    "dicho": {
-      "id": "dicho-indulto-abusadores",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
-      "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl",
-      "categoria": "seguridad",
-      "postura": "prohibe",
-      "conceptosClave": [
-        "indulto",
-        "rebaja",
-        "condena",
-        "pena",
-        "abusador",
-        "pederasta",
-        "violador",
-        "justicia",
-        "rabat",
-        "reos",
-        "carcel"
-      ]
-    },
-    "scoreContradiccion": 90,
-    "tipoChoque": "Inversión de postura",
-    "evidenciasLexicas": [
-      "rebaja",
-      "condena"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rebaja, condena). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, alza) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -492,52 +448,99 @@
       "alza"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, alza). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-13-504b6ed75f__dicho-bencinas-impuestos",
+    "id": "news-2026-11-14-3836dd535c__dicho-giras-extranjero",
     "noticia": {
-      "id": "news-2026-11-13-504b6ed75f",
-      "titulo": "Kast acordó con los camioneros y desactivó el paro en Chile: importante baja del diésel y congelamiento de naftas",
-      "bajada": "Kast acordó con los camioneros y desactivó el paro en Chile: importante baja del diésel y congelamiento de naftas Los Andes",
-      "medio": "Los Andes",
-      "fecha": "2026-11-13",
-      "publicadoEn": "2026-11-13T12:08:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPeTR3N2Q3R3ZpbkhqY0g3aEhEQl94S1d5dmVjcnZKUEZzdnJjNVF6bC1vYlo5aDhveUgyY2hLVVVzNDVXaWtacmEzRWFpTGJJS3p3cnRwdHljOWJnY1otU1NrVVZENVFONXhBMDkzM0RfRDY5dWRUS3ExckVHb1V3MDJOTmMyWDh6R3FXOTRWaTRBRnZTLV93RUhENnRJYmxxb2JpclBkb3dUdXVqNnNxa3hyWWtsRmFrMTVyQkt3SDJ5SHB1UDl3VHVVelQyUlZ3bDVVaU5SWE4yMmJ4VVE?oc=5"
+      "id": "news-2026-11-14-3836dd535c",
+      "titulo": "Presidente Kast despega rumbo a Asia en medio de crisis aún abiertas: este domingo aterriza en Vietnam",
+      "bajada": "El mandatario volará por más de 24 horas rumbo a Hanói, donde sostendrá un encuentro con el presidente de Vietnam, Tô Lâm, y entregará una agenda floral en el Mausoleo de Ho Chi Minh, antes de trasladarse a China y Japón. La visita se dará tras una compleja semana en la que a contrarreloj se logró llegar a un acuerdo con los gremios de camioneros y donde la oposición presentó una AC en contra del ministro Fernando Ra",
+      "medio": "The Clinic",
+      "fecha": "2026-11-14",
+      "publicadoEn": "2026-11-14T00:33:08.000Z",
+      "url": "https://www.theclinic.cl/2026/11/13/presidente-kast-despega-rumbo-a-asia-en-medio-de-crisis-aun-abiertas-este-domingo-aterriza-en-vietnam/"
     },
     "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
       "tipoMedio": "tweet",
       "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
       "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
+      "categoria": "gasto-publico",
+      "postura": "condena",
       "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
       ]
     },
     "scoreContradiccion": 84,
-    "tipoChoque": "Promesa incumplida",
+    "tipoChoque": "Bumerán retórico",
     "evidenciasLexicas": [
-      "diesel",
-      "camioneros",
-      "paro"
+      "asia",
+      "vietnam",
+      "crisis",
+      "presidente"
     ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (diesel, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-13",
+    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (asia, vietnam, crisis, presidente). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio) frente a la postura original de \"condena\" emitida el 2023-07-18.",
+    "generadoEn": "2026-11-14",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-12-a8d8fda54c__dicho-indulto-abusadores",
+    "noticia": {
+      "id": "news-2026-11-12-a8d8fda54c",
+      "titulo": "Tras adoptar doctrina de que las decisiones de la Comisión de Rebaja de Condenas son irrevocables: Rabat igual rechazó 22 reducciones",
+      "bajada": "La entrada Tras adoptar doctrina de que las decisiones de la Comisión de Rebaja de Condenas son irrevocables: Rabat igual rechazó 22 reducciones se publicó primero en CIPER Chile .",
+      "medio": "CIPER Chile",
+      "fecha": "2026-11-12",
+      "publicadoEn": "2026-11-12T23:04:53.000Z",
+      "url": "https://www.ciperchile.cl/2026/11/12/tras-adoptar-doctrina-de-que-las-decisiones-de-la-comision-de-rebaja-de-condenas-son-irrevocables-rabat-igual-rechazo-22-reducciones/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=tras-adoptar-doctrina-de-que-las-decisiones-de-la-comision-de-rebaja-de-condenas-son-irrevocables-rabat-igual-rechazo-22-reducciones"
+    },
+    "dicho": {
+      "id": "dicho-indulto-abusadores",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "tipoMedio": "debate",
+      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+      "fuenteUrl": "https://www.anatel.cl",
+      "categoria": "seguridad",
+      "postura": "prohibe",
+      "conceptosClave": [
+        "indulto",
+        "rebaja",
+        "condena",
+        "pena",
+        "abusador",
+        "pederasta",
+        "violador",
+        "justicia",
+        "rabat",
+        "reos",
+        "carcel"
+      ]
+    },
+    "scoreContradiccion": 84,
+    "tipoChoque": "Inversión de postura",
+    "evidenciasLexicas": [
+      "rebaja",
+      "condena",
+      "rabat"
+    ],
+    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (rebaja, condena, rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "generadoEn": "2026-11-14",
     "metodoAnalisis": "motor-determinista"
   }
 ]
