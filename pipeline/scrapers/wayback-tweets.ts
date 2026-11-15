@@ -278,12 +278,17 @@ function extraerTextoDesdeTitle(html: string): string | null {
 }
 
 function extraerFechaDataTime(html: string, tweetId: string): string | null {
-  const patronId = new RegExp(`data-tweet-id=["']${tweetId}["']`, 'i');
-  const matchId = html.match(patronId);
-  if (!matchId || matchId.index === undefined) return null;
+  if (!/^\d{1,30}$/.test(tweetId)) return null;
 
-  const resto = html.slice(matchId.index);
-  const matchTime = resto.match(/data-time=["'](\d+)["']/i);
+  const htmlLower = html.toLowerCase();
+  const idxDoble = htmlLower.indexOf(`data-tweet-id="${tweetId}"`);
+  const idxSimple = htmlLower.indexOf(`data-tweet-id='${tweetId}'`);
+  const indices = [idxDoble, idxSimple].filter((i) => i >= 0);
+  if (indices.length === 0) return null;
+
+  const matchIndex = Math.min(...indices);
+  const resto = html.slice(matchIndex, matchIndex + 2048);
+  const matchTime = resto.match(/data-time=["'](\d{1,15})["']/i);
   if (!matchTime) return null;
 
   const segundos = Number(matchTime[1]);
@@ -492,6 +497,37 @@ async function hidratarDesdeOEmbedConArchivo(
   }
 }
 
+const MAX_HTML_SNAPSHOT_BYTES = 5 * 1024 * 1024;
+
+async function leerTextoSnapshotAcotado(resp: Response): Promise<string | null> {
+  const lenHeader = resp.headers.get('content-length');
+  if (lenHeader) {
+    const declared = Number(lenHeader);
+    if (Number.isFinite(declared) && declared > MAX_HTML_SNAPSHOT_BYTES) {
+      await resp.body?.cancel();
+      return null;
+    }
+  }
+  if (!resp.body) {
+    const txt = await resp.text();
+    return Buffer.byteLength(txt, 'utf-8') <= MAX_HTML_SNAPSHOT_BYTES ? txt : null;
+  }
+  const reader = resp.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > MAX_HTML_SNAPSHOT_BYTES) {
+      await reader.cancel();
+      return null;
+    }
+    chunks.push(value);
+  }
+  return Buffer.concat(chunks).toString('utf-8');
+}
+
 async function hidratarDesdeSnapshotsWayback(
   tweetId: string,
   handle: string,
@@ -518,7 +554,11 @@ async function hidratarDesdeSnapshotsWayback(
       if (!resp.ok) {
         errores.push(`Tweet ${tweetId} (${captura.timestamp}): HTTP ${resp.status}`);
       } else {
-        const html = await resp.text();
+        const html = await leerTextoSnapshotAcotado(resp);
+        if (!html) {
+          errores.push(`Tweet ${tweetId} (${captura.timestamp}): respuesta excede límite de tamaño`);
+          continue;
+        }
         const extraido = extraerTweetDesdeHtmlArchivado(html, tweetId, handle);
         if (extraido && extraido.fecha) {
           return {

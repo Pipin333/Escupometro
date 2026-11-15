@@ -5,6 +5,7 @@ import {
   extraerIdTweetDesdeUrl,
   normalizarFechaIso,
 } from '../../src/motor/clasificador-dichos';
+import { sanitizarUrlHttp } from '../../src/lib/url-segura';
 
 export interface ResultadoIngestaFuente {
   fuente: string;
@@ -16,7 +17,8 @@ const USUARIO_DEFECTO = 'joseantoniokast';
 const TIMEOUT_RED_MS = 12000;
 
 function limpiarHandle(usuario?: string): string {
-  return (usuario ?? USUARIO_DEFECTO).replace(/^@+/, '').trim() || USUARIO_DEFECTO;
+  const candidato = (usuario ?? USUARIO_DEFECTO).replace(/^@+/, '').trim();
+  return /^[a-zA-Z0-9_]{1,15}$/.test(candidato) ? candidato : USUARIO_DEFECTO;
 }
 
 function decodificarEntidadesHtml(texto: string): string {
@@ -83,18 +85,20 @@ function normalizarRegistroGenerico(
     usuarioPorDefecto;
 
   const handleLimpio = limpiarHandle(usuarioExtraido);
+  const idSeguro = /^\d{1,30}$/.test(idCrudo) ? idCrudo : '';
   const urlCruda =
     convertirValorString(anidado.url) ||
     convertirValorString(anidado.tweetUrl) ||
     convertirValorString(anidado.link) ||
     convertirValorString(anidado.fuenteUrl) ||
-    (idCrudo ? `https://x.com/${handleLimpio}/status/${idCrudo}` : '');
+    (idSeguro ? `https://x.com/${handleLimpio}/status/${idSeguro}` : '');
 
+  const urlSegura = sanitizarUrlHttp(urlCruda);
   const rol = convertirValorString(anidado.rol) || undefined;
   const fechaIso = normalizarFechaIso(fechaCruda);
-  const idFinal = idCrudo || extraerIdTweetDesdeUrl(urlCruda) || '';
+  const idFinal = idSeguro || (urlSegura ? extraerIdTweetDesdeUrl(urlSegura) : '') || '';
 
-  if (!texto || !fechaIso || !urlCruda) {
+  if (!texto || !fechaIso || !urlSegura) {
     return null;
   }
 
@@ -102,7 +106,7 @@ function normalizarRegistroGenerico(
     id: idFinal ? `tweet-${idFinal}` : undefined,
     fecha: fechaIso,
     texto,
-    url: urlCruda,
+    url: urlSegura,
     usuario: `@${handleLimpio}`,
     rol,
     tipoMedio: 'tweet',
@@ -300,11 +304,11 @@ export async function ingestarDesdeXApiV2(
 
     const userJson = (await userRes.json()) as { data?: { id?: string } };
     const userId = userJson.data?.id;
-    if (!userId) {
+    if (!userId || !/^\d{1,30}$/.test(userId)) {
       return {
         fuente: 'x-api-v2',
         registros: [],
-        errores: [`X API v2 no devolvió id para @${handle}`],
+        errores: [`X API v2 no devolvió id válido para @${handle}`],
       };
     }
 
@@ -444,14 +448,15 @@ export async function ingestarDesdeSocialData(
 export async function hidratarTweetOEmbed(
   tweetUrl: string
 ): Promise<RegistroDichoCrudo | null> {
-  const tweetId = extraerIdTweetDesdeUrl(tweetUrl);
-  if (!tweetId) {
+  const urlEntradaSegura = sanitizarUrlHttp(tweetUrl);
+  const tweetId = urlEntradaSegura ? extraerIdTweetDesdeUrl(urlEntradaSegura) : null;
+  if (!urlEntradaSegura || !tweetId) {
     return null;
   }
 
   try {
     const endpoint = `https://publish.twitter.com/oembed?url=${encodeURIComponent(
-      tweetUrl
+      urlEntradaSegura
     )}&omit_script=true`;
     const res = await fetch(endpoint, {
       headers: { Accept: 'application/json' },
@@ -491,7 +496,7 @@ export async function hidratarTweetOEmbed(
       id: `tweet-${tweetId}`,
       fecha: fechaIso,
       texto: cita,
-      url: payload.url ?? tweetUrl,
+      url: sanitizarUrlHttp(payload.url) ?? urlEntradaSegura,
       usuario: `@${handle}`,
       tipoMedio: 'tweet',
     };

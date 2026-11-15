@@ -1,4 +1,5 @@
 import type { NoticiaScrapeada } from '../types/escupo';
+import { sanitizarUrlHttp } from './url-segura';
 
 export interface RespuestaNoticiasEnVivo {
   items: NoticiaScrapeada[];
@@ -96,7 +97,7 @@ function esNoticiaValida(item: unknown): item is NoticiaScrapeada {
     typeof candidato.bajada === 'string' &&
     typeof candidato.medio === 'string' &&
     typeof candidato.fecha === 'string' &&
-    typeof candidato.url === 'string'
+    sanitizarUrlHttp(candidato.url) !== null
   );
 }
 

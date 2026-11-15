@@ -8,6 +8,7 @@ import {
   X,
 } from 'lucide-react';
 import type { NoticiaScrapeada } from '../types/escupo';
+import { sanitizarUrlHttp } from '../lib/url-segura';
 import {
   filtrarNoticiasPorMedioYTexto,
   formatearTiempoRelativo,
@@ -242,41 +243,48 @@ export const SeccionNoticias: React.FC<SeccionNoticiasProps> = ({
         </div>
       ) : (
         <ul className="space-y-3">
-          {noticiasFiltradas.map((noticia) => (
-            <li key={noticia.id}>
-              <article className="rounded-lg border border-[#dcd7cc] bg-[#ffffff] p-5 hover:border-[#141413] transition-colors">
-                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-tabular text-[#4a4843] mb-2">
-                  <span className="font-semibold uppercase tracking-wider text-[#b91c1c]">
-                    {noticia.medio}
-                  </span>
-                  <time dateTime={noticia.publicadoEn ?? noticia.fecha}>
-                    {formatearTiempoRelativo(noticia.publicadoEn ?? noticia.fecha)}
-                  </time>
-                </div>
+          {noticiasFiltradas.map((noticia) => {
+            const urlSegura = sanitizarUrlHttp(noticia.url);
+            return (
+              <li key={noticia.id}>
+                <article className="rounded-lg border border-[#dcd7cc] bg-[#ffffff] p-5 hover:border-[#141413] transition-colors">
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-tabular text-[#4a4843] mb-2">
+                    <span className="font-semibold uppercase tracking-wider text-[#b91c1c]">
+                      {noticia.medio}
+                    </span>
+                    <time dateTime={noticia.publicadoEn ?? noticia.fecha}>
+                      {formatearTiempoRelativo(noticia.publicadoEn ?? noticia.fecha)}
+                    </time>
+                  </div>
 
-                <h2 className="font-editorial text-lg sm:text-xl font-bold text-[#141413] leading-snug">
-                  <a
-                    href={noticia.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline inline-flex items-baseline gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] rounded"
-                  >
-                    <span>{noticia.titulo}</span>
-                    <ExternalLink
-                      className="w-3.5 h-3.5 text-[#4a4843] flex-shrink-0 translate-y-0.5"
-                      aria-hidden="true"
-                    />
-                  </a>
-                </h2>
+                  <h2 className="font-editorial text-lg sm:text-xl font-bold text-[#141413] leading-snug">
+                    {urlSegura ? (
+                      <a
+                        href={urlSegura}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline inline-flex items-baseline gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] rounded"
+                      >
+                        <span>{noticia.titulo}</span>
+                        <ExternalLink
+                          className="w-3.5 h-3.5 text-[#4a4843] flex-shrink-0 translate-y-0.5"
+                          aria-hidden="true"
+                        />
+                      </a>
+                    ) : (
+                      <span>{noticia.titulo}</span>
+                    )}
+                  </h2>
 
-                {noticia.bajada && (
-                  <p className="mt-2 text-sm text-[#4a4843] leading-relaxed">
-                    {noticia.bajada}
-                  </p>
-                )}
-              </article>
-            </li>
-          ))}
+                  {noticia.bajada && (
+                    <p className="mt-2 text-sm text-[#4a4843] leading-relaxed">
+                      {noticia.bajada}
+                    </p>
+                  )}
+                </article>
+              </li>
+            );
+          })}
         </ul>
       )}
     </section>

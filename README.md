@@ -101,7 +101,16 @@ cp .env.example .env
 docker compose up --build
 ```
 
-Abre [http://localhost:3000](http://localhost:3000).
+Abre [http://localhost:3000](http://localhost:3000). El servicio escucha ligado solo a `127.0.0.1:${PORT:-3000}` mapeado al puerto interno no privilegiado `8080` bajo usuario `nginx`, sistema de archivos de solo lectura (`read_only: true`), capacidades Linux eliminadas (`cap_drop: ALL`) y cabeceras HTTP de seguridad.
+
+---
+
+## 🛡️ Seguridad y Blindaje
+
+- **Cabeceras y CSP estrictas**: Configuradas en [`vercel.json`](vercel.json) (HTTP headers con HSTS, `frame-ancestors 'none'`, `Cross-Origin-Opener-Policy`, `Cross-Origin-Resource-Policy`), en el contenedor Nginx ([`Dockerfile`](Dockerfile)) y en builds estáticos mediante meta CSP sin `'unsafe-inline'` en [`vite.config.ts`](vite.config.ts).
+- **Endpoints serverless (`/api/*`)**: [`api/_seguridad.ts`](api/_seguridad.ts), [`api/encuesta.ts`](api/encuesta.ts) y [`api/votos.ts`](api/votos.ts) validan mismo origen (`Sec-Fetch-Site` / `Origin` / `Referer`), `Content-Type: application/json`, cuerpos acotados (`2048` bytes), cookie técnica `HttpOnly` firmada con HMAC-SHA256 (`ck_votante`), rate limiting con hashes IP anónimos en Redis, contadores atómicos no negativos en Lua, lista blanca contra `escupos.json`, respuestas de error sin trazas internas y tiempos límite en [`api/_upstash.ts`](api/_upstash.ts).
+- **Anti cache-busting DoS**: [`api/rss.ts`](api/rss.ts) y [`api/og.ts`](api/og.ts) canonizan con redirección `308` cualquier query string redundante y deduplican solicitudes concurrentes en memoria.
+- **Ingesta, scrapers y cadenas de suministro**: Sanitización estricta HTTP/HTTPS y bloqueo de destinos SSRF en [`src/lib/url-segura.ts`](src/lib/url-segura.ts) y [`pipeline/scrapers/rss-prensa.ts`](pipeline/scrapers/rss-prensa.ts) (límites XML XXE/entidades y tamaño máximo de respuesta), eliminación de `RegExp` dinámicas en [`pipeline/scrapers/wayback-tweets.ts`](pipeline/scrapers/wayback-tweets.ts), validación de argumentos/handles en [`pipeline/scrapers/x-ingesta.ts`](pipeline/scrapers/x-ingesta.ts) y [`pipeline/scrapers/youtube-transcripciones.ts`](pipeline/scrapers/youtube-transcripciones.ts), aislamiento de prompts en [`pipeline/motor/llm-verifier.ts`](pipeline/motor/llm-verifier.ts), y pinning de GitHub Actions por SHA de commit.
 
 ---
 

@@ -23,7 +23,28 @@ export async function cargarEnvLocal(rootDir = process.cwd()): Promise<void> {
     const separador = linea.indexOf('=');
     if (separador <= 0) continue;
 
+const PATRON_CLAVE_ENV = /^[A-Za-z_][A-Za-z0-9_]{0,127}$/;
+const CLAVES_ENV_BLOQUEADAS = new Set([
+  '__proto__',
+  'constructor',
+  'prototype',
+  'NODE_OPTIONS',
+  'NODE_EXTRA_CA_CERTS',
+  'LD_PRELOAD',
+  'LD_LIBRARY_PATH',
+  'PATH',
+  'HOME',
+]);
+
     const clave = linea.slice(0, separador).trim();
+    if (
+      !PATRON_CLAVE_ENV.test(clave) ||
+      CLAVES_ENV_BLOQUEADAS.has(clave) ||
+      CLAVES_ENV_BLOQUEADAS.has(clave.toUpperCase())
+    ) {
+      continue;
+    }
+
     let valor = linea.slice(separador + 1).trim();
 
     if (
@@ -33,7 +54,7 @@ export async function cargarEnvLocal(rootDir = process.cwd()): Promise<void> {
       valor = valor.slice(1, -1);
     }
 
-    if (clave && process.env[clave] === undefined) {
+    if (process.env[clave] === undefined) {
       process.env[clave] = valor;
     }
   }

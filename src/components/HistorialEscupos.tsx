@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowUpRight, ThumbsUp } from 'lucide-react';
 import type { Escupo } from '../types/escupo';
+import { sanitizarUrlHttp } from '../lib/url-segura';
 import {
   calcularTotalVotosExpediente,
   cargarVotosGlobales,
@@ -87,6 +88,9 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
           deltasLocales[item.id] ?? 0
         );
         const haVotado = !!votados[item.id];
+        const urlFuentePasado = sanitizarUrlHttp(item.pasado.fuenteUrl);
+        const urlArchivoPasado = sanitizarUrlHttp(item.pasado.archivoUrl);
+        const urlFuentePresente = sanitizarUrlHttp(item.presente.fuenteUrl);
 
         return (
           <article key={item.id} className="py-8 space-y-5">
@@ -123,11 +127,11 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
                   {item.pasado.rol}
                   {item.pasado.usuarioTweet ? ` · ${item.pasado.usuarioTweet}` : ''}
                 </p>
-                {(item.pasado.fuenteUrl || item.pasado.archivoUrl) && (
+                {(urlFuentePasado || urlArchivoPasado) && (
                   <div className="flex flex-wrap items-center gap-3 pt-1">
-                    {item.pasado.fuenteUrl && (
+                    {urlFuentePasado && (
                       <a
-                        href={item.pasado.fuenteUrl}
+                        href={urlFuentePasado}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4"
@@ -136,9 +140,9 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
                         <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
                       </a>
                     )}
-                    {item.pasado.archivoUrl && (
+                    {urlArchivoPasado && (
                       <a
-                        href={item.pasado.archivoUrl}
+                        href={urlArchivoPasado}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4"
@@ -173,9 +177,9 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
               </p>
 
               <div className="flex items-center gap-3 flex-shrink-0">
-                {item.presente.fuenteUrl && (
+                {urlFuentePresente && (
                   <a
-                    href={item.presente.fuenteUrl}
+                    href={urlFuentePresente}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs font-medium text-[#141413] underline underline-offset-4 hover:text-[#b91c1c]"

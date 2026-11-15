@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     build:
@@ -8,11 +6,19 @@ services:
     container_name: contador-kast-web
     restart: unless-stopped
     ports:
-      - "3000:80"
+      - "127.0.0.1:${PORT:-3000}:8080"
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+      - /var/cache/nginx:rw,noexec,nosuid,size=16m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
     environment:
       - NODE_ENV=production
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      test: ["CMD", "nc", "-z", "127.0.0.1", "8080"]
       interval: 30s
       timeout: 3s
       retries: 3

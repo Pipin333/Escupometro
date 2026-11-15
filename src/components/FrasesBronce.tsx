@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Quote } from 'lucide-react';
 import type { FraseBronce } from '../types/escupo';
+import { sanitizarUrlHttp } from '../lib/url-segura';
 
 interface FrasesBronceProps {
   frases: FraseBronce[];
@@ -39,53 +40,58 @@ export const FrasesBronce: React.FC<FrasesBronceProps> = ({ frases }) => {
         </p>
       ) : (
         <div className="grid grid-cols-1 gap-4">
-          {frases.map((item) => (
-            <article
-              key={item.id}
-              className="bg-[#ffffff] border border-[#dcd7cc] rounded-lg p-6 space-y-4"
-            >
-              <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-[#4a4843]">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="font-semibold text-[#141413]">{item.autor}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{item.cargo}</span>
+          {frases.map((item) => {
+            const urlSegura = sanitizarUrlHttp(item.fuenteUrl);
+            return (
+              <article
+                key={item.id}
+                className="bg-[#ffffff] border border-[#dcd7cc] rounded-lg p-6 space-y-4"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-[#4a4843]">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-semibold text-[#141413]">{item.autor}</span>
+                    <span aria-hidden="true">·</span>
+                    <span>{item.cargo}</span>
+                  </div>
+                  <time
+                    dateTime={item.fecha}
+                    className="font-tabular px-2 py-0.5 rounded bg-[#efeae0] text-[#141413]"
+                  >
+                    {item.fecha}
+                  </time>
                 </div>
-                <time
-                  dateTime={item.fecha}
-                  className="font-tabular px-2 py-0.5 rounded bg-[#efeae0] text-[#141413]"
-                >
-                  {item.fecha}
-                </time>
-              </div>
 
-              <blockquote className="relative pl-5 border-l-2 border-[#b91c1c]">
-                <Quote
-                  className="w-4 h-4 text-[#b91c1c] mb-2"
-                  aria-hidden="true"
-                />
-                <p className="font-editorial text-lg sm:text-xl leading-relaxed text-[#141413]">
-                  «{item.cita}»
+                <blockquote className="relative pl-5 border-l-2 border-[#b91c1c]">
+                  <Quote
+                    className="w-4 h-4 text-[#b91c1c] mb-2"
+                    aria-hidden="true"
+                  />
+                  <p className="font-editorial text-lg sm:text-xl leading-relaxed text-[#141413]">
+                    «{item.cita}»
+                  </p>
+                </blockquote>
+
+                <p className="text-sm text-[#4a4843] leading-relaxed">
+                  {item.contexto}
                 </p>
-              </blockquote>
 
-              <p className="text-sm text-[#4a4843] leading-relaxed">
-                {item.contexto}
-              </p>
-
-              <div className="pt-2 border-t border-[#efeae0] flex flex-wrap items-center justify-between gap-2 text-xs text-[#4a4843]">
-                <span>Fuente: {item.medio}</span>
-                <a
-                  href={item.fuenteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-medium text-[#141413] hover:text-[#b91c1c] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] rounded"
-                >
-                  <span>Ver medio</span>
-                  <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
-                </a>
-              </div>
-            </article>
-          ))}
+                <div className="pt-2 border-t border-[#efeae0] flex flex-wrap items-center justify-between gap-2 text-xs text-[#4a4843]">
+                  <span>Fuente: {item.medio}</span>
+                  {urlSegura && (
+                    <a
+                      href={urlSegura}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-medium text-[#141413] hover:text-[#b91c1c] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413] rounded"
+                    >
+                      <span>Ver medio</span>
+                      <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+              </article>
+            );
+          })}
         </div>
       )}
     </section>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Check, Copy, Share2 } from 'lucide-react';
 import type { Escupo } from '../types/escupo';
+import { sanitizarUrlHttp } from '../lib/url-segura';
 
 interface MarcadorPortadaProps {
   diasActuales: number;
@@ -30,8 +31,9 @@ export const MarcadorPortada: React.FC<MarcadorPortadaProps> = ({
     }
   };
 
+  const urlActual = sanitizarUrlHttp(window.location.href) ?? 'https://escupometro.vercel.app/';
   const textoCompartir = `Llevamos ${diasActuales} días sin que a Kast le caiga su propio escupo en la cara (récord histórico: ${recordHistorico} días). Archivo documental:`;
-  const urlTwitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textoCompartir)}&url=${encodeURIComponent(window.location.href)}`;
+  const urlTwitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textoCompartir)}&url=${encodeURIComponent(urlActual)}`;
 
   const numeroFormateado = String(diasActuales).padStart(2, '0');
   const esCero = diasActuales === 0;

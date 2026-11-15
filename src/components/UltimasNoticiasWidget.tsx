@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, ExternalLink, Newspaper, RefreshCw } from 'lucide-react';
 import type { NoticiaScrapeada } from '../types/escupo';
 import { formatearTiempoRelativo } from '../lib/noticias';
+import { sanitizarUrlHttp } from '../lib/url-segura';
 
 interface UltimasNoticiasWidgetProps {
   noticias: readonly NoticiaScrapeada[];
@@ -96,27 +97,22 @@ export const UltimasNoticiasWidget: React.FC<UltimasNoticiasWidgetProps> = ({
         </div>
       ) : (
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {titularesPortada.map((noticia, idx) => (
-            <li
-              key={noticia.id}
-              className={idx === 0 ? 'md:col-span-2' : undefined}
-            >
-              <a
-                href={noticia.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block h-full rounded-lg border border-[#dcd7cc] bg-[#ffffff] p-4 hover:border-[#141413] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
-              >
+          {titularesPortada.map((noticia, idx) => {
+            const urlSegura = sanitizarUrlHttp(noticia.url);
+            const contenidoTarjeta = (
+              <>
                 <div className="flex items-center justify-between gap-2 text-[11px] font-tabular text-[#4a4843] mb-1.5">
                   <span className="font-semibold uppercase tracking-wider text-[#b91c1c]">
                     {noticia.medio}
                   </span>
                   <span className="inline-flex items-center gap-1">
                     {formatearTiempoRelativo(noticia.publicadoEn ?? noticia.fecha)}
-                    <ExternalLink
-                      className="w-3 h-3 opacity-60 group-hover:opacity-100 transition-opacity"
-                      aria-hidden="true"
-                    />
+                    {urlSegura && (
+                      <ExternalLink
+                        className="w-3 h-3 opacity-60 group-hover:opacity-100 transition-opacity"
+                        aria-hidden="true"
+                      />
+                    )}
                   </span>
                 </div>
                 <h3 className="font-editorial text-base sm:text-lg font-bold text-[#141413] group-hover:underline leading-snug">
@@ -127,9 +123,31 @@ export const UltimasNoticiasWidget: React.FC<UltimasNoticiasWidgetProps> = ({
                     {noticia.bajada}
                   </p>
                 )}
-              </a>
-            </li>
-          ))}
+              </>
+            );
+
+            return (
+              <li
+                key={noticia.id}
+                className={idx === 0 ? 'md:col-span-2' : undefined}
+              >
+                {urlSegura ? (
+                  <a
+                    href={urlSegura}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block h-full rounded-lg border border-[#dcd7cc] bg-[#ffffff] p-4 hover:border-[#141413] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
+                  >
+                    {contenidoTarjeta}
+                  </a>
+                ) : (
+                  <div className="block h-full rounded-lg border border-[#dcd7cc] bg-[#ffffff] p-4">
+                    {contenidoTarjeta}
+                  </div>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
     </section>

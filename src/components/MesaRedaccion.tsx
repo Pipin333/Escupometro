@@ -16,6 +16,7 @@ import type {
   NoticiaScrapeada,
 } from '../types/escupo';
 import { detectarContradiccionesEnLote } from '../motor/detector';
+import { sanitizarUrlHttp } from '../lib/url-segura';
 
 interface MesaRedaccionProps {
   candidatosIniciales: CandidatoContradiccion[];
@@ -59,7 +60,7 @@ export const MesaRedaccion: React.FC<MesaRedaccionProps> = ({
       bajada: bajadaPrueba.trim() || tituloPrueba.trim(),
       medio: medioPrueba.trim() || 'Prensa nacional',
       fecha: fechaPrueba,
-      url: urlPrueba.trim() || 'https://news.google.com',
+      url: sanitizarUrlHttp(urlPrueba) ?? 'https://news.google.com',
     };
 
     const matches = detectarContradiccionesEnLote([noticia], dichosHistoricos, 35);
@@ -538,15 +539,19 @@ export const MesaRedaccion: React.FC<MesaRedaccionProps> = ({
               </div>
 
               <div className="pt-2 flex flex-wrap items-center justify-between gap-3">
-                <a
-                  href={cand.noticia.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-medium text-[#141413] underline underline-offset-4 hover:text-[#b91c1c]"
-                >
-                  <span>Abrir noticia original en {cand.noticia.medio}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
-                </a>
+                {sanitizarUrlHttp(cand.noticia.url) ? (
+                  <a
+                    href={sanitizarUrlHttp(cand.noticia.url)!}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-[#141413] underline underline-offset-4 hover:text-[#b91c1c]"
+                  >
+                    <span>Abrir noticia original en {cand.noticia.medio}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <span className="text-xs text-[#4a4843]">{cand.noticia.medio}</span>
+                )}
 
                 <button
                   type="button"

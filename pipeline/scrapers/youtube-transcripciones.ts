@@ -57,6 +57,11 @@ const SCRIPT_WHISPER = path.join(
   process.cwd(),
   'pipeline/scripts/transcribir_whisper.py'
 );
+const MODELOS_WHISPER_PERMITIDOS = new Set(['tiny', 'base', 'small', 'medium', 'large-v3']);
+const PATRON_IDIOMA_YT = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})?$/;
+const PATRON_VIDEO_ID_YT = /^[A-Za-z0-9_-]{11}$/;
+const TIMEOUT_YTDLP_MS = 120_000;
+const TIMEOUT_WHISPER_MS = 10 * 60_000;
 
 const REGEX_RANGO_VTT =
   /^((?:\d{2}:)?\d{2}:\d{2}\.\d{3})\s+-->\s+((?:\d{2}:)?\d{2}:\d{2}\.\d{3})(?:\s+.*)?$/;
@@ -367,11 +372,20 @@ export async function obtenerTranscripcionYoutube(
   } = {}
 ): Promise<ResultadoTranscripcionYoutube> {
   const videoId = extraerIdVideoYoutube(url);
-  if (!videoId) {
+  if (!videoId || !PATRON_VIDEO_ID_YT.test(videoId)) {
     throw new Error(`URL de YouTube inválida: ${url}`);
   }
 
   const idioma = opciones.idioma ?? 'es';
+  if (!PATRON_IDIOMA_YT.test(idioma)) {
+    throw new Error(`Código de idioma inválido: ${idioma}`);
+  }
+  const modeloWhisper = opciones.modeloWhisper ?? 'small';
+  if (!MODELOS_WHISPER_PERMITIDOS.has(modeloWhisper)) {
+    throw new Error(`Modelo Whisper no permitido: ${modeloWhisper}`);
+  }
+
+  const urlCanonica = `https://www.youtube.com/watch?v=${videoId}`;
   const dirTemp = await fs.mkdtemp(path.join(os.tmpdir(), `esc-yt-${videoId}-`));
 
   try {
@@ -393,9 +407,10 @@ export async function obtenerTranscripcionYoutube(
           '--write-info-json',
           '-o',
           plantillaSalida,
-          url,
+          '--',
+          urlCanonica,
         ],
-        { maxBuffer: 20 * 1024 * 1024 }
+        { maxBuffer: 20 * 1024 * 1024, timeout: TIMEOUT_YTDLP_MS }
       );
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
@@ -450,9 +465,10 @@ export async function obtenerTranscripcionYoutube(
         'bestaudio[ext=m4a]/bestaudio',
         '-o',
         plantillaSalida,
-        url,
+        '--',
+        urlCanonica,
       ],
-      { maxBuffer: 20 * 1024 * 1024 }
+      { maxBuffer: 20 * 1024 * 1024, timeout: TIMEOUT_YTDLP_MS }
     );
 
     const archivosTemp = await fs.readdir(dirTemp);
@@ -469,11 +485,11 @@ export async function obtenerTranscripcionYoutube(
         SCRIPT_WHISPER,
         path.join(dirTemp, audioArchivo),
         '--modelo',
-        opciones.modeloWhisper ?? 'small',
+        modeloWhisper,
         '--idioma',
         idioma,
       ],
-      { maxBuffer: 50 * 1024 * 1024 }
+      { maxBuffer: 50 * 1024 * 1024, timeout: TIMEOUT_WHISPER_MS }
     );
 
     const lineas = JSON.parse(stdout) as LineaTranscripcion[];
@@ -504,6 +520,9 @@ export async function buscarVideosYoutube(
   limite = 6
 ): Promise<Array<{ id: string; titulo: string; canal: string; duracion: string; url: string }>> {
   const n = Math.max(1, Math.min(20, Math.floor(limite)));
+  const consultaLimpia = consulta.replace(/[\r\n\0]+/g, ' ').trim().slice(0, 200);
+  if (!consultaLimpia) return [];
+
   const { stdout } = await execFileAsync(
     PYTHON_BIN,
     [
@@ -512,9 +531,10 @@ export async function buscarVideosYoutube(
       '--flat-playlist',
       '--print',
       '%(id)s\t%(duration_string)s\t%(channel)s\t%(title)s',
-      `ytsearch${n}:${consulta}`,
+      '--',
+      `ytsearch${n}:${consultaLimpia}`,
     ],
-    { maxBuffer: 5 * 1024 * 1024 }
+    { maxBuffer: 5 * 1024 * 1024, timeout: TIMEOUT_YTDLP_MS }
   );
 
   return stdout

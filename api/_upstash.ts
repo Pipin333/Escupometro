@@ -8,26 +8,40 @@ export interface ResultadoPipelineRedis {
   error?: string;
 }
 
+const TIMEOUT_UPSTASH_MS = 5000;
+
 /**
- * Lee las credenciales REST de Upstash Redis / Vercel KV desde variables de entorno.
+ * Lee y valida las credenciales REST de Upstash Redis / Vercel KV desde variables de entorno.
+ * Exige URL HTTPS sin credenciales embebidas para evitar fugas por transporte sin cifrar.
  *
- * @returns Credenciales normalizadas o `null` si no están configuradas.
+ * @returns Credenciales normalizadas o `null` si no están configuradas o son inválidas.
  */
 export function obtenerCredencialesRedis(): CredencialesRedis | null {
   const env =
     (globalThis as { process?: { env?: Record<string, string | undefined> } }).process
       ?.env ?? {};
 
-  const url = env.UPSTASH_REDIS_REST_URL ?? env.KV_REST_API_URL ?? '';
-  const token = env.UPSTASH_REDIS_REST_TOKEN ?? env.KV_REST_API_TOKEN ?? '';
+  const url = (env.UPSTASH_REDIS_REST_URL ?? env.KV_REST_API_URL ?? '').trim();
+  const token = (env.UPSTASH_REDIS_REST_TOKEN ?? env.KV_REST_API_TOKEN ?? '').trim();
 
-  if (!url.trim() || !token.trim()) {
+  if (!url || !token) {
+    return null;
+  }
+
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return null;
+  }
+
+  if (parsed.protocol !== 'https:' || parsed.username || parsed.password) {
     return null;
   }
 
   return {
     url: url.replace(/\/+$/, ''),
-    token: token.trim(),
+    token,
   };
 }
 
@@ -43,7 +57,7 @@ export function aEnteroNoNegativo(raw: unknown): number {
 }
 
 /**
- * Ejecuta un lote de comandos contra el endpoint `/pipeline` de Upstash Redis.
+ * Ejecuta un lote de comandos contra el endpoint `/pipeline` de Upstash Redis con timeout estricto.
  *
  * @param credenciales URL y token REST de Upstash.
  * @param comandos Lista de comandos Redis serializados.
@@ -62,6 +76,7 @@ export async function ejecutarPipelineRedis(
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(comandos),
+    signal: AbortSignal.timeout(TIMEOUT_UPSTASH_MS),
   });
 
   if (!resp.ok) {
@@ -73,22 +88,36 @@ export async function ejecutarPipelineRedis(
     throw new Error('Respuesta inesperada de Upstash');
   }
 
+  for (const item of data) {
+    if (item && typeof item === 'object' && typeof item.error === 'string' && item.error) {
+      throw new Error(`Upstash comando falló: ${item.error}`);
+    }
+  }
+
   return data;
 }
 
 /**
- * Construye una respuesta JSON sin caché para endpoints serverless.
+ * Construye una respuesta JSON sin caché con cabeceras de seguridad para endpoints serverless.
  *
  * @param payload Datos serializables.
  * @param status Código HTTP.
+ * @param headersExtra Cabeceras opcionales adicionales (ej. `Set-Cookie`, `Retry-After`).
  * @returns Objeto Response estándar.
  */
-export function jsonResponse(payload: unknown, status = 200): Response {
+export function jsonResponse(
+  payload: unknown,
+  status = 200,
+  headersExtra?: Record<string, string>
+): Response {
   return new Response(JSON.stringify(payload), {
     status,
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
       'Cache-Control': 'no-store',
+      'X-Content-Type-Options': 'nosniff',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      ...headersExtra,
     },
   });
 }

@@ -2,22 +2,64 @@ import { defineConfig, loadEnv, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
+function validarSiteUrlBase(siteUrl?: string): string | null {
+  if (!siteUrl) return null;
+  const trimmed = siteUrl.trim();
+  if (!trimmed || /[\u0000-\u001F\u007F]/.test(trimmed)) return null;
+
+  try {
+    const parsed = new URL(trimmed);
+    if (
+      (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') ||
+      parsed.username ||
+      parsed.password
+    ) {
+      return null;
+    }
+    const baseLimpia = `${parsed.origin}${parsed.pathname}`.replace(/\/+$/, '');
+    if (/[&"'<>]/.test(baseLimpia)) return null;
+    return baseLimpia;
+  } catch {
+    return null;
+  }
+}
+
 function metaTagsRedesPlugin(siteUrl?: string): Plugin {
   return {
     name: 'meta-tags-redes-gh-pages',
     transformIndexHtml(html) {
-      const limpia = siteUrl?.replace(/\/+$/, '');
+      const limpia = validarSiteUrlBase(siteUrl);
       if (!limpia) return html;
 
-      return html
-        .replaceAll(
+      return {
+        html: html.replaceAll(
           'content="./og-cover.jpg"',
           `content="${limpia}/og-cover.jpg"`
-        )
-        .replace(
-          '<meta property="og:type" content="website" />',
-          `<meta property="og:type" content="website" />\n    <meta property="og:url" content="${limpia}/" />`
-        );
+        ),
+        tags: [
+          {
+            tag: 'meta',
+            attrs: { property: 'og:url', content: `${limpia}/` },
+            injectTo: 'head',
+          },
+        ],
+      };
+    },
+  };
+}
+
+function cspMetaBuildPlugin(): Plugin {
+  const cspMeta =
+    "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'";
+
+  return {
+    name: 'csp-meta-build',
+    apply: 'build',
+    transformIndexHtml(html) {
+      return html.replace(
+        '<meta name="viewport"',
+        `<meta http-equiv="Content-Security-Policy" content="${cspMeta}" />\n    <meta name="viewport"`
+      );
     },
   };
 }
@@ -29,7 +71,16 @@ function devApiRssPlugin(): Plugin {
   return {
     name: 'dev-api-rss',
     configureServer(server) {
-      server.middlewares.use('/api/rss', async (_req, res) => {
+      server.middlewares.use('/api/rss', async (req, res) => {
+        const metodo = (req as { method?: string }).method;
+        res.setHeader('X-Content-Type-Options', 'nosniff');
+        if (metodo !== 'GET' && metodo !== 'HEAD') {
+          res.statusCode = 405;
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+          res.end(JSON.stringify({ error: 'Método no permitido.' }));
+          return;
+        }
+
         try {
           const ahora = Date.now();
           if (!cachePayload || ahora > cacheHasta) {
@@ -52,14 +103,13 @@ function devApiRssPlugin(): Plugin {
 
           res.statusCode = 200;
           res.setHeader('Content-Type', 'application/json; charset=utf-8');
-          res.end(cachePayload);
-        } catch (err) {
+          res.end(metodo === 'HEAD' ? undefined : cachePayload);
+        } catch {
           res.statusCode = 502;
           res.setHeader('Content-Type', 'application/json; charset=utf-8');
           res.end(
             JSON.stringify({
               error: 'Fallo al consultar feeds RSS locales.',
-              detalle: err instanceof Error ? err.message : String(err),
             })
           );
         }
@@ -81,6 +131,7 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
       metaTagsRedesPlugin(siteUrl),
+      cspMetaBuildPlugin(),
       devApiRssPlugin(),
     ],
     server: {

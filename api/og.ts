@@ -94,197 +94,86 @@ function cargarFuentes() {
   return fuentesCache;
 }
 
+const CACHE_OG_TTL_MS = 300_000;
+let cacheOg: { fecha: string; expiraEn: number; png: Uint8Array } | null = null;
+let renderEnVuelo: Promise<Uint8Array> | null = null;
+
 /**
  * Genera la tarjeta Open Graph dinámica (`1200×630` PNG) con el cómputo del día
- * en horario de Santiago y el último expediente registrado.
+ * en horario de Santiago y el último expediente registrado, con caché en memoria y anti cache-busting.
  */
-export async function GET(): Promise<Response> {
+export async function GET(request?: Request): Promise<Response> {
+  if (request) {
+    try {
+      const parsed = new URL(request.url);
+      if (parsed.search) {
+        return new Response(null, {
+          status: 308,
+          headers: {
+            Location: parsed.pathname || '/api/og',
+            'Cache-Control': 'public, max-age=86400',
+            'X-Content-Type-Options': 'nosniff',
+          },
+        });
+      }
+    } catch {
+      // Continuar si request.url no es absoluta
+    }
+  }
+
   try {
-    const escupos = cargarEscupos();
     const fechaHoy = obtenerFechaHoySantiago();
-    const diasSinEscupo = calcularDiasSinEscupo(escupos, fechaHoy);
-    const recordHistorico = calcularRecordHistorico(escupos, diasSinEscupo);
-    const ultimo = obtenerUltimoIncidente(escupos);
-
-    const etiquetaDias = diasSinEscupo === 1 ? 'día sin escupo' : 'días sin escupo';
-    const tituloUltimo = ultimo
-      ? truncarTexto(ultimo.titulo, 95)
-      : 'Archivo documental de coherencia política';
-    const citaPasado = ultimo
-      ? truncarTexto(`"${ultimo.pasado.cita}"`, 120)
-      : 'Declaraciones públicas contrastadas con hechos verificables.';
-    const hechoPresente = ultimo
-      ? truncarTexto(ultimo.presente.titulo, 100)
-      : 'Revisión cronológica de prensa y archivo.';
-
-    const arbol = el(
-      'div',
-      {
-        width: '1200px',
-        height: '630px',
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: '#f6f4ef',
-        color: '#141413',
-        fontFamily: 'Public Sans',
-      },
-      el(
-        'div',
-        {
-          flex: 1,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          margin: '34px 46px',
+    const ahora = Date.now();
+    if (cacheOg && cacheOg.fecha === fechaHoy && ahora < cacheOg.expiraEn) {
+      return new Response(Buffer.from(cacheOg.png), {
+        status: 200,
+        headers: {
+          'Content-Type': 'image/png',
+          'Cache-Control': 'public, max-age=0, s-maxage=300, stale-while-revalidate=600',
+          'X-Content-Type-Options': 'nosniff',
+          'Cross-Origin-Resource-Policy': 'cross-origin',
         },
-        el(
-          'div',
-          {
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            borderBottom: '3px solid #141413',
-            paddingBottom: '14px',
-          },
-          el(
+      });
+    }
+
+    if (!renderEnVuelo) {
+      renderEnVuelo = (async () => {
+        try {
+          const escupos = cargarEscupos();
+          const diasSinEscupo = calcularDiasSinEscupo(escupos, fechaHoy);
+          const recordHistorico = calcularRecordHistorico(escupos, diasSinEscupo);
+          const ultimo = obtenerUltimoIncidente(escupos);
+
+          const etiquetaDias = diasSinEscupo === 1 ? 'día sin escupo' : 'días sin escupo';
+          const tituloUltimo = ultimo
+            ? truncarTexto(ultimo.titulo, 95)
+            : 'Archivo documental de coherencia política';
+          const citaPasado = ultimo
+            ? truncarTexto(`"${ultimo.pasado.cita}"`, 120)
+            : 'Declaraciones públicas contrastadas con hechos verificables.';
+          const hechoPresente = ultimo
+            ? truncarTexto(ultimo.presente.titulo, 100)
+            : 'Revisión cronológica de prensa y archivo.';
+
+          const arbol = el(
             'div',
             {
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-              fontSize: '20px',
-              fontWeight: 700,
-              letterSpacing: '0.07em',
-              fontFamily: 'JetBrains Mono',
-            },
-            el('div', {
-              width: '12px',
-              height: '12px',
-              borderRadius: '6px',
-              backgroundColor: '#b91c1c',
-            }),
-            el('span', {}, 'EL CONTADOR DEL ESCUPO · CHILE')
-          ),
-          el(
-            'div',
-            {
-              fontSize: '17px',
-              color: '#4a4843',
-              fontFamily: 'JetBrains Mono',
-              fontWeight: 700,
-              letterSpacing: '0.05em',
-            },
-            `CÓMPUTO AL ${fechaHoy}`
-          )
-        ),
-        el(
-          'div',
-          {
-            display: 'flex',
-            flex: 1,
-            gap: '28px',
-            paddingTop: '22px',
-            paddingBottom: '18px',
-          },
-          el(
-            'div',
-            {
-              width: '350px',
+              width: '1200px',
+              height: '630px',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'space-between',
-              backgroundColor: '#141413',
-              color: '#f6f4ef',
-              borderRadius: '12px',
-              padding: '24px 28px',
+              backgroundColor: '#f6f4ef',
+              color: '#141413',
+              fontFamily: 'Public Sans',
             },
             el(
               'div',
               {
-                display: 'flex',
-                alignItems: 'center',
-                fontSize: '14px',
-                fontWeight: 700,
-                letterSpacing: '0.14em',
-                color: '#fca5a5',
-                fontFamily: 'JetBrains Mono',
-              },
-              'MARCADOR EN VIVO'
-            ),
-            el(
-              'div',
-              {
+                flex: 1,
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '4px',
-              },
-              el(
-                'div',
-                {
-                  fontSize: '118px',
-                  fontWeight: 700,
-                  lineHeight: 0.95,
-                  color: '#ffffff',
-                  fontFamily: 'JetBrains Mono',
-                },
-                String(diasSinEscupo)
-              ),
-              el(
-                'div',
-                {
-                  fontSize: '26px',
-                  fontWeight: 700,
-                  color: '#f6f4ef',
-                  marginTop: '8px',
-                  fontFamily: 'Source Serif 4',
-                },
-                etiquetaDias
-              ),
-              el(
-                'div',
-                {
-                  fontSize: '16px',
-                  color: '#d6d1c4',
-                  lineHeight: 1.35,
-                },
-                'al cielo en el mandato actual'
-              )
-            ),
-            el(
-              'div',
-              {
-                display: 'flex',
                 justifyContent: 'space-between',
-                borderTop: '1px solid #383632',
-                paddingTop: '14px',
-                fontSize: '15px',
-                fontWeight: 700,
-                color: '#d6d1c4',
-                fontFamily: 'JetBrains Mono',
-              },
-              el('span', {}, `${escupos.length} casos`),
-              el('span', {}, `Récord: ${recordHistorico} d`)
-            )
-          ),
-          el(
-            'div',
-            {
-              flex: 1,
-              minWidth: 0,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              backgroundColor: '#ffffff',
-              border: '1px solid #dcd7cc',
-              borderRadius: '12px',
-              padding: '24px 28px',
-            },
-            el(
-              'div',
-              {
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '10px',
+                margin: '34px 46px',
               },
               el(
                 'div',
@@ -292,142 +181,306 @@ export async function GET(): Promise<Response> {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
-                  fontSize: '14px',
+                  borderBottom: '3px solid #141413',
+                  paddingBottom: '14px',
+                },
+                el(
+                  'div',
+                  {
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    fontSize: '20px',
+                    fontWeight: 700,
+                    letterSpacing: '0.07em',
+                    fontFamily: 'JetBrains Mono',
+                  },
+                  el('div', {
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '6px',
+                    backgroundColor: '#b91c1c',
+                  }),
+                  el('span', {}, 'EL CONTADOR DEL ESCUPO · CHILE')
+                ),
+                el(
+                  'div',
+                  {
+                    fontSize: '17px',
+                    color: '#4a4843',
+                    fontFamily: 'JetBrains Mono',
+                    fontWeight: 700,
+                    letterSpacing: '0.05em',
+                  },
+                  `CÓMPUTO AL ${fechaHoy}`
+                )
+              ),
+              el(
+                'div',
+                {
+                  display: 'flex',
+                  flex: 1,
+                  gap: '28px',
+                  paddingTop: '22px',
+                  paddingBottom: '18px',
+                },
+                el(
+                  'div',
+                  {
+                    width: '350px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    backgroundColor: '#141413',
+                    color: '#f6f4ef',
+                    borderRadius: '12px',
+                    padding: '24px 28px',
+                  },
+                  el(
+                    'div',
+                    {
+                      display: 'flex',
+                      alignItems: 'center',
+                      fontSize: '14px',
+                      fontWeight: 700,
+                      letterSpacing: '0.14em',
+                      color: '#fca5a5',
+                      fontFamily: 'JetBrains Mono',
+                    },
+                    'MARCADOR EN VIVO'
+                  ),
+                  el(
+                    'div',
+                    {
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '4px',
+                    },
+                    el(
+                      'div',
+                      {
+                        fontSize: '118px',
+                        fontWeight: 700,
+                        lineHeight: 0.95,
+                        color: '#ffffff',
+                        fontFamily: 'JetBrains Mono',
+                      },
+                      String(diasSinEscupo)
+                    ),
+                    el(
+                      'div',
+                      {
+                        fontSize: '26px',
+                        fontWeight: 700,
+                        color: '#f6f4ef',
+                        marginTop: '8px',
+                        fontFamily: 'Source Serif 4',
+                      },
+                      etiquetaDias
+                    ),
+                    el(
+                      'div',
+                      {
+                        fontSize: '16px',
+                        color: '#d6d1c4',
+                        lineHeight: 1.35,
+                      },
+                      'al cielo en el mandato actual'
+                    )
+                  ),
+                  el(
+                    'div',
+                    {
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      borderTop: '1px solid #383632',
+                      paddingTop: '14px',
+                      fontSize: '15px',
+                      fontWeight: 700,
+                      color: '#d6d1c4',
+                      fontFamily: 'JetBrains Mono',
+                    },
+                    el('span', {}, `${escupos.length} casos`),
+                    el('span', {}, `Récord: ${recordHistorico} d`)
+                  )
+                ),
+                el(
+                  'div',
+                  {
+                    flex: 1,
+                    minWidth: 0,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #dcd7cc',
+                    borderRadius: '12px',
+                    padding: '24px 28px',
+                  },
+                  el(
+                    'div',
+                    {
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '10px',
+                    },
+                    el(
+                      'div',
+                      {
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        fontSize: '14px',
+                        fontWeight: 700,
+                        letterSpacing: '0.1em',
+                        color: '#b91c1c',
+                        fontFamily: 'JetBrains Mono',
+                      },
+                      el('span', {}, 'ÚLTIMO EXPEDIENTE'),
+                      el('span', { color: '#4a4843' }, ultimo?.fechaIncidente ?? fechaHoy)
+                    ),
+                    el(
+                      'div',
+                      {
+                        fontSize: '27px',
+                        fontWeight: 700,
+                        lineHeight: 1.22,
+                        color: '#141413',
+                        fontFamily: 'Source Serif 4',
+                      },
+                      tituloUltimo
+                    )
+                  ),
+                  el(
+                    'div',
+                    {
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '12px',
+                      borderTop: '1px solid #ece7dc',
+                      paddingTop: '14px',
+                    },
+                    el(
+                      'div',
+                      {
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '4px',
+                      },
+                      el(
+                        'span',
+                        {
+                          fontSize: '13px',
+                          fontWeight: 700,
+                          color: '#6b675e',
+                          fontFamily: 'JetBrains Mono',
+                          letterSpacing: '0.08em',
+                        },
+                        `LO QUE DIJO (${ultimo?.pasado.fecha ?? 'ARCHIVO'})`
+                      ),
+                      el(
+                        'span',
+                        {
+                          fontSize: '17px',
+                          color: '#2f2e2a',
+                          lineHeight: 1.35,
+                        },
+                        citaPasado
+                      )
+                    ),
+                    el(
+                      'div',
+                      {
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '4px',
+                      },
+                      el(
+                        'span',
+                        {
+                          fontSize: '13px',
+                          fontWeight: 700,
+                          color: '#b91c1c',
+                          fontFamily: 'JetBrains Mono',
+                          letterSpacing: '0.08em',
+                        },
+                        `HECHO (${ultimo?.presente.medio ?? 'PRENSA'})`
+                      ),
+                      el(
+                        'span',
+                        {
+                          fontSize: '17px',
+                          fontWeight: 700,
+                          color: '#141413',
+                          lineHeight: 1.35,
+                        },
+                        hechoPresente
+                      )
+                    )
+                  )
+                )
+              ),
+              el(
+                'div',
+                {
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  borderTop: '1px solid #dcd7cc',
+                  paddingTop: '12px',
+                  fontSize: '16px',
                   fontWeight: 700,
-                  letterSpacing: '0.1em',
-                  color: '#b91c1c',
+                  color: '#4a4843',
                   fontFamily: 'JetBrains Mono',
                 },
-                el('span', {}, 'ÚLTIMO EXPEDIENTE'),
-                el('span', { color: '#4a4843' }, ultimo?.fechaIncidente ?? fechaHoy)
-              ),
-              el(
-                'div',
-                {
-                  fontSize: '27px',
-                  fontWeight: 700,
-                  lineHeight: 1.22,
-                  color: '#141413',
-                  fontFamily: 'Source Serif 4',
-                },
-                tituloUltimo
-              )
-            ),
-            el(
-              'div',
-              {
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '12px',
-                borderTop: '1px solid #ece7dc',
-                paddingTop: '14px',
-              },
-              el(
-                'div',
-                {
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '4px',
-                },
-                el(
-                  'span',
-                  {
-                    fontSize: '13px',
-                    fontWeight: 700,
-                    color: '#6b675e',
-                    fontFamily: 'JetBrains Mono',
-                    letterSpacing: '0.08em',
-                  },
-                  `LO QUE DIJO (${ultimo?.pasado.fecha ?? 'ARCHIVO'})`
-                ),
-                el(
-                  'span',
-                  {
-                    fontSize: '17px',
-                    color: '#2f2e2a',
-                    lineHeight: 1.35,
-                  },
-                  citaPasado
-                )
-              ),
-              el(
-                'div',
-                {
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '4px',
-                },
-                el(
-                  'span',
-                  {
-                    fontSize: '13px',
-                    fontWeight: 700,
-                    color: '#b91c1c',
-                    fontFamily: 'JetBrains Mono',
-                    letterSpacing: '0.08em',
-                  },
-                  `HECHO (${ultimo?.presente.medio ?? 'PRENSA'})`
-                ),
-                el(
-                  'span',
-                  {
-                    fontSize: '17px',
-                    fontWeight: 700,
-                    color: '#141413',
-                    lineHeight: 1.35,
-                  },
-                  hechoPresente
-                )
+                el('span', {}, 'escupometro.vercel.app'),
+                el('span', {}, 'Archivo documental verificable · Prensa y citas públicas')
               )
             )
-          )
-        ),
-        el(
-          'div',
-          {
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            borderTop: '1px solid #dcd7cc',
-            paddingTop: '12px',
-            fontSize: '16px',
-            fontWeight: 700,
-            color: '#4a4843',
-            fontFamily: 'JetBrains Mono',
-          },
-          el('span', {}, 'escupometro.vercel.app'),
-          el('span', {}, 'Archivo documental verificable · Prensa y citas públicas')
-        )
-      )
-    );
+          );
 
-    const svg = await satori(arbol as unknown as Parameters<typeof satori>[0], {
-      width: 1200,
-      height: 630,
-      fonts: cargarFuentes(),
-    });
+          const svg = await satori(arbol as unknown as Parameters<typeof satori>[0], {
+            width: 1200,
+            height: 630,
+            fonts: cargarFuentes(),
+          });
 
-    const resvg = new Resvg(svg, {
-      fitTo: { mode: 'width', value: 1200 },
-    });
-    const pngBuffer = resvg.render().asPng();
+          const resvg = new Resvg(svg, {
+            fitTo: { mode: 'width', value: 1200 },
+          });
+          const pngBuffer = resvg.render().asPng();
+          cacheOg = { fecha: fechaHoy, expiraEn: Date.now() + CACHE_OG_TTL_MS, png: pngBuffer };
+          return pngBuffer;
+        } finally {
+          renderEnVuelo = null;
+        }
+      })();
+    }
 
-    return new Response(pngBuffer, {
+    const pngBuffer = await renderEnVuelo;
+
+    return new Response(Buffer.from(pngBuffer), {
       status: 200,
       headers: {
         'Content-Type': 'image/png',
         'Cache-Control': 'public, max-age=0, s-maxage=300, stale-while-revalidate=600',
+        'X-Content-Type-Options': 'nosniff',
+        'Cross-Origin-Resource-Policy': 'cross-origin',
       },
     });
   } catch (err) {
+    console.error('[api/og] Fallo al generar tarjeta OG:', err instanceof Error ? err.message : 'error');
     return new Response(
       JSON.stringify({
         error: 'No se pudo generar la tarjeta OG.',
-        detalle: err instanceof Error ? err.message : String(err),
       }),
       {
         status: 500,
-        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+          'Cache-Control': 'no-store',
+          'X-Content-Type-Options': 'nosniff',
+        },
       }
     );
   }

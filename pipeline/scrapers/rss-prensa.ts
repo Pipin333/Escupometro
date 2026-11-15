@@ -2,6 +2,7 @@ import { XMLParser } from 'fast-xml-parser';
 import crypto from 'node:crypto';
 import type { NoticiaScrapeada } from '../../src/types/escupo.js';
 import { normalizarTexto } from '../../src/motor/detector.js';
+import { esHostPrivadoOLocal, sanitizarUrlHttp } from '../../src/lib/url-segura.js';
 
 export interface FuenteRSS {
   nombre: string;
@@ -53,14 +54,27 @@ const TERMINOS_RELEVANCIA = [
  * @param html Texto o fragmento HTML crudo del feed.
  * @returns Texto plano normalizado.
  */
+function decodificarCodePointSeguro(codigo: number): string {
+  if (
+    !Number.isInteger(codigo) ||
+    codigo < 0x20 ||
+    codigo === 0x7f ||
+    codigo > 0x10ffff ||
+    (codigo >= 0xd800 && codigo <= 0xdfff)
+  ) {
+    return ' ';
+  }
+  return String.fromCodePoint(codigo);
+}
+
 export function limpiarHtml(html: string): string {
   return html
     .replace(/<[^>]*>/g, ' ')
     .replace(/&#x([0-9a-f]+);/gi, (_, hex: string) =>
-      String.fromCodePoint(Number.parseInt(hex, 16))
+      decodificarCodePointSeguro(Number.parseInt(hex, 16))
     )
     .replace(/&#(\d+);/g, (_, dec: string) =>
-      String.fromCodePoint(Number.parseInt(dec, 10))
+      decodificarCodePointSeguro(Number.parseInt(dec, 10))
     )
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
@@ -184,22 +198,89 @@ export function esNoticiaRelevante(titulo: string, bajada: string, url = ''): bo
   return TERMINOS_RELEVANCIA.some((termino) => texto.includes(termino));
 }
 
+const MAX_RSS_BYTES = 2 * 1024 * 1024;
+const MAX_REDIRECTS_RSS = 3;
+
+function validarUrlFeedPublica(rawUrl: string): string {
+  const urlSegura = sanitizarUrlHttp(rawUrl);
+  if (!urlSegura) {
+    throw new Error('URL de feed RSS inválida o no permitida');
+  }
+  const parsed = new URL(urlSegura);
+  if (esHostPrivadoOLocal(parsed.hostname)) {
+    throw new Error(`Host privado o local bloqueado en feed RSS: ${parsed.hostname}`);
+  }
+  return parsed.toString();
+}
+
+async function leerRespuestaAcotada(resp: Response, maxBytes: number): Promise<string> {
+  const lenHeader = resp.headers.get('content-length');
+  if (lenHeader) {
+    const declared = Number(lenHeader);
+    if (Number.isFinite(declared) && declared > maxBytes) {
+      await resp.body?.cancel();
+      throw new Error('Respuesta RSS excede el límite máximo de tamaño');
+    }
+  }
+  if (!resp.body) {
+    const txt = await resp.text();
+    if (Buffer.byteLength(txt, 'utf-8') > maxBytes) {
+      throw new Error('Respuesta RSS excede el límite máximo de tamaño');
+    }
+    return txt;
+  }
+
+  const reader = resp.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > maxBytes) {
+      await reader.cancel();
+      throw new Error('Respuesta RSS excede el límite máximo de tamaño');
+    }
+    chunks.push(value);
+  }
+  return Buffer.concat(chunks).toString('utf-8');
+}
+
 async function fetchConTimeout(url: string, timeoutMs = 8000): Promise<string> {
+  let currentUrl = validarUrlFeedPublica(url);
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
 
   try {
-    const resp = await fetch(url, {
-      signal: controller.signal,
-      headers: {
-        'User-Agent': 'ObservatorioCoherenciaBot/1.0 (+https://github.com)',
-        Accept: 'application/rss+xml, application/xml, text/xml',
-      },
-    });
-    if (!resp.ok) {
-      throw new Error(`HTTP ${resp.status} en ${url}`);
+    for (let salto = 0; salto <= MAX_REDIRECTS_RSS; salto++) {
+      const resp = await fetch(currentUrl, {
+        signal: controller.signal,
+        redirect: 'manual',
+        headers: {
+          'User-Agent': 'ObservatorioCoherenciaBot/1.0 (+https://github.com)',
+          Accept: 'application/rss+xml, application/xml, text/xml',
+        },
+      });
+
+      if (resp.status >= 300 && resp.status < 400) {
+        const location = resp.headers.get('location');
+        await resp.body?.cancel();
+        if (!location || salto === MAX_REDIRECTS_RSS) {
+          throw new Error(`Redirección inválida o excesiva en ${currentUrl}`);
+        }
+        currentUrl = validarUrlFeedPublica(new URL(location, currentUrl).toString());
+        continue;
+      }
+
+      if (!resp.ok) {
+        throw new Error(`HTTP ${resp.status} en ${currentUrl}`);
+      }
+      if (resp.url) {
+        validarUrlFeedPublica(resp.url);
+      }
+      return await leerRespuestaAcotada(resp, MAX_RSS_BYTES);
     }
-    return await resp.text();
+    throw new Error(`Demasiadas redirecciones en ${url}`);
   } finally {
     clearTimeout(timer);
   }
@@ -221,6 +302,15 @@ export async function scrapearFeed(fuente: FuenteRSS): Promise<NoticiaScrapeada[
   const parser = new XMLParser({
     ignoreAttributes: false,
     attributeNamePrefix: '@_',
+    maxNestedTags: 40,
+    processEntities: {
+      enabled: true,
+      maxEntitySize: 512,
+      maxExpansionDepth: 2,
+      maxTotalExpansions: 200,
+      maxExpandedLength: 20000,
+      maxEntityCount: 20,
+    },
   });
   const parsed = parser.parse(xml) as {
     rss?: { channel?: { item?: RawRssItem | RawRssItem[] } };
@@ -234,7 +324,7 @@ export async function scrapearFeed(fuente: FuenteRSS): Promise<NoticiaScrapeada[
 
   for (const item of items) {
     const tituloBruto = typeof item.title === 'string' ? limpiarHtml(item.title) : '';
-    const url = typeof item.link === 'string' ? item.link.trim() : '';
+    const url = sanitizarUrlHttp(typeof item.link === 'string' ? item.link : '');
     if (!tituloBruto || !url) continue;
 
     let medio = fuente.nombre;

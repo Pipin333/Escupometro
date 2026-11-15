@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import type { Escupo } from '../types/escupo';
+import { sanitizarUrlHttp } from '../lib/url-segura';
 
 interface ExpedienteDestacadoProps {
   incidente: Escupo;
@@ -10,6 +11,10 @@ interface ExpedienteDestacadoProps {
  * Presentación en portada del incidente más reciente en formato comparativo editorial de dos columnas.
  */
 export const ExpedienteDestacado: React.FC<ExpedienteDestacadoProps> = ({ incidente }) => {
+  const urlFuentePasado = sanitizarUrlHttp(incidente.pasado.fuenteUrl);
+  const urlArchivoPasado = sanitizarUrlHttp(incidente.pasado.archivoUrl);
+  const urlFuentePresente = sanitizarUrlHttp(incidente.presente.fuenteUrl);
+
   return (
     <section aria-labelledby="titulo-ultimo-impacto" className="py-8 sm:py-10 border-b border-[#dcd7cc]">
       <div className="flex flex-wrap items-baseline justify-between gap-2 mb-5">
@@ -52,11 +57,11 @@ export const ExpedienteDestacado: React.FC<ExpedienteDestacadoProps> = ({ incide
               </blockquote>
             </div>
 
-            {(incidente.pasado.fuenteUrl || incidente.pasado.archivoUrl) && (
+            {(urlFuentePasado || urlArchivoPasado) && (
               <div className="pt-2 flex flex-wrap items-center gap-4">
-                {incidente.pasado.fuenteUrl && (
+                {urlFuentePasado && (
                   <a
-                    href={incidente.pasado.fuenteUrl}
+                    href={urlFuentePasado}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
@@ -65,9 +70,9 @@ export const ExpedienteDestacado: React.FC<ExpedienteDestacadoProps> = ({ incide
                     <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
                   </a>
                 )}
-                {incidente.pasado.archivoUrl && (
+                {urlArchivoPasado && (
                   <a
-                    href={incidente.pasado.archivoUrl}
+                    href={urlArchivoPasado}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs font-medium text-[#4a4843] hover:text-[#141413] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
@@ -104,10 +109,10 @@ export const ExpedienteDestacado: React.FC<ExpedienteDestacadoProps> = ({ incide
               </p>
             </div>
 
-            {incidente.presente.fuenteUrl && (
+            {urlFuentePresente && (
               <div className="pt-2">
                 <a
-                  href={incidente.presente.fuenteUrl}
+                  href={urlFuentePresente}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs font-semibold text-[#b91c1c] hover:text-[#991b1b] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b91c1c]"

@@ -18,7 +18,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
+from pathlib import Path
+
+MODELOS_PERMITIDOS = ("tiny", "base", "small", "medium", "large-v3")
+DISPOSITIVOS_PERMITIDOS = ("auto", "cpu", "cuda")
+PATRON_IDIOMA = re.compile(r"^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})?$")
 
 
 def parsear_argumentos(argv: list[str]) -> argparse.Namespace:
@@ -37,12 +43,14 @@ def parsear_argumentos(argv: list[str]) -> argparse.Namespace:
     parser.add_argument(
         "--modelo",
         default="small",
+        choices=MODELOS_PERMITIDOS,
         help="Modelo Whisper (tiny, base, small, medium, large-v3).",
     )
     parser.add_argument("--idioma", default="es", help="Código de idioma ISO 639-1.")
     parser.add_argument(
         "--dispositivo",
         default="auto",
+        choices=DISPOSITIVOS_PERMITIDOS,
         help="Dispositivo de inferencia: auto, cpu o cuda.",
     )
     return parser.parse_args(argv)
@@ -97,11 +105,22 @@ def main(argv: list[str]) -> int:
         argv: Argumentos sin el nombre del script.
 
     Returns:
-        Código de salida del proceso (0 éxito, 2 dependencia ausente).
+        Código de salida del proceso (0 éxito, 1 entrada inválida, 2 dependencia ausente).
     """
     args = parsear_argumentos(argv)
+    ruta_audio = Path(args.audio).resolve()
+    if not ruta_audio.is_file():
+        print(
+            f"El archivo de audio no existe o no es un archivo regular: {args.audio}",
+            file=sys.stderr,
+        )
+        return 1
+    if not PATRON_IDIOMA.fullmatch(args.idioma):
+        print(f"Código de idioma inválido: {args.idioma}", file=sys.stderr)
+        return 1
+
     try:
-        segmentos = transcribir(args.audio, args.modelo, args.idioma, args.dispositivo)
+        segmentos = transcribir(str(ruta_audio), args.modelo, args.idioma, args.dispositivo)
     except ImportError:
         print(
             "faster-whisper no está instalado. Ejecuta: python -m pip install faster-whisper",
