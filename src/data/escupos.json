@@ -1,5 +1,30 @@
 [
   {
+    "id": "bbnj-alta-mar-onu-china-2026",
+    "titulo": "Recortes a ONU y 'distancia firme frente a dictaduras' vs. Lobby en Asia por sede ONU en Valparaíso y choque con China",
+    "categoria": "libertades",
+    "fechaIncidente": "2026-11-15",
+    "diasSinEscupoPrevios": 2,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2021-10-02",
+      "rol": "Candidato Presidencial (Programa 2021)",
+      "tipoMedio": "prensa",
+      "cita": "Propondremos la salida de Chile del Consejo de Derechos Humanos de la ONU y marcaremos distancia firme frente a regímenes autoritarios y dictaduras comunistas que violan sistemáticamente las libertades.",
+      "fuenteUrl": "https://x.com/joseantoniokast"
+    },
+    "presente": {
+      "fecha": "2026-11-15",
+      "medio": "CNN Chile / Ex-Ante / BioBioChile",
+      "titulo": "China acusa a Chile y Bélgica de actuar 'a escondidas', 'falta de respeto' y 'politizar' sede del Tratado de Alta Mar de la ONU",
+      "descripcion": "Al iniciar su gira por Asia en Vietnam rumbo a la cumbre APEC en Shenzhen —y con la alcaldesa de Valparaíso, Camila Nieto, en la comitiva para impulsar a la ciudad puerto como primera sede latinoamericana de una secretaría de la ONU (BBNJ)—, la Cancillería china acusó a Chile y Bélgica de pactar 'a escondidas' y 'politizar' la competencia frente a Xiamen.",
+      "impacto": "Choque diplomático abierto con Beijing justo antes de aterrizar en China, defendiendo además la instalación en Chile de un organismo permanente de Naciones Unidas.",
+      "fuenteUrl": "https://www.cnnchile.com/mundo/china-acusa-a-chile-y-belgica-de-politizar-dividir-a-los-miembros-en-bandos-opuestos-para-albergar-secretaria-bbnj/"
+    },
+    "veredictoSatirico": "En campaña prometía marcar distancia de organismos de la ONU y regímenes comunistas; hoy viaja a China haciendo lobby por una sede permanente de la ONU en Valparaíso y Beijing lo acusa de 'politizar' el proceso.",
+    "votosComunidad": 0
+  },
+  {
     "id": "aprobacion-18-renuncia-bachelet-2026",
     "titulo": "Pidió a Bachelet renunciar por baja aprobación ('7 de cada 10 no le cree') vs. Cae al 18% en Black & White",
     "categoria": "constitucion",
