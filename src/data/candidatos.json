@@ -138,52 +138,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-10-303e6d88bc__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-10-303e6d88bc",
-      "titulo": "Presidente Kast reconoce tensión con camioneros en medio de paro por alza de combustibles",
-      "bajada": "Presidente Kast reconoce tensión con camioneros en medio de paro por alza de combustibles Revista Digital Minera REDIMIN",
-      "medio": "Revista Digital Minera REDIMIN",
-      "fecha": "2026-11-10",
-      "publicadoEn": "2026-11-10T15:31:38.000Z",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRjZheUxZTEhNaU9nd0NRVlBwWUl5MXhjQV92WVdVV3hGRjFJNUM0ZmxfaEwzQm9ibFJoNlh4OFVPNkNuTzlidlhUaVJUZHlKZDViS1phS1FBQnNQaTNycUctX0FsLXhGNnVmZE5ZdmVUaEhGLUQyNXY0REJDZXl0S3JVdGJFYjJlWFJ2bW9hSE5hUHMxaG9oZ3Q2aFdHMXpiSy1yWjJUaVpPYnl0eDYtVjl3?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 99,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "combustible",
-      "alza",
-      "camioneros",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (combustible, alza, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-12-e4d53de9d3__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-12-e4d53de9d3",
@@ -225,53 +179,6 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (diesel, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-12-fbb35f6cba__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-12-fbb35f6cba",
-      "titulo": "La Moneda informa que viaje de Kast a Asia se mantiene: confirmadas reuniones con Xi Jinping y primera ministra de Japón",
-      "bajada": "La Moneda informa que viaje de Kast a Asia se mantiene: confirmadas reuniones con Xi Jinping y primera ministra de Japón Diario Financiero",
-      "medio": "Diario Financiero",
-      "fecha": "2026-11-12",
-      "publicadoEn": "2026-11-12T14:36:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb25IeGh2UFA4Y1JwclVUYl9VbHlHb0ZzbFZLd3VFUW9JcFFfRmxwOTNKNC1uS24xbTJVRVZJWk5GVl95YlFleTV0TFpCQXVhOVNRRmVLN1UtaXpJV1UyTzRCaEFfQzFhdVNaekptaVZLTmFpQTFveEpZWEE5YUY4ejN5UDV2RzljS0JQRGsxQVFmSExWZF9VMFhldy1QVGxTOFJxR0NKTVFwaTE3THRsa3N3UQ?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "viaje",
-      "asia",
-      "xi",
-      "moneda"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (viaje, asia, xi, moneda). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, confirma) frente a la postura original de \"condena\" emitida el 2023-07-18.",
     "generadoEn": "2026-11-15",
     "metodoAnalisis": "motor-determinista"
   },
@@ -457,52 +364,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-11-196bcc364f__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-11-196bcc364f",
-      "titulo": "Kast viaja con amplia comitiva empresarial a China, Vietnam y Japón en busca de nuevas oportunidades comerciales",
-      "bajada": "Kast viaja con amplia comitiva empresarial a China, Vietnam y Japón en busca de nuevas oportunidades comerciales Diario Financiero",
-      "medio": "Diario Financiero",
-      "fecha": "2026-11-11",
-      "publicadoEn": "2026-11-11T22:12:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZWFveUIycnJhX2lOWWtLeE90ZFJXTFZTTmdmM1pRLVdtMHV4NDRqZmxiMTNsQ0NfX3NvTFpJczNIOUx1alZ6RncydE9vUlNzTGtOZXB3SXFGWDgwQWk3SUwxMF91SnlRd3V3NS1WUXhaSExaNUdwemhNOGxhUjRySlkxTTA2RGx4dzgxVjVaY2loQUVvamZuU1psa1B5SXhGRzd1T2YyRlQzUmM5N1l2R0loZU9CUQ?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 90,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "comitiva",
-      "china",
-      "vietnam"
-    ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (comitiva, china, vietnam). El titular/bajada registra indicadores de ejecución contraria o conflicto (viaja, comitiva) frente a la postura original de \"condena\" emitida el 2023-07-18.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-10-2a4d60e47b__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-10-2a4d60e47b",
@@ -543,6 +404,143 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-15",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-09-02462b854e__dicho-bencinas-impuestos",
+    "noticia": {
+      "id": "news-2026-11-09-02462b854e",
+      "titulo": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20",
+      "bajada": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20 El Desconcierto",
+      "medio": "El Desconcierto",
+      "fecha": "2026-11-09",
+      "publicadoEn": "2026-11-09T14:11:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYV9uX3FZelFxYXFUOGFTTDh3ZFVYMEY1el9hMnlmZnhZMTltaXQxQkF0Tkw2MFl5OHl1cXRkV21Qa2lhTXZhTVA4Tmg2NWdYUDM0cThPaWIzV2stdUhtaXlSaGRnZlZIQzdHR240Rmd5T2RlTVlKdnhyY0IxbTZqNmdDMzJSMHBSc0pZbHROOGpRMnVieG5qQUM3VVVmNUtIamtNSGRRYkhiUWs0MVE3TlRYUWF2c0JtNWFWbjRGTlppSzZZRlZjVmpBVkljaWJvb05IX2ZWc0c?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
+      "conceptosClave": [
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 90,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "combustible",
+      "alza"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, alza). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-15",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-14-7381f8900d__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-14-7381f8900d",
+      "titulo": "\"Presidente, dé la cara\": reflotan los tuits de Kast contra los viajes de Piñera y Boric en medio de su polémica gira por Asia",
+      "bajada": "\"Presidente, dé la cara\": reflotan los tuits de Kast contra los viajes de Piñera y Boric en medio de su polémica gira por Asia elciudadano.com",
+      "medio": "elciudadano.com",
+      "fecha": "2026-11-14",
+      "publicadoEn": "2026-11-14T12:41:48.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNMzIyVWotQXhCMEVJZW1yT3VYanBSQkxCOG9VUTVjZHE1M04tcm1hVVNVLWZzODM3LVpPb1VjUEJxV2dZOEI2dURlX28weGhnU1BlXy14WWoxekduVkw5WENCQVh3a0lRckZidjVfOGkxYlAyRlZhMXd0d2FmU1JFTWJUa01fakNfbTVTWFE4UWljQVZGNHdMZFRDb2JSa1VBWDZKbFZpMzJiSG1OeTRhWkNzZ2MwVkxxTThxNFY5bTNBZWdCdXItVFBIdnp4QVV0T3JNUEdiZjNsbWZfTURfTW9pY3l4bGVvRG5CQVdyNDZvMGd0TWRlX1I3YnA?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 84,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "gira",
+      "viaje",
+      "asia",
+      "presidente"
+    ],
+    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, viaje, asia, presidente). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio) frente a la postura original de \"condena\" emitida el 2023-07-18.",
+    "generadoEn": "2026-11-15",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-13-eb44554a48__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-13-eb44554a48",
+      "titulo": "Oposición emplaza a Kast a suspender su gira por Asia en medio de crisis: \"Dé la cara y quédese en Chile\"",
+      "bajada": "Oposición emplaza a Kast a suspender su gira por Asia en medio de crisis: \"Dé la cara y quédese en Chile\" Universidad de Chile",
+      "medio": "Universidad de Chile",
+      "fecha": "2026-11-13",
+      "publicadoEn": "2026-11-13T12:03:47.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVDhlVFUxeE1hY0hjRm43Q2I1YXRYektNQ19fS1pQYnZSNDY2b0UzaVB3aG9LVzlxc2pKQ19CblF2SEoydDZUQnVDbV9qdGlkTnVKMmUtVlJwRDY3MUlHY3p0SEZwcmtGX2lqcHUtNVJLTnVxUkRDczdoNnI5NzhzcmpzaHIyaGppeFZwODZzaFpKMkRSX1FyczlTaDN6TS1iNEdtUDl2elhLSXhNbm14Wl9BcXhJeTNQZlZudVM3ZHB6aE1Panh2RFB4VHVlNE9LcFBzdA?oc=5"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 84,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "gira",
+      "asia",
+      "crisis"
+    ],
+    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (gira, asia, crisis). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio) frente a la postura original de \"condena\" emitida el 2023-07-18.",
     "generadoEn": "2026-11-15",
     "metodoAnalisis": "motor-determinista"
   }
