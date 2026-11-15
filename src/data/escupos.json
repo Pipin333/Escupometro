@@ -463,6 +463,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "plan-implacable-politica-boric-2026",
+    "titulo": "Campaña con el 'Plan Implacable' contra la inacción de Boric vs. Mantener la Política Nacional de Seguridad de Boric porque 'es suficiente'",
+    "categoria": "seguridad",
+    "fechaIncidente": "2026-05-25",
+    "diasSinEscupoPrevios": 6,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2025-05-19",
+      "rol": "Candidato Presidencial (lanzamiento del Plan Implacable)",
+      "tipoMedio": "prensa",
+      "cita": "Chile está funcionando al revés: los delincuentes están libres y los ciudadanos honestos viven encerrados. El Plan Implacable es una declaración de guerra contra el crimen organizado. Es el retorno del Estado donde ha sido expulsado.",
+      "fuenteUrl": "https://partidorepublicanodechile.cl/prensa/2025/05/jose-antonio-kast-presenta-el-plan-implacable-para-devolverle-la-seguridad-a-los-chilenos-y-el-derecho-a-vivir-sin-miedo/"
+    },
+    "presente": {
+      "fecha": "2026-05-25",
+      "medio": "CIPER Chile / BioBioChile / El País",
+      "titulo": "Ministro de Seguridad confirma que el Gobierno operará bajo la Política Nacional de Seguridad Pública promulgada por Boric",
+      "descripcion": "Tras su primer Comité de Seguridad en La Moneda junto al presidente Kast, el ministro Martín Arrau anunció que mantendrán el plan maestro vigente por seis años (Ley 21.730): 'Existe una Política Nacional de Seguridad Pública, esa está vigente, la promulgó el Presidente Boric, dura seis años y nosotros creemos que esa política es suficiente, es amplia... Por tanto, vamos a operar bajo esa política'.",
+      "impacto": "Luego de años acusando al gobierno anterior de no hacer lo suficiente ni tener un plan frente al crimen, La Moneda admitió que la hoja de ruta estratégica promulgada por Boric hasta 2031 'es suficiente'.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/bbcl-explica/bbcl-explica-notas/2026/05/27/la-politica-nacional-de-seguridad-de-boric-que-usara-kast-en-que-consiste-y-que-faltaria-por-hacer.shtml"
+    },
+    "veredictoSatirico": "En campaña prometió demoler la estrategia de Boric con un 'Plan Implacable'; en La Moneda declaró que la Política Nacional de Seguridad promulgada por Boric 'es suficiente' para gobernar los próximos cinco años.",
+    "votosComunidad": 0
+  },
+  {
     "id": "mara-sedini-voceria-corrupcion",
     "titulo": "La 'corrupción de asumir cargos no preparados' de Mara Sedini: de lección moral en TV a 69 días como vocera",
     "categoria": "nepotismo",
