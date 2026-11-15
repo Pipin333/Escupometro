@@ -230,6 +230,32 @@
     "votosComunidad": 0
   },
   {
+    "id": "bencinazo-camioneros-2026",
+    "titulo": "Exigía rebajar el impuesto a las bencinas vs. El 'bencinazo', retiro de proyecto y paro indefinido de camioneros",
+    "categoria": "impuestos",
+    "fechaIncidente": "2026-11-11",
+    "diasSinEscupoPrevios": 0,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast"
+    },
+    "presente": {
+      "fecha": "2026-11-11",
+      "medio": "La Tribuna / El País",
+      "titulo": "Gobierno retira proyecto para contener alza de combustibles en medio del paro de camioneros",
+      "descripcion": "Ante el alza sostenida de los combustibles y con el desempleo superando el millón de personas, el Ejecutivo retiró su proyecto original en el Congreso mientras los gremios de camioneros mantuvieron el paro indefinido en carreteras.",
+      "impacto": "Choque frontal con el sector del transporte y deterioro acelerado de la evaluación económica del Ejecutivo.",
+      "fuenteUrl": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaExPLXpRc01tTGFRWjhYcktmRFh2VVptMndJbzNuR2duTjE1YndoSWUteTRrWnBLUk52ZGtRYTdCLXQwTF9hUVQ5ZzV3ZTZxMDFyOXk5UXFPU3cxZHpfREQ4a3Z0SWF5b0xYQWt3QkRZVTF4aFc5cjRlbVlYZjRpYVRRSzNtcEV1VlNTSTBTMWRuaWgxYkdLdWZ2eGNsd0I3TGF5V2h0ZF9Bc251UFNCd2dseTdSSUZGSVVZS2M5ZEFDbzFDRU5oUm9tbjI5WDNlQzVLLUUzZS1WOUc0b3JLRWJFT205YjZLcjBTUFRKbknSAfgBQVVfeXFMT0lCMkVfczFzUnFPbF9FMFBNdDdaRGp5VFRFUklSVWZ4TEkybENDRTNsQ004UDBqOThQeWhlYXdKa0hBS0JodU5MSllLWEtTb2Z5Z1k5QWMxVnlwVUJWTVBNME1BdEkzb05EdXJseW1lWlpkRnN2YW1JUV9jS18wMkZUaFp1SFNndFUxV2gwcmRhTVdGTnRCTHdreHhfU3p1OGpuNnFUX2ZFWTZBY1R5V3ZXZnpoS1dSSTBkcGlsaGpURVVaV0I1RE83Nm5lZzlpVno2TzNpWFRPZ1liWVBpS0dXUGRxWGthakxkcnNnX3ZWZzMxMTdmWkk?oc=5"
+    },
+    "veredictoSatirico": "El impuesto específico a las bencinas era un robo estatal en campaña; en el gobierno se volvió un rompecabezas que detonó un paro nacional de camioneros.",
+    "votosComunidad": 4950
+  },
+  {
     "id": "steinert-embajada-paraguay-antipitutos-2026",
     "titulo": "Bandera 'Antipitutos' en cargos públicos vs. Nombramiento de exministra Steinert en embajada en Paraguay",
     "categoria": "nepotismo",
@@ -305,32 +331,6 @@
     },
     "veredictoSatirico": "La tolerancia cero contra delitos hacia la infancia chocó de frente contra los decretos firmados por su propio Ministerio de Justicia... y el ministro salió premiado con respaldo presidencial.",
     "votosComunidad": 7890
-  },
-  {
-    "id": "bencinazo-camioneros-2026",
-    "titulo": "Exigía rebajar el impuesto a las bencinas vs. El 'bencinazo', retiro de proyecto y paro indefinido de camioneros",
-    "categoria": "impuestos",
-    "fechaIncidente": "2026-11-11",
-    "diasSinEscupoPrevios": 0,
-    "gravedad": "critica",
-    "pasado": {
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast"
-    },
-    "presente": {
-      "fecha": "2026-11-11",
-      "medio": "La Tribuna / El País",
-      "titulo": "Gobierno retira proyecto para contener alza de combustibles en medio del paro de camioneros",
-      "descripcion": "Ante el alza sostenida de los combustibles y con el desempleo superando el millón de personas, el Ejecutivo retiró su proyecto original en el Congreso mientras los gremios de camioneros mantuvieron el paro indefinido en carreteras.",
-      "impacto": "Choque frontal con el sector del transporte y deterioro acelerado de la evaluación económica del Ejecutivo.",
-      "fuenteUrl": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaExPLXpRc01tTGFRWjhYcktmRFh2VVptMndJbzNuR2duTjE1YndoSWUteTRrWnBLUk52ZGtRYTdCLXQwTF9hUVQ5ZzV3ZTZxMDFyOXk5UXFPU3cxZHpfREQ4a3Z0SWF5b0xYQWt3QkRZVTF4aFc5cjRlbVlYZjRpYVRRSzNtcEV1VlNTSTBTMWRuaWgxYkdLdWZ2eGNsd0I3TGF5V2h0ZF9Bc251UFNCd2dseTdSSUZGSVVZS2M5ZEFDbzFDRU5oUm9tbjI5WDNlQzVLLUUzZS1WOUc0b3JLRWJFT205YjZLcjBTUFRKbknSAfgBQVVfeXFMT0lCMkVfczFzUnFPbF9FMFBNdDdaRGp5VFRFUklSVWZ4TEkybENDRTNsQ004UDBqOThQeWhlYXdKa0hBS0JodU5MSllLWEtTb2Z5Z1k5QWMxVnlwVUJWTVBNME1BdEkzb05EdXJseW1lWlpkRnN2YW1JUV9jS18wMkZUaFp1SFNndFUxV2gwcmRhTVdGTnRCTHdreHhfU3p1OGpuNnFUX2ZFWTZBY1R5V3ZXZnpoS1dSSTBkcGlsaGpURVVaV0I1RE83Nm5lZzlpVno2TzNpWFRPZ1liWVBpS0dXUGRxWGthakxkcnNnX3ZWZzMxMTdmWkk?oc=5"
-    },
-    "veredictoSatirico": "El impuesto específico a las bencinas era un robo estatal en campaña; en el gobierno se volvió un rompecabezas que detonó un paro nacional de camioneros.",
-    "votosComunidad": 4950
   },
   {
     "id": "trinidad-zegers-rabat-nepotismo-2026",
@@ -414,7 +414,7 @@
     "titulo": "Del 'gobierno de practicantes' a estudiantes de pregrado y expracticantes con sueldos millonarios en La Moneda",
     "categoria": "nepotismo",
     "fechaIncidente": "2026-09-09",
-    "diasSinEscupoPrevios": 43,
+    "diasSinEscupoPrevios": 20,
     "gravedad": "termocéfala",
     "pasado": {
       "fecha": "2022-04-07",
@@ -434,6 +434,31 @@
       "fuenteUrl": "https://www.elmostrador.cl/noticias/pais/2026/09/09/otro-joven-se-suma-a-los-altos-pagos-en-las-contrataciones-del-gobierno/"
     },
     "veredictoSatirico": "En 2022 acusaba a Boric de encabezar un 'gobierno de practicantes'; en 2026 estudiantes de 1.º de Periodismo, 4.º de Derecho y expracticantes de su círculo cobraron hasta $3,7 millones brutos como 'expertos' y directores.",
+    "votosComunidad": 0
+  },
+  {
+    "id": "estado-excepcion-240-dias-woke-2026",
+    "titulo": "Contra el 'presidente woke' y en defensa de libertades vs. Estado de excepción de 240 días sin Congreso (luego retirado)",
+    "categoria": "libertades",
+    "fechaIncidente": "2026-08-20",
+    "diasSinEscupoPrevios": 23,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2024-04-26",
+      "rol": "Líder opositor en cumbre CPAC (Hungría)",
+      "tipoMedio": "prensa",
+      "cita": "En Chile, estamos gobernados por un presidente 'woke' (...) un presidente que dice que su gobierno sería feminista, ecologista e indigenista",
+      "fuenteUrl": "https://radio.uchile.cl/2024/04/26/jose-antonio-kast-estamos-gobernados-por-un-presidente-woke/"
+    },
+    "presente": {
+      "fecha": "2026-08-20",
+      "medio": "El País / El Mostrador / Cadem",
+      "titulo": "Kast impulsa estado de excepción de hasta 240 días sin aval del Congreso y luego lo retira tras declararlo irrenunciable",
+      "descripcion": "En agosto de 2026 envió con suma urgencia la reforma constitucional ACOT para permitir al Presidente decretar un estado de excepción por 120 días prorrogables a 240 días sin autorización previa del Congreso, restringiendo libertades e interviniendo comunicaciones. Un 58% lo rechazó en Cadem, sectores oficialistas lo tildaron de iliberal y en septiembre terminó retirándolo pese a haberlo defendido como irrenunciable.",
+      "impacto": "Choque frontal entre su retórica internacional por las libertades individuales y un intento de concentrar 8 meses de poderes excepcionales sin control parlamentario.",
+      "fuenteUrl": "https://www.elmostrador.cl/noticias/pais/2026/09/30/kast-retira-reforma-de-seguridad-y-deja-caer-estado-de-excepcion-que-defendio-como-irrenunciable/"
+    },
+    "veredictoSatirico": "Denunciaba en Hungría los excesos de un 'presidente woke'; en La Moneda intentó gobernar 240 días bajo estado de excepción sin permiso del Congreso y terminó retirando lo que juró 'irrenunciable'.",
     "votosComunidad": 0
   },
   {
@@ -467,7 +492,7 @@
     "titulo": "Quiebre por 'falta de transparencia' en el cable chino vs. Reunión secreta con Peter Thiel (Palantir) sin registro ni actas",
     "categoria": "libertades",
     "fechaIncidente": "2026-07-09",
-    "diasSinEscupoPrevios": 45,
+    "diasSinEscupoPrevios": 38,
     "gravedad": "critica",
     "pasado": {
       "fecha": "2026-03-03",
@@ -485,6 +510,56 @@
       "fuenteUrl": "https://www.theclinic.cl/2026/07/09/presidencia-reconoce-que-kast-y-peter-thiel-abordaron-los-desafios-de-la-ia-para-el-estado-pero-rechaza-entregar-mas-antecedentes-de-la-reunion/"
     },
     "veredictoSatirico": "En marzo rompió la transición acusando falta de transparencia por el cable chino; en mayo recibió en secreto al fundador de Palantir y en julio invocó reserva privada para no entregar actas sobre IA estatal.",
+    "votosComunidad": 0
+  },
+  {
+    "id": "cuenta-publica-ajuste-dolor-2026",
+    "titulo": "Prometió recortar US$ 6.000 millones 'sin afectar beneficios' vs. 'Va a haber dolor' en su primera Cuenta Pública",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-06-01",
+    "diasSinEscupoPrevios": 1,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2025-10-07",
+      "rol": "Candidato Presidencial (debate por recorte fiscal)",
+      "tipoMedio": "prensa",
+      "cita": "El ajuste fiscal de US$ 6.000 millones en 18 meses se logrará mediante eficiencia estatal y reducción de grasa política, sin recortar ni afectar los beneficios sociales existentes.",
+      "fuenteUrl": "https://elpais.com/chile/2025-10-07/la-propuesta-de-kast-de-recorte-fiscal-de-6000-millones-dolares-lo-enfrenta-con-el-gobierno-de-boric.html"
+    },
+    "presente": {
+      "fecha": "2026-06-01",
+      "medio": "El País / TN / Congreso Nacional",
+      "titulo": "Primera Cuenta Pública: Kast admite que el ajuste fiscal traerá 'dolor' y enfrenta primera marcha masiva",
+      "descripcion": "En su primera Cuenta Pública ante el Congreso en Valparaíso, el mandatario endureció el tono económico frente a la estrechez fiscal advirtiendo: 'No será rápido, va a haber dolor. No les voy a prometer milagros'. Dos días después enfrentó la primera marcha masiva convocada por estudiantes y profesores contra el impacto social de los recortes.",
+      "impacto": "Primer gran quiebre de expectativas entre el relato de campaña indoloro sobre la grasa estatal y los costos sociales asumidos a tres meses de asumir.",
+      "fuenteUrl": "https://elpais.com/chile/2026-06-03/kast-enfrenta-la-primera-marcha-masiva-a-los-tres-meses-de-llegar-al-poder-para-este-gobierno-los-pobres-no-son-dignos-de-tener-educacion.html"
+    },
+    "veredictoSatirico": "En campaña el recorte de US$ 6.000 millones salía gratis cortando 'grasa estatal'; en su primera Cuenta Pública avisó al país que 'va a haber dolor'.",
+    "votosComunidad": 0
+  },
+  {
+    "id": "punta-peuco-traslado-reos-2026",
+    "titulo": "Versión oficial de 'criterios técnicos y solicitud voluntaria' vs. Kast confiesa en TV que él ordenó vaciar Punta Peuco de reos comunes",
+    "categoria": "seguridad",
+    "fechaIncidente": "2026-05-31",
+    "diasSinEscupoPrevios": 6,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2026-05-28",
+      "rol": "Gendarmería y Subsecretaría de Justicia (versión oficial inicial)",
+      "tipoMedio": "prensa",
+      "cita": "El traslado de los tres reos comunes desde el Centro Penitenciario de Tiltil (ex Punta Peuco) respondió exclusivamente a criterios técnicos y a solicitudes voluntarias presentadas por escrito por los internos.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2026/05/31/kast-reconoce-que-el-ordeno-traslado-de-reos-comunes-de-expunta-peuco-es-una-facultad.shtml"
+    },
+    "presente": {
+      "fecha": "2026-05-31",
+      "medio": "BioBioChile / Radio Universidad de Chile",
+      "titulo": "Kast reconoce en televisión que él dio la instrucción directa de sacar a los reos comunes de ex Punta Peuco",
+      "descripcion": "Días después de que Gendarmería y el subsecretario Luis Silva atribuyeran el movimiento a peticiones voluntarias y razones técnicas, el propio Presidente admitió en entrevista televisiva que la orden emanó directamente de él, revirtiendo la conversión a penal común dispuesta en 2025 y dejando el recinto nuevamente solo para condenados por crímenes de lesa humanidad.",
+      "impacto": "Desmentido presidencial en vivo a la versión técnica de su propio Ministerio de Justicia y reapertura de la polémica por privilegios carcelarios en Punta Peuco.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2026/05/31/kast-reconoce-que-el-ordeno-traslado-de-reos-comunes-de-expunta-peuco-es-una-facultad.shtml"
+    },
+    "veredictoSatirico": "Su Ministerio de Justicia juró que los reos comunes se fueron de Punta Peuco por petición propia y criterio técnico; tres días después Kast salió en TV a contar que la orden la dio él.",
     "votosComunidad": 0
   },
   {
@@ -567,7 +642,7 @@
     "titulo": "Prometía que 'los recursos de los chilenos son sagrados' vs. Almuerzo privado para 70 excompañeros de Derecho UC en La Moneda",
     "categoria": "gasto-publico",
     "fechaIncidente": "2026-04-10",
-    "diasSinEscupoPrevios": 30,
+    "diasSinEscupoPrevios": 11,
     "gravedad": "critica",
     "pasado": {
       "fecha": "2022-03-15",
@@ -586,6 +661,31 @@
       "fuenteUrl": "https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2026/04/13/el-menu-con-que-kast-recibio-a-excompaneros-en-la-moneda-actividad-fue-denunciada-a-la-contraloria.shtml"
     },
     "veredictoSatirico": "De predicar que nadie use bienes fiscales para fines propios a armar el reencuentro de generación 1984 en los salones de La Moneda y tener que pedir disculpas por 'desconocimiento'.",
+    "votosComunidad": 0
+  },
+  {
+    "id": "colonia-dignidad-sitio-memoria-2026",
+    "titulo": "Promesa de prioridad a víctimas y verdad vs. Freno y anulación del sitio de memoria en ex Colonia Dignidad",
+    "categoria": "libertades",
+    "fechaIncidente": "2026-03-30",
+    "diasSinEscupoPrevios": 19,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2025-10-07",
+      "rol": "Candidato Presidencial (compromiso de respeto a derechos y tratados)",
+      "tipoMedio": "prensa",
+      "cita": "Sostuvo en campaña que los recortes fiscales se enfocarían en eficiencia administrativa y que su gobierno respetaría los derechos humanos, las víctimas y los compromisos internacionales del Estado.",
+      "fuenteUrl": "https://elpais.com/chile/2026-03-30/kast-anula-la-construccion-de-un-sitio-de-memoria-para-las-victimas-de-la-dictadura-de-pinochet-en-colonia-dignidad.html"
+    },
+    "presente": {
+      "fecha": "2026-03-30",
+      "medio": "El País / Radio Universidad de Chile",
+      "titulo": "Gobierno de Kast frena y deja sin efecto la expropiación de 117 hectáreas en ex Colonia Dignidad para sitio de memoria",
+      "descripcion": "A menos de tres semanas de asumir, el Ejecutivo revocó el proceso iniciado en julio de 2025 para levantar un sitio de memoria en la ex Colonia Dignidad, alegando falta de presupuesto y reparos administrativos ante la Comisión Mixta con Alemania. Sobrevivientes y familiares llevaron el caso ante la CIDH y la ONU, mientras Berlín expresó preocupación diplomática.",
+      "impacto": "Primer conflicto internacional en derechos humanos y memoria histórica de la administración, revertiendo un acuerdo bilateral con Alemania.",
+      "fuenteUrl": "https://elpais.com/chile/2026-03-30/kast-anula-la-construccion-de-un-sitio-de-memoria-para-las-victimas-de-la-dictadura-de-pinochet-en-colonia-dignidad.html"
+    },
+    "veredictoSatirico": "A semanas de llegar a La Moneda, el primer gran ajuste administrativo no fue contra la grasa política sino anular el sitio de memoria en Colonia Dignidad, abriendo un frente en la CIDH y con Alemania.",
     "votosComunidad": 0
   },
   {
@@ -614,6 +714,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "marcela-cubillos-uss-sueldo",
+    "titulo": "Cruzada contra 'los pitutos millonarios' vs. Apoyo a Marcela Cubillos y su sueldo de $17 millones en la USS",
+    "categoria": "nepotismo",
+    "fechaIncidente": "2024-10-27",
+    "diasSinEscupoPrevios": 25,
+    "gravedad": "critica",
+    "pasado": {
+      "fecha": "2021-11-04",
+      "rol": "Candidato Presidencial",
+      "tipoMedio": "debate",
+      "cita": "En Chile hay una élite de políticos apernados con sueldos exorbitantes e injustificables que se ríen en la cara de los trabajadores que se sacan la mugre a fin de mes. Eso se tiene que acabar.",
+      "fuenteUrl": "https://www.anatel.cl"
+    },
+    "presente": {
+      "fecha": "2024-09-25",
+      "medio": "CIPER Chile",
+      "titulo": "Defensa matizada del sueldo de $17 millones y apoyo en Las Condes",
+      "descripcion": "Tras revelarse que Marcela Cubillos cobraba $17 millones mensuales brutos en la USS incluso residiendo en Madrid, Kast reconoció que 'era un sueldo para algo más que hacer clases', pero Republicanos respaldó su candidatura en Las Condes, sufriendo una derrota histórica ante Catalina San Martín.",
+      "impacto": "Derrota electoral en el bastión histórico de la derecha y apertura de indagatoria penal por la Fiscalía.",
+      "fuenteUrl": "https://ciperchile.cl/2024/09/23/marcela-cubillos-y-su-sueldo-de-17-millones-en-la-universidad-san-sebastian/"
+    },
+    "veredictoSatirico": "La meritocracia según el comando: 17 millones mensuales por mandar correos desde Madrid en una universidad financiada con créditos estatales.",
+    "votosComunidad": 3890
+  },
+  {
     "id": "caso-convenios-mauricio-ojeda",
     "titulo": "Guerra al 'Caso Convenios' vs. Desafuero del diputado republicano Mauricio Ojeda por $730 millones",
     "categoria": "gasto-publico",
@@ -638,31 +763,6 @@
     },
     "veredictoSatirico": "El escupo al cielo contra el Caso Convenios dio una vuelta orbital completa y aterrizó sobre un parlamentario de su propia bancada.",
     "votosComunidad": 4120
-  },
-  {
-    "id": "marcela-cubillos-uss-sueldo",
-    "titulo": "Cruzada contra 'los pitutos millonarios' vs. Apoyo a Marcela Cubillos y su sueldo de $17 millones en la USS",
-    "categoria": "nepotismo",
-    "fechaIncidente": "2024-10-27",
-    "diasSinEscupoPrevios": 25,
-    "gravedad": "critica",
-    "pasado": {
-      "fecha": "2021-11-04",
-      "rol": "Candidato Presidencial",
-      "tipoMedio": "debate",
-      "cita": "En Chile hay una élite de políticos apernados con sueldos exorbitantes e injustificables que se ríen en la cara de los trabajadores que se sacan la mugre a fin de mes. Eso se tiene que acabar.",
-      "fuenteUrl": "https://www.anatel.cl"
-    },
-    "presente": {
-      "fecha": "2024-09-25",
-      "medio": "CIPER Chile",
-      "titulo": "Defensa matizada del sueldo de $17 millones y apoyo en Las Condes",
-      "descripcion": "Tras revelarse que Marcela Cubillos cobraba $17 millones mensuales brutos en la USS incluso residiendo en Madrid, Kast reconoció que 'era un sueldo para algo más que hacer clases', pero Republicanos respaldó su candidatura en Las Condes, sufriendo una derrota histórica ante Catalina San Martín.",
-      "impacto": "Derrota electoral en el bastión histórico de la derecha y apertura de indagatoria penal por la Fiscalía.",
-      "fuenteUrl": "https://ciperchile.cl/2024/09/23/marcela-cubillos-y-su-sueldo-de-17-millones-en-la-universidad-san-sebastian/"
-    },
-    "veredictoSatirico": "La meritocracia según el comando: 17 millones mensuales por mandar correos desde Madrid en una universidad financiada con créditos estatales.",
-    "votosComunidad": 3890
   },
   {
     "id": "bencina-urruticoechea-republicanos",
@@ -717,31 +817,6 @@
     "votosComunidad": 1420
   },
   {
-    "id": "eliminar-ministerio-mujer-voltereta",
-    "titulo": "Decretar la eliminación del Ministerio de la Mujer a pedir perdón en televisión abierta",
-    "categoria": "libertades",
-    "fechaIncidente": "2021-12-07",
-    "diasSinEscupoPrevios": 15,
-    "gravedad": "termocéfala",
-    "pasado": {
-      "fecha": "2021-09-24",
-      "rol": "Programa Presidencial (1ra Vuelta)",
-      "tipoMedio": "prensa",
-      "cita": "Eliminaremos el Ministerio de la Mujer y la Equidad de Género para reducir la burocracia política y evitar la ideología de género con dineros públicos.",
-      "fuenteUrl": "https://www.servel.cl"
-    },
-    "presente": {
-      "fecha": "2021-12-06",
-      "medio": "T13",
-      "titulo": "Acto de rectificación y disculpas públicas en el Cerro San Cristóbal",
-      "descripcion": "Tras clasificar a segunda vuelta y enfrentar el rechazo mayoritario del electorado femenino, Kast convocó un acto para pedir perdón públicamente, retractarse de la propuesta y garantizar la mantención del Ministerio de la Mujer con más presupuesto.",
-      "impacto": "El 'Plan para el Futuro de Chile' de segunda vuelta borró formalmente la eliminación de la cartera.",
-      "fuenteUrl": "https://www.t13.cl/noticia/elecciones-2021/politica/kast-pide-perdon-y-recula-sobre-ministerio-de-la-mujer-06-12-2021"
-    },
-    "veredictoSatirico": "La convicción programática de primera vuelta se disolvió en menos de dos semanas ante las encuestas del balotaje.",
-    "votosComunidad": 4670
-  },
-  {
     "id": "panama-papers-impuestos",
     "titulo": "El patriota que tributa en Chile vs. Sociedades familiares en Panamá",
     "categoria": "impuestos",
@@ -765,5 +840,30 @@
     },
     "veredictoSatirico": "Los patriotas pagan impuestos en Chile, pero la chequera se va de vacaciones al canal de Panamá.",
     "votosComunidad": 2890
+  },
+  {
+    "id": "eliminar-ministerio-mujer-voltereta",
+    "titulo": "Decretar la eliminación del Ministerio de la Mujer a pedir perdón en televisión abierta",
+    "categoria": "libertades",
+    "fechaIncidente": "2021-12-07",
+    "diasSinEscupoPrevios": 15,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2021-09-24",
+      "rol": "Programa Presidencial (1ra Vuelta)",
+      "tipoMedio": "prensa",
+      "cita": "Eliminaremos el Ministerio de la Mujer y la Equidad de Género para reducir la burocracia política y evitar la ideología de género con dineros públicos.",
+      "fuenteUrl": "https://www.servel.cl"
+    },
+    "presente": {
+      "fecha": "2021-12-06",
+      "medio": "T13",
+      "titulo": "Acto de rectificación y disculpas públicas en el Cerro San Cristóbal",
+      "descripcion": "Tras clasificar a segunda vuelta y enfrentar el rechazo mayoritario del electorado femenino, Kast convocó un acto para pedir perdón públicamente, retractarse de la propuesta y garantizar la mantención del Ministerio de la Mujer con más presupuesto.",
+      "impacto": "El 'Plan para el Futuro de Chile' de segunda vuelta borró formalmente la eliminación de la cartera.",
+      "fuenteUrl": "https://www.t13.cl/noticia/elecciones-2021/politica/kast-pide-perdon-y-recula-sobre-ministerio-de-la-mujer-06-12-2021"
+    },
+    "veredictoSatirico": "La convicción programática de primera vuelta se disolvió en menos de dos semanas ante las encuestas del balotaje.",
+    "votosComunidad": 4670
   }
 ]
