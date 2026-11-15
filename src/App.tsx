@@ -19,7 +19,7 @@ import {
   determinarVistaInicial,
   puedeAccederRedaccion,
 } from './lib/entorno-editor';
-import { Header, type VistaActiva } from './components/Header';
+import { Header, type SeccionNavegacion, type VistaActiva } from './components/Header';
 import { MarcadorPortada } from './components/MarcadorPortada';
 import { ExpedienteDestacado } from './components/ExpedienteDestacado';
 import { FiltrosYBusqueda } from './components/FiltrosYBusqueda';
@@ -56,6 +56,12 @@ export function App() {
   const [vistaActiva, setVistaActiva] = useState<VistaActiva>(() =>
     determinarVistaInicial(leerContextoNavegador())
   );
+  const [seccionArchivo, setSeccionArchivo] = useState<'archivo' | 'frases' | 'encuesta'>(() => {
+    const hash = leerContextoNavegador().hash;
+    if (hash === '#frases-bronce') return 'frases';
+    if (hash === '#encuesta-gobierno') return 'encuesta';
+    return 'archivo';
+  });
   const [totalCandidatosDev, setTotalCandidatosDev] = useState(0);
   const [categoria, setCategoria] = useState<CategoriaEscupo | 'todas'>('todas');
   const [busqueda, setBusqueda] = useState('');
@@ -133,14 +139,43 @@ export function App() {
 
   const volverAlArchivo = () => {
     setVistaActiva('archivo');
+    setSeccionArchivo('archivo');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const seccionActiva: SeccionNavegacion | null =
+    vistaActiva === 'legal' ? null : vistaActiva === 'archivo' ? seccionArchivo : vistaActiva;
+
+  const navegarDesdeHeader = (seccion: SeccionNavegacion) => {
+    if (seccion === 'noticias' || seccion === 'redaccion') {
+      setVistaActiva(seccion);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    setVistaActiva('archivo');
+    setSeccionArchivo(seccion);
+
+    if (seccion === 'archivo') {
+      if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    const targetId = seccion === 'frases' ? 'frases-bronce' : 'encuesta-gobierno';
+    window.history.replaceState(null, '', `#${targetId}`);
+    requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-[#f7f5f0] text-[#141413]">
       <Header
-        vistaActiva={vistaActiva}
-        onCambiarVista={setVistaActiva}
+        seccionActiva={seccionActiva}
+        onNavegar={navegarDesdeHeader}
         totalCandidatos={totalCandidatosDev}
         fechaEdicion={fechaHoy}
         mostrarRedaccion={mostrarRedaccion}
