@@ -178,6 +178,31 @@
     "votosComunidad": 0
   },
   {
+    "id": "avances-economicos-europa-recesion-2026",
+    "titulo": "Desde Europa presume 'avances económicos reconocidos internacionalmente' vs. 8 días después su ministro Quiroz admite recesión técnica",
+    "categoria": "gasto-publico",
+    "fechaIncidente": "2026-11-11",
+    "diasSinEscupoPrevios": 0,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2026-11-03",
+      "rol": "Presidente de la República (gira por España e Italia)",
+      "tipoMedio": "prensa",
+      "cita": "Durante su gira por España e Italia, el Presidente José Antonio Kast aseguró que Chile está recuperando su protagonismo internacional y que sus avances económicos son reconocidos en el extranjero, sosteniendo que su agenda busca atraer inversiones que generen más y mejores empleos.",
+      "fuenteUrl": "https://www.noticiaslosrios.cl/2026/11/03/presidente-kast-asegura-desde-europa-que-los-avances-economicos-de-su-gobierno-son-reconocidos-internacionalmente/"
+    },
+    "presente": {
+      "fecha": "2026-11-11",
+      "medio": "Bloomberg / Radio Universidad de Chile",
+      "titulo": "Ministro de Hacienda Jorge Quiroz admite en prensa internacional que Chile está 'técnicamente en recesión'",
+      "descripcion": "Apenas ocho días después de que Kast celebrara desde Europa los 'avances económicos' de su administración, su propio ministro de Hacienda, Jorge Quiroz, reconoció en entrevista con Bloomberg que la economía chilena atraviesa 'técnicamente una recesión', en un escenario con contracción de 0,4% en 2026 y desocupación en 9,8% (más de un millón de desempleados).",
+      "impacto": "Choque frontal entre el relato presidencial en giras internacionales y el diagnóstico oficial de su propio Ministerio de Hacienda ante los mercados globales.",
+      "fuenteUrl": "https://radio.uchile.cl/2026/11/11/un-contratiempo-pasajero-ministro-quiroz-reconoce-por-primera-vez-que-chile-esta-en-recesion/"
+    },
+    "veredictoSatirico": "El 3 de noviembre vendía en Europa 'avances económicos reconocidos internacionalmente'; el 11 de noviembre su propio ministro de Hacienda salió a explicar ante la prensa internacional que el país está técnicamente en recesión.",
+    "votosComunidad": 0
+  },
+  {
     "id": "recesion-tecnica-quiroz-2026",
     "titulo": "Citaba a Jorge Quiroz contra el 'bajo crecimiento' vs. Su ministro Quiroz reconoce recesión técnica",
     "categoria": "gasto-publico",
