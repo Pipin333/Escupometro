@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowUpRight, ThumbsUp } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, ChevronUp, ThumbsUp } from 'lucide-react';
 import type { Escupo } from '../types/escupo';
 import { sanitizarUrlHttp } from '../lib/url-segura';
 import {
@@ -23,6 +23,8 @@ const ETIQUETAS_CATEGORIA: Record<string, string> = {
   libertades: 'Derechos y ONU',
 };
 
+const LIMITE_INICIAL = 8;
+
 /**
  * Listado cronológico de expedientes documentados en formato editorial limpio.
  */
@@ -30,6 +32,11 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
   const [votosGlobales, setVotosGlobales] = useState<Record<string, number>>({});
   const [deltasLocales, setDeltasLocales] = useState<Record<string, number>>({});
   const [votados, setVotados] = useState<Record<string, boolean>>(() => leerVotadosLocales());
+  const [mostrarTodos, setMostrarTodos] = useState(false);
+
+  useEffect(() => {
+    setMostrarTodos(false);
+  }, [incidentes]);
 
   useEffect(() => {
     let activo = true;
@@ -79,9 +86,14 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
     );
   }
 
+  const hayMasRegistros = incidentes.length > LIMITE_INICIAL;
+  const incidentesVisibles =
+    hayMasRegistros && !mostrarTodos ? incidentes.slice(0, LIMITE_INICIAL) : incidentes;
+
   return (
-    <section aria-label="Registros históricos" className="divide-y divide-[#dcd7cc] border-t border-b border-[#dcd7cc]">
-      {incidentes.map((item) => {
+    <section aria-label="Registros históricos" className="border-t border-b border-[#dcd7cc]">
+      <div className="divide-y divide-[#dcd7cc]">
+      {incidentesVisibles.map((item) => {
         const totalVotos = calcularTotalVotosExpediente(
           item.votosComunidad,
           votosGlobales[item.id],
@@ -207,6 +219,35 @@ export const HistorialEscupos: React.FC<HistorialEscuposProps> = ({ incidentes }
           </article>
         );
       })}
+      </div>
+
+      {hayMasRegistros && (
+        <div className="py-5 border-t border-[#dcd7cc] flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs font-tabular text-[#4a4843]">
+            {mostrarTodos
+              ? `Mostrando los ${incidentes.length} expedientes`
+              : `Mostrando los ${LIMITE_INICIAL} más recientes de ${incidentes.length} expedientes`}
+          </p>
+          <button
+            type="button"
+            onClick={() => setMostrarTodos((prev) => !prev)}
+            aria-expanded={mostrarTodos}
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs sm:text-sm font-medium border border-[#dcd7cc] bg-[#efeae0] text-[#141413] hover:bg-[#e5dfd3] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#141413]"
+          >
+            {mostrarTodos ? (
+              <>
+                <ChevronUp className="w-4 h-4" aria-hidden="true" />
+                <span>Mostrar solo los {LIMITE_INICIAL} más recientes</span>
+              </>
+            ) : (
+              <>
+                <ChevronDown className="w-4 h-4" aria-hidden="true" />
+                <span>Ver todos los expedientes ({incidentes.length - LIMITE_INICIAL} más)</span>
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </section>
   );
 };
