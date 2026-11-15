@@ -1,98 +1,5 @@
 [
   {
-    "id": "news-2026-11-12-cd6f58ff65__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-12-cd6f58ff65",
-      "titulo": "Kast criticó a Boric por viajar en crisis y ahora mantiene gira a Asia en pleno paro de camioneros",
-      "bajada": "Kast criticó a Boric por viajar en crisis y ahora mantiene gira a Asia en pleno paro de camioneros Novena Digital",
-      "medio": "Novena Digital",
-      "fecha": "2026-11-12",
-      "publicadoEn": "2026-11-12T20:20:31.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTXN4MUFqSlhGQXdkZEZ4TFFJMDY2MWZ3RkZGaUtzSEZZZXhmUWx2OUptclBsRTZOcTFBSnFGejNLMjBHaWx3ZlpTY1pZdzdtTlN4X2dTNmQ5bEtUME1yZ3BYcXFUYXBIU1Q2Z2c1TnJYMmhROHY2b01hRWVNZk10M2p6N1Z3WFEyUkdlSGZQRmx6R01Fck1aLTFFZzZWdFEzUm9fZjREQVBEYWZ6bFoxdFVSajNMTU5uVlpFZGhQN2NwUQ?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 99,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "gira",
-      "asia",
-      "crisis",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, asia, crisis, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, viaja, paro) frente a la postura original de \"condena\" emitida el 2023-07-18.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-11-bb20bfeb2e__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-11-bb20bfeb2e",
-      "titulo": "Gobierno retira proyecto para contener alza de combustibles y prepara cambios en medio del paro de camioneros",
-      "bajada": "Gobierno retira proyecto para contener alza de combustibles y prepara cambios en medio del paro de camioneros La Tribuna",
-      "medio": "La Tribuna",
-      "fecha": "2026-11-11",
-      "publicadoEn": "2026-11-11T19:32:49.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNaExPLXpRc01tTGFRWjhYcktmRFh2VVptMndJbzNuR2duTjE1YndoSWUteTRrWnBLUk52ZGtRYTdCLXQwTF9hUVQ5ZzV3ZTZxMDFyOXk5UXFPU3cxZHpfREQ4a3Z0SWF5b0xYQWt3QkRZVTF4aFc5cjRlbVlYZjRpYVRRSzNtcEV1VlNTSTBTMWRuaWgxYkdLdWZ2eGNsd0I3TGF5V2h0ZF9Bc251UFNCd2dseTdSSUZGSVVZS2M5ZEFDbzFDRU5oUm9tbjI5WDNlQzVLLUUzZS1WOUc0b3JLRWJFT205YjZLcjBTUFRKbknSAfgBQVVfeXFMT0lCMkVfczFzUnFPbF9FMFBNdDdaRGp5VFRFUklSVWZ4TEkybENDRTNsQ004UDBqOThQeWhlYXdKa0hBS0JodU5MSllLWEtTb2Z5Z1k5QWMxVnlwVUJWTVBNME1BdEkzb05EdXJseW1lWlpkRnN2YW1JUV9jS18wMkZUaFp1SFNndFUxV2gwcmRhTVdGTnRCTHdreHhfU3p1OGpuNnFUX2ZFWTZBY1R5V3ZXZnpoS1dSSTBkcGlsaGpURVVaV0I1RE83Nm5lZzlpVno2TzNpWFRPZ1liWVBpS0dXUGRxWGthakxkcnNnX3ZWZzMxMTdmWkk?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 99,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "combustible",
-      "alza",
-      "camioneros",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (combustible, alza, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-10-3257ee7190__dicho-indulto-abusadores",
     "noticia": {
       "id": "news-2026-11-10-3257ee7190",
@@ -134,6 +41,52 @@
       "rabat"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (rebaja, condena, rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro, continua) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "generadoEn": "2026-11-15",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-15-72fd03c073__dicho-indulto-abusadores",
+    "noticia": {
+      "id": "news-2026-11-15-72fd03c073",
+      "titulo": "Insostenible continuidad de Rabat: 79% rechaza que siga en Justicia y 72% respalda su destitución mediante AC",
+      "bajada": "El Ciudadano Encuesta Criteria: 79% rechaza continuidad de Rabat en Justicia y 72% respalda su destitución; Kast cae a su peor evaluación La decisión del Presidente José Antonio Kast de mantener a Fernando Rabat como ministro de Justicia, luego de que el Gobierno reconociera un error en el otorgamiento de rebajas de condenas, enfrenta un contundente rechazo […] La entrada Insostenible continuidad de Rabat: 79% rechaz",
+      "medio": "El Ciudadano",
+      "fecha": "2026-11-15",
+      "publicadoEn": "2026-11-15T21:03:01.000Z",
+      "url": "https://www.elciudadano.com/actualidad/insostenible-continuidad-de-rabat-79-rechaza-que-siga-en-justicia-y-72-respalda-su-destitucion-mediante-ac/11/15/"
+    },
+    "dicho": {
+      "id": "dicho-indulto-abusadores",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "tipoMedio": "debate",
+      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+      "fuenteUrl": "https://www.anatel.cl",
+      "categoria": "seguridad",
+      "postura": "prohibe",
+      "conceptosClave": [
+        "indulto",
+        "rebaja",
+        "condena",
+        "pena",
+        "abusador",
+        "pederasta",
+        "violador",
+        "justicia",
+        "rabat",
+        "reos",
+        "carcel"
+      ]
+    },
+    "scoreContradiccion": 96,
+    "tipoChoque": "Inversión de postura",
+    "evidenciasLexicas": [
+      "rabat",
+      "rebaja",
+      "condena",
+      "justicia"
+    ],
+    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (rabat, rebaja, condena, justicia). El titular/bajada registra indicadores de ejecución contraria o conflicto (respalda, rebaja) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
     "generadoEn": "2026-11-15",
     "metodoAnalisis": "motor-determinista"
   },
@@ -183,143 +136,6 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-12-11c4a23a7d__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-12-11c4a23a7d",
-      "titulo": "Los camioneros mantienen sus protestas pese a que el Gobierno de Kast congela el precio de los combustibles",
-      "bajada": "Los camioneros mantienen sus protestas pese a que el Gobierno de Kast congela el precio de los combustibles EL PAÍS",
-      "medio": "EL PAÍS",
-      "fecha": "2026-11-12",
-      "publicadoEn": "2026-11-12T01:45:46.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNcElrZ3BJcVFrNXd2T2JTRXlXS014clBJcnotNnQ1OWxZbl95N0J4RXU4Qng0b01xLUJtVkN2RDJtSlhZX1c2X3k0Wmd0dW56b21wb2hsRURnU0tlQ3pCbnpQZXVOblFMNXFMUWpDa1hXSUE5NXQ5bGdoY2ZlQ2RDT2NtU1VUZnVYazBUY3BZMFdvWDlSVVlXSXF3R1Bndm5nZjZBQW80bWZqSlU5SHFLMGtBa2NaNmowZnVGTXo3WVVBOEtmbjkxQUZaV0d2SGZ4RThYWGpVZFkwMlVpR2F5OUJR0gH2AUFVX3lxTE1FYm9CMGhQb2s3endlWE0tX1pmbWxadXVpUWJwcVBPMlhpVWlCalVfakNZU0VLbFpkMnR5eko4UXZaeFdKeXVsOUdTaFAxME56ZEh2cEdpSUJpbmdodkJic0Y5TkhlVTU1WGFrMUVaZmNfV0RUbVhSYUpKZ2V0dHNKUVVjSTEwOXVpX2RGWHNPSllqbmpPLXRCV3A1NXVKYnlkU2tjUlVZY0FjNUhuS0R1cmZrd2kza2ZxbTBXc1JDT3M0U09HcXNhSEpnN1lMYkRGeUpaZ25uWmlrb2FhQUpQWjRwcnBNWlRKQnJaX0MyN1lwVnhKQQ?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "combustible",
-      "camioneros",
-      "precio"
-    ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (combustible, camioneros, precio). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, pese) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-11-2dccb13bbe__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-11-2dccb13bbe",
-      "titulo": "El jaque de los camioneros a Kast: paro indefinido y nueva alza de combustibles ponen a prueba la capacidad de negociación del Gobierno",
-      "bajada": "El jaque de los camioneros a Kast: paro indefinido y nueva alza de combustibles ponen a prueba la capacidad de negociación del Gobierno TemucoDiario.cl",
-      "medio": "TemucoDiario.cl",
-      "fecha": "2026-11-11",
-      "publicadoEn": "2026-11-11T01:49:32.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPOUdmSWVYd1JSYjNBZDZUcXdCWGZVQlpHUnZJdXBfMFllcUpWRzI3ajhaajBHYzJFNGNuNG40TDBZcUNYNHJBQnFaUVNHX1NxSWpvYUR0Rms5bW5UYk9EOTBBUno2Nl9lQm1SbDRMMUhiY1k2QWtrZnRHOHJBZkdMMjFDUUlDS0Z2djhBUnlQLWxCQndsNFRzTURzSmhCanR0akltSVNLdVBPckRkM0Q1SWFhRXRpMER6NnFtSnBiMTNjTFRyNUloRnZJYjhoWG5IbkxmMnVKZzh0Z2cxZE1EVXg1cThVTnZVR1JjTVFUUF9oNVdreGltUWIteFlEdXM?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "combustible",
-      "alza",
-      "camioneros",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (combustible, alza, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-10-26-8cacea93c2__dicho-indulto-abusadores",
-    "noticia": {
-      "id": "news-2026-10-26-8cacea93c2",
-      "titulo": "Kast califica de \"error\" la rebaja de la pena a 56 pederastas, pero mantiene a Rabat",
-      "bajada": "Kast califica de \"error\" la rebaja de la pena a 56 pederastas, pero mantiene a Rabat EL PAÍS",
-      "medio": "EL PAÍS",
-      "fecha": "2026-10-26",
-      "publicadoEn": "2026-10-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWjg3MXpSTTBTSzdBLWowaUlZYkpiTTNKbmYzV0wwbGZ3V3BTZ3NaSjZmRC1VRVU0ZHhzcmh0b25XamRmSG5tRFFsbmxtdmdnNXJ6MURIQ202bVhqYjY3WkE3NlNjbWhpcUNxXzZHa01OLUVJdHRnaHdvM1ZESmJnclZ3VDdFSV9RbmhxNmJHakI0ZlZlYWc5LTg0ZFR3R2g0b2dfMWZiSldkeDNPejJvY0hMWWhFRkczdXRkUlIwTdIB0wFBVV95cUxNWlp1V0E1X1JQYk9ZbDVHZktZcWRGWXVleGFhcVFNNTc0OGpOSzc5b2l3OTBWd2t4QkRHbmhXVkZTU2lXX0NtWHc5QnN3eUxmWWYwbk5FaEF1cV9lWDFOMTVodThWNDZsbmNKckNNME1zd2lIclFPSERnTk9oNUdTYVI0R0ZZSEQyZkUwN3Y2VzFrTWVjSzdvLXQ4RG10SzNCTnlXX2JxV2Z4SDJNWWhZMTY3MDQxUHY2MEdIcDd1X1NXeXlualhNQVhaclN0WWFjcVJR?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-indulto-abusadores",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
-      "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl",
-      "categoria": "seguridad",
-      "postura": "prohibe",
-      "conceptosClave": [
-        "indulto",
-        "rebaja",
-        "condena",
-        "pena",
-        "abusador",
-        "pederasta",
-        "violador",
-        "justicia",
-        "rabat",
-        "reos",
-        "carcel"
-      ]
-    },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Inversión de postura",
-    "evidenciasLexicas": [
-      "rebaja",
-      "pena",
-      "pederasta",
-      "rabat"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (rebaja, pena, pederasta, rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (mantiene, rebaja) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-11-39bf44025f__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-11-39bf44025f",
@@ -364,183 +180,178 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-10-2a4d60e47b__dicho-bencinas-impuestos",
+    "id": "news-2026-11-12-a8d8fda54c__dicho-indulto-abusadores",
     "noticia": {
-      "id": "news-2026-11-10-2a4d60e47b",
-      "titulo": "En medio del paro: Presidente Kast pide a camioneros \"pensar en Chile\"",
-      "bajada": "En medio del paro: Presidente Kast pide a camioneros \"pensar en Chile\" Mega.cl",
-      "medio": "Mega.cl",
-      "fecha": "2026-11-10",
-      "publicadoEn": "2026-11-10T16:38:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRUVRNXhVNC1UX2lNa0p0TlNpYm9SQURpU0g0aEt1dmotaE5DQkdxZ0pfUmNLNDFXTmlVMGdjTmwzUTJvdjctUXB3UUJ4THVPWm44YzlPQkRkbFMzREVCTl9tYkQ2WVVyRU1uVUpaT0otdWtCMk5ScEt1aERVeUFQeFhqaWd2Ykw5YjIyU0x4cUhSVHdmLVJaTnhwM0o1THhaX3Z4Y9IBqgFBVV95cUxQTWRqR3BDX05PNXRBM0Y5dm5DczlWaU5fSUdWTlRPTzJtY3N3TTFFVVRlbW1kcWlSN0otXzlWQXJoYThoal9JOE1EMWZPN1M2dWhKcldnRWxWUTZDWThRMG51ZkNPNE9vSXhmejNWaVJneGNYQ05vRUZyUjY5a2MyYXdfOFdtdXlzYjIxeXRDaHBsV0k0aFdPS0I1VzRFcFZyZVBPRG9Cckg4QQ?oc=5"
+      "id": "news-2026-11-12-a8d8fda54c",
+      "titulo": "Tras adoptar doctrina de que las decisiones de la Comisión de Rebaja de Condenas son irrevocables: Rabat igual rechazó 22 reducciones",
+      "bajada": "La entrada Tras adoptar doctrina de que las decisiones de la Comisión de Rebaja de Condenas son irrevocables: Rabat igual rechazó 22 reducciones se publicó primero en CIPER Chile .",
+      "medio": "CIPER Chile",
+      "fecha": "2026-11-12",
+      "publicadoEn": "2026-11-12T23:04:53.000Z",
+      "url": "https://www.ciperchile.cl/2026/11/12/tras-adoptar-doctrina-de-que-las-decisiones-de-la-comision-de-rebaja-de-condenas-son-irrevocables-rabat-igual-rechazo-22-reducciones/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=tras-adoptar-doctrina-de-que-las-decisiones-de-la-comision-de-rebaja-de-condenas-son-irrevocables-rabat-igual-rechazo-22-reducciones"
     },
     "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
+      "id": "dicho-indulto-abusadores",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "tipoMedio": "debate",
+      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+      "fuenteUrl": "https://www.anatel.cl",
+      "categoria": "seguridad",
+      "postura": "prohibe",
       "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
+        "indulto",
+        "rebaja",
+        "condena",
+        "pena",
+        "abusador",
+        "pederasta",
+        "violador",
+        "justicia",
+        "rabat",
+        "reos",
+        "carcel"
       ]
     },
-    "scoreContradiccion": 90,
-    "tipoChoque": "Promesa incumplida",
+    "scoreContradiccion": 84,
+    "tipoChoque": "Inversión de postura",
     "evidenciasLexicas": [
-      "camioneros",
+      "rebaja",
+      "condena",
+      "rabat"
+    ],
+    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (rebaja, condena, rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "generadoEn": "2026-11-15",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-15-578f01b20d__dicho-china-comunismo-onu",
+    "noticia": {
+      "id": "news-2026-11-15-578f01b20d",
+      "titulo": "Kast en el país de Ho Chi Minh: las razones de la escala del mandatario en el Vietnam comunista y el rostro de su capital, Hanói",
+      "bajada": "En uno de los últimos países gobernados por un partido comunista, el mandatario cumplirá una agenda marcada por los vínculos comerciales y el protocolo diplomático, que incluye una ofrenda floral al líder de la revolución vietnamita. Se trata de una visita que contrasta con sus posiciones ideológicas y que también permite recorrer las calles de Hanói, entre motocicletas, banderas, café y una población concentrada en ",
+      "medio": "The Clinic",
+      "fecha": "2026-11-15",
+      "publicadoEn": "2026-11-15T14:38:50.000Z",
+      "url": "https://www.theclinic.cl/2026/11/15/kast-en-el-pais-de-ho-chi-minh-las-razones-de-la-escala-del-mandatario-en-el-vietnam-comunista-y-el-rostro-de-su-capital-hanoi/"
+    },
+    "dicho": {
+      "id": "dicho-china-comunismo-onu",
+      "fecha": "2021-10-02",
+      "rol": "Programa Presidencial",
+      "tipoMedio": "prensa",
+      "cita": "Propondremos la salida de Chile del Consejo de Derechos Humanos de la ONU y marcaremos distancia firme frente a regímenes autoritarios y dictaduras comunistas que violan libertades.",
+      "fuenteUrl": "https://www.servel.cl",
+      "categoria": "libertades",
+      "postura": "condena",
+      "conceptosClave": [
+        "china",
+        "vietnam",
+        "comunista",
+        "comunismo",
+        "beijing",
+        "xi jinping",
+        "onu",
+        "tratado",
+        "soberania",
+        "comitiva"
+      ]
+    },
+    "scoreContradiccion": 66,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "vietnam",
+      "comunista"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (vietnam, comunista). Relación directa con el compromiso histórico de 2021-10-02 (Programa Presidencial).",
+    "generadoEn": "2026-11-15",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-15-48c438e65c__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-15-48c438e65c",
+      "titulo": "Columna de Kike Mujica: ¿No más No + Tag?",
+      "bajada": "Alguien no ganó en esta pasada: NO+TAG, el mediático y popular movimiento que lidera André Alarcón. Fue, en el pasado, interlocutor válido para las autoridades. Hoy no se sentaron en La Moneda, pese a que lo pidieron fervorosamente, y tampoco instalaron sus demandas en el acuerdo. Su líder dice que están lejos de sucumbir. Es más: cuenta aquí que la idea del paro fue de él. The post Columna de Kike Mujica: ¿No más No",
+      "medio": "The Clinic",
+      "fecha": "2026-11-15",
+      "publicadoEn": "2026-11-15T12:25:05.000Z",
+      "url": "https://www.theclinic.cl/2026/11/15/columna-de-kike-mujica-no-mas-no-tag/"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 56,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "moneda",
       "paro"
     ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (moneda, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (pese, paro) frente a la postura original de \"condena\" emitida el 2023-07-18.",
     "generadoEn": "2026-11-15",
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-09-02462b854e__dicho-bencinas-impuestos",
+    "id": "news-2026-11-15-c7154c4032__tweet-1800623427461771709",
     "noticia": {
-      "id": "news-2026-11-09-02462b854e",
-      "titulo": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20",
-      "bajada": "Valor de los combustibles: Kast confirma sexta alza consecutiva y anuncia proyecto con subida máxima de $20 El Desconcierto",
-      "medio": "El Desconcierto",
-      "fecha": "2026-11-09",
-      "publicadoEn": "2026-11-09T14:11:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYV9uX3FZelFxYXFUOGFTTDh3ZFVYMEY1el9hMnlmZnhZMTltaXQxQkF0Tkw2MFl5OHl1cXRkV21Qa2lhTXZhTVA4Tmg2NWdYUDM0cThPaWIzV2stdUhtaXlSaGRnZlZIQzdHR240Rmd5T2RlTVlKdnhyY0IxbTZqNmdDMzJSMHBSc0pZbHROOGpRMnVieG5qQUM3VVVmNUtIamtNSGRRYkhiUWs0MVE3TlRYUWF2c0JtNWFWbjRGTlppSzZZRlZjVmpBVkljaWJvb05IX2ZWc0c?oc=5"
+      "id": "news-2026-11-15-c7154c4032",
+      "titulo": "\"Era puro bluff, no había nada detrás\": Evelyn Matthei vuelve a arremeter contra el plan de seguridad de Kast, cuestiona sus promesas de campaña",
+      "bajada": "En una entrevista en el programa Felipe PodKast la excandidata presidencial lanzó duras críticas al Gobierno de José Antonio Kast, cuestionó el manejo de la crisis del ministro Rabat y acusó machismo frente a sus declaraciones. The post \"Era puro bluff, no había nada detrás\": Evelyn Matthei vuelve a arremeter contra el plan de seguridad de Kast, cuestiona sus promesas de campaña appeared first on The Clinic .",
+      "medio": "The Clinic",
+      "fecha": "2026-11-15",
+      "publicadoEn": "2026-11-15T14:06:55.000Z",
+      "url": "https://www.theclinic.cl/2026/11/15/era-puro-bluff-no-habia-nada-detras-evelyn-matthei-vuelve-a-arremeter-contra-el-plan-de-seguridad-de-kast-cuestiona-sus-promesas-de-campana/"
     },
     "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
+      "id": "tweet-1800623427461771709",
+      "fecha": "2024-06-11",
+      "rol": "Líder de oposición / Candidato presidencial",
       "tipoMedio": "tweet",
       "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 90,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "combustible",
-      "alza"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, alza). El titular/bajada registra indicadores de ejecución contraria o conflicto (confirma, alza) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-14-7381f8900d__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-14-7381f8900d",
-      "titulo": "\"Presidente, dé la cara\": reflotan los tuits de Kast contra los viajes de Piñera y Boric en medio de su polémica gira por Asia",
-      "bajada": "\"Presidente, dé la cara\": reflotan los tuits de Kast contra los viajes de Piñera y Boric en medio de su polémica gira por Asia elciudadano.com",
-      "medio": "elciudadano.com",
-      "fecha": "2026-11-14",
-      "publicadoEn": "2026-11-14T12:41:48.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNMzIyVWotQXhCMEVJZW1yT3VYanBSQkxCOG9VUTVjZHE1M04tcm1hVVNVLWZzODM3LVpPb1VjUEJxV2dZOEI2dURlX28weGhnU1BlXy14WWoxekduVkw5WENCQVh3a0lRckZidjVfOGkxYlAyRlZhMXd0d2FmU1JFTWJUa01fakNfbTVTWFE4UWljQVZGNHdMZFRDb2JSa1VBWDZKbFZpMzJiSG1OeTRhWkNzZ2MwVkxxTThxNFY5bTNBZWdCdXItVFBIdnp4QVV0T3JNUEdiZjNsbWZfTURfTW9pY3l4bGVvRG5CQVdyNDZvMGd0TWRlX1I3YnA?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
+      "cita": "Boric se pregunta: ¿Qué sería diferente si yo hubiera ganado la elección presidencial? Por lo pronto, no estaría de gira de estudios con 7 ministros y 10 parlamentarios, sino en La Moneda, trabajando para enfrentar la crisis de seguridad, económica y social.",
+      "fuenteUrl": "https://x.com/joseantoniokast/status/1800623427461771709",
+      "archivoUrl": "https://web.archive.org/web/20240611221136/https://twitter.com/joseantoniokast/status/1800623427461771709",
+      "categoria": "seguridad",
       "postura": "condena",
       "conceptosClave": [
+        "seguridad",
         "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
+        "presidencial",
+        "parlamentario",
+        "trabajando",
+        "diferente",
+        "enfrentar",
+        "economica"
       ]
     },
-    "scoreContradiccion": 84,
+    "scoreContradiccion": 52,
     "tipoChoque": "Bumerán retórico",
     "evidenciasLexicas": [
-      "gira",
-      "viaje",
-      "asia",
-      "presidente"
+      "seguridad",
+      "presidencial"
     ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, viaje, asia, presidente). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio) frente a la postura original de \"condena\" emitida el 2023-07-18.",
-    "generadoEn": "2026-11-15",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-13-eb44554a48__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-13-eb44554a48",
-      "titulo": "Oposición emplaza a Kast a suspender su gira por Asia en medio de crisis: \"Dé la cara y quédese en Chile\"",
-      "bajada": "Oposición emplaza a Kast a suspender su gira por Asia en medio de crisis: \"Dé la cara y quédese en Chile\" Universidad de Chile",
-      "medio": "Universidad de Chile",
-      "fecha": "2026-11-13",
-      "publicadoEn": "2026-11-13T12:03:47.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVDhlVFUxeE1hY0hjRm43Q2I1YXRYektNQ19fS1pQYnZSNDY2b0UzaVB3aG9LVzlxc2pKQ19CblF2SEoydDZUQnVDbV9qdGlkTnVKMmUtVlJwRDY3MUlHY3p0SEZwcmtGX2lqcHUtNVJLTnVxUkRDczdoNnI5NzhzcmpzaHIyaGppeFZwODZzaFpKMkRSX1FyczlTaDN6TS1iNEdtUDl2elhLSXhNbm14Wl9BcXhJeTNQZlZudVM3ZHB6aE1Panh2RFB4VHVlNE9LcFBzdA?oc=5"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 84,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "gira",
-      "asia",
-      "crisis"
-    ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (gira, asia, crisis). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio) frente a la postura original de \"condena\" emitida el 2023-07-18.",
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (seguridad, presidencial). El titular/bajada registra indicadores de ejecución contraria o conflicto (criticas) frente a la postura original de \"condena\" emitida el 2024-06-11.",
     "generadoEn": "2026-11-15",
     "metodoAnalisis": "motor-determinista"
   }
