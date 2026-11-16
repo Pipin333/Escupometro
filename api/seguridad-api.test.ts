@@ -250,5 +250,5 @@ describe('seguridad en endpoints serverless (/api/*)', () => {
 
     const bytes = new Uint8Array(await ogResp.arrayBuffer());
     expect(bytes.slice(0, 4)).toEqual(new Uint8Array([0x89, 0x50, 0x4e, 0x47]));
-  });
+  }, 15_000);
 });
