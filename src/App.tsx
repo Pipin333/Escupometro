@@ -1,4 +1,5 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import datosEscupos from './data/escupos.json';
 import type {
   CategoriaEscupo,
@@ -244,6 +245,7 @@ export function App() {
       </main>
 
       <Footer onAbrirLegal={abrirLegal} />
+      <Analytics />
     </div>
   );
 }
