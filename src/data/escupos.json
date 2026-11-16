@@ -1,5 +1,30 @@
 [
   {
+    "id": "ho-chi-minh-ofrenda-floral-vietnam-2026",
+    "titulo": "Llamó a Ho Chi Minh 'asesino en serie' y criticó a Bachelet por ir a su tumba vs. Deposita ofrenda floral en su mausoleo en Vietnam",
+    "categoria": "libertades",
+    "fechaIncidente": "2026-11-16",
+    "diasSinEscupoPrevios": 1,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2017-12-03",
+      "rol": "Ex Candidato Presidencial (en Estado Nacional de TVN y Twitter)",
+      "tipoMedio": "prensa",
+      "cita": "Criticó a Michelle Bachelet acusándola de tener 'corazón comunista' por ir a 'poner flores a la tumba de Ho Chi Minh, un asesino en serie', y escribió en Twitter: '23 años duró la dictadura de Ho Chi Minh. Sólo en las Matanzas del Hué, murieron más de 2.000 personas a manos del Vietcong'.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2026/11/16/kast-deposita-ofrenda-floral-a-ho-chi-minh-en-vietnam-anos-antes-lo-tildo-de-asesino-en-serie.shtml"
+    },
+    "presente": {
+      "fecha": "2026-11-16",
+      "medio": "BioBioChile / Cooperativa / El Mostrador",
+      "titulo": "Kast deposita ofrenda floral a Ho Chi Minh en Vietnam: años antes lo tildó de 'asesino en serie'",
+      "descripcion": "En su visita oficial a Hanói durante la gira por Asia, el presidente José Antonio Kast depositó una ofrenda floral en el Mausoleo de Ho Chi Minh, el mismo gesto protocolar que fustigó con dureza en 2017 contra Bachelet (y que en 2020 reforzó tildando al líder vietnamita de 'genocida'). Cancillería y La Moneda defendieron el acto como protocolo tradicional de Estado.",
+      "impacto": "Nuevo cómputo de archivo: el mismo homenaje que en 2017 denunciaba como señal de 'corazón comunista' pasó a justificarse en 2026 como protocolo de Estado.",
+      "fuenteUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2026/11/16/kast-deposita-ofrenda-floral-a-ho-chi-minh-en-vietnam-anos-antes-lo-tildo-de-asesino-en-serie.shtml"
+    },
+    "veredictoSatirico": "En 2017 fustigaba a Bachelet por 'poner flores a la tumba de Ho Chi Minh, un asesino en serie'; en 2026 el propio Kast llevó la corona de flores al mausoleo en Hanói bajo etiqueta de protocolo de Estado.",
+    "votosComunidad": 0
+  },
+  {
     "id": "bbnj-alta-mar-onu-china-2026",
     "titulo": "Recortes a ONU y 'distancia firme frente a dictaduras' vs. Lobby en Asia por sede ONU en Valparaíso y choque con China",
     "categoria": "libertades",
