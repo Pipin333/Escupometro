@@ -41,7 +41,7 @@
       "rabat"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (rebaja, condena, rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro, continua) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-15",
+    "generadoEn": "2026-11-16",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -87,7 +87,7 @@
       "justicia"
     ],
     "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (rabat, rebaja, condena, justicia). El titular/bajada registra indicadores de ejecución contraria o conflicto (respalda, rebaja) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-15",
+    "generadoEn": "2026-11-16",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -132,7 +132,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (diesel, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-15",
+    "generadoEn": "2026-11-16",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -176,7 +176,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro, continua) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-15",
+    "generadoEn": "2026-11-16",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -221,7 +221,7 @@
       "rabat"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (rebaja, condena, rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-15",
+    "generadoEn": "2026-11-16",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -264,7 +264,7 @@
       "comunista"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (vietnam, comunista). Relación directa con el compromiso histórico de 2021-10-02 (Programa Presidencial).",
-    "generadoEn": "2026-11-15",
+    "generadoEn": "2026-11-16",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -309,7 +309,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (moneda, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (pese, paro) frente a la postura original de \"condena\" emitida el 2023-07-18.",
-    "generadoEn": "2026-11-15",
+    "generadoEn": "2026-11-16",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -352,7 +352,7 @@
       "presidencial"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (seguridad, presidencial). El titular/bajada registra indicadores de ejecución contraria o conflicto (criticas) frente a la postura original de \"condena\" emitida el 2024-06-11.",
-    "generadoEn": "2026-11-15",
+    "generadoEn": "2026-11-16",
     "metodoAnalisis": "motor-determinista"
   }
 ]
