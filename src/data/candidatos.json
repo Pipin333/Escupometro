@@ -1,14 +1,14 @@
 [
   {
-    "id": "news-2026-11-12-e4d53de9d3__dicho-bencinas-impuestos",
+    "id": "news-2026-11-17-ad40c1d16f__dicho-bencinas-impuestos",
     "noticia": {
-      "id": "news-2026-11-12-e4d53de9d3",
-      "titulo": "Gobierno y camioneros acuerdan fin del paro con rebaja de $142 en el diésel; 41 mil niños esperan cupo en programas de protección, y la mitad de los vertederos del país no tiene autorización sanitaria",
-      "bajada": "La entrada Gobierno y camioneros acuerdan fin del paro con rebaja de $142 en el diésel; 41 mil niños esperan cupo en programas de protección, y la mitad de los vertederos del país no tiene autorización sanitaria se publicó primero en CIPER Chile .",
-      "medio": "CIPER Chile",
-      "fecha": "2026-11-12",
-      "publicadoEn": "2026-11-12T23:21:20.000Z",
-      "url": "https://www.ciperchile.cl/2026/11/12/gobierno-y-camioneros-acuerdan-fin-del-paro-con-rebaja-de-142-en-el-diesel-41-mil-ninos-esperan-cupo-en-programas-de-proteccion-y-la-mitad-de-los-vertederos-del-pais-no-tiene-autorizacion-sanitaria/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=gobierno-y-camioneros-acuerdan-fin-del-paro-con-rebaja-de-142-en-el-diesel-41-mil-ninos-esperan-cupo-en-programas-de-proteccion-y-la-mitad-de-los-vertederos-del-pais-no-tiene-autorizacion-sanitaria"
+      "id": "news-2026-11-17-ad40c1d16f",
+      "titulo": "Cristián Fernández, arquitecto detrás de la remodelación del GAM y la falta de recursos para su ampliación: \"El paro de camioneros equivale a siete proyectos del GAM\"",
+      "bajada": "El arquitecto director de CFA se refirió al acuerdo logrado por el Gobierno con camioneros para terminar con el paro, que implicó un proyecto de ley que costará al Estado más de $800 millones de dólares. Ante esto, recordó que el Ejecutivo determinó paralizar la ampliación del GAM por falta de recursos, aunque costara casi un octavo de esta iniciativa. \"Para esta autoridad, para el ministro Quiroz, esto (el GAM) no e",
+      "medio": "The Clinic",
+      "fecha": "2026-11-17",
+      "publicadoEn": "2026-11-17T20:30:03.000Z",
+      "url": "https://www.theclinic.cl/2026/11/17/cristian-fernandez-arquitecto-detras-de-la-remodelacion-del-gam-y-la-falta-de-recursos-para-su-ampliacion-el-paro-de-camioneros-equivale-a-siete-proyectos-del-gam/"
     },
     "dicho": {
       "id": "dicho-bencinas-impuestos",
@@ -33,105 +33,13 @@
         "bencinazo"
       ]
     },
-    "scoreContradiccion": 96,
+    "scoreContradiccion": 78,
     "tipoChoque": "Promesa incumplida",
     "evidenciasLexicas": [
-      "diesel",
       "camioneros",
       "paro"
     ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (diesel, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-17",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-16-d8c725c0d0__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-16-d8c725c0d0",
-      "titulo": "La fuerte señal política en la inclusión de Camila Nieto (FA) en la gira de Kast por Asia",
-      "bajada": "La alcaldesa de Valparaíso es parte de la delegación que acompaña al Presidente en su visita por Vietnam, China y Japón. El Gobierno buscó dar un mensaje de transversalidad al convocarla junto a Mario Desbordes (Santiago), quien se restó por problemas de salud. Pero su participación también responde a las últimas gestiones que la Cancillería busca dar para que su comuna se convierta en la sede del Acuerdo BBNJ, previ",
-      "medio": "The Clinic",
-      "fecha": "2026-11-16",
-      "publicadoEn": "2026-11-16T22:10:33.000Z",
-      "url": "https://www.theclinic.cl/2026/11/16/la-fuerte-senal-politica-en-la-inclusion-de-camila-nieto-fa-en-la-gira-de-kast-por-asia/"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 72,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "gira",
-      "asia",
-      "vietnam",
-      "presidente"
-    ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, asia, vietnam, presidente). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
-    "generadoEn": "2026-11-17",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-17-e742bc18a6__dicho-china-comunismo-onu",
-    "noticia": {
-      "id": "news-2026-11-17-e742bc18a6",
-      "titulo": "Kast llega a China para reunirse con Xi Jinping: la decisión de Chile ante la disputa estratégica entre Washington y Beijing",
-      "bajada": "El Ciudadano La llegada del presidente chileno a Shenzhen, en el marco de la APEC 2026, abre un nuevo capítulo en la relación de Chile con las dos principales potencias mundiales. Mientras la administración de Donald Trump busca contener la expansión tecnológica y geopolítica de China en Chile, Santiago necesita preservar sus vínculos económicos con Beijing, su […] La entrada Kast llega a China para reunirse con Xi J",
-      "medio": "El Ciudadano",
-      "fecha": "2026-11-17",
-      "publicadoEn": "2026-11-17T08:30:47.000Z",
-      "url": "https://www.elciudadano.com/china/kast-llega-a-china-para-reunirse-con-xi-jinping-la-decision-de-chile-ante-la-disputa-estrategica-entre-washington-y-beijing/11/17/"
-    },
-    "dicho": {
-      "id": "dicho-china-comunismo-onu",
-      "fecha": "2021-10-02",
-      "rol": "Programa Presidencial",
-      "tipoMedio": "prensa",
-      "cita": "Propondremos la salida de Chile del Consejo de Derechos Humanos de la ONU y marcaremos distancia firme frente a regímenes autoritarios y dictaduras comunistas que violan libertades.",
-      "fuenteUrl": "https://www.servel.cl",
-      "categoria": "libertades",
-      "postura": "condena",
-      "conceptosClave": [
-        "china",
-        "vietnam",
-        "comunista",
-        "comunismo",
-        "beijing",
-        "xi jinping",
-        "onu",
-        "tratado",
-        "soberania",
-        "comitiva"
-      ]
-    },
-    "scoreContradiccion": 66,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "china",
-      "beijing",
-      "xi jinping"
-    ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (china, beijing, xi jinping). Relación directa con el compromiso histórico de 2021-10-02 (Programa Presidencial).",
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
     "generadoEn": "2026-11-17",
     "metodoAnalisis": "motor-determinista"
   },
@@ -180,47 +88,130 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-17-b69a66c1d4__dicho-giras-extranjero",
+    "id": "news-2026-11-17-c4bdfcfb4c__dicho-bencinas-impuestos",
     "noticia": {
-      "id": "news-2026-11-17-b69a66c1d4",
-      "titulo": "Bilaterales con Xi Jinping y Keiko Fujimori: La agenda del Presidente Kast en la Cumbre de la APEC en China",
-      "bajada": "Asimismo, el Mandatario sostendrá distintos encuentros con el primer ministro de Singapur, Lawrence Wong; el jefe del Ejecutivo de Hong Kong, John Lee Ka-chiu; y el presidente de Filipinas, Ferdinand Marcos Jr. The post Bilaterales con Xi Jinping y Keiko Fujimori: La agenda del Presidente Kast en la Cumbre de la APEC en China appeared first on The Clinic .",
-      "medio": "The Clinic",
+      "id": "news-2026-11-17-c4bdfcfb4c",
+      "titulo": "Vocero Arenas arremete contra proyecto antibarricadas de su propio gobierno: «Yo no quiero que sea delito»",
+      "bajada": "El Ciudadano Un incómodo momento vivió este lunes el vocero de Gobierno, Gonzalo Arenas, al expresar su rechazo al proyecto de ley Antibarricadas 2.0, una iniciativa que su propio Gobierno está impulsando en el Congreso Nacional. El episodio ocurrió en Tolerancia Cero, cuando Arenas fue consultado respecto al paro de camioneros que afectó las principales rutas del […] La entrada Vocero Arenas arremete contra proyecto",
+      "medio": "El Ciudadano",
       "fecha": "2026-11-17",
-      "publicadoEn": "2026-11-17T00:32:04.000Z",
-      "url": "https://www.theclinic.cl/2026/11/16/bilaterales-con-xi-jinping-y-keiko-fujimori-la-agenda-del-presidente-kast-en-la-cumbre-de-la-apec-en-china/"
+      "publicadoEn": "2026-11-17T18:41:32.000Z",
+      "url": "https://www.elciudadano.com/actualidad/vocero-arenas-arremete-contra-proyecto-antibarricadas-de-su-propio-gobierno-yo-no-quiero-que-sea-delito/11/17/"
     },
     "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
       "tipoMedio": "tweet",
       "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
+      "conceptosClave": [
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 54,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "paro",
+      "camioneros"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (paro, camioneros). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-17",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-17-98bd115bd9__yt-fUfJmxVgttA-t1782",
+    "noticia": {
+      "id": "news-2026-11-17-98bd115bd9",
+      "titulo": "Diputado Cuello acusa doble estándar del Gobierno: \"Para los profesores, despidos; para los camioneros, todo el dinero del mundo\"",
+      "bajada": "El Ciudadano \"Este Gobierno que prometió empleo hoy día está despidiendo masivamente a profesores y asistentes, sin ningún criterio pedagógico ha fusionado cursos y está reduciendo la dotación de profesores y asistentes de la educación, y eso ciertamente afecta a los niños y niñas\", denunció el parlamentario. La entrada Diputado Cuello acusa doble estándar del Gobierno: \"Para los profesores, despidos; para los camion",
+      "medio": "El Ciudadano",
+      "fecha": "2026-11-17",
+      "publicadoEn": "2026-11-17T17:47:51.000Z",
+      "url": "https://www.elciudadano.com/politica/diputado-cuello-acusa-doble-estandar-del-gobierno-para-los-profesores-despidos-para-los-camioneros-todo-el-dinero-del-mundo/11/17/"
+    },
+    "dicho": {
+      "id": "yt-fUfJmxVgttA-t1782",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL 2025)",
+      "tipoMedio": "debate",
+      "cita": "les estamos señalando que les quedan 92 días y después de los 92 días la persona que vaya a resolicitar cualquier recurso del Estado, sea en salud, sea en educación, sea en transporte, sea para una remesa, sea para un contrato, sea para vender algo, esa persona va a quedar registrada y va a ser invitada a",
+      "fuenteUrl": "https://youtu.be/fUfJmxVgttA?t=1782",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "estado",
+        "para",
+        "persona",
+        "dias",
+        "resolicitar",
+        "transporte",
+        "registrada",
+        "senalando"
+      ]
+    },
+    "scoreContradiccion": 52,
+    "tipoChoque": "Doble estándar",
+    "evidenciasLexicas": [
+      "para",
+      "dias"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (para, dias). El titular/bajada registra indicadores de ejecución contraria o conflicto (doble) frente a la postura original de \"condena\" emitida el 2025-12-10.",
+    "generadoEn": "2026-11-17",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-17-a28e2dc4c1__dicho-fundaciones-corrupcion",
+    "noticia": {
+      "id": "news-2026-11-17-a28e2dc4c1",
+      "titulo": "\"Este es un Gobierno clasista, racista y misógino\": Manouchehri (PS) defiende a ministra Lincolao y arremete contra La Moneda",
+      "bajada": "El diputado Daniel Manouchehri (PS) salió este martes en defensa de Ximena Lincolao, luego de que el vocero de Gobierno, Gonzalo Arenas, cuestionara públicamente su gestión. Aunque el parlamentario también abordó el acuerdo con OpenAI, le bajó el perfil al señalar que se trata de un convenio de capacitación y no de un tratado internacional. Sin embargo, prefirió centrar sus declaraciones en el trato que ha recibido l",
+      "medio": "The Clinic",
+      "fecha": "2026-11-17",
+      "publicadoEn": "2026-11-17T19:47:14.000Z",
+      "url": "https://www.theclinic.cl/2026/11/17/este-es-un-gobierno-clasista-racista-y-misogino-manouchehri-ps-defiende-a-ministra-lincolao-y-arremete-contra-la-moneda/"
+    },
+    "dicho": {
+      "id": "dicho-fundaciones-corrupcion",
+      "fecha": "2023-06-28",
+      "rol": "Líder Partido Republicano",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "El escándalo de las fundaciones es la punta del iceberg de la corrupción. No puede haber impunidad ni defensas corporativas. Caiga quien caiga, los que se robaron la plata de los chilenos deben terminar presos.",
       "fuenteUrl": "https://x.com/joseantoniokast",
       "categoria": "gasto-publico",
       "postura": "condena",
       "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
+        "fundaciones",
+        "convenios",
+        "fraude",
+        "fisco",
+        "desafuero",
+        "corrupcion",
+        "ojeda",
+        "trato directo",
+        "millones"
       ]
     },
-    "scoreContradiccion": 66,
+    "scoreContradiccion": 42,
     "tipoChoque": "Bumerán retórico",
     "evidenciasLexicas": [
-      "china",
-      "presidente"
+      "convenios",
+      "trato directo"
     ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (china, presidente). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (convenios, trato directo). Relación directa con el compromiso histórico de 2023-06-28 (Líder Partido Republicano).",
     "generadoEn": "2026-11-17",
     "metodoAnalisis": "motor-determinista"
   }
