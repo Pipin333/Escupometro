@@ -41,7 +41,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (diesel, camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-16",
+    "generadoEn": "2026-11-17",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -86,151 +86,19 @@
       "rabat"
     ],
     "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (rebaja, condena, rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-16",
+    "generadoEn": "2026-11-17",
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-16-fc5b056928__dicho-bencinas-impuestos",
+    "id": "news-2026-11-16-d8c725c0d0__dicho-giras-extranjero",
     "noticia": {
-      "id": "news-2026-11-16-fc5b056928",
-      "titulo": "Tras el paro camionero, las protestas no paran: CUT, Confech y feministas convocan cacerolazo y marchas contra los recortes de Kast",
-      "bajada": "El Ciudadano \"Nos vamos a movilizar en todas las regiones para entregar cartas, misivas e ir a hablar con los diputados y senadores del daño y el perjuicio que se genera cuando se recortan partidas que van dirigidas directamente a la ciudadanía\", indicó presidente de la CUT, José Manuel Díaz. La entrada Tras el paro camionero, las protestas no paran: CUT, Confech y feministas convocan cacerolazo y marchas contra los ",
-      "medio": "El Ciudadano",
-      "fecha": "2026-11-16",
-      "publicadoEn": "2026-11-16T13:07:37.000Z",
-      "url": "https://www.elciudadano.com/actualidad/tras-el-paro-camionero-las-protestas-no-paran-cut-confech-y-feministas-convocan-cacerolazo-y-marchas-contra-los-recortes-de-kast/11/16/"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 78,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "camioneros",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-16",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-16-ef6db67959__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-16-ef6db67959",
-      "titulo": "Proyecto de combustibles: informe fiscal cifra en US$820 millones el costo del acuerdo con camioneros",
-      "bajada": "\"El mayor gasto fiscal que represente la aplicación de la ley durante su primer año presupuestario de vigencia se financiará con cargo a la Partida Presupuestaria del Tesoro Público. Los menores ingresos fiscales se financiarán mediante la venta de activos disponibles del Tesoro Público\", indica el Informe Financiero. The post Proyecto de combustibles: informe fiscal cifra en US$820 millones el costo del acuerdo con ",
+      "id": "news-2026-11-16-d8c725c0d0",
+      "titulo": "La fuerte señal política en la inclusión de Camila Nieto (FA) en la gira de Kast por Asia",
+      "bajada": "La alcaldesa de Valparaíso es parte de la delegación que acompaña al Presidente en su visita por Vietnam, China y Japón. El Gobierno buscó dar un mensaje de transversalidad al convocarla junto a Mario Desbordes (Santiago), quien se restó por problemas de salud. Pero su participación también responde a las últimas gestiones que la Cancillería busca dar para que su comuna se convierta en la sede del Acuerdo BBNJ, previ",
       "medio": "The Clinic",
       "fecha": "2026-11-16",
-      "publicadoEn": "2026-11-16T14:34:40.000Z",
-      "url": "https://www.theclinic.cl/2026/11/16/proyecto-de-combustibles-informe-fiscal-cifra-en-us820-millones-el-costo-del-acuerdo-con-camioneros/"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 66,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "combustible",
-      "camioneros"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, camioneros). Relación directa con el compromiso histórico de 2022-06-14 (Ex Candidato Presidencial).",
-    "generadoEn": "2026-11-16",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-16-e37e3b06b0__dicho-indulto-abusadores",
-    "noticia": {
-      "id": "news-2026-11-16-e37e3b06b0",
-      "titulo": "Arturo Squella por caída en la aprobación de Kast y presiones para sacar a Rabat: \"Es una campaña en contra del Gobierno\"",
-      "bajada": "El presidente del Partido Republicano abordó la baja en las encuestas de José Antonio Kast y las presiones para sacar al ministro de Justicia, Fernando Rabat. El senador sostuvo que existe una campaña en contra del Gobierno y defendió la permanencia del secretario de Estado. The post Arturo Squella por caída en la aprobación de Kast y presiones para sacar a Rabat: \"Es una campaña en contra del Gobierno\" appeared firs",
-      "medio": "The Clinic",
-      "fecha": "2026-11-16",
-      "publicadoEn": "2026-11-16T12:00:08.000Z",
-      "url": "https://www.theclinic.cl/2026/11/16/arturo-squella-por-caida-en-la-aprobacion-de-kast-y-presiones-para-sacar-a-rabat-es-una-campana-en-contra-del-gobierno/"
-    },
-    "dicho": {
-      "id": "dicho-indulto-abusadores",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
-      "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl",
-      "categoria": "seguridad",
-      "postura": "prohibe",
-      "conceptosClave": [
-        "indulto",
-        "rebaja",
-        "condena",
-        "pena",
-        "abusador",
-        "pederasta",
-        "violador",
-        "justicia",
-        "rabat",
-        "reos",
-        "carcel"
-      ]
-    },
-    "scoreContradiccion": 58,
-    "tipoChoque": "Inversión de postura",
-    "evidenciasLexicas": [
-      "rabat",
-      "justicia"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rabat, justicia). Relación directa con el compromiso histórico de 2025-12-10 (Candidato Presidencial (Debate ANATEL)).",
-    "generadoEn": "2026-11-16",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-16-c4866cca50__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-16-c4866cca50",
-      "titulo": "Las veces que Kast condenó a Ho Chi Minh y al régimen vietnamita al que hoy rindió homenaje",
-      "bajada": "El actual mandatario había cuestionado duramente en 2017 a Michelle Bachelet por homenajear al histórico líder vietnamita, a quien calificó de \"asesino en serie\", durante una visita oficial de la entonces presidenta. Este lunes, en el marco de su visita oficial a Hanói, depositará una ofrenda floral en el mausoleo que lleva su nombre. The post Las veces que Kast condenó a Ho Chi Minh y al régimen vietnamita al que ho",
-      "medio": "The Clinic",
-      "fecha": "2026-11-16",
-      "publicadoEn": "2026-11-16T10:00:00.000Z",
-      "url": "https://www.theclinic.cl/2026/11/16/asesino-en-serie-y-dictadura-comunista-las-veces-que-kast-condeno-a-ho-chi-minh-y-el-regimen-vietnamita-que-hoy-homenajeo/"
+      "publicadoEn": "2026-11-16T22:10:33.000Z",
+      "url": "https://www.theclinic.cl/2026/11/16/la-fuerte-senal-politica-en-la-inclusion-de-camila-nieto-fa-en-la-gira-de-kast-por-asia/"
     },
     "dicho": {
       "id": "dicho-giras-extranjero",
@@ -256,56 +124,16 @@
         "paro"
       ]
     },
-    "scoreContradiccion": 54,
+    "scoreContradiccion": 72,
     "tipoChoque": "Bumerán retórico",
     "evidenciasLexicas": [
-      "vietnam"
+      "gira",
+      "asia",
+      "vietnam",
+      "presidente"
     ],
-    "explicacionMotor": "Coincidencia temática en 1 concepto(s) clave (vietnam). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
-    "generadoEn": "2026-11-16",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-16-1315714911__dicho-indulto-abusadores",
-    "noticia": {
-      "id": "news-2026-11-16-1315714911",
-      "titulo": "Pamela Jiles adelanta la postura del PDG ante la acusación constitucional contra Rabat: \"Nos gustaría que la bancada completa la aprobara\"",
-      "bajada": "La diputada del Partido de la Gente aseguró que hasta el momento solo dos de los once integrantes de la bancada están en duda, mientras los otros nueve ya resolvieron aprobar la acusación. Pese a no conocer aún los argumentos, Jiles advirtió que ya \"hay base sólida constitucional y legal para aprobar\". The post Pamela Jiles adelanta la postura del PDG ante la acusación constitucional contra Rabat: \"Nos gustaría que l",
-      "medio": "The Clinic",
-      "fecha": "2026-11-16",
-      "publicadoEn": "2026-11-16T13:00:20.000Z",
-      "url": "https://www.theclinic.cl/2026/11/16/pamela-jiles-adelanta-la-postura-del-pdg-ante-la-acusacion-constitucional-contra-rabat-nos-gustaria-que-la-bancada-completa-la-aprobara/"
-    },
-    "dicho": {
-      "id": "dicho-indulto-abusadores",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
-      "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl",
-      "categoria": "seguridad",
-      "postura": "prohibe",
-      "conceptosClave": [
-        "indulto",
-        "rebaja",
-        "condena",
-        "pena",
-        "abusador",
-        "pederasta",
-        "violador",
-        "justicia",
-        "rabat",
-        "reos",
-        "carcel"
-      ]
-    },
-    "scoreContradiccion": 48,
-    "tipoChoque": "Inversión de postura",
-    "evidenciasLexicas": [
-      "rabat"
-    ],
-    "explicacionMotor": "Coincidencia temática en 1 concepto(s) clave (rabat). El titular/bajada registra indicadores de ejecución contraria o conflicto (pese) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-16",
+    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, asia, vietnam, presidente). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
+    "generadoEn": "2026-11-17",
     "metodoAnalisis": "motor-determinista"
   }
 ]
