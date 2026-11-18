@@ -42,5 +42,49 @@
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, precio). Relación directa con el compromiso histórico de 2022-06-14 (Ex Candidato Presidencial).",
     "generadoEn": "2026-11-18",
     "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-18-61a34da68c__dicho-indulto-abusadores",
+    "noticia": {
+      "id": "news-2026-11-18-61a34da68c",
+      "titulo": "Daniela Serrano (PC) sobre acusación contra Rabat: \"Los parlamentarios tendrán que dar una explicación de cómo van a votar\"",
+      "bajada": "La jefa de bancada del Partido Comunista cuestiona los recortes del Gobierno en educación y advierte que el compromiso del ministro de Hacienda, Jorge Quiroz, de reponer el programa Yo Elijo Mi PC todavía no se ha materializado. Además, defiende la acusación constitucional contra Fernando Rabat, descarta que un eventual rechazo fortalezca al ministro de Justicia y aborda la falta de coordinación previa entre los part",
+      "medio": "The Clinic",
+      "fecha": "2026-11-18",
+      "publicadoEn": "2026-11-18T21:15:00.000Z",
+      "url": "https://www.theclinic.cl/2026/11/18/daniela-serrano-pc-sobre-acusacion-contra-rabat-los-parlamentarios-tendran-que-dar-una-explicacion-de-como-van-a-votar/"
+    },
+    "dicho": {
+      "id": "dicho-indulto-abusadores",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "tipoMedio": "debate",
+      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+      "fuenteUrl": "https://www.anatel.cl",
+      "categoria": "seguridad",
+      "postura": "prohibe",
+      "conceptosClave": [
+        "indulto",
+        "rebaja",
+        "condena",
+        "pena",
+        "abusador",
+        "pederasta",
+        "violador",
+        "justicia",
+        "rabat",
+        "reos",
+        "carcel"
+      ]
+    },
+    "scoreContradiccion": 58,
+    "tipoChoque": "Inversión de postura",
+    "evidenciasLexicas": [
+      "rabat",
+      "justicia"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rabat, justicia). Relación directa con el compromiso histórico de 2025-12-10 (Candidato Presidencial (Debate ANATEL)).",
+    "generadoEn": "2026-11-18",
+    "metodoAnalisis": "motor-determinista"
   }
 ]
