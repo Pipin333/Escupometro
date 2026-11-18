@@ -1,46 +1,50 @@
 [
   {
-    "id": "news-2026-11-17-ad40c1d16f__dicho-bencinas-impuestos",
+    "id": "news-2026-11-17-8118b33651__dicho-giras-extranjero",
     "noticia": {
-      "id": "news-2026-11-17-ad40c1d16f",
-      "titulo": "Cristián Fernández, arquitecto detrás de la remodelación del GAM y la falta de recursos para su ampliación: \"El paro de camioneros equivale a siete proyectos del GAM\"",
-      "bajada": "El arquitecto director de CFA se refirió al acuerdo logrado por el Gobierno con camioneros para terminar con el paro, que implicó un proyecto de ley que costará al Estado más de $800 millones de dólares. Ante esto, recordó que el Ejecutivo determinó paralizar la ampliación del GAM por falta de recursos, aunque costara casi un octavo de esta iniciativa. \"Para esta autoridad, para el ministro Quiroz, esto (el GAM) no e",
+      "id": "news-2026-11-17-8118b33651",
+      "titulo": "Cómo Ho Chi Minh puso fin a la tregua entre el Partido Nacional Libertario con La Moneda",
+      "bajada": "El homenaje que Kast hizo al histórico líder comunista en Vietnam —durante su gira por Asia— abrió un flanco con los militantes libertarios. Desde la colectividad cuestionaron los argumentos del mandatario para justificar el acto, quien apeló a que cuando criticó a la figura homenajeada era candidato y que hoy, como Presidente, \"representa a una nación\". \"¿Somos consecuentes con las palabras que proferimos en el tiem",
       "medio": "The Clinic",
       "fecha": "2026-11-17",
-      "publicadoEn": "2026-11-17T20:30:03.000Z",
-      "url": "https://www.theclinic.cl/2026/11/17/cristian-fernandez-arquitecto-detras-de-la-remodelacion-del-gam-y-la-falta-de-recursos-para-su-ampliacion-el-paro-de-camioneros-equivale-a-siete-proyectos-del-gam/"
+      "publicadoEn": "2026-11-17T21:28:48.000Z",
+      "url": "https://www.theclinic.cl/2026/11/17/como-ho-chi-minh-puso-fin-a-la-tregua-entre-el-partido-nacional-libertario-con-la-moneda/"
     },
     "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
       "tipoMedio": "tweet",
       "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
       "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
+      "categoria": "gasto-publico",
+      "postura": "condena",
       "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
       ]
     },
-    "scoreContradiccion": 78,
-    "tipoChoque": "Promesa incumplida",
+    "scoreContradiccion": 72,
+    "tipoChoque": "Bumerán retórico",
     "evidenciasLexicas": [
-      "camioneros",
-      "paro"
+      "gira",
+      "vietnam",
+      "asia",
+      "moneda",
+      "presidente"
     ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-17",
+    "explicacionMotor": "Coincidencia temática en 5 concepto(s) clave (gira, vietnam, asia, moneda, presidente). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
+    "generadoEn": "2026-11-18",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -84,135 +88,7 @@
       "precio"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, precio). Relación directa con el compromiso histórico de 2022-06-14 (Ex Candidato Presidencial).",
-    "generadoEn": "2026-11-17",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-17-c4bdfcfb4c__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-17-c4bdfcfb4c",
-      "titulo": "Vocero Arenas arremete contra proyecto antibarricadas de su propio gobierno: «Yo no quiero que sea delito»",
-      "bajada": "El Ciudadano Un incómodo momento vivió este lunes el vocero de Gobierno, Gonzalo Arenas, al expresar su rechazo al proyecto de ley Antibarricadas 2.0, una iniciativa que su propio Gobierno está impulsando en el Congreso Nacional. El episodio ocurrió en Tolerancia Cero, cuando Arenas fue consultado respecto al paro de camioneros que afectó las principales rutas del […] La entrada Vocero Arenas arremete contra proyecto",
-      "medio": "El Ciudadano",
-      "fecha": "2026-11-17",
-      "publicadoEn": "2026-11-17T18:41:32.000Z",
-      "url": "https://www.elciudadano.com/actualidad/vocero-arenas-arremete-contra-proyecto-antibarricadas-de-su-propio-gobierno-yo-no-quiero-que-sea-delito/11/17/"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 54,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "paro",
-      "camioneros"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (paro, camioneros). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-17",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-17-98bd115bd9__yt-fUfJmxVgttA-t1782",
-    "noticia": {
-      "id": "news-2026-11-17-98bd115bd9",
-      "titulo": "Diputado Cuello acusa doble estándar del Gobierno: \"Para los profesores, despidos; para los camioneros, todo el dinero del mundo\"",
-      "bajada": "El Ciudadano \"Este Gobierno que prometió empleo hoy día está despidiendo masivamente a profesores y asistentes, sin ningún criterio pedagógico ha fusionado cursos y está reduciendo la dotación de profesores y asistentes de la educación, y eso ciertamente afecta a los niños y niñas\", denunció el parlamentario. La entrada Diputado Cuello acusa doble estándar del Gobierno: \"Para los profesores, despidos; para los camion",
-      "medio": "El Ciudadano",
-      "fecha": "2026-11-17",
-      "publicadoEn": "2026-11-17T17:47:51.000Z",
-      "url": "https://www.elciudadano.com/politica/diputado-cuello-acusa-doble-estandar-del-gobierno-para-los-profesores-despidos-para-los-camioneros-todo-el-dinero-del-mundo/11/17/"
-    },
-    "dicho": {
-      "id": "yt-fUfJmxVgttA-t1782",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL 2025)",
-      "tipoMedio": "debate",
-      "cita": "les estamos señalando que les quedan 92 días y después de los 92 días la persona que vaya a resolicitar cualquier recurso del Estado, sea en salud, sea en educación, sea en transporte, sea para una remesa, sea para un contrato, sea para vender algo, esa persona va a quedar registrada y va a ser invitada a",
-      "fuenteUrl": "https://youtu.be/fUfJmxVgttA?t=1782",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "estado",
-        "para",
-        "persona",
-        "dias",
-        "resolicitar",
-        "transporte",
-        "registrada",
-        "senalando"
-      ]
-    },
-    "scoreContradiccion": 52,
-    "tipoChoque": "Doble estándar",
-    "evidenciasLexicas": [
-      "para",
-      "dias"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (para, dias). El titular/bajada registra indicadores de ejecución contraria o conflicto (doble) frente a la postura original de \"condena\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-17",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-17-a28e2dc4c1__dicho-fundaciones-corrupcion",
-    "noticia": {
-      "id": "news-2026-11-17-a28e2dc4c1",
-      "titulo": "\"Este es un Gobierno clasista, racista y misógino\": Manouchehri (PS) defiende a ministra Lincolao y arremete contra La Moneda",
-      "bajada": "El diputado Daniel Manouchehri (PS) salió este martes en defensa de Ximena Lincolao, luego de que el vocero de Gobierno, Gonzalo Arenas, cuestionara públicamente su gestión. Aunque el parlamentario también abordó el acuerdo con OpenAI, le bajó el perfil al señalar que se trata de un convenio de capacitación y no de un tratado internacional. Sin embargo, prefirió centrar sus declaraciones en el trato que ha recibido l",
-      "medio": "The Clinic",
-      "fecha": "2026-11-17",
-      "publicadoEn": "2026-11-17T19:47:14.000Z",
-      "url": "https://www.theclinic.cl/2026/11/17/este-es-un-gobierno-clasista-racista-y-misogino-manouchehri-ps-defiende-a-ministra-lincolao-y-arremete-contra-la-moneda/"
-    },
-    "dicho": {
-      "id": "dicho-fundaciones-corrupcion",
-      "fecha": "2023-06-28",
-      "rol": "Líder Partido Republicano",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "El escándalo de las fundaciones es la punta del iceberg de la corrupción. No puede haber impunidad ni defensas corporativas. Caiga quien caiga, los que se robaron la plata de los chilenos deben terminar presos.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "fundaciones",
-        "convenios",
-        "fraude",
-        "fisco",
-        "desafuero",
-        "corrupcion",
-        "ojeda",
-        "trato directo",
-        "millones"
-      ]
-    },
-    "scoreContradiccion": 42,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "convenios",
-      "trato directo"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (convenios, trato directo). Relación directa con el compromiso histórico de 2023-06-28 (Líder Partido Republicano).",
-    "generadoEn": "2026-11-17",
+    "generadoEn": "2026-11-18",
     "metodoAnalisis": "motor-determinista"
   }
 ]
