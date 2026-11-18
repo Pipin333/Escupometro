@@ -1,53 +1,5 @@
 [
   {
-    "id": "news-2026-11-17-8118b33651__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-17-8118b33651",
-      "titulo": "Cómo Ho Chi Minh puso fin a la tregua entre el Partido Nacional Libertario con La Moneda",
-      "bajada": "El homenaje que Kast hizo al histórico líder comunista en Vietnam —durante su gira por Asia— abrió un flanco con los militantes libertarios. Desde la colectividad cuestionaron los argumentos del mandatario para justificar el acto, quien apeló a que cuando criticó a la figura homenajeada era candidato y que hoy, como Presidente, \"representa a una nación\". \"¿Somos consecuentes con las palabras que proferimos en el tiem",
-      "medio": "The Clinic",
-      "fecha": "2026-11-17",
-      "publicadoEn": "2026-11-17T21:28:48.000Z",
-      "url": "https://www.theclinic.cl/2026/11/17/como-ho-chi-minh-puso-fin-a-la-tregua-entre-el-partido-nacional-libertario-con-la-moneda/"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 72,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "gira",
-      "vietnam",
-      "asia",
-      "moneda",
-      "presidente"
-    ],
-    "explicacionMotor": "Coincidencia temática en 5 concepto(s) clave (gira, vietnam, asia, moneda, presidente). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
-    "generadoEn": "2026-11-18",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-17-5a0ec804d0__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-17-5a0ec804d0",
