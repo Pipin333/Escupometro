@@ -1,5 +1,30 @@
 [
   {
+    "id": "openai-for-chile-cable-chino-2026",
+    "titulo": "Rompió la transición por 'falta de transparencia' en el cable chino vs. Acuerdo 'OpenAI for Chile' sin texto público y defendido desde China",
+    "categoria": "libertades",
+    "fechaIncidente": "2026-11-19",
+    "diasSinEscupoPrevios": 3,
+    "gravedad": "termocéfala",
+    "pasado": {
+      "fecha": "2026-03-03",
+      "rol": "Presidente Electo (en reunión de transición en La Moneda)",
+      "tipoMedio": "prensa",
+      "cita": "El equipo de Kast acusó falta de transparencia e información previa sobre el cable submarino con China y suspendió abruptamente las reuniones bilaterales de traspaso tras 22 minutos en La Moneda.",
+      "fuenteUrl": "https://www.cooperativa.cl/noticias/pais/gabriel-boric/tension-por-cable-chino-causa-quiebre-absoluto-entre-boric-y-kast/2026-03-03/084011.html"
+    },
+    "presente": {
+      "fecha": "2026-11-19",
+      "medio": "T13 / Radio Universidad de Chile / Infobae",
+      "titulo": "Kast defiende desde China el acuerdo 'OpenAI for Chile' tras críticas por opacidad y soberanía de datos",
+      "descripcion": "La ministra de Ciencia Ximena Lincolao firmó en San Francisco con Sam Altman el memorándum 'OpenAI for Chile' sin difundir previamente el texto ni los alcances sobre datos públicos, motivando oficios del Congreso y su citación a La Moneda por el vicepresidente Claudio Alvarado. Desde China, Kast respaldó el pacto y descartó los reparos: 'Hay algunos que quieren quedarse anclados en un pasado donde no hay futuro'.",
+      "impacto": "Mientras el cable submarino con China detonó un quiebre institucional por exigencia de transparencia previa, el convenio de IA estatal con OpenAI se firmó en reserva y el mandatario trató de retrógrados a quienes pidieron explicaciones.",
+      "fuenteUrl": "https://www.t13.cl/noticia/politica/presidente-kast-defendio-lincolao-tras-acuerdo-openai-hay-algunos-quieren-19-11-2026"
+    },
+    "veredictoSatirico": "En marzo quebró el traspaso de mando exigiendo transparencia total por el cable chino; en noviembre firmaron 'OpenAI for Chile' en California sin texto público y desde China trató de anclados en el pasado a quienes pidieron explicaciones.",
+    "votosComunidad": 0
+  },
+  {
     "id": "ho-chi-minh-ofrenda-floral-vietnam-2026",
     "titulo": "Llamó a Ho Chi Minh 'asesino en serie' y criticó a Bachelet por ir a su tumba vs. Deposita ofrenda floral en su mausoleo en Vietnam",
     "categoria": "libertades",
