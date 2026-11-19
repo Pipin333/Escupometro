@@ -1,5 +1,49 @@
 [
   {
+    "id": "news-2026-11-19-9e2609d874__dicho-indulto-abusadores",
+    "noticia": {
+      "id": "news-2026-11-19-9e2609d874",
+      "titulo": "De amor al odio, un paso",
+      "bajada": "El Ciudadano Por Benjamín Escobedo Araneda En una semana marcada por el paro de camioneros y la crisis por rebajas de condenas, el Presidente José Antonio Kast alcanzó la cifra de aprobación más baja en lo que va de su mandato, esto según la encuesta Criteria. Esta última fue publicada el 15 de noviembre de 2026, registrando […] La entrada De amor al odio, un paso se publicó primero en El Ciudadano .",
+      "medio": "El Ciudadano",
+      "fecha": "2026-11-19",
+      "publicadoEn": "2026-11-19T02:51:04.000Z",
+      "url": "https://www.elciudadano.com/chile/de-amor-al-odio-un-paso/11/18/"
+    },
+    "dicho": {
+      "id": "dicho-indulto-abusadores",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "tipoMedio": "debate",
+      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+      "fuenteUrl": "https://www.anatel.cl",
+      "categoria": "seguridad",
+      "postura": "prohibe",
+      "conceptosClave": [
+        "indulto",
+        "rebaja",
+        "condena",
+        "pena",
+        "abusador",
+        "pederasta",
+        "violador",
+        "justicia",
+        "rabat",
+        "reos",
+        "carcel"
+      ]
+    },
+    "scoreContradiccion": 66,
+    "tipoChoque": "Inversión de postura",
+    "evidenciasLexicas": [
+      "condena",
+      "rebaja"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (condena, rebaja). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "generadoEn": "2026-11-19",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
     "id": "news-2026-11-17-5a0ec804d0__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-17-5a0ec804d0",
@@ -40,7 +84,7 @@
       "precio"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, precio). Relación directa con el compromiso histórico de 2022-06-14 (Ex Candidato Presidencial).",
-    "generadoEn": "2026-11-18",
+    "generadoEn": "2026-11-19",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -84,7 +128,7 @@
       "justicia"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rabat, justicia). Relación directa con el compromiso histórico de 2025-12-10 (Candidato Presidencial (Debate ANATEL)).",
-    "generadoEn": "2026-11-18",
+    "generadoEn": "2026-11-19",
     "metodoAnalisis": "motor-determinista"
   }
 ]
