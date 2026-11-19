@@ -1,45 +1,89 @@
 [
   {
-    "id": "news-2026-11-19-9e2609d874__dicho-indulto-abusadores",
+    "id": "news-2026-11-19-b4688d133d__dicho-bencinas-impuestos",
     "noticia": {
-      "id": "news-2026-11-19-9e2609d874",
-      "titulo": "De amor al odio, un paso",
-      "bajada": "El Ciudadano Por Benjamín Escobedo Araneda En una semana marcada por el paro de camioneros y la crisis por rebajas de condenas, el Presidente José Antonio Kast alcanzó la cifra de aprobación más baja en lo que va de su mandato, esto según la encuesta Criteria. Esta última fue publicada el 15 de noviembre de 2026, registrando […] La entrada De amor al odio, un paso se publicó primero en El Ciudadano .",
-      "medio": "El Ciudadano",
+      "id": "news-2026-11-19-b4688d133d",
+      "titulo": "Paro de camioneros: el método sí importa",
+      "bajada": "La entrada Paro de camioneros: el método sí importa se publicó primero en CIPER Chile .",
+      "medio": "CIPER Chile",
       "fecha": "2026-11-19",
-      "publicadoEn": "2026-11-19T02:51:04.000Z",
-      "url": "https://www.elciudadano.com/chile/de-amor-al-odio-un-paso/11/18/"
+      "publicadoEn": "2026-11-19T12:32:40.000Z",
+      "url": "https://www.ciperchile.cl/2026/11/19/paro-de-camioneros-el-metodo-si-importa/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=paro-de-camioneros-el-metodo-si-importa"
     },
     "dicho": {
-      "id": "dicho-indulto-abusadores",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
-      "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl",
-      "categoria": "seguridad",
-      "postura": "prohibe",
+      "id": "dicho-bencinas-impuestos",
+      "fecha": "2022-06-14",
+      "rol": "Ex Candidato Presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "exige",
       "conceptosClave": [
-        "indulto",
-        "rebaja",
-        "condena",
-        "pena",
-        "abusador",
-        "pederasta",
-        "violador",
-        "justicia",
-        "rabat",
-        "reos",
-        "carcel"
+        "bencina",
+        "combustible",
+        "alza",
+        "impuesto",
+        "camioneros",
+        "paro",
+        "transporte",
+        "diesel",
+        "precio",
+        "bencinazo"
+      ]
+    },
+    "scoreContradiccion": 78,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "camioneros",
+      "paro"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-19",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-19-ede8a95ee9__dicho-desempleo-crecimiento",
+    "noticia": {
+      "id": "news-2026-11-19-ede8a95ee9",
+      "titulo": "Quiroz prometía un «boom de inversión», pero las cifras van en reversa: inversión cae 6,7% y PIB retrocede 1,1%",
+      "bajada": "El Ciudadano Aunque el ministro de Hacienda aseguró que el gobierno de José Antonio Kast contaba con el \"mayor monto proyectado de inversión en últimos diez años\", el Banco Central reveló que durante el tercer trimestres de 2026, la actividad económica de Chile experimentó un retroceso de un 1,1% en términos anuales, impulsado por una menor inversión. La entrada Quiroz prometía un «boom de inversión», pero las cifras",
+      "medio": "El Ciudadano",
+      "fecha": "2026-11-19",
+      "publicadoEn": "2026-11-19T11:34:57.000Z",
+      "url": "https://www.elciudadano.com/economia/quiroz-prometia-un-boom-de-inversion-pero-las-cifras-van-en-reversa-inversion-cae-67-y-pib-retrocede-11/11/19/"
+    },
+    "dicho": {
+      "id": "dicho-desempleo-crecimiento",
+      "fecha": "2024-08-19",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La incapacidad económica del gobierno tiene al país estancado y destruyendo empleos. Con orden y sentido común vamos a recuperar la inversión y el trabajo de las familias chilenas desde el primer día.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "promete",
+      "conceptosClave": [
+        "desempleo",
+        "empleo",
+        "cesantia",
+        "economia",
+        "crecimiento",
+        "ajuste",
+        "inversion",
+        "quiroz",
+        "reforma",
+        "jpmorgan"
       ]
     },
     "scoreContradiccion": 66,
-    "tipoChoque": "Inversión de postura",
+    "tipoChoque": "Promesa incumplida",
     "evidenciasLexicas": [
-      "condena",
-      "rebaja"
+      "inversion",
+      "quiroz"
     ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (condena, rebaja). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, paro) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (inversion, quiroz). Relación directa con el compromiso histórico de 2024-08-19 (Líder de la Oposición).",
     "generadoEn": "2026-11-19",
     "metodoAnalisis": "motor-determinista"
   },
@@ -88,46 +132,90 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
-    "id": "news-2026-11-18-61a34da68c__dicho-indulto-abusadores",
+    "id": "news-2026-11-19-fa39bacf6a__tweet-1704839515519508841",
     "noticia": {
-      "id": "news-2026-11-18-61a34da68c",
-      "titulo": "Daniela Serrano (PC) sobre acusación contra Rabat: \"Los parlamentarios tendrán que dar una explicación de cómo van a votar\"",
-      "bajada": "La jefa de bancada del Partido Comunista cuestiona los recortes del Gobierno en educación y advierte que el compromiso del ministro de Hacienda, Jorge Quiroz, de reponer el programa Yo Elijo Mi PC todavía no se ha materializado. Además, defiende la acusación constitucional contra Fernando Rabat, descarta que un eventual rechazo fortalezca al ministro de Justicia y aborda la falta de coordinación previa entre los part",
+      "id": "news-2026-11-19-fa39bacf6a",
+      "titulo": "Parisi por acusación constitucional contra Rabat: \"Hay gente muy cercana al Gobierno que quiere que se apruebe para hacer un cambio de ministros\"",
+      "bajada": "El excandidato presidencial del PDG aseguró que al interior del oficialismo hay quienes abogan por la aprobación de la acusación, pese a los esfuerzos del Ejecutivo de lo contrario. Aunque el voto del PDG sigue en disputa, Parisi reiteró que mayoritariamente respaldarán el libelo acusatorio. The post Parisi por acusación constitucional contra Rabat: \"Hay gente muy cercana al Gobierno que quiere que se apruebe para ha",
       "medio": "The Clinic",
-      "fecha": "2026-11-18",
-      "publicadoEn": "2026-11-18T21:15:00.000Z",
-      "url": "https://www.theclinic.cl/2026/11/18/daniela-serrano-pc-sobre-acusacion-contra-rabat-los-parlamentarios-tendran-que-dar-una-explicacion-de-como-van-a-votar/"
+      "fecha": "2026-11-19",
+      "publicadoEn": "2026-11-19T12:22:28.000Z",
+      "url": "https://www.theclinic.cl/2026/11/19/parisi-por-acusacion-constitucional-contra-rabat-hay-gente-muy-cercana-al-gobierno-que-quiere-que-se-apruebe-para-hacer-un-cambio-de-ministros/"
     },
     "dicho": {
-      "id": "dicho-indulto-abusadores",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
-      "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl",
-      "categoria": "seguridad",
-      "postura": "prohibe",
+      "id": "tweet-1704839515519508841",
+      "fecha": "2023-09-21",
+      "rol": "Líder de oposición / Candidato presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Gobierno inicia campaña en contra del proyecto constitucional, mintiendo y desinformando, buscando - con complicidad de los medios- de desviar atención de aprobación de normas claves en materia de inmigración. La expulsión inmediata de inmigrantes ilegales es un cambio radical. pic.twitter.com/e2Z2uoVxnU",
+      "fuenteUrl": "https://x.com/joseantoniokast/status/1704839515519508841",
+      "archivoUrl": "https://web.archive.org/web/20230923081745/https://twitter.com/joseantoniokast/status/1704839515519508841",
+      "categoria": "constitucion",
+      "postura": "condena",
       "conceptosClave": [
-        "indulto",
-        "rebaja",
-        "condena",
-        "pena",
-        "abusador",
-        "pederasta",
-        "violador",
-        "justicia",
-        "rabat",
-        "reos",
-        "carcel"
+        "constitucional",
+        "desinformando",
+        "complicidad",
+        "aprobacion",
+        "inmigracion",
+        "inmigrante",
+        "e2z2uovxnu",
+        "mintiendo"
       ]
     },
-    "scoreContradiccion": 58,
-    "tipoChoque": "Inversión de postura",
+    "scoreContradiccion": 64,
+    "tipoChoque": "Bumerán retórico",
     "evidenciasLexicas": [
-      "rabat",
-      "justicia"
+      "constitucional",
+      "aprobacion"
     ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rabat, justicia). Relación directa con el compromiso histórico de 2025-12-10 (Candidato Presidencial (Debate ANATEL)).",
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (constitucional, aprobacion). El titular/bajada registra indicadores de ejecución contraria o conflicto (respalda, pese) frente a la postura original de \"condena\" emitida el 2023-09-21.",
+    "generadoEn": "2026-11-19",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-19-c1688a81e9__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-19-c1688a81e9",
+      "titulo": "La bufanda azul de Kast, el encuentro de las tres potencias y los puentes con México: cómo fue la última jornada del Presidente en la APEC",
+      "bajada": "Con una vistosa bufanda azul, el Presidente participó de la fotografía oficial y luego intervino ante los líderes de las 21 economías del foro, donde destacó la importancia del diálogo entre las principales potencias. La jornada también estuvo marcada por la esperada trilateral entre Xi Jinping, Donald Trump y Vladimir Putin, y por un breve encuentro con la mandataria mexicana Claudia Sheinbaum, con quien Kast buscab",
+      "medio": "The Clinic",
+      "fecha": "2026-11-19",
+      "publicadoEn": "2026-11-19T09:02:33.000Z",
+      "url": "https://www.theclinic.cl/2026/11/19/la-bufanda-azul-de-kast-el-encuentro-de-las-tres-potencias-y-los-puentes-con-mexico-la-jornada-del-presidente-en-su-ultima-jornada-en-la-apec/"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 48,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "xi",
+      "presidente"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (xi, presidente). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
     "generadoEn": "2026-11-19",
     "metodoAnalisis": "motor-determinista"
   }
