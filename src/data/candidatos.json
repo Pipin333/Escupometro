@@ -132,6 +132,51 @@
     "metodoAnalisis": "motor-determinista"
   },
   {
+    "id": "news-2026-11-20-18bbf86851__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-20-18bbf86851",
+      "titulo": "El estricto protocolo que marcó la visita de Kast al emperador de Japón y las inesperadas salidas de libreto",
+      "bajada": "Por 35 minutos se extendió la visita que realizó el mandatario junto a la primera dama a la familia imperial. Los encuentros con estas autoridades están estrictamente planificados en el país asiático. Sin embargo, la cita se extendió por mayor tiempo al considerado, hubo invitaciones a Chile y saludos insospechados. The post El estricto protocolo que marcó la visita de Kast al emperador de Japón y las inesperadas sal",
+      "medio": "The Clinic",
+      "fecha": "2026-11-20",
+      "publicadoEn": "2026-11-20T11:26:15.000Z",
+      "url": "https://www.theclinic.cl/2026/11/20/el-estricto-protocolo-que-marco-la-visita-de-kast-al-emperador-de-japon-y-las-inesperadas-salidas-de-libreto/"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 50,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "japon",
+      "asia"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (japon, asia). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
+    "generadoEn": "2026-11-20",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
     "id": "news-2026-11-19-81fc0971b5__dicho-fundaciones-corrupcion",
     "noticia": {
       "id": "news-2026-11-19-81fc0971b5",
