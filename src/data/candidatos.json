@@ -1,49 +1,5 @@
 [
   {
-    "id": "news-2026-11-19-e4db125d5a__dicho-bencinas-impuestos",
-    "noticia": {
-      "id": "news-2026-11-19-e4db125d5a",
-      "titulo": "(VIDEO) Desaire en vivo: Vocero Gonzalo Arenas contradice al Gobierno sobre la Ley Antibarricadas 2.0 tras paro de camioneros",
-      "bajada": "El Ciudadano Gonzalo Arenas, vocero, sorprendió al rechazar la conocida Ley Antibarricadas 2.0 en un programa en vivo, marcando una distancia con el ministro Martín Arrau y el Gobierno, después de recientes paros de camioneros. Este inesperado cruce televisivo arroja luz sobre tensiones internas y desacuerdos en torno a esta legislación. La entrada (VIDEO) Desaire en vivo: Vocero Gonzalo Arenas contradice al Gobierno",
-      "medio": "El Ciudadano",
-      "fecha": "2026-11-19",
-      "publicadoEn": "2026-11-19T21:00:09.000Z",
-      "url": "https://www.elciudadano.com/reels/video-desaire-en-vivo-vocero-gonzalo-arenas-contradice-al-gobierno-sobre-la-ley-antibarricadas-2-0-tras-paro-de-camioneros/11/19/"
-    },
-    "dicho": {
-      "id": "dicho-bencinas-impuestos",
-      "fecha": "2022-06-14",
-      "rol": "Ex Candidato Presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "La gente no aguanta más el alza brutal de las bencinas y el costo de la vida. El Gobierno tiene el deber de actuar, rebajar el impuesto específico y aliviar a las familias trabajadoras.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "impuestos",
-      "postura": "exige",
-      "conceptosClave": [
-        "bencina",
-        "combustible",
-        "alza",
-        "impuesto",
-        "camioneros",
-        "paro",
-        "transporte",
-        "diesel",
-        "precio",
-        "bencinazo"
-      ]
-    },
-    "scoreContradiccion": 78,
-    "tipoChoque": "Promesa incumplida",
-    "evidenciasLexicas": [
-      "camioneros",
-      "paro"
-    ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-19",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
     "id": "news-2026-11-19-b4688d133d__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-19-b4688d133d",
@@ -84,7 +40,7 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-19",
+    "generadoEn": "2026-11-20",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -128,7 +84,51 @@
       "precio"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (combustible, precio). Relación directa con el compromiso histórico de 2022-06-14 (Ex Candidato Presidencial).",
-    "generadoEn": "2026-11-19",
+    "generadoEn": "2026-11-20",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-20-76e5673c8e__dicho-indulto-abusadores",
+    "noticia": {
+      "id": "news-2026-11-20-76e5673c8e",
+      "titulo": "La nostalgia de la noche",
+      "bajada": "El Ciudadano Por Juan Carlos Yáñez Andrade El Gobierno, qué duda cabe, vive una de sus peores crisis políticas a tan solo ocho meses de asumido el poder. La última parece ser una de las más graves producto de la firma de decretos por parte del ministro de Justicia y Derechos Humanos, Fernando Rabat, y que permitió […] La entrada La nostalgia de la noche se publicó primero en El Ciudadano .",
+      "medio": "El Ciudadano",
+      "fecha": "2026-11-20",
+      "publicadoEn": "2026-11-20T01:48:27.000Z",
+      "url": "https://www.elciudadano.com/chile/la-nostalgia-de-la-noche/11/19/"
+    },
+    "dicho": {
+      "id": "dicho-indulto-abusadores",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL)",
+      "tipoMedio": "debate",
+      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
+      "fuenteUrl": "https://www.anatel.cl",
+      "categoria": "seguridad",
+      "postura": "prohibe",
+      "conceptosClave": [
+        "indulto",
+        "rebaja",
+        "condena",
+        "pena",
+        "abusador",
+        "pederasta",
+        "violador",
+        "justicia",
+        "rabat",
+        "reos",
+        "carcel"
+      ]
+    },
+    "scoreContradiccion": 54,
+    "tipoChoque": "Inversión de postura",
+    "evidenciasLexicas": [
+      "rabat",
+      "justicia"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (rabat, justicia). El titular/bajada registra indicadores de ejecución contraria o conflicto (decretos) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "generadoEn": "2026-11-20",
     "metodoAnalisis": "motor-determinista"
   },
   {
@@ -171,7 +171,7 @@
       "millones"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (cargo, millones). Relación directa con el compromiso histórico de 2023-06-28 (Líder Partido Republicano).",
-    "generadoEn": "2026-11-19",
+    "generadoEn": "2026-11-20",
     "metodoAnalisis": "motor-determinista"
   }
 ]
