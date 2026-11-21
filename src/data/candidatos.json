@@ -1,5 +1,52 @@
 [
   {
+    "id": "news-2026-11-21-857e198d35__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-21-857e198d35",
+      "titulo": "Camila Nieto (FA), alcaldesa de Valparaíso: \"Tuve dudas de aceptar la invitación del Presidente a su gira por Asia. Pero tengo un deber con mis vecinos\"",
+      "bajada": "La jefa comunal fue una de las representantes de la delegación que acompañó a José Antonio Kast en sus visitas a Vietnam, China y Japón. Aquí cuenta por qué decidió subirse al avión pese a mantener serias diferencias con el Gobierno y la conversación previa que mantuvo con la directiva de su partido. También relata las gestiones que realizó junto a Cancillería para que Valparaíso sea elegida la sede del Tratado de Al",
+      "medio": "The Clinic",
+      "fecha": "2026-11-21",
+      "publicadoEn": "2026-11-21T11:00:00.000Z",
+      "url": "https://www.theclinic.cl/2026/11/21/camila-nieto-fa-alcaldesa-de-valparaiso-tuve-dudas-de-aceptar-la-invitacion-del-presidente-a-su-gira-por-asia-pero-tengo-un-deber-con-mis-vecinos/"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 84,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "gira",
+      "asia",
+      "vietnam",
+      "presidente"
+    ],
+    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, asia, vietnam, presidente). El titular/bajada registra indicadores de ejecución contraria o conflicto (pese) frente a la postura original de \"condena\" emitida el 2023-07-18.",
+    "generadoEn": "2026-11-21",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
     "id": "news-2026-11-19-b4688d133d__dicho-bencinas-impuestos",
     "noticia": {
       "id": "news-2026-11-19-b4688d133d",
@@ -40,50 +87,6 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
-    "generadoEn": "2026-11-21",
-    "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-20-d052e13c79__tweet-1800111599023542383",
-    "noticia": {
-      "id": "news-2026-11-20-d052e13c79",
-      "titulo": "Senador Matías Walker: \"La postura de libertarios y republicanos es totalitaria porque a través del Estado quieren reemplazar la voluntad de las familias\"",
-      "bajada": "El independiente anclado en la bancada de Evópoli, en el centro de la polémica por la caída de la indicación que limitaba el acceso a programas de hormonización en menores de edad, señala que el Presidente José Antonio Kast sabe que su voto no estará para ninguna medida que sea un \"retroceso en derechos sociales y libertades individuales\". Asimismo, señala que los partidos que le han cuestionado su posición \"han recu",
-      "medio": "The Clinic",
-      "fecha": "2026-11-20",
-      "publicadoEn": "2026-11-20T21:54:41.000Z",
-      "url": "https://www.theclinic.cl/2026/11/20/senador-matias-walker-la-postura-de-libertarios-y-republicanos-es-totalitaria-porque-a-traves-del-estado-quieren-reemplazar-la-voluntad-de-las-familias/"
-    },
-    "dicho": {
-      "id": "tweet-1800111599023542383",
-      "fecha": "2024-06-10",
-      "rol": "Líder de oposición / Candidato presidencial",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Es una muy buena noticia para Europa que las nuevas derechas avancen en los distintos paises, restaurando el sentido común, la libertad y el estado de derecho. Una Europa más libre, segura y con convicciones, es una mejor Europa",
-      "fuenteUrl": "https://x.com/joseantoniokast/status/1800111599023542383",
-      "archivoUrl": "https://web.archive.org/web/20240610132654/https://twitter.com/joseantoniokast/status/1800111599023542383",
-      "categoria": "libertades",
-      "postura": "condena",
-      "conceptosClave": [
-        "libertad",
-        "derecho",
-        "estado",
-        "europa",
-        "restaurando",
-        "conviccion",
-        "distinto",
-        "noticia"
-      ]
-    },
-    "scoreContradiccion": 50,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "libertad",
-      "derecho",
-      "estado"
-    ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (libertad, derecho, estado). Relación directa con el compromiso histórico de 2024-06-10 (Líder de oposición / Candidato presidencial).",
     "generadoEn": "2026-11-21",
     "metodoAnalisis": "motor-determinista"
   }
