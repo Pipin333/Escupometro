@@ -1,48 +1,48 @@
 [
   {
-    "id": "news-2026-11-21-857e198d35__dicho-giras-extranjero",
+    "id": "news-2026-11-21-26a6baddd4__dicho-desempleo-crecimiento",
     "noticia": {
-      "id": "news-2026-11-21-857e198d35",
-      "titulo": "Camila Nieto (FA), alcaldesa de Valparaíso: \"Tuve dudas de aceptar la invitación del Presidente a su gira por Asia. Pero tengo un deber con mis vecinos\"",
-      "bajada": "La jefa comunal fue una de las representantes de la delegación que acompañó a José Antonio Kast en sus visitas a Vietnam, China y Japón. Aquí cuenta por qué decidió subirse al avión pese a mantener serias diferencias con el Gobierno y la conversación previa que mantuvo con la directiva de su partido. También relata las gestiones que realizó junto a Cancillería para que Valparaíso sea elegida la sede del Tratado de Al",
-      "medio": "The Clinic",
+      "id": "news-2026-11-21-26a6baddd4",
+      "titulo": "Prometió reactivar la economía, inversión privada y empleo: BBC Mundo destapa las claves de la crisis económica del gobierno de Kast",
+      "bajada": "El Ciudadano Desempleo récord, inflación y crecimiento nulo: el análisis de la BBC sobre la crisis económica en Chile Un frenazo económico en medio de la \"austeridad\" Chile atraviesa una de sus mayores crisis económicas desde la pandemia, una situación que BBC News Mundo aborda en un profundo análisis audiovisual. Según el reportaje, el país se encuentra […] La entrada Prometió reactivar la economía, inversión privad",
+      "medio": "El Ciudadano",
       "fecha": "2026-11-21",
-      "publicadoEn": "2026-11-21T11:00:00.000Z",
-      "url": "https://www.theclinic.cl/2026/11/21/camila-nieto-fa-alcaldesa-de-valparaiso-tuve-dudas-de-aceptar-la-invitacion-del-presidente-a-su-gira-por-asia-pero-tengo-un-deber-con-mis-vecinos/"
+      "publicadoEn": "2026-11-21T12:24:19.000Z",
+      "url": "https://www.elciudadano.com/actualidad/prometio-reactivar-la-economia-inversion-privada-y-empleo-bbc-mundo-destapa-las-claves-de-la-crisis-economica-del-gobierno-de-kast/11/21/"
     },
     "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
+      "id": "dicho-desempleo-crecimiento",
+      "fecha": "2024-08-19",
       "rol": "Líder de la Oposición",
       "tipoMedio": "tweet",
       "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "cita": "La incapacidad económica del gobierno tiene al país estancado y destruyendo empleos. Con orden y sentido común vamos a recuperar la inversión y el trabajo de las familias chilenas desde el primer día.",
       "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
+      "categoria": "impuestos",
+      "postura": "promete",
       "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
+        "desempleo",
+        "empleo",
+        "cesantia",
+        "economia",
+        "crecimiento",
+        "ajuste",
+        "inversion",
+        "quiroz",
+        "reforma",
+        "jpmorgan"
       ]
     },
     "scoreContradiccion": 84,
-    "tipoChoque": "Bumerán retórico",
+    "tipoChoque": "Promesa incumplida",
     "evidenciasLexicas": [
-      "gira",
-      "asia",
-      "vietnam",
-      "presidente"
+      "desempleo",
+      "empleo",
+      "economia",
+      "crecimiento",
+      "inversion"
     ],
-    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, asia, vietnam, presidente). El titular/bajada registra indicadores de ejecución contraria o conflicto (pese) frente a la postura original de \"condena\" emitida el 2023-07-18.",
+    "explicacionMotor": "Coincidencia temática en 5 concepto(s) clave (desempleo, empleo, economia, crecimiento, inversion). El titular/bajada registra indicadores de ejecución contraria o conflicto (medio) frente a la postura original de \"promete\" emitida el 2024-08-19.",
     "generadoEn": "2026-11-21",
     "metodoAnalisis": "motor-determinista"
   },
@@ -87,6 +87,97 @@
       "paro"
     ],
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
+    "generadoEn": "2026-11-21",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-21-bd50d45983__dicho-giras-extranjero",
+    "noticia": {
+      "id": "news-2026-11-21-bd50d45983",
+      "titulo": "Encuentro de cónyuges en APEC, una escuela de excelencia en China y marionetas sobre el agua en Vietnam: la agenda paralela de la primera dama en Asia",
+      "bajada": "Además de acompañar al presidente Kast en sus actividades durante la gira asiática, la primera dama tuvo una apretada agenda paralela en Vietnam, China y Japón. Participó en un encuentro de cónyuges de líderes de la APEC, recorrió una prestigiosa escuela en China y abordó la importancia del voluntariado juvenil en Japón. The post Encuentro de cónyuges en APEC, una escuela de excelencia en China y marionetas sobre el ",
+      "medio": "The Clinic",
+      "fecha": "2026-11-21",
+      "publicadoEn": "2026-11-21T14:40:16.000Z",
+      "url": "https://www.theclinic.cl/2026/11/21/encuentro-de-conyuges-en-apec-una-escuela-de-excelencia-en-china-y-marionetas-sobre-el-agua-en-vietnam-la-agenda-paralela-de-la-primera-dama-en-asia/"
+    },
+    "dicho": {
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
+      ]
+    },
+    "scoreContradiccion": 72,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "gira",
+      "asia",
+      "china",
+      "vietnam",
+      "presidente"
+    ],
+    "explicacionMotor": "Coincidencia temática en 5 concepto(s) clave (gira, asia, china, vietnam, presidente). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
+    "generadoEn": "2026-11-21",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-21-950f009b39__tweet-1400137033360805893",
+    "noticia": {
+      "id": "news-2026-11-21-950f009b39",
+      "titulo": "(VIDEO) Denuncia: Prioridades del Gobierno de Kast cuestionadas por Jeannette Jara sobre financiación de seguros sociales",
+      "bajada": "El Ciudadano La entrada (VIDEO) Denuncia: Prioridades del Gobierno de Kast cuestionadas por Jeannette Jara sobre financiación de seguros sociales se publicó primero en El Ciudadano .",
+      "medio": "El Ciudadano",
+      "fecha": "2026-11-21",
+      "publicadoEn": "2026-11-21T12:45:07.000Z",
+      "url": "https://www.elciudadano.com/reels/video-denuncia-prioridades-del-gobierno-de-kast-cuestionadas-por-jeannette-jara-sobre-financiacion-de-seguros-sociales/11/21/"
+    },
+    "dicho": {
+      "id": "tweet-1400137033360805893",
+      "fecha": "2021-06-02",
+      "rol": "Líder de oposición / Candidato presidencial",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Durante y después de la pandemia, las urgencias sociales de Chile son aún más necesarias de abordar. Todos los niveles de educación se han visto severamente afectados y son ignorados por las prioridades políticas de otros. pic.twitter.com/SYwSTFpkBi",
+      "fuenteUrl": "https://x.com/joseantoniokast/status/1400137033360805893",
+      "archivoUrl": "https://web.archive.org/web/20210602180107/https://twitter.com/joseantoniokast/status/1400137033360805893",
+      "categoria": "gasto-publico",
+      "postura": "exige",
+      "conceptosClave": [
+        "severamente",
+        "sywstfpkbi",
+        "necesaria",
+        "educacion",
+        "prioridad",
+        "pandemia",
+        "urgencia",
+        "sociales"
+      ]
+    },
+    "scoreContradiccion": 48,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "prioridad",
+      "sociales"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (prioridad, sociales). Relación directa con el compromiso histórico de 2021-06-02 (Líder de oposición / Candidato presidencial).",
     "generadoEn": "2026-11-21",
     "metodoAnalisis": "motor-determinista"
   }
