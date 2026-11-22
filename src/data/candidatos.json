@@ -42,53 +42,5 @@
     "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (camioneros, paro). El titular/bajada registra indicadores de ejecución contraria o conflicto (paro) frente a la postura original de \"exige\" emitida el 2022-06-14.",
     "generadoEn": "2026-11-22",
     "metodoAnalisis": "motor-determinista"
-  },
-  {
-    "id": "news-2026-11-21-bd50d45983__dicho-giras-extranjero",
-    "noticia": {
-      "id": "news-2026-11-21-bd50d45983",
-      "titulo": "Encuentro de cónyuges en APEC, una escuela de excelencia en China y marionetas sobre el agua en Vietnam: la agenda paralela de la primera dama en Asia",
-      "bajada": "Además de acompañar al presidente Kast en sus actividades durante la gira asiática, la primera dama tuvo una apretada agenda paralela en Vietnam, China y Japón. Participó en un encuentro de cónyuges de líderes de la APEC, recorrió una prestigiosa escuela en China y abordó la importancia del voluntariado juvenil en Japón. The post Encuentro de cónyuges en APEC, una escuela de excelencia en China y marionetas sobre el ",
-      "medio": "The Clinic",
-      "fecha": "2026-11-21",
-      "publicadoEn": "2026-11-21T14:40:16.000Z",
-      "url": "https://www.theclinic.cl/2026/11/21/encuentro-de-conyuges-en-apec-una-escuela-de-excelencia-en-china-y-marionetas-sobre-el-agua-en-vietnam-la-agenda-paralela-de-la-primera-dama-en-asia/"
-    },
-    "dicho": {
-      "id": "dicho-giras-extranjero",
-      "fecha": "2023-07-18",
-      "rol": "Líder de la Oposición",
-      "tipoMedio": "tweet",
-      "usuarioTweet": "@joseantoniokast",
-      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
-      "fuenteUrl": "https://x.com/joseantoniokast",
-      "categoria": "gasto-publico",
-      "postura": "condena",
-      "conceptosClave": [
-        "gira",
-        "viaje",
-        "europa",
-        "asia",
-        "china",
-        "vietnam",
-        "extranjero",
-        "crisis",
-        "moneda",
-        "presidente",
-        "paro"
-      ]
-    },
-    "scoreContradiccion": 72,
-    "tipoChoque": "Bumerán retórico",
-    "evidenciasLexicas": [
-      "gira",
-      "asia",
-      "china",
-      "vietnam",
-      "presidente"
-    ],
-    "explicacionMotor": "Coincidencia temática en 5 concepto(s) clave (gira, asia, china, vietnam, presidente). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
-    "generadoEn": "2026-11-22",
-    "metodoAnalisis": "motor-determinista"
   }
 ]
