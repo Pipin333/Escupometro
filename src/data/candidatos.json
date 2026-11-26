@@ -1,46 +1,89 @@
 [
   {
-    "id": "news-2026-11-23-86b3b0ac10__dicho-indulto-abusadores",
+    "id": "news-2026-11-26-5ab8d0196e__dicho-desempleo-crecimiento",
     "noticia": {
-      "id": "news-2026-11-23-86b3b0ac10",
-      "titulo": "Ministerio de Justicia entrega más de 1.800 decretos de rebaja de condena; PDI realiza diligencia en el Senado por eventual firma falsa, y Kast anuncia agenda de 100 días para el empleo",
-      "bajada": "La entrada Ministerio de Justicia entrega más de 1.800 decretos de rebaja de condena; PDI realiza diligencia en el Senado por eventual firma falsa, y Kast anuncia agenda de 100 días para el empleo se publicó primero en CIPER Chile .",
-      "medio": "CIPER Chile",
-      "fecha": "2026-11-23",
-      "publicadoEn": "2026-11-23T23:08:51.000Z",
-      "url": "https://www.ciperchile.cl/2026/11/23/radar-23-11-26/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=radar-23-11-26"
+      "id": "news-2026-11-26-5ab8d0196e",
+      "titulo": "(VIDEO) Creciente indignación en Chile por promesas incumplidas del gobierno de Kast y crisis de desempleo",
+      "bajada": "El Ciudadano La entrada (VIDEO) Creciente indignación en Chile por promesas incumplidas del gobierno de Kast y crisis de desempleo se publicó primero en El Ciudadano .",
+      "medio": "El Ciudadano",
+      "fecha": "2026-11-26",
+      "publicadoEn": "2026-11-26T12:30:07.000Z",
+      "url": "https://www.elciudadano.com/reels/video-creciente-indignacion-en-chile-por-promesas-incumplidas-del-gobierno-de-kast-y-crisis-de-desempleo/11/26/"
     },
     "dicho": {
-      "id": "dicho-indulto-abusadores",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL)",
-      "tipoMedio": "debate",
-      "cita": "Jamás indultaría a un abusador de niños. Jamás. Se les acabó la fiesta a los delincuentes y a quienes atentan contra la infancia.",
-      "fuenteUrl": "https://www.anatel.cl",
-      "categoria": "seguridad",
-      "postura": "prohibe",
+      "id": "dicho-desempleo-crecimiento",
+      "fecha": "2024-08-19",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La incapacidad económica del gobierno tiene al país estancado y destruyendo empleos. Con orden y sentido común vamos a recuperar la inversión y el trabajo de las familias chilenas desde el primer día.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "promete",
       "conceptosClave": [
-        "indulto",
-        "rebaja",
-        "condena",
-        "pena",
-        "abusador",
-        "pederasta",
-        "violador",
-        "justicia",
-        "rabat",
-        "reos",
-        "carcel"
+        "desempleo",
+        "empleo",
+        "cesantia",
+        "economia",
+        "crecimiento",
+        "ajuste",
+        "inversion",
+        "quiroz",
+        "reforma",
+        "jpmorgan"
       ]
     },
-    "scoreContradiccion": 96,
-    "tipoChoque": "Inversión de postura",
+    "scoreContradiccion": 48,
+    "tipoChoque": "Promesa incumplida",
     "evidenciasLexicas": [
-      "rebaja",
-      "condena",
-      "justicia"
+      "desempleo",
+      "empleo"
     ],
-    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (rebaja, condena, justicia). El titular/bajada registra indicadores de ejecución contraria o conflicto (rebaja, decretos) frente a la postura original de \"prohibe\" emitida el 2025-12-10.",
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (desempleo, empleo). Relación directa con el compromiso histórico de 2024-08-19 (Líder de la Oposición).",
+    "generadoEn": "2026-11-26",
+    "metodoAnalisis": "motor-determinista"
+  },
+  {
+    "id": "news-2026-11-26-de73ff1067__dicho-desempleo-crecimiento",
+    "noticia": {
+      "id": "news-2026-11-26-de73ff1067",
+      "titulo": "Vocero Arenas y promesa de 100 días de Kast ante el desempleo: \"En marzo la gente verá una tendencia de un país que va generando puestos de trabajo\"",
+      "bajada": "El vocero de Gobierno dijo que el desempleo y el costo de la vida son las prioridades que el Presidente fijó para sus ministros de cara al primer año de mandato. También afirmó que el Ejecutivo mira \"con optimismo\" la votación de la acusación constitucional contra el ministro Fernando Rabat. The post Vocero Arenas y promesa de 100 días de Kast ante el desempleo: \"En marzo la gente verá una tendencia de un país que va",
+      "medio": "The Clinic",
+      "fecha": "2026-11-26",
+      "publicadoEn": "2026-11-26T12:16:07.000Z",
+      "url": "https://www.theclinic.cl/2026/11/26/vocero-arenas-y-promesa-de-100-dias-de-kast-ante-el-desempleo-en-marzo-la-gente-va-a-ver-una-tendencia-de-una-pais-que-va-generando-nuevos-puestos-de-trabajo/"
+    },
+    "dicho": {
+      "id": "dicho-desempleo-crecimiento",
+      "fecha": "2024-08-19",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "La incapacidad económica del gobierno tiene al país estancado y destruyendo empleos. Con orden y sentido común vamos a recuperar la inversión y el trabajo de las familias chilenas desde el primer día.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "impuestos",
+      "postura": "promete",
+      "conceptosClave": [
+        "desempleo",
+        "empleo",
+        "cesantia",
+        "economia",
+        "crecimiento",
+        "ajuste",
+        "inversion",
+        "quiroz",
+        "reforma",
+        "jpmorgan"
+      ]
+    },
+    "scoreContradiccion": 48,
+    "tipoChoque": "Promesa incumplida",
+    "evidenciasLexicas": [
+      "desempleo",
+      "empleo"
+    ],
+    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (desempleo, empleo). Relación directa con el compromiso histórico de 2024-08-19 (Líder de la Oposición).",
     "generadoEn": "2026-11-26",
     "metodoAnalisis": "motor-determinista"
   }
