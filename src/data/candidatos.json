@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "news-2026-11-27-735e4f8e6e__yt-fUfJmxVgttA-t1782",
+    "noticia": {
+      "id": "news-2026-11-27-735e4f8e6e",
+      "titulo": "\"Una invitación a invertir, a contratar y a jugársela por Chile\": El mensaje del Presidente Kast a los empresarios en el Encuentro Anual de la Sofofa",
+      "bajada": "En su exposición, que se extendió por cerca de media hora, el jefe de Estado pidió que contraten más personal, argumentando que en los ochos meses de su administración se han impulsados proyectos, como la Ley de Reconstrucción, que permiten las condiciones para hacerlo. The post \"Una invitación a invertir, a contratar y a jugársela por Chile\": El mensaje del Presidente Kast a los empresarios en el Encuentro Anual de ",
+      "medio": "The Clinic",
+      "fecha": "2026-11-27",
+      "publicadoEn": "2026-11-27T01:47:49.000Z",
+      "url": "https://www.theclinic.cl/2026/11/26/una-invitacion-a-invertir-a-contratar-y-a-jugarsela-por-chile-el-mensaje-del-presidente-kast-a-los-empresarios-en-el-encuentro-anual-de-la-sofofa/"
+    },
+    "dicho": {
+      "id": "yt-fUfJmxVgttA-t1782",
+      "fecha": "2025-12-10",
+      "rol": "Candidato Presidencial (Debate ANATEL 2025)",
+      "tipoMedio": "debate",
+      "cita": "les estamos señalando que les quedan 92 días y después de los 92 días la persona que vaya a resolicitar cualquier recurso del Estado, sea en salud, sea en educación, sea en transporte, sea para una remesa, sea para un contrato, sea para vender algo, esa persona va a quedar registrada y va a ser invitada a",
+      "fuenteUrl": "https://youtu.be/fUfJmxVgttA?t=1782",
+      "categoria": "gasto-publico",
+      "postura": "condena",
+      "conceptosClave": [
+        "estado",
+        "para",
+        "persona",
+        "dias",
+        "resolicitar",
+        "transporte",
+        "registrada",
+        "senalando"
+      ]
+    },
+    "scoreContradiccion": 42,
+    "tipoChoque": "Bumerán retórico",
+    "evidenciasLexicas": [
+      "estado",
+      "para",
+      "persona"
+    ],
+    "explicacionMotor": "Coincidencia temática en 3 concepto(s) clave (estado, para, persona). Relación directa con el compromiso histórico de 2025-12-10 (Candidato Presidencial (Debate ANATEL 2025)).",
+    "generadoEn": "2026-11-27",
+    "metodoAnalisis": "motor-determinista"
+  }
+]
