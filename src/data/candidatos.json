@@ -1,43 +1,49 @@
 [
   {
-    "id": "news-2026-11-27-89f43d4973__yt-fUfJmxVgttA-t632",
+    "id": "news-2026-11-27-f5769bbf38__dicho-giras-extranjero",
     "noticia": {
-      "id": "news-2026-11-27-89f43d4973",
-      "titulo": "Selfies con Feijóo, mensaje de Jackson y viajes frustrados: partidos se involucran desde Chile en las elecciones españolas de este domingo",
-      "bajada": "Mientras dirigentes de las juventudes de la UDI viajaron a España para participar en actividades de campaña del Partido Popular, desde el Partido Republicano expresaron su respaldo a Vox, aunque la votación de la acusación constitucional contra Fernando Rabat les impidió enviar representantes a la recta final de la campaña. El PS, en tanto, desplegó una campaña de apoyo a Pedro Sánchez entre los españoles residentes ",
+      "id": "news-2026-11-27-f5769bbf38",
+      "titulo": "\"Parte fundamental del nuevo cine chileno\": Muere a los 98 años Shenda Román, actriz conocida por su trabajo en\"Tres tristes tigres\" y \"El Chacal de Nahueltoro\"",
+      "bajada": "Tras el Golpe de Estado de 1973, Román Dobson se exilió en Cuba trabajando en montajes como \"Guarda tu luz, oh patria\", obra que la llevó de gira por Europa. Al retornar a Chile se dedicó a la docencia, participando fugazmente en cortometrajes. Por su trabajo en pos de los derechos de las mujeres en 2015 fue reconocida con el premio Elena Caffarena. En 2021 fue una de las candidatas al Premio Nacional de Artes de la ",
       "medio": "The Clinic",
       "fecha": "2026-11-27",
-      "publicadoEn": "2026-11-27T16:36:31.000Z",
-      "url": "https://www.theclinic.cl/2026/11/27/selfies-con-feijoo-mensaje-de-jackson-y-viajes-frustrados-partidos-se-involucran-desde-chile-en-las-elecciones-espanolas-de-este-domingo/"
+      "publicadoEn": "2026-11-27T23:39:41.000Z",
+      "url": "https://www.theclinic.cl/2026/11/27/parte-fundamental-del-nuevo-cine-chileno-muere-a-los-98-anos-shenda-roman-actriz-conocida-por-su-trabajo-entres-tristes-tigres-y-el-chacal-de-nahueltoro/"
     },
     "dicho": {
-      "id": "yt-fUfJmxVgttA-t632",
-      "fecha": "2025-12-10",
-      "rol": "Candidato Presidencial (Debate ANATEL 2025)",
-      "tipoMedio": "debate",
-      "cita": "Creo que no tiene ninguna relevancia ser o no ser militante del partido republicano. No lo voy a hacer. No lo voy a no voy a seguir siendo milante del partido republicano. Como lo dije hace 4 años atrás, entregué la chapita republicana y le dije cuando pasé de la primera vuelta a la segunda vuelta, aquí",
-      "fuenteUrl": "https://youtu.be/fUfJmxVgttA?t=632",
-      "categoria": "constitucion",
+      "id": "dicho-giras-extranjero",
+      "fecha": "2023-07-18",
+      "rol": "Líder de la Oposición",
+      "tipoMedio": "tweet",
+      "usuarioTweet": "@joseantoniokast",
+      "cita": "Mientras Chile sufre una crisis grave de seguridad y escándalos internos, el Presidente no puede seguir en giras de estudio por Europa. Su obligación es quedarse en La Moneda ordenando la casa.",
+      "fuenteUrl": "https://x.com/joseantoniokast",
+      "categoria": "gasto-publico",
       "postura": "condena",
       "conceptosClave": [
-        "republicano",
-        "partido",
-        "vuelta",
-        "dije",
-        "relevancia",
-        "republicana",
-        "militante",
-        "entregue"
+        "gira",
+        "viaje",
+        "europa",
+        "asia",
+        "china",
+        "vietnam",
+        "extranjero",
+        "crisis",
+        "moneda",
+        "presidente",
+        "paro"
       ]
     },
-    "scoreContradiccion": 52,
+    "scoreContradiccion": 60,
     "tipoChoque": "Bumerán retórico",
     "evidenciasLexicas": [
-      "republicano",
-      "partido"
+      "gira",
+      "roma",
+      "europa",
+      "xi"
     ],
-    "explicacionMotor": "Coincidencia temática en 2 concepto(s) clave (republicano, partido). El titular/bajada registra indicadores de ejecución contraria o conflicto (viaja) frente a la postura original de \"condena\" emitida el 2025-12-10.",
-    "generadoEn": "2026-11-27",
+    "explicacionMotor": "Coincidencia temática en 4 concepto(s) clave (gira, roma, europa, xi). Relación directa con el compromiso histórico de 2023-07-18 (Líder de la Oposición).",
+    "generadoEn": "2026-11-28",
     "metodoAnalisis": "motor-determinista"
   }
 ]
